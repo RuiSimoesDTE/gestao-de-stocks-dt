@@ -2,20 +2,52 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="refresh" content="0; url=https://raw.githubusercontent.com/RuiSimoesDTE/gestao-de-stocks-dt/master/app/gestao_armazem_catenaria.html?t=" + Date.now()>
-<title>Gestão de Armazém</title>
+<title>Gestão de Armazém - DTE</title>
 </head>
-<body>
-Carregando programa do repositório...
+<body style="margin:0;padding:0;background:linear-gradient(135deg, #0b4f8a 0%, #1b6fb8 100%);display:flex;align-items:center;justify-content:center;min-height:100vh;">
+<div style="text-align:center;color:white;">
+<h1>Carregando...</h1>
+<div style="border:4px solid rgba(255,255,255,0.3);border-radius:50%;border-top:4px solid white;width:40px;height:40px;animation:spin 1s linear infinite;margin:20px auto;"></div>
+</div>
+<style>@keyframes spin { to { transform:rotate(360deg); } }</style>
 <script>
-// Redirecionar para raw content do GitHub (sem cache)
-const url = 'https://raw.githubusercontent.com/RuiSimoesDTE/gestao-de-stocks-dt/master/app/gestao_armazem_catenaria.html?nocache=' + Date.now();
-fetch(url).then(r => r.text()).then(html => {
-    document.documentElement.innerHTML = html;
-}).catch(e => {
-    document.body.innerHTML = '<h1>Erro ao carregar</h1><p>Não conseguiu ligar ao repositório. Erro: ' + e.message + '</p>';
-});
+(async function() {
+    try {
+        const t = Date.now();
+        const url = 'https://raw.githubusercontent.com/RuiSimoesDTE/gestao-de-stocks-dt/master/app/gestao_armazem_catenaria.html?v=' + t;
+        console.log('Carregando:', url);
+
+        const resp = await fetch(url, { cache: 'no-store' });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+
+        let html = await resp.text();
+        console.log('HTML recebido, tamanho:', html.length, 'bytes');
+
+        // Substituir ANTES de renderizar
+        html = html
+            .replace(/Pasta partilhada/g, 'Gravar para GitHub')
+            .replace(/desligada/g, '(GitHub)')
+            .replace(/Ligar pasta partilhada/g, 'Sincronizar com GitHub');
+
+        console.log('Substituições aplicadas');
+        document.documentElement.innerHTML = html;
+        console.log('✅ Programa carregado e renderizado');
+
+        // Executar scripts
+        const scripts = document.querySelectorAll('script');
+        console.log('Scripts encontrados:', scripts.length);
+        scripts.forEach(s => {
+            if (!s.src && s.textContent) {
+                try { eval(s.textContent); } catch(e) { console.error('Erro no script:', e); }
+            }
+        });
+    } catch (e) {
+        console.error('Erro:', e);
+        document.body.innerHTML = '<div style="color:white;padding:40px;font-family:Arial;"><h1>❌ Erro</h1><p>' + e.message + '</p><p><a href="" style="color:#fff;text-decoration:underline;">Tentar novamente</a></p><hr style="margin:20px 0;border:none;border-top:1px solid rgba(255,255,255,0.3);"><pre style="text-align:left;background:rgba(0,0,0,0.3);padding:10px;border-radius:5px;overflow:auto;max-height:200px;font-size:11px;"><code>' + e.stack + '</code></pre></div>';
+    }
+})();
 </script>
 </body>
 </html>
