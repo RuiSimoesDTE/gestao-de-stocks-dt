@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Armazém - DTE</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #0b4f8a 0%, #1b6fb8 100%); color: white; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+        .container { text-align: center; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 10px; }
+        h1 { margin-top: 0; }
+        .spinner { border: 4px solid rgba(255,255,255,0.3); border-radius: 50%; border-top: 4px solid white; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestão de Armazém</h1>
+        <p>Carregando programa...</p>
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        // Carregar o programa e fazer substituição em TEMPO REAL
+        async function carregar() {
+            try {
+                const url = 'https://raw.githubusercontent.com/RuiSimoesDTE/gestao-de-stocks-dt/master/app/gestao_armazem_catenaria.html?t=' + Date.now();
+                const resp = await fetch(url);
+                let html = await resp.text();
+
+                // Substituição agressiva ANTES de renderizar
+                html = html.replace(/Pasta partilhada/g, 'Gravar para GitHub');
+                html = html.replace(/desligada/g, '(GitHub)');
+                html = html.replace(/Ligar pasta partilhada/g, 'Abrir GitHub');
+
+                // Renderizar
+                document.documentElement.innerHTML = html;
+
+                // Executar scripts da página (se houver)
+                const scripts = document.querySelectorAll('script');
+                scripts.forEach(script => {
+                    if (!script.src) {
+                        try { eval(script.textContent); } catch(e) { console.error(e); }
+                    }
+                });
+
+                console.log('✅ Programa carregado do GitHub com substituições aplicadas');
+            } catch (e) {
+                document.body.innerHTML = '<div style="color:white;padding:40px;text-align:center;"><h1>❌ Erro ao carregar</h1><p>' + e.message + '</p><p><a href="" style="color:white;text-decoration:underline;">Tentar de novo</a></p></div>';
+            }
+        }
+
+        // Aguardar um bocado e carregar
+        setTimeout(carregar, 500);
+    </script>
+</body>
+</html>
