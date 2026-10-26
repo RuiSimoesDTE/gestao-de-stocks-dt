@@ -261,11 +261,29 @@
                 </div>
             </div>
 
-            <a href="app/gestao_armazem_catenaria.html" class="btn" style="background: #0b4f8a; color: white; display: inline-block; padding: 12px 30px; margin-top: 20px;">
+<a href="javascript:carregarPrograma()" class="btn" style="background: #0b4f8a; color: white; display: inline-block; padding: 12px 30px; margin-top: 20px;">
                 ACEDER AO PROGRAMA →
             </a>
         </div>
     </section>
+
+<script>
+async function carregarPrograma() {
+  try {
+    const t = Date.now();
+    const url = 'app/gestao_armazem_catenaria.html?t=' + t + '&v=' + Math.random();
+    const r = await fetch(url, { cache: 'no-store', headers: { 'Cache-Control': 'no-cache' } });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    let html = await r.text();
+    html = html.replace(/Pasta partilhada/g, 'Gravar para GitHub').replace(/desligada/g, '(GitHub)');
+    const blob = new Blob([html], { type: 'text/html' });
+    window.location = URL.createObjectURL(blob);
+  } catch (e) {
+    alert('Erro ao carregar: ' + e.message + '\n\nTentando acesso direto...');
+    window.location = 'app/gestao_armazem_catenaria.html';
+  }
+}
+</script>
 
     <!-- DOCUMENTOS -->
     <section id="documentos" class="secao" style="background: #f5f5f5;">
