@@ -1,0 +1,370 @@
+{
+ "66": {
+  "novo": "03.101.02",
+  "desc": "Isolador 9T (ZT ou ZM)"
+ },
+ "88": {
+  "novo": "02.305.06",
+  "desc": "Brinco trapezoidal"
+ },
+ "183": {
+  "novo": "02.108.06",
+  "desc": "Cantoneira L100x100x10 L=670"
+ },
+ "239": {
+  "novo": "02.209.04",
+  "desc": "Perfil U140x60x7"
+ },
+ "262": {
+  "novo": "02.213.07",
+  "desc": "Perfil U80x70x8 L=825"
+ },
+ "358": {
+  "novo": "05.100.09",
+  "desc": "Garra dupla p/ desdobramento do F.C."
+ },
+ "380": {
+  "novo": "05.102.09",
+  "desc": "Porca de aperto (Rosca direita)"
+ },
+ "387": {
+  "novo": "05.100.11",
+  "desc": "Garra de antideslizamento"
+ },
+ "470": {
+  "novo": "05.300.08",
+  "desc": "Peça de adaptação"
+ },
+ "489": {
+  "novo": "04.406.01",
+  "desc": "Perno roscado M18x300/100 c/3Hu+anilha"
+ },
+ "497": {
+  "novo": "02.100.06",
+  "desc": "Cantoneira L100x100x10"
+ },
+ "516": {
+  "novo": "05.300.09",
+  "desc": "Ponteira para tubo 19x26"
+ },
+ "617": {
+  "novo": "07.400.06",
+  "desc": "Viga HEA 160"
+ },
+ "732": {
+  "novo": "06.800.01",
+  "desc": "Ferragem de amarração compensada p/ 1 FC"
+ },
+ "753": {
+  "novo": "06.800.07",
+  "desc": "Placa de amarração p/ cabo de suporte ou fio de contacto"
+ },
+ "762": {
+  "novo": "06.200.02",
+  "desc": "Viga de união"
+ },
+ "769": {
+  "novo": "06.800.03",
+  "desc": "Placa de amarração para antideslizamento"
+ },
+ "771": {
+  "novo": "07.501.01",
+  "desc": "Antibalançantes para AMV'S tangenciais (Tubo 40x49)"
+ },
+ "773": {
+  "novo": "06.200.01",
+  "desc": "Estrutura de apoio para dois isoladores"
+ },
+ "811": {
+  "novo": "05.101.13",
+  "desc": "Suporte de cabo da alimentação"
+ },
+ "814": {
+  "novo": "02.204.03",
+  "desc": "A reprodução parcial ou integral está sujeita à autorização prévia da Infraestruturas de Portugal S.A."
+ },
+ "818": {
+  "novo": "02.101.01",
+  "desc": "Cantoneira L60x60x6"
+ },
+ "819": {
+  "novo": "06.501.01",
+  "desc": "Aço S235JR: NP EN 10025-2"
+ },
+ "1110": {
+  "novo": "02.102.04",
+  "desc": "Perfil L80x80x8 (L=550 mm)"
+ },
+ "1117": {
+  "novo": "02.104.21",
+  "desc": "COM ESPIAMENTO HORIZONTAL"
+ },
+ "14B1": {
+  "novo": "04.600.02",
+  "desc": "Cotas (mm)"
+ },
+ "14B2": {
+  "novo": "04.600.04",
+  "desc": "Espia Ø 24 (L=7450mm)"
+ },
+ "14B3": {
+  "novo": "04.600.05",
+  "desc": "Espia Ø 24 (L=8000mm)"
+ },
+ "14B4": {
+  "novo": "04.600.06",
+  "desc": "Espia Ø 24 (L=8700mm)"
+ },
+ "14B6": {
+  "novo": "04.600.08",
+  "desc": "Espia Ø 24 (L=9700mm)"
+ },
+ "14B7": {
+  "novo": "04.600.09",
+  "desc": "Espia Ø 24 (L=10250mm)"
+ },
+ "14B9": {
+  "novo": "04.600.01",
+  "desc": "Espia Ø 24 (L=4150mm)"
+ },
+ "14B10": {
+  "novo": "04.600.03",
+  "desc": "Espia Ø 24 (L=6150mm)"
+ },
+ "14C1": {
+  "novo": "04.601.02",
+  "desc": "Espia Ø 30 (L=5150mm)"
+ },
+ "14C2": {
+  "novo": "04.601.04",
+  "desc": "Espia Ø 30 (L=7450mm)"
+ },
+ "14C3": {
+  "novo": "04.601.05",
+  "desc": "Espia Ø 30 (L=8000mm)"
+ },
+ "14C4": {
+  "novo": "04.601.06",
+  "desc": "Espia Ø 30 (L=8700mm)"
+ },
+ "14C5": {
+  "novo": "04.601.07",
+  "desc": "Espia Ø 30 (L=9150mm)"
+ },
+ "14C6": {
+  "novo": "04.601.08",
+  "desc": "Espia Ø 30 (L=9700mm)"
+ },
+ "14C7": {
+  "novo": "04.601.09",
+  "desc": "Espia Ø 30 (L=10250mm)"
+ },
+ "14C9": {
+  "novo": "04.601.01",
+  "desc": "Espia Ø 30 (L=4150mm)"
+ },
+ "14C10": {
+  "novo": "04.601.03",
+  "desc": "Espia Ø 30 (L=6150mm)"
+ },
+ "16D20": {
+  "novo": "04.100.07",
+  "desc": "Parafuso M16x40/40 c/Hu"
+ },
+ "17V": {
+  "novo": "04.201.04",
+  "desc": "Parafuso M10x50/50 c/Hu"
+ },
+ "17W": {
+  "novo": "04.200.01",
+  "desc": "Parafuso M6x12/12"
+ },
+ "17X": {
+  "novo": "04.202.01",
+  "desc": "Parafuso M6x25/25 com Hu+Hm"
+ },
+ "18U": {
+  "novo": "04.407.11",
+  "desc": "Perno roscado M20x520/70 c/ 2Hu+2Hm+2anilhas"
+ },
+ "124B": {
+  "novo": "02.106.18",
+  "desc": "Cantoneira L90x90x9 (L=555 mm)"
+ },
+ "124D": {
+  "novo": "02.106.06",
+  "desc": "Cantoneira L90x90x9 (L=555 mm)"
+ },
+ "134A": {
+  "novo": "02.104.41",
+  "desc": "Consola de feeder L=3550 mm"
+ },
+ "141A": {
+  "novo": "02.105.03",
+  "desc": "Cantoneira L80x80x8 c/ tubo 40x49 (L=305mm)"
+ },
+ "141B": {
+  "novo": "02.105.04",
+  "desc": "Cantoneira L80x80x8 c/ tubo 40x49 (L=385mm)"
+ },
+ "142A": {
+  "novo": "02.100.28",
+  "desc": "A reprodução parcial ou integral está sujeita à autorização prévia da Infraestruturas de Portugal S.A."
+ },
+ "179B": {
+  "novo": "02.108.05",
+  "desc": "Cantoneira L100x100x10 L=420 mm"
+ },
+ "180A": {
+  "novo": "02.104.05",
+  "desc": "Cantoneira L80x80x8 L=340 mm"
+ },
+ "180B": {
+  "novo": "02.104.08",
+  "desc": "Cantoneira L80x80x8 L=420 mm"
+ },
+ "181C": {
+  "novo": "06.700.01",
+  "desc": "1/2 Braço direito da consola"
+ },
+ "181D": {
+  "novo": "06.700.02",
+  "desc": "1/2 Braço esquerdo da consola"
+ },
+ "188D": {
+  "novo": "02.100.27",
+  "desc": "Perfil L60x60x6 (L=525)"
+ },
+ "189D": {
+  "novo": "02.101.13",
+  "desc": "Perfil L60x60x6 com patilha (L=525)"
+ },
+ "226B": {
+  "novo": "06.300.14",
+  "desc": "Chapa 90x5"
+ },
+ "241B": {
+  "novo": "02.209.09",
+  "desc": "Perfil U140x60x7 (L=1720 mm)"
+ },
+ "252B": {
+  "novo": "02.207.07",
+  "desc": "Perfil U120x55x7 L=1560"
+ },
+ "267A": {
+  "novo": "02.200.01",
+  "desc": "Perfil U40x20x5 c/ chapa (L=120mm)"
+ },
+ "267D": {
+  "novo": "02.200.04",
+  "desc": "Perfil U40x20x5 c/ chapa (L=283 mm)"
+ },
+ "272D": {
+  "novo": "02.403.04",
+  "desc": "Barra 70x10 (L=525)"
+ },
+ "273D": {
+  "novo": "02.403.08",
+  "desc": "Barra 50x10 (L=525)"
+ },
+ "294C": {
+  "novo": "05.701.04",
+  "desc": "PORMENOR B"
+ },
+ "432G": {
+  "novo": "05.500.07",
+  "desc": "Braçaceira M12 c/ 2Hu+2Hm"
+ },
+ "447A": {
+  "novo": "05.800.06",
+  "desc": "Manga saliente para tubo 24x32"
+ },
+ "494A": {
+  "novo": "07.300.08",
+  "desc": "SECCIONADORES DUPLOS"
+ },
+ "514A": {
+  "novo": "05.300.35",
+  "desc": "Pé de consola articulado"
+ },
+ "531B": {
+  "novo": "05.300.12",
+  "desc": "Articulação macho"
+ },
+ "531C": {
+  "novo": "05.300.13",
+  "desc": "Articulação de extremidade"
+ },
+ "618A": {
+  "novo": "07.400.07",
+  "desc": "Viga HEA 160"
+ },
+ "618B": {
+  "novo": "07.400.08",
+  "desc": "Viga HEA 160"
+ },
+ "623E": {
+  "novo": "07.300.01",
+  "desc": "Seccionador CP4 ZT ou ZM"
+ },
+ "623F": {
+  "novo": "07.300.02",
+  "desc": "Seccionador CP4 ZT ou ZM"
+ },
+ "652B": {
+  "novo": "04.400.01",
+  "desc": "Perno roscado M8x110/110 c/ Hu+anilha"
+ },
+ "712A": {
+  "novo": "04.404.01",
+  "desc": "Perno para chumbar M16/150/50 c/Hu+Hm+anilha"
+ },
+ "712F": {
+  "novo": "04.410.03",
+  "desc": "Placa de amarração para antideslizamento"
+ },
+ "746D": {
+  "novo": "06.101.07",
+  "desc": "Quadro III"
+ },
+ "760A": {
+  "novo": "06.102.01",
+  "desc": "a GR.IT.CAT.004"
+ },
+ "760B": {
+  "novo": "06.102.02",
+  "desc": "a GR.IT.CAT.004"
+ },
+ "767B": {
+  "novo": "06.700.10",
+  "desc": "Braço de apoio do postalete (L=7930 e L1=7940)"
+ },
+ "793C": {
+  "novo": "06.900.12",
+  "desc": "Isolador 5T (ZM ou ZT)"
+ },
+ "812A": {
+  "novo": "02.105.11",
+  "desc": "identificadas nas respetivas tabelas."
+ },
+ "1112B": {
+  "novo": "02.102.10",
+  "desc": "Consola Feeder L= 2300 mm"
+ },
+ "1114B": {
+  "novo": "02.101.06",
+  "desc": "Perfil L60x60x6 p/ 2 tubos guia (L=450 mm)"
+ },
+ "1115A": {
+  "novo": "02.104.32",
+  "desc": "Cantoneira L80x80x8 (L=650mm)"
+ },
+ "1115C": {
+  "novo": "02.104.38",
+  "desc": "Cantoneira L80x80x8 (L=1650mm)"
+ },
+ "1123A": {
+  "novo": "02.103.07",
+  "desc": "Cantoneira L70x70x7 (L=360mm)"
+ }
+}

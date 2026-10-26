@@ -1,0 +1,120 @@
+*** Begin Patch
+*** Update File: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\gestao_armazem_catenaria.html
+@@
+ function renderProjetoPoste(){
+@@
+     '<p class="mini" style="margin-top:10px"><b>Como ler a quantidade:</b> “1 aplicação” significa que essa referência aparece uma vez naquela consola ou equipamento do poste. Se o poste tiver duas consolas, as aplicações são mostradas separadamente. Os parafusos e peças internas de cada desenho só podem ser discriminados quando a própria folha os indicar.</p>';
+ }
+ 
++function itensDesenhoDoPoste(p){
++  const itens=[];
++  const add=(codigo,nome)=>{
++    codigo=String(codigo||'').trim();if(!codigo)return;
++    itens.push({codigo,nome:nome||'Elemento do poste'});
++  };
++  const consolas=p.consolas||{};
++  for(const [tipo,c] of Object.entries(consolas)){
++    const suf=' — consola '+(tipo==='simples'?'simples':tipo);
++    add(c.montagem_ref,'Montagem'+suf);
++    add(c.tirFix,'Fixação do tirante'+suf);
++    add(c.tirTubo,'Tubo do tirante'+suf);
++    add(c.consFix,'Fixação da consola'+suf);
++    add(c.consTubo,'Tubo da consola'+suf);
++    (c.antibalancantes||[]).forEach(a=>add(a.ref,'Antibalançante'+suf));
++    add(c.antivento,'Antivento'+suf);
++    add(c.brch,'Braço de chamada'+suf);
++    add(c.pend,'Pêndulo antibalançante'+suf);
++  }
++  if(!Object.keys(consolas).length){
++    add(p.montagem_ref,'Montagem principal');add(p.tirFix,'Fixação do tirante');
++    add(p.tirTubo,'Tubo do tirante');add(p.consFix,'Fixação da consola');
++    add(p.ab,'Antibalançante');add(p.brch,'Braço de chamada');add(p.pend,'Pêndulo antibalançante');
++  }
++  (p.outros_equipamentos||p.outrosEquip||[]).forEach(e=>add(e.cod,e.desc||'Outro equipamento'));
++  add(p.viga,'Viga / poste');add(p.tipo_macico||p.macico,'Maciço');
++  return itens;
++}
++function renderIndiceDesenhosProjeto(){
++  const tbl=document.getElementById('proj-desenhos-tbl');if(!tbl||!DB||!DB.postes)return;
++  const mapa=new Map();
++  DB.postes.filter(p=>p.codigo&&!String(p.codigo).includes('-EXIST')).forEach(p=>{
++    itensDesenhoDoPoste(p).forEach(i=>{
++      const chave=i.codigo.toUpperCase()+'|'+i.nome;
++      if(!mapa.has(chave))mapa.set(chave,{codigo:i.codigo,nome:i.nome,qtd:0,postes:new Set()});
++      const d=mapa.get(chave);d.qtd++;d.postes.add(p.codigo);
++    });
++  });
++  const q=(document.getElementById('proj-desenho-busca')?.value||'').trim().toLowerCase();
++  const linhas=[...mapa.values()].filter(d=>!q||(d.codigo+' '+d.nome+' '+[...d.postes].join(' ')).toLowerCase().includes(q))
++    .sort((a,b)=>a.codigo.localeCompare(b.codigo,'pt',{numeric:true})).slice(0,500);
++  tbl.innerHTML='<tr><th>Desenho / referência</th><th>Designação no caderno</th><th>Aplicações</th><th>Postes</th></tr>'+
++    linhas.map(d=>'<tr><td><b>'+escapeHtml(d.codigo)+'</b></td><td>'+escapeHtml(d.nome)+'</td><td>'+d.qtd+'</td><td class="mini">'+
++      escapeHtml([...d.postes].sort((a,b)=>a.localeCompare(b,'pt',{numeric:true})).join(', '))+'</td></tr>').join('');
++  if(!linhas.length)tbl.innerHTML+='<tr><td colspan="4" class="muted">Nenhum desenho encontrado.</td></tr>';
++}
++
++function normalizarCabecalhoProjeto(v){
++  return String(v==null?'':v).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
++}
++function analisarFolhaTemplateProjeto(nome,rows){
++  const aliases={
++    poste:['poste','numero poste','n poste','codigo poste'],
++    codigo:['codigo','cod','desenho','referencia','ref','material'],
++    nome:['nome','descricao','designacao'],
++    quantidade:['quantidade','qtd','qt','qty'],
++    observacoes:['observacoes','observacao','obs']
++  };
++  let melhor={linha:-1,mapa:{},pontos:0};
++  rows.slice(0,12).forEach((row,idx)=>{
++    const mapa={};let pontos=0;
++    (row||[]).forEach((v,col)=>{
++      const h=normalizarCabecalhoProjeto(v);
++      for(const [campo,lista] of Object.entries(aliases)){
++        if(lista.includes(h)&&mapa[campo]==null){mapa[campo]=col;pontos++;}
++      }
++    });
++    if(pontos>melhor.pontos)melhor={linha:idx,mapa,pontos};
++  });
++  const n=normalizarCabecalhoProjeto(nome);
++  const tipo=n.includes('poste')?'Postes':n.includes('desenho')?'Desenhos':n.includes('mater')?'Materiais':n.includes('template')?'Template':'Outra';
++  if(melhor.linha<0)return {nome,tipo,total:0,validas:0,erros:['Não foi possível identificar os cabeçalhos.'],colunas:[]};
++  const dados=rows.slice(melhor.linha+1).filter(r=>(r||[]).some(v=>String(v||'').trim()));
++  const erros=[];let validas=0;
++  dados.forEach((r,i)=>{
++    const chave=tipo==='Postes'?(melhor.mapa.poste!=null?r[melhor.mapa.poste]:''):(melhor.mapa.codigo!=null?r[melhor.mapa.codigo]:'');
++    const qtd=melhor.mapa.quantidade!=null?r[melhor.mapa.quantidade]:'';
++    if(!String(chave||'').trim())erros.push('Linha '+(melhor.linha+i+2)+': falta '+(tipo==='Postes'?'o número do poste':'o código/referência')+'.');
++    else if(String(qtd||'').trim()!==''&&(!Number.isFinite(Number(qtd))||Number(qtd)<0))erros.push('Linha '+(melhor.linha+i+2)+': quantidade inválida.');
++    else validas++;
++  });
++  return {nome,tipo,total:dados.length,validas,erros,colunas:Object.keys(melhor.mapa)};
++}
++function analisarTemplateProjeto(input){
++  const box=document.getElementById('proj-template-resultado');
++  const f=input&&input.files&&input.files[0];if(!f||!box)return;
++  if(typeof XLSX==='undefined'){box.innerHTML='<div class="projeto-alerta">O leitor de Excel não está disponível. Abra o programa com ligação à internet e tente novamente.</div>';return;}
++  const reader=new FileReader();
++  reader.onload=e=>{
++    try{
++      const wb=XLSX.read(e.target.result,{type:'array'});
++      const analises=wb.SheetNames.map(nome=>analisarFolhaTemplateProjeto(nome,XLSX.utils.sheet_to_json(wb.Sheets[nome],{header:1,defval:'',raw:true})));
++      const validas=analises.reduce((s,a)=>s+a.validas,0),erros=analises.reduce((s,a)=>s+a.erros.length,0);
++      box.innerHTML='<div class="info-box" style="margin-top:14px"><b>'+escapeHtml(f.name)+'</b> — '+analises.length+' folha(s), '+validas+' linha(s) válidas e '+erros+' erro(s). <b>Nenhum dado foi gravado.</b></div>'+
++        '<div class="tbl-wrap"><table><tr><th>Folha</th><th>Tipo detetado</th><th>Linhas</th><th>Válidas</th><th>Resultado</th></tr>'+
++        analises.map(a=>'<tr><td><b>'+escapeHtml(a.nome)+'</b></td><td>'+a.tipo+'</td><td>'+a.total+'</td><td>'+a.validas+'</td><td>'+
++          (a.erros.length?'<span class="tag saida">'+a.erros.length+' erro(s)</span><div class="mini" style="margin-top:5px">'+escapeHtml(a.erros.slice(0,4).join(' | '))+(a.erros.length>4?' | …':'')+'</div>':'<span class="tag entrada">Pronta</span>')+
++          '</td></tr>').join('')+'</table></div>'+
++        '<p class="mini"><b>Segurança:</b> esta função serve para conferir o formato antes de importar. O stock e os movimentos nunca são alterados por um template de Projeto.</p>';
++    }catch(err){
++      box.innerHTML='<div class="projeto-alerta" style="margin-top:14px"><b>Não foi possível ler o ficheiro:</b> '+escapeHtml(err.message||String(err))+'</div>';
++    }
++  };
++  reader.readAsArrayBuffer(f);
++}
++function limparTemplateProjeto(){
++  const input=document.getElementById('proj-template-file'),box=document.getElementById('proj-template-resultado');
++  if(input)input.value='';if(box)box.innerHTML='';
++}
++
+ /* ================= SELECTS ================= */
+*** End Patch

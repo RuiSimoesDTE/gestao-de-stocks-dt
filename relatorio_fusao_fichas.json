@@ -1,0 +1,1659 @@
+[
+ {
+  "fica": "M481",
+  "apaga": [
+   "sap20260817-mat-4500854997-360"
+  ],
+  "codigo": "4036938",
+  "desc": "Articulação macho p/Vara de Comando"
+ },
+ {
+  "fica": "M2450",
+  "apaga": [
+   "sap20260817-mat-4500860403-30"
+  ],
+  "codigo": "5003982",
+  "desc": "CINTA CARGA C/ROQ. MACFER GANCHO \"\"J"
+ },
+ {
+  "fica": "M2452",
+  "apaga": [
+   "sap20260817-mat-4500855224-50"
+  ],
+  "codigo": "5002377",
+  "desc": "DISCO LAMELAS P/INOX MACFER 115MM GR"
+ },
+ {
+  "fica": "M2460",
+  "apaga": [
+   "sap20260817-mat-4500855000-30"
+  ],
+  "codigo": "4036940",
+  "desc": "1/2 Garra p/cabos 70mm2/107mm2 DES:44007"
+ },
+ {
+  "fica": "M2462",
+  "apaga": [
+   "sap20260817-mat-4500855000-20"
+  ],
+  "codigo": "4036969",
+  "desc": "1/2 Garra p/cabos 95mm2/107mm2 DES:44009"
+ },
+ {
+  "fica": "M2522",
+  "apaga": [
+   "sap20260817-mat-4500846844-20"
+  ],
+  "codigo": "5015289",
+  "desc": "Abraçª espigº inox 3/4*"
+ },
+ {
+  "fica": "M2524",
+  "apaga": [
+   "sap20260817-mat-4500858970-30",
+   "sap20260817-mat-4500849110-30"
+  ],
+  "codigo": "4002623",
+  "desc": "ABRACAD.P/ELECTRODO 5/8 RCC16 EM BRONZE"
+ },
+ {
+  "fica": "M2527",
+  "apaga": [
+   "sap20260817-mat-4500860403-10"
+  ],
+  "codigo": "4019734",
+  "desc": "ABRAÇADEIRA GAS Nº.2"
+ },
+ {
+  "fica": "M2533",
+  "apaga": [
+   "sap20260817-mat-4500846844-40"
+  ],
+  "codigo": "5018849",
+  "desc": "Agl zi ce 6,0x40-Prf.aglom-%"
+ },
+ {
+  "fica": "M2546",
+  "apaga": [
+   "sap20260817-mat-4500851896-820"
+  ],
+  "codigo": "4036092",
+  "desc": "Anilha de Mola B12"
+ },
+ {
+  "fica": "M2548",
+  "apaga": [
+   "sap20260817-mat-4500851896-840"
+  ],
+  "codigo": "4048952",
+  "desc": "Anilha de mola B8 GQ"
+ },
+ {
+  "fica": "M2550",
+  "apaga": [
+   "sap20260817-mat-4500851896-830"
+  ],
+  "codigo": "4049008",
+  "desc": "Anilha M9 DIN125/ISO7089 GQ"
+ },
+ {
+  "fica": "M2559",
+  "apaga": [
+   "sap20260817-mat-4500854997-260"
+  ],
+  "codigo": "4026555",
+  "desc": "Aperta tubo p/antibalançante 40x49"
+ },
+ {
+  "fica": "M2561",
+  "apaga": [
+   "sap20260817-mat-4500849959-10"
+  ],
+  "codigo": "4002706",
+  "desc": "Arame zincado/KG"
+ },
+ {
+  "fica": "M2565",
+  "apaga": [
+   "sap20260817-mat-4500854997-350"
+  ],
+  "codigo": "4036937",
+  "desc": "Articulação fêmea p/Vara de Comando"
+ },
+ {
+  "fica": "M2571",
+  "apaga": [
+   "sap20260817-mat-4500846817-10"
+  ],
+  "codigo": "3002410",
+  "desc": "Balde plast.arco prtº-15lts"
+ },
+ {
+  "fica": "M2573",
+  "apaga": [
+   "sap20260817-mat-4500858970-60"
+  ],
+  "codigo": "4010296",
+  "desc": "BARRA COLECTORA DE TERRA AL FIXAR 490x60"
+ },
+ {
+  "fica": "M2577",
+  "apaga": [
+   "sap20260817-mat-4500846844-60"
+  ],
+  "codigo": "4020930",
+  "desc": "Bate Retas+pó CLS03-Mcf"
+ },
+ {
+  "fica": "M2581",
+  "apaga": [
+   "sap20260817-mat-4500844782-90"
+  ],
+  "codigo": "7024632",
+  "desc": "BOQ.CORTE S-21 A-50 N"
+ },
+ {
+  "fica": "M2585",
+  "apaga": [
+   "sap20260817-mat-4500855444-380"
+  ],
+  "codigo": "4038586",
+  "desc": "Braçadeira de algeroz 50mm (1 1/2'')"
+ },
+ {
+  "fica": "M2587",
+  "apaga": [
+   "sap20260817-mat-4500855444-390"
+  ],
+  "codigo": "4037210",
+  "desc": "Braçadeira de algeroz 90mm"
+ },
+ {
+  "fica": "M2589",
+  "apaga": [
+   "sap20260817-mat-4500855444-60"
+  ],
+  "codigo": "4026491",
+  "desc": "Braçadeira M10 C/ cabeça destacável"
+ },
+ {
+  "fica": "M2595",
+  "apaga": [
+   "sap20260817-mat-4500852942-50"
+  ],
+  "codigo": "5000511",
+  "desc": "Broca Hss-Multinox 07,25mm"
+ },
+ {
+  "fica": "M2599",
+  "apaga": [
+   "sap20260817-mat-4500783006-10"
+  ],
+  "codigo": "5012365",
+  "desc": "BROCA HSSM 2-7,25MM"
+ },
+ {
+  "fica": "M2601",
+  "apaga": [
+   "sap20260817-mat-4500846844-70"
+  ],
+  "codigo": "5000512",
+  "desc": "Broca Hssm2-06,00mm-Mcf"
+ },
+ {
+  "fica": "M2603",
+  "apaga": [
+   "sap20260817-mat-4500846844-80"
+  ],
+  "codigo": "5016427",
+  "desc": "Broca Hssm2-07,00mm-Mcf"
+ },
+ {
+  "fica": "M2607",
+  "apaga": [
+   "sap20260817-mat-4500857392-30"
+  ],
+  "codigo": "4026224",
+  "desc": "BRONZE CABLE 10 (49x0X51mm)"
+ },
+ {
+  "fica": "sap20260817-mat-4500857392-40",
+  "apaga": [
+   "M2609"
+  ],
+  "codigo": "4026589",
+  "desc": "BRONZE CABLE 12"
+ },
+ {
+  "fica": "M2611",
+  "apaga": [
+   "sap20260817-mat-4500784635-10"
+  ],
+  "codigo": "5016672",
+  "desc": "BUCHA BEBEK C/M A/R 16 B16 MCF"
+ },
+ {
+  "fica": "M2625",
+  "apaga": [
+   "sap20260817-mat-4500851885-20"
+  ],
+  "codigo": "4046819",
+  "desc": "Caixa de Comando Eletrico de Seccionador"
+ },
+ {
+  "fica": "M2638",
+  "apaga": [
+   "sap20260817-mat-4500854997-440"
+  ],
+  "codigo": "4029795",
+  "desc": "Calço de apoio p/espia de amarração"
+ },
+ {
+  "fica": "M2643",
+  "apaga": [
+   "sap20260817-mat-4500852546-60"
+  ],
+  "codigo": "9001510",
+  "desc": "Canon logístico:"
+ },
+ {
+  "fica": "M2645",
+  "apaga": [
+   "sap20260817-mat-4500858970-140"
+  ],
+  "codigo": "4049190",
+  "desc": "CANTONEIRA INOX P/CDTE EM FT ACO"
+ },
+ {
+  "fica": "M2651",
+  "apaga": [
+   "sap20260817-mat-4500853041-20"
+  ],
+  "codigo": "4003428",
+  "desc": "CARTUCHO GAZ VITO C/VALVULA 190GR"
+ },
+ {
+  "fica": "M2675",
+  "apaga": [
+   "sap20260817-mat-4500863877-10"
+  ],
+  "codigo": "4012717",
+  "desc": "CHUVEIRO 3 FUNÇOES CROMO CH-05 VIGO"
+ },
+ {
+  "fica": "M2681",
+  "apaga": [
+   "sap20260817-mat-4500861505-10"
+  ],
+  "codigo": "5015056",
+  "desc": "CINTA ROQUETE 35MMX6M 2TON"
+ },
+ {
+  "fica": "M2683",
+  "apaga": [
+   "sap20260817-mat-4500859309-30"
+  ],
+  "codigo": "5014152",
+  "desc": "CINTA TUB S/FIM 03 MT 03 TON (ÚTIL)"
+ },
+ {
+  "fica": "M2695",
+  "apaga": [
+   "sap20260817-mat-4500784975-10"
+  ],
+  "codigo": "5005589",
+  "desc": "CONE MORSE ENCABADOURO Nº4-B16"
+ },
+ {
+  "fica": "M2697",
+  "apaga": [
+   "sap20260817-mat-4500848628-100"
+  ],
+  "codigo": "4028050",
+  "desc": "Conexão Indutiva CIT 430 AT"
+ },
+ {
+  "fica": "M2699",
+  "apaga": [
+   "sap20260817-mat-4500851896-870"
+  ],
+  "codigo": "4049009",
+  "desc": "Contraporca M16 INOX A4"
+ },
+ {
+  "fica": "M2703",
+  "apaga": [
+   "sap20260817-mat-4500857392-60"
+  ],
+  "codigo": "4043815",
+  "desc": "COPPER FLEX CABLE 95"
+ },
+ {
+  "fica": "M2707",
+  "apaga": [
+   "sap20260817-mat-4500864228-10"
+  ],
+  "codigo": "5008875",
+  "desc": "CORRENTE GALVANIZADA 3/16-5MM"
+ },
+ {
+  "fica": "M2711",
+  "apaga": [
+   "sap20260817-mat-4500856412-10"
+  ],
+  "codigo": "4001665",
+  "desc": "Cunhas em Pinho"
+ },
+ {
+  "fica": "M2715",
+  "apaga": [
+   "sap20260817-mat-4500838303-20",
+   "sap20260817-mat-4500838039-20"
+  ],
+  "codigo": "5004611",
+  "desc": "Descarnador cabo 101307"
+ },
+ {
+  "fica": "M2718",
+  "apaga": [
+   "sap20260817-mat-4500851435-10"
+  ],
+  "codigo": "5009749",
+  "desc": "DISCO C/FERRO INOX MACFER CAM-CSS 125 x"
+ },
+ {
+  "fica": "M2722",
+  "apaga": [
+   "sap20260817-mat-4500851945-200"
+  ],
+  "codigo": "4049011",
+  "desc": "EC-346_4 Perfil L60x60x6 (L=580 mm)"
+ },
+ {
+  "fica": "M2724",
+  "apaga": [
+   "sap20260817-mat-4500851564-10"
+  ],
+  "codigo": "4006079",
+  "desc": "ELCOMETER MODELO 456CFBS"
+ },
+ {
+  "fica": "M2726",
+  "apaga": [
+   "sap20260817-mat-4500847822-20"
+  ],
+  "codigo": "5000134",
+  "desc": "Electrod.SCH 6013-2,5-%"
+ },
+ {
+  "fica": "M2728",
+  "apaga": [
+   "sap20260817-mat-4500858970-10",
+   "sap20260817-mat-4500849110-10"
+  ],
+  "codigo": "4043113",
+  "desc": "ELÉCTRODO DE TERRA ET250-2,0RR5/8"
+ },
+ {
+  "fica": "M2731",
+  "apaga": [
+   "sap20260817-mat-4500851211-40"
+  ],
+  "codigo": "4043226",
+  "desc": "Espia D=24 L=10250"
+ },
+ {
+  "fica": "M2733",
+  "apaga": [
+   "sap20260817-mat-4500851211-10"
+  ],
+  "codigo": "4043225",
+  "desc": "Espia D=24 L=7450"
+ },
+ {
+  "fica": "M2735",
+  "apaga": [
+   "sap20260817-mat-4500851211-20"
+  ],
+  "codigo": "4026307",
+  "desc": "Espia D=24 L=8700"
+ },
+ {
+  "fica": "M2739",
+  "apaga": [
+   "sap20260817-mat-4500851211-50"
+  ],
+  "codigo": "4043234",
+  "desc": "Espia D=30 L=10250"
+ },
+ {
+  "fica": "M2743",
+  "apaga": [
+   "sap20260817-mat-4500855000-80"
+  ],
+  "codigo": "4043595",
+  "desc": "Esticador aberto tipo II de -M16"
+ },
+ {
+  "fica": "M2747",
+  "apaga": [
+   "sap20260817-mat-4500784975-20"
+  ],
+  "codigo": "4003680",
+  "desc": "EXTENSAO 3S 3G1,5-5MTS"
+ },
+ {
+  "fica": "M2749",
+  "apaga": [
+   "sap20260817-mat-4500855198-40"
+  ],
+  "codigo": "5003389",
+  "desc": "EXTINTOR PÓ 2KG"
+ },
+ {
+  "fica": "M2751",
+  "apaga": [
+   "sap20260817-mat-4500855198-10"
+  ],
+  "codigo": "5001215",
+  "desc": "EXTINTOR PÓ 6KG"
+ },
+ {
+  "fica": "M2760",
+  "apaga": [
+   "sap20260817-mat-4500852843-40"
+  ],
+  "codigo": "4038467",
+  "desc": "Fita de Aço Cobreado 30x3,5mm"
+ },
+ {
+  "fica": "M2762",
+  "apaga": [
+   "sap20260817-mat-4500855224-40"
+  ],
+  "codigo": "4003803",
+  "desc": "FITA ISOLADORA AZUL"
+ },
+ {
+  "fica": "M2764",
+  "apaga": [
+   "sap20260817-mat-4500855224-30"
+  ],
+  "codigo": "4003806",
+  "desc": "FITA ISOLADORA PRETA"
+ },
+ {
+  "fica": "M2766",
+  "apaga": [
+   "sap20260817-mat-4500855224-20"
+  ],
+  "codigo": "4003809",
+  "desc": "FITA ISOLADORA VERMELHA"
+ },
+ {
+  "fica": "M2773",
+  "apaga": [
+   "sap20260817-mat-4500848628-40"
+  ],
+  "codigo": "4039483",
+  "desc": "FUSIVEL 2,5A"
+ },
+ {
+  "fica": "M2775",
+  "apaga": [
+   "sap20260817-mat-4500848628-50"
+  ],
+  "codigo": "4037070",
+  "desc": "FUSIVEL 6,3AX36KV C/PERCURTOR"
+ },
+ {
+  "fica": "M2780",
+  "apaga": [
+   "sap20260817-mat-4500854997-380"
+  ],
+  "codigo": "4026534",
+  "desc": "Gancho p/braço chamada 25x30 (fechado)"
+ },
+ {
+  "fica": "M2783",
+  "apaga": [
+   "sap20260817-mat-4500855444-30"
+  ],
+  "codigo": "4037051",
+  "desc": "Griffe simples para antibalançante"
+ },
+ {
+  "fica": "M2785",
+  "apaga": [
+   "sap20260817-mat-4500845007-20"
+  ],
+  "codigo": "5004519",
+  "desc": "ILHAS DURACEL ALCALINA MN 1500PLUS K4 (A"
+ },
+ {
+  "fica": "M2789",
+  "apaga": [
+   "sap20260817-mat-4500858970-130"
+  ],
+  "codigo": "4015909",
+  "desc": "KIT P/ ACOPLAMENTO DE CABO CARRIL"
+ },
+ {
+  "fica": "M2791",
+  "apaga": [
+   "sap20260817-mat-4500846008-10",
+   "sap20260817-mat-4500846008-40"
+  ],
+  "codigo": "5003823",
+  "desc": "Lava maos Eco pasta-4kg"
+ },
+ {
+  "fica": "M2794",
+  "apaga": [
+   "sap20260817-mat-4500858970-50",
+   "sap20260817-mat-4500849110-50",
+   "sap20260817-mat-4500844629-10"
+  ],
+  "codigo": "4004145",
+  "desc": "LIG DERIVAC AL 35-120/ 4-35 PRF INOX"
+ },
+ {
+  "fica": "M2800",
+  "apaga": [
+   "sap20260817-mat-4500848628-70"
+  ],
+  "codigo": "4046821",
+  "desc": "Ligador p/ transf. Tensao RBRC-18150"
+ },
+ {
+  "fica": "M2802",
+  "apaga": [
+   "sap20260817-mat-4500848628-60"
+  ],
+  "codigo": "4037073",
+  "desc": "Ligador p/ transformador de alimentação"
+ },
+ {
+  "fica": "M2804",
+  "apaga": [
+   "sap20260817-mat-4500853867-10"
+  ],
+  "codigo": "4037050",
+  "desc": "Ligador paralelo p/ cabos Al"
+ },
+ {
+  "fica": "M2810",
+  "apaga": [
+   "sap20260817-mat-4500843871-340"
+  ],
+  "codigo": "4019341",
+  "desc": "LNK-Abraçadeira de serrilha 2,5 x 100 -"
+ },
+ {
+  "fica": "M2812",
+  "apaga": [
+   "sap20260817-mat-4500843871-10"
+  ],
+  "codigo": "4010640",
+  "desc": "LNK-Porta marcadores nylon AT-3 (saco 10"
+ },
+ {
+  "fica": "M2822",
+  "apaga": [
+   "sap20260817-mat-4500853041-10"
+  ],
+  "codigo": "5005574",
+  "desc": "MAÇARICO VITO C/ISQUEIRO"
+ },
+ {
+  "fica": "M2824",
+  "apaga": [
+   "sap20260817-mat-4500845725-20"
+  ],
+  "codigo": "2100006",
+  "desc": "Mala c/ferramt.-MHT 78pçs"
+ },
+ {
+  "fica": "M2838",
+  "apaga": [
+   "sap20260817-mat-4500849110-60"
+  ],
+  "codigo": "4006241",
+  "desc": "MANGA TERMO.GMW30/8 - 1000MM"
+ },
+ {
+  "fica": "M2844",
+  "apaga": [
+   "sap20260817-mat-4500845725-10"
+  ],
+  "codigo": "5000627",
+  "desc": "Martelo t/americano HMC32-mcf"
+ },
+ {
+  "fica": "M2846",
+  "apaga": [
+   "sap20260817-mat-4500847822-10"
+  ],
+  "codigo": "3002353",
+  "desc": "Masc.soldar autª Redstar-Evolution"
+ },
+ {
+  "fica": "M2848",
+  "apaga": [
+   "sap20260817-mat-4500852546-40"
+  ],
+  "codigo": "9001504",
+  "desc": "Meio Ambiente e Regulamentação:"
+ },
+ {
+  "fica": "M2850",
+  "apaga": [
+   "sap20260817-mat-4500858970-150"
+  ],
+  "codigo": "4001553",
+  "desc": "METRO TUBO GALV.S/L 1\" (33MM) C/ 6MT"
+ },
+ {
+  "fica": "M2860",
+  "apaga": [
+   "sap20260817-mat-4500864211-90"
+  ],
+  "codigo": "4006307",
+  "desc": "PARAF C/SEXT DIN 933 A2 10X30"
+ },
+ {
+  "fica": "M2862",
+  "apaga": [
+   "sap20260817-mat-4500864211-100"
+  ],
+  "codigo": "4004312",
+  "desc": "PARAF C/SEXT DIN 933 A2 10X40"
+ },
+ {
+  "fica": "M2864",
+  "apaga": [
+   "sap20260817-mat-4500864211-120"
+  ],
+  "codigo": "4011575",
+  "desc": "PARAF C/SEXT DIN 933 A2 10X45"
+ },
+ {
+  "fica": "M2866",
+  "apaga": [
+   "sap20260817-mat-4500864211-10"
+  ],
+  "codigo": "4046160",
+  "desc": "PARAF C/SEXT DIN 933 A2 10X60"
+ },
+ {
+  "fica": "M2868",
+  "apaga": [
+   "sap20260817-mat-4500864211-130"
+  ],
+  "codigo": "4004336",
+  "desc": "PARAF C/SEXT DIN 933 A2 10X80"
+ },
+ {
+  "fica": "M2872",
+  "apaga": [
+   "sap20260817-mat-4500864211-50"
+  ],
+  "codigo": "4004337",
+  "desc": "PARAF C/SEXT DIN 933 A2 12X60"
+ },
+ {
+  "fica": "M2877",
+  "apaga": [
+   "sap20260817-mat-4500851896-460"
+  ],
+  "codigo": "4026375",
+  "desc": "Parafuso M10x35/26 com Hu + Hm"
+ },
+ {
+  "fica": "M2879",
+  "apaga": [
+   "sap20260817-mat-4500851896-670"
+  ],
+  "codigo": "4038577",
+  "desc": "Parafuso M10x50/50 com Hu"
+ },
+ {
+  "fica": "M2883",
+  "apaga": [
+   "sap20260817-mat-4500851896-480"
+  ],
+  "codigo": "4036944",
+  "desc": "Parafuso M12x120/30 c/ Hu+Hm"
+ },
+ {
+  "fica": "M2885",
+  "apaga": [
+   "sap20260817-mat-4500851896-650"
+  ],
+  "codigo": "4049007",
+  "desc": "Parafuso M12x20/20"
+ },
+ {
+  "fica": "M2893",
+  "apaga": [
+   "sap20260817-mat-4500851896-760"
+  ],
+  "codigo": "4043029",
+  "desc": "Parafuso M12x45/45 com Hu + Hm IN"
+ },
+ {
+  "fica": "M2899",
+  "apaga": [
+   "sap20260817-mat-4500851896-530"
+  ],
+  "codigo": "4026379",
+  "desc": "Parafuso M16x70/38 com Hu + Hm"
+ },
+ {
+  "fica": "M2905",
+  "apaga": [
+   "sap20260817-mat-4500851896-570"
+  ],
+  "codigo": "4043340",
+  "desc": "Parafuso M20x55/46 com Hu + Hm"
+ },
+ {
+  "fica": "M2911",
+  "apaga": [
+   "sap20260817-mat-4500851896-620"
+  ],
+  "codigo": "4048954",
+  "desc": "Parafuso M6x12/12"
+ },
+ {
+  "fica": "M2913",
+  "apaga": [
+   "sap20260817-mat-4500851896-640"
+  ],
+  "codigo": "4049006",
+  "desc": "Parafuso M6x16/16"
+ },
+ {
+  "fica": "M2915",
+  "apaga": [
+   "sap20260817-mat-4500851896-730"
+  ],
+  "codigo": "4038596",
+  "desc": "Parafuso M6x25/25 c/ Hu+Hm"
+ },
+ {
+  "fica": "M2917",
+  "apaga": [
+   "sap20260817-mat-4500851896-630"
+  ],
+  "codigo": "4048955",
+  "desc": "Parafuso M8x12/12"
+ },
+ {
+  "fica": "M2919",
+  "apaga": [
+   "sap20260817-mat-4500851896-780"
+  ],
+  "codigo": "4043347",
+  "desc": "Parafuso M8x30/30 com 2Hu+Hm"
+ },
+ {
+  "fica": "M2921",
+  "apaga": [
+   "sap20260817-mat-4500851896-720"
+  ],
+  "codigo": "4038591",
+  "desc": "Parafuso M8x40/40 com Hu"
+ },
+ {
+  "fica": "M2925",
+  "apaga": [
+   "sap20260817-mat-4500859283-30"
+  ],
+  "codigo": "4004331",
+  "desc": "PARAFUSO SEXTAVADO DIN933 M8X45"
+ },
+ {
+  "fica": "M2927",
+  "apaga": [
+   "sap20260817-mat-4500859283-10"
+  ],
+  "codigo": "5003586",
+  "desc": "PAS LIXO ZINCO C/CABO ALTO"
+ },
+ {
+  "fica": "M2932",
+  "apaga": [
+   "sap20260817-mat-4500855000-100"
+  ],
+  "codigo": "4032281",
+  "desc": "Pé de consola articulado L=365"
+ },
+ {
+  "fica": "M2936",
+  "apaga": [
+   "sap20260817-mat-4500854997-200"
+  ],
+  "codigo": "4038355",
+  "desc": "Peça regul. \"tipo R2\" p/espia amarração"
+ },
+ {
+  "fica": "M2940",
+  "apaga": [
+   "sap20260817-mat-4500843080-10",
+   "sap20260817-mat-4500842565-10"
+  ],
+  "codigo": "4006316",
+  "desc": "PILHA DURACEL ALCALINA MN 1300 PLUS K2"
+ },
+ {
+  "fica": "M2952",
+  "apaga": [
+   "sap20260817-mat-4500858970-40"
+  ],
+  "codigo": "4049186",
+  "desc": "PLACA DE ATERRAMENTO CU 82x82 / AÇO 16mm"
+ },
+ {
+  "fica": "M2959",
+  "apaga": [
+   "sap20260817-mat-4500854997-40"
+  ],
+  "codigo": "4026492",
+  "desc": "Placa de identificação p/isolador"
+ },
+ {
+  "fica": "M2964",
+  "apaga": [
+   "sap20260817-mat-4500851896-860"
+  ],
+  "codigo": "4031416",
+  "desc": "Porca M16 INOX A4"
+ },
+ {
+  "fica": "M2968",
+  "apaga": [
+   "sap20260817-mat-4500859283-40"
+  ],
+  "codigo": "4004395",
+  "desc": "PORCA SEXTAVADA AÇO ZN D934 M8"
+ },
+ {
+  "fica": "M2970",
+  "apaga": [
+   "sap20260817-mat-4500848628-130"
+  ],
+  "codigo": "4037071",
+  "desc": "Porta-fusivel 36kV"
+ },
+ {
+  "fica": "M3030",
+  "apaga": [
+   "sap20260817-mat-4500843871-310"
+  ],
+  "codigo": "4004249",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - (.) (rolo 50"
+ },
+ {
+  "fica": "M3034",
+  "apaga": [
+   "sap20260817-mat-4500843871-330"
+  ],
+  "codigo": "4017767",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - (espaço) (ro"
+ },
+ {
+  "fica": "M3036",
+  "apaga": [
+   "sap20260817-mat-4500843871-210"
+  ],
+  "codigo": "4004215",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 0 (rolo 500"
+ },
+ {
+  "fica": "M3038",
+  "apaga": [
+   "sap20260817-mat-4500843871-220"
+  ],
+  "codigo": "4004216",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 1 (rolo 500"
+ },
+ {
+  "fica": "M3040",
+  "apaga": [
+   "sap20260817-mat-4500843871-230"
+  ],
+  "codigo": "4004217",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 2 (rolo 500"
+ },
+ {
+  "fica": "M3042",
+  "apaga": [
+   "sap20260817-mat-4500843871-240"
+  ],
+  "codigo": "4006413",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 3 (rolo 500"
+ },
+ {
+  "fica": "M3044",
+  "apaga": [
+   "sap20260817-mat-4500843871-250"
+  ],
+  "codigo": "4006414",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 4 (rolo 500"
+ },
+ {
+  "fica": "M3046",
+  "apaga": [
+   "sap20260817-mat-4500843871-260"
+  ],
+  "codigo": "4004218",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 5 (rolo 500"
+ },
+ {
+  "fica": "M3048",
+  "apaga": [
+   "sap20260817-mat-4500843871-270"
+  ],
+  "codigo": "4004219",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 6 (rolo 500"
+ },
+ {
+  "fica": "M3050",
+  "apaga": [
+   "sap20260817-mat-4500843871-280"
+  ],
+  "codigo": "4004220",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 7 (rolo 500"
+ },
+ {
+  "fica": "M3052",
+  "apaga": [
+   "sap20260817-mat-4500843871-290"
+  ],
+  "codigo": "4004221",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 8 (rolo 500"
+ },
+ {
+  "fica": "M3054",
+  "apaga": [
+   "sap20260817-mat-4500843871-300"
+  ],
+  "codigo": "4004222",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - 9 (rolo 500"
+ },
+ {
+  "fica": "M3056",
+  "apaga": [
+   "sap20260817-mat-4500843871-20"
+  ],
+  "codigo": "4004223",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - A (rolo 500"
+ },
+ {
+  "fica": "M3058",
+  "apaga": [
+   "sap20260817-mat-4500843871-30"
+  ],
+  "codigo": "4004224",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - B (rolo 500"
+ },
+ {
+  "fica": "M3060",
+  "apaga": [
+   "sap20260817-mat-4500843871-40"
+  ],
+  "codigo": "4004225",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - C (rolo 500"
+ },
+ {
+  "fica": "M3062",
+  "apaga": [
+   "sap20260817-mat-4500843871-50"
+  ],
+  "codigo": "4004226",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - D (rolo 500"
+ },
+ {
+  "fica": "M3064",
+  "apaga": [
+   "sap20260817-mat-4500843871-60"
+  ],
+  "codigo": "4004227",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - E (rolo 500"
+ },
+ {
+  "fica": "M3066",
+  "apaga": [
+   "sap20260817-mat-4500843871-70"
+  ],
+  "codigo": "4004228",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - F (rolo 500"
+ },
+ {
+  "fica": "M3068",
+  "apaga": [
+   "sap20260817-mat-4500843871-80"
+  ],
+  "codigo": "4004229",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - G (rolo 500"
+ },
+ {
+  "fica": "M3070",
+  "apaga": [
+   "sap20260817-mat-4500843871-90"
+  ],
+  "codigo": "4004231",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - I (rolo 500"
+ },
+ {
+  "fica": "M3072",
+  "apaga": [
+   "sap20260817-mat-4500843871-100"
+  ],
+  "codigo": "4004232",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - J (rolo 500"
+ },
+ {
+  "fica": "M3074",
+  "apaga": [
+   "sap20260817-mat-4500843871-110"
+  ],
+  "codigo": "4004234",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - L (rolo 500"
+ },
+ {
+  "fica": "M3076",
+  "apaga": [
+   "sap20260817-mat-4500843871-120"
+  ],
+  "codigo": "4004235",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - M (rolo 500"
+ },
+ {
+  "fica": "M3078",
+  "apaga": [
+   "sap20260817-mat-4500843871-130"
+  ],
+  "codigo": "4004236",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - N (rolo 500"
+ },
+ {
+  "fica": "M3080",
+  "apaga": [
+   "sap20260817-mat-4500843871-140"
+  ],
+  "codigo": "4004238",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - P (rolo 500"
+ },
+ {
+  "fica": "M3082",
+  "apaga": [
+   "sap20260817-mat-4500843871-150"
+  ],
+  "codigo": "4004239",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - Q (rolo 500"
+ },
+ {
+  "fica": "M3084",
+  "apaga": [
+   "sap20260817-mat-4500843871-160"
+  ],
+  "codigo": "4004240",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - R (rolo 500"
+ },
+ {
+  "fica": "M3086",
+  "apaga": [
+   "sap20260817-mat-4500843871-170"
+  ],
+  "codigo": "4004241",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - S (rolo 500"
+ },
+ {
+  "fica": "M3088",
+  "apaga": [
+   "sap20260817-mat-4500843871-180"
+  ],
+  "codigo": "4004242",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - T (rolo 500"
+ },
+ {
+  "fica": "M3090",
+  "apaga": [
+   "sap20260817-mat-4500843871-190"
+  ],
+  "codigo": "4004243",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - U (rolo 500"
+ },
+ {
+  "fica": "M3092",
+  "apaga": [
+   "sap20260817-mat-4500843871-200"
+  ],
+  "codigo": "4004244",
+  "desc": "PTX-Marcador PVC CLIM 2/4 - V (rolo 500"
+ },
+ {
+  "fica": "M3096",
+  "apaga": [
+   "sap20260817-mat-4500852546-50"
+  ],
+  "codigo": "9001503",
+  "desc": "Rastreabilidade de Recipientes:"
+ },
+ {
+  "fica": "M3106",
+  "apaga": [
+   "sap20260817-mat-4500844782-10"
+  ],
+  "codigo": "7017180",
+  "desc": "REG.DIN2002P-MO-OXIGENO"
+ },
+ {
+  "fica": "M3108",
+  "apaga": [
+   "sap20260817-mat-4500854997-450"
+  ],
+  "codigo": "4038354",
+  "desc": "Rotula de apoio p/ espia de amarração"
+ },
+ {
+  "fica": "M3118",
+  "apaga": [
+   "sap20260817-mat-4500851885-10"
+  ],
+  "codigo": "4037095",
+  "desc": "Seccionador Completo"
+ },
+ {
+  "fica": "M3120",
+  "apaga": [
+   "sap20260817-mat-4500858851-20"
+  ],
+  "codigo": "5004876",
+  "desc": "Serrote c/ferro macfer tubular ths-03"
+ },
+ {
+  "fica": "M3122",
+  "apaga": [
+   "sap20260817-mat-4500852546-70"
+  ],
+  "codigo": "9001502",
+  "desc": "Serviço de Armazém (Portes de entrega):"
+ },
+ {
+  "fica": "M3128",
+  "apaga": [
+   "sap20260817-mat-4500846008-30"
+  ],
+  "codigo": "5004315",
+  "desc": "Shampoo Auto-5lt"
+ },
+ {
+  "fica": "M3135",
+  "apaga": [
+   "sap20260817-mat-4500851305-10"
+  ],
+  "codigo": "4036990",
+  "desc": "Suporte de fixação de braço de chamada"
+ },
+ {
+  "fica": "M3147",
+  "apaga": [
+   "sap20260817-mat-4500848628-80"
+  ],
+  "codigo": "4037072",
+  "desc": "Terminal para porta fusível RCP-15033"
+ },
+ {
+  "fica": "M3151",
+  "apaga": [
+   "sap20260817-mat-4500848628-90"
+  ],
+  "codigo": "4042626",
+  "desc": "TRANSFORMADOR DE ALIMENTACAO 50KVA"
+ },
+ {
+  "fica": "M3153",
+  "apaga": [
+   "sap20260817-mat-4500851872-10"
+  ],
+  "codigo": "4026291",
+  "desc": "Transformador Tensão"
+ },
+ {
+  "fica": "M3157",
+  "apaga": [
+   "sap20260817-mat-4500851088-10"
+  ],
+  "codigo": "4043165",
+  "desc": "Tubo AlMg 25x30"
+ },
+ {
+  "fica": "M3171",
+  "apaga": [
+   "sap20260817-mat-4500851088-80"
+  ],
+  "codigo": "4011998",
+  "desc": "Tubo de aço c/ costura 45,2x51,0"
+ },
+ {
+  "fica": "M3173",
+  "apaga": [
+   "sap20260817-mat-4500851088-90"
+  ],
+  "codigo": "4011997",
+  "desc": "Tubo de aço c/ costura 81,7x88,9"
+ },
+ {
+  "fica": "M3175",
+  "apaga": [
+   "sap20260817-mat-4500856280-10"
+  ],
+  "codigo": "4014378",
+  "desc": "TUBO HIDR ALTA PRESSÃO 700BAR C/1500MM+P"
+ },
+ {
+  "fica": "M3179",
+  "apaga": [
+   "sap20260817-mat-4500858970-160",
+   "sap20260817-mat-4500849110-70"
+  ],
+  "codigo": "4004766",
+  "desc": "UNIAO P/ELECTRODO TERRA UT 5/8\" ACO COBR"
+ },
+ {
+  "fica": "M3187",
+  "apaga": [
+   "sap20260817-mat-4500846844-50"
+  ],
+  "codigo": "5000437",
+  "desc": "Wd40-Oleo spray 500ml c/bico"
+ },
+ {
+  "fica": "M3864",
+  "apaga": [
+   "sap20260817-mat-4500867466-10"
+  ],
+  "codigo": "4041406",
+  "desc": "Manga de Junção do Feeder 150mm2 (C-1636"
+ },
+ {
+  "fica": "m3907",
+  "apaga": [
+   "sap20260817-mat-4500858970-70"
+  ],
+  "codigo": "4004595",
+  "desc": "TERMINAL COMPRESSAO AL TCT 95 M12"
+ },
+ {
+  "fica": "m3981",
+  "apaga": [
+   "sap20260817-mat-4500849110-20"
+  ],
+  "codigo": "4027876",
+  "desc": "MANGA TERMO.GMW22/6 - 1000MM"
+ },
+ {
+  "fica": "M4052",
+  "apaga": [
+   "sap20260817-mat-4500871362-10"
+  ],
+  "codigo": "4008674",
+  "desc": "Spray Tinta Branco Opaco 400Ml"
+ },
+ {
+  "fica": "M4053",
+  "apaga": [
+   "sap20260817-mat-4500871362-20"
+  ],
+  "codigo": "4000803",
+  "desc": "Spray Tinta Verm.Ral 3000 400M"
+ },
+ {
+  "fica": "M4054",
+  "apaga": [
+   "sap20260817-mat-4500871362-30"
+  ],
+  "codigo": "5000663",
+  "desc": "Fita Papel Masking 38 Mm"
+ },
+ {
+  "fica": "M4055",
+  "apaga": [
+   "sap20260817-mat-4500871362-40"
+  ],
+  "codigo": "3000233",
+  "desc": "Balde Preto 10 Lt Especial"
+ },
+ {
+  "fica": "M4056",
+  "apaga": [
+   "sap20260817-mat-4500851945-10"
+  ],
+  "codigo": "4043191",
+  "desc": "113A Cantoneira L60X60X6 L=305"
+ },
+ {
+  "fica": "M4057",
+  "apaga": [
+   "sap20260817-mat-4500851945-20"
+  ],
+  "codigo": "4043194",
+  "desc": "115A Cantoneira L60X60X6 L=325"
+ },
+ {
+  "fica": "M4058",
+  "apaga": [
+   "sap20260817-mat-4500851945-50"
+  ],
+  "codigo": "4049010",
+  "desc": "1127 Cantoneira L60X60X6 L=405"
+ },
+ {
+  "fica": "M4059",
+  "apaga": [
+   "sap20260817-mat-4500851945-60"
+  ],
+  "codigo": "4036922",
+  "desc": "188A Cantoneira L60X60X6 L=330"
+ },
+ {
+  "fica": "M4060",
+  "apaga": [
+   "sap20260817-mat-4500851945-70"
+  ],
+  "codigo": "4029801",
+  "desc": "161 Cantoneira L60X60X6 L=460"
+ },
+ {
+  "fica": "M4061",
+  "apaga": [
+   "sap20260817-mat-4500851945-80"
+  ],
+  "codigo": "4043027",
+  "desc": "166 Cantoneira L60X60X6 L=460"
+ },
+ {
+  "fica": "M4062",
+  "apaga": [
+   "sap20260817-mat-4500851945-90"
+  ],
+  "codigo": "4043169",
+  "desc": "1113A Cantoneira L60X60X6 L=325"
+ },
+ {
+  "fica": "M4063",
+  "apaga": [
+   "sap20260817-mat-4500851945-110"
+  ],
+  "codigo": "4029802",
+  "desc": "189A Cantoneira L60X60X6 L=360"
+ },
+ {
+  "fica": "M4064",
+  "apaga": [
+   "sap20260817-mat-4500851945-120"
+  ],
+  "codigo": "4043838",
+  "desc": "731A Cantoneira L70X70X7 L=200"
+ },
+ {
+  "fica": "M4065",
+  "apaga": [
+   "sap20260817-mat-4500851945-130"
+  ],
+  "codigo": "4043175",
+  "desc": "111A Cantoneira L80X80X8 L=325"
+ },
+ {
+  "fica": "M4066",
+  "apaga": [
+   "sap20260817-mat-4500851945-150"
+  ],
+  "codigo": "4036961",
+  "desc": "125E Cantoneira L90X90X9 L=365"
+ },
+ {
+  "fica": "M4067",
+  "apaga": [
+   "sap20260817-mat-4500851945-170"
+  ],
+  "codigo": "4043204",
+  "desc": "125B Cantoneira L90X90X9 L=365"
+ },
+ {
+  "fica": "M4068",
+  "apaga": [
+   "sap20260817-mat-4500851945-190"
+  ],
+  "codigo": "4032270",
+  "desc": "123A Cantoneira L90X90X9 L=1120"
+ },
+ {
+  "fica": "M4069",
+  "apaga": [
+   "sap20260817-mat-4500851945-210"
+  ],
+  "codigo": "4037076",
+  "desc": "267B Perfil U40X20X5 L=155"
+ },
+ {
+  "fica": "M4070",
+  "apaga": [
+   "sap20260817-mat-4500851945-230"
+  ],
+  "codigo": "4043710",
+  "desc": "211A Perfil U80X45X6 L=305"
+ },
+ {
+  "fica": "M4071",
+  "apaga": [
+   "sap20260817-mat-4500851945-260"
+  ],
+  "codigo": "4043692",
+  "desc": "210A Perfil U80X45X6 L=305"
+ },
+ {
+  "fica": "M4072",
+  "apaga": [
+   "sap20260817-mat-4500851945-270"
+  ],
+  "codigo": "4043693",
+  "desc": "210B Perfil U80X45X6 L=385"
+ },
+ {
+  "fica": "M4073",
+  "apaga": [
+   "sap20260817-mat-4500851945-280"
+  ],
+  "codigo": "4032251",
+  "desc": "245 Perfil U120X55X7 L=260"
+ },
+ {
+  "fica": "M4074",
+  "apaga": [
+   "sap20260817-mat-4500851945-290"
+  ],
+  "codigo": "4049012",
+  "desc": "243 Perfil U140X60X7 L=250"
+ },
+ {
+  "fica": "M4075",
+  "apaga": [
+   "sap20260817-mat-4500851945-300"
+  ],
+  "codigo": "4043698",
+  "desc": "217A Perfil U140X60X7 L=1320"
+ },
+ {
+  "fica": "M4076",
+  "apaga": [
+   "sap20260817-mat-4500851945-320"
+  ],
+  "codigo": "4043707",
+  "desc": "248A Perfil U160X65X7,5 L=325"
+ },
+ {
+  "fica": "M4077",
+  "apaga": [
+   "sap20260817-mat-4500851945-330"
+  ],
+  "codigo": "4043708",
+  "desc": "248B Perfil U160X65X7,5 L=405"
+ },
+ {
+  "fica": "M4078",
+  "apaga": [
+   "sap20260817-mat-4500851945-340"
+  ],
+  "codigo": "4043696",
+  "desc": "216A Perfil U180X70X8 L=325"
+ },
+ {
+  "fica": "M4079",
+  "apaga": [
+   "sap20260817-mat-4500851945-350"
+  ],
+  "codigo": "4026400",
+  "desc": "81 Brinco Curto L=130 Esp. 8"
+ },
+ {
+  "fica": "M4080",
+  "apaga": [
+   "sap20260817-mat-4500851945-360"
+  ],
+  "codigo": "4043003",
+  "desc": "89 Brinco Amarração Transversal"
+ },
+ {
+  "fica": "M4081",
+  "apaga": [
+   "sap20260817-mat-4500851945-370"
+  ],
+  "codigo": "4027087",
+  "desc": "86A Brinco P/Espias Amarração J1 Esp. 10"
+ },
+ {
+  "fica": "M4082",
+  "apaga": [
+   "sap20260817-mat-4500851945-380"
+  ],
+  "codigo": "4032247",
+  "desc": "86B Brinco P/Espias Amarração J2 Esp. 10"
+ },
+ {
+  "fica": "M4083",
+  "apaga": [
+   "sap20260817-mat-4500851945-390"
+  ],
+  "codigo": "4043142",
+  "desc": "102B Brinco De Amarração X=95 Esp. 10"
+ },
+ {
+  "fica": "M4084",
+  "apaga": [
+   "sap20260817-mat-4500851945-410"
+  ],
+  "codigo": "4032248",
+  "desc": "82 Brinco Triangular (Tipo A) Esp. 16"
+ },
+ {
+  "fica": "M4085",
+  "apaga": [
+   "sap20260817-mat-4500851945-420"
+  ],
+  "codigo": "4029815",
+  "desc": "465 Chapa Esp.6-Esquadro P/Pinça"
+ },
+ {
+  "fica": "M4086",
+  "apaga": [
+   "sap20260817-mat-4500851945-430"
+  ],
+  "codigo": "4043065",
+  "desc": "271 Chapa Esp.6-Esquadro De Abaixamento"
+ },
+ {
+  "fica": "M4087",
+  "apaga": [
+   "sap20260817-mat-4500851945-440"
+  ],
+  "codigo": "4037077",
+  "desc": "273A Barra 50X10 L=330"
+ },
+ {
+  "fica": "M4088",
+  "apaga": [
+   "sap20260817-mat-4500851945-500"
+  ],
+  "codigo": "4043047",
+  "desc": "255 Suporte P/Fix De 1 Isolador De Apoio"
+ },
+ {
+  "fica": "M4089",
+  "apaga": [
+   "sap20260817-mat-4500851945-520"
+  ],
+  "codigo": "4036925",
+  "desc": "727 Perfil U140X60X7 (L=1820)"
+ },
+ {
+  "fica": "M4480",
+  "apaga": [
+   "sap20260817-mat-4500864792-30"
+  ],
+  "codigo": "5004993",
+  "desc": "Bobine Madeira Tipo A18"
+ },
+ {
+  "fica": "M4481",
+  "apaga": [
+   "sap20260817-mat-4500864792-40"
+  ],
+  "codigo": "5004983",
+  "desc": "Bobine Madeira Tipo A6"
+ },
+ {
+  "fica": "M4484",
+  "apaga": [
+   "sap20260817-mat-4500848364-20"
+  ],
+  "codigo": "4026554",
+  "desc": "Aparelho tensor tipo cadernal 1/5"
+ },
+ {
+  "fica": "M4488",
+  "apaga": [
+   "sap20260817-mat-4500873696-20"
+  ],
+  "codigo": "PRG0001",
+  "desc": "Prego KG"
+ },
+ {
+  "fica": "M4490",
+  "apaga": [
+   "sap20260817-mat-4500873704-20"
+  ],
+  "codigo": "5004647",
+  "desc": "Trincha Junior Nº1 1/2"
+ },
+ {
+  "fica": "M4491",
+  "apaga": [
+   "sap20260817-mat-4500873704-30",
+   "sap20260817-mat-4500873704-40"
+  ],
+  "codigo": "4004621",
+  "desc": "Kar Esmalte Karlux Brilhante 3625"
+ },
+ {
+  "fica": "sap20260817-mat-4500855444-140",
+  "apaga": [
+   "sap20260817-mat-4500845878-10"
+  ],
+  "codigo": "4026448",
+  "desc": "Pinça de suspensão do CdTA"
+ }
+]

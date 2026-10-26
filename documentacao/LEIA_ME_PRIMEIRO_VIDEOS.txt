@@ -1,0 +1,349 @@
+================================================================================
+                    LEIA-ME PRIMEIRO - VÍDEOS TUTORIAIS
+                        Gestão de Materiais de Catenária
+================================================================================
+
+OLÁ RUI!
+
+Este ficheiro explica o que foi feito e como proceder.
+
+================================================================================
+O QUE ACONTECEU?
+================================================================================
+
+Foi CRIADA UMA ESTRUTURA COMPLETA para produzir 12 vídeos tutoriais profissionais
+em português de Portugal para a sua aplicação de Gestão de Materiais de Catenária.
+
+✅ JÁ FOI FEITO:
+
+1. ✅ Estrutura de pastas criada (scripts, áudio, vídeos)
+2. ✅ 12 scripts de narração em português (PT-PT)
+3. ✅ Guias detalhados passo-a-passo
+4. ✅ Scripts automáticos para gerar áudio
+5. ✅ Ficheiros de metadados
+6. ✅ Checklist de progresso
+
+⏳ FALTA FAZER (O SEU TRABALHO):
+
+1. ⏳ Gravar os 12 vídeos (com OBS Studio)
+2. ⏳ Gerar áudio (automático com PowerShell)
+3. ⏳ Sincronizar áudio + vídeo (com FFmpeg)
+4. ⏳ Integrar no MANUAL.html
+5. ⏳ Publicar na SharePoint
+
+Tempo estimado: 6-8 horas no total
+
+================================================================================
+POR ONDE COMEÇAR?
+================================================================================
+
+PASSO 1: Ler este ficheiro até ao fim (5 min) ✓
+PASSO 2: Ler o README_VIDEOS.md (15 min)
+PASSO 3: Instalar OBS Studio (10 min)
+PASSO 4: Começar a gravar (3-4 horas)
+
+================================================================================
+FICHEIROS IMPORTANTES
+================================================================================
+
+Está na pasta:
+C:\Users\dst7973\Desktop\gestao_de_stocks_dte\documentacao\
+
+Encontrará os seguintes ficheiros:
+
+📖 DOCUMENTAÇÃO (Ler NESTA ORDEM):
+
+1. LEIA_ME_PRIMEIRO_VIDEOS.txt  ← VOCÊ ESTÁ AQUI
+   Introdução rápida (este ficheiro)
+
+2. README_VIDEOS.md
+   Guia completo passo-a-passo
+   ⭐ LEIA ISTO PRIMEIRO ANTES DE COMEÇAR
+
+3. SUMARIO_EXECUCAO_VIDEOS.md
+   Resumo executivo do projeto
+   (Para referência rápida)
+
+4. 01_PLANO_EXECUCAO_VIDEOS.md (em scripts_videos/)
+   Plano detalhado com 3 opções
+   (Está em scripts_videos/)
+
+📋 CHECKLISTS:
+
+5. CHECKLIST_PROGRESSO_VIDEOS.txt
+   Use isto para acompanhar o progresso
+   Marque [ ] conforme completa cada fase
+
+📊 DADOS:
+
+6. info_videos.json
+   Informação técnica de todos os 12 vídeos
+   (Para referência)
+
+🔧 SCRIPTS AUTOMÁTICOS:
+
+7. gerar_audio_tts.ps1
+   Script para gerar áudio automaticamente
+   (Executar na FASE 3)
+
+📝 SCRIPTS DE NARRAÇÃO (12 ficheiros):
+
+8. scripts_videos/01_inicio_menu_lateral_script.txt
+9. scripts_videos/02_stock_consultar_materiais_script.txt
+10. ... (vídeos 3-12)
+
+(Estes contêm o texto que será narrado e os passos de navegação)
+
+================================================================================
+ESTRUTURA DE PASTAS
+================================================================================
+
+documentacao/
+│
+├── LEIA_ME_PRIMEIRO_VIDEOS.txt ← LEIA ISTO AGORA
+├── README_VIDEOS.md             ← DEPOIS LEIA ISTO
+├── SUMARIO_EXECUCAO_VIDEOS.md
+├── CHECKLIST_PROGRESSO_VIDEOS.txt
+├── info_videos.json
+├── gerar_videos.py
+├── gerar_audio_tts.ps1
+│
+├── scripts_videos/              ← 12 SCRIPTS DE NARRAÇÃO
+│   ├── 01_PLANO_EXECUCAO_VIDEOS.md
+│   ├── 01_inicio_menu_lateral_script.txt
+│   ├── 02_stock_consultar_materiais_script.txt
+│   ├── ... (3-12)
+│   └── 12_definicoes_configurar_script.txt
+│
+├── audio_videos/                ← SERÁ PREENCHIDA (FASE 3)
+│   └── (vazio agora, será preenchido com áudios WAV)
+│
+└── videos/                       ← SERÁ PREENCHIDA (FASE 2-5)
+    └── (vazio agora, será preenchido com vídeos MP4)
+
+================================================================================
+AS 12 SECÇÕES DOS VÍDEOS
+================================================================================
+
+1.  Início e Menu Lateral (2:30)
+2.  Stock - Consultar Materiais (3:00)
+3.  Entradas - Registar Chegadas (3:30)
+4.  Saídas - Registar Saídas (3:30)
+5.  Transferências entre Armazéns (3:00)
+6.  Encomendas - Pedidos de Compra (3:30)
+7.  Consumos - Relatório de Saídas (3:00)
+8.  Projeto - Visualizar Postes (3:30)
+9.  Materiais por Poste (3:00)
+10. Relatórios - Análises (3:30)
+11. Backup e Restauração (2:30)
+12. Definições - Configurar (3:00)
+
+TOTAL: ~36 minutos
+
+================================================================================
+COMO PROCEDER?
+================================================================================
+
+FASE 1: Preparação (30 min)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] 1. Descarregar OBS Studio
+       https://obsproject.com
+
+[ ] 2. Instalar OBS Studio
+       Próximo > Próximo > Instalar
+
+[ ] 3. Configurar OBS Studio
+       Resolução: 1920x1080
+       FPS: 30
+
+[ ] 4. Fazer teste de gravação (10 seg)
+
+FASE 2: Gravação (3-4 h)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para cada um dos 12 vídeos:
+
+[ ] 1. Abrir ficheiro script em scripts_videos/
+[ ] 2. Abrir http://localhost:8765 em navegador
+[ ] 3. Iniciar gravação no OBS
+[ ] 4. Seguir os passos do script (~2-4 min)
+[ ] 5. Parar gravação
+[ ] 6. Ficheiro fica em videos/
+
+FASE 3: Áudio TTS (1-2 h - Automático!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] 1. Abrir PowerShell
+
+[ ] 2. Executar:
+       cd C:\Users\dst7973\Desktop\gestao_de_stocks_dte\documentacao
+       .\gerar_audio_tts.ps1
+
+[ ] 3. Aguardar (leva ~1-2 horas, mas é automático)
+
+FASE 4: Processamento (1-2 h)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para cada vídeo:
+
+[ ] 1. Usar FFmpeg para sincronizar áudio + vídeo
+
+Exemplo:
+ffmpeg -i videos/01_inicio_menu_lateral.mp4 \
+        -i audio_videos/01_audio.wav \
+        -c:v copy -c:a aac -shortest \
+        videos/01_FINAL.mp4
+
+(Script automático: descrito em README_VIDEOS.md)
+
+FASE 5: Integração (30 min)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] 1. Abrir MANUAL.html
+
+[ ] 2. Adicionar links para vídeos
+
+[ ] 3. Testar no navegador
+
+[ ] 4. Publicar na SharePoint
+
+================================================================================
+REQUISITOS TÉCNICOS
+================================================================================
+
+Ferramentas OBRIGATÓRIAS (Gratuitas):
+
+✅ OBS Studio
+   https://obsproject.com
+   Versão: 29.0+
+   Custo: GRATUITO
+
+✅ FFmpeg
+   https://ffmpeg.org
+   Custo: GRATUITO
+
+✅ Windows PowerShell
+   Incluído no Windows
+   Custo: GRATUITO
+
+Ferramentas OPCIONAIS (Para Qualidade Superior):
+
+⭐ ElevenLabs (Áudio super natural)
+   https://elevenlabs.io
+   Custo: €5-100/mês
+   Recomendado? Não (Windows TTS é suficiente)
+
+================================================================================
+DICAS IMPORTANTES
+================================================================================
+
+1️⃣ ANTES DE COMEÇAR A GRAVAR:
+   - Feche todos os programas desnecessários
+   - Coloque o telemóvel em silencio
+   - Escolha um local quieto
+   - Feche navegadores em background
+
+2️⃣ DURANTE A GRAVAÇÃO:
+   - Siga o script de navegação passo-a-passo
+   - Clique devagar para que fique claro
+   - Deixe 1-2 segundos entre ações
+
+3️⃣ QUALIDADE DE ÁUDIO:
+   - Português de Portugal (PT-PT)
+   - Pronuncia clara
+   - Sem sotaque brasileiro
+
+4️⃣ SE ERRAR:
+   - Não precisa parar imediatamente
+   - Continue até ao fim
+   - Depois refaz se for grave
+
+5️⃣ GUARDAR TUDO:
+   - Faça backup dos vídeos finais
+   - Guarde numa pasta segura
+   - OneDrive ou USB externo
+
+================================================================================
+TEMPO ESTIMADO
+================================================================================
+
+Fase 1 (Preparação):         30 min
+Fase 2 (Gravação):          3-4 horas
+Fase 3 (Áudio TTS):         1-2 horas (automático)
+Fase 4 (Processamento):     1-2 horas
+Fase 5 (Integração):        30 min
+                            ___________
+TOTAL:                      6-8 HORAS
+
+Isto é executável num fim de semana!
+
+================================================================================
+PRÓXIMOS PASSOS
+================================================================================
+
+1. ✅ LER este ficheiro (AGORA!)
+2. ✅ LER README_VIDEOS.md (15 min)
+3. ⏳ INSTALAR OBS Studio (10 min)
+4. ⏳ GRAVAR 12 vídeos (3-4 horas)
+5. ⏳ GERAR áudio (1-2 horas - automático)
+6. ⏳ PROCESSAR vídeos (1-2 horas)
+7. ⏳ INTEGRAR no MANUAL.html (30 min)
+8. ⏳ PUBLICAR na SharePoint (30 min)
+
+================================================================================
+QUESTÕES FREQUENTES
+================================================================================
+
+P: Preciso de ser técnico para fazer isto?
+R: Não! Tudo está documentado passo-a-passo.
+
+P: Qual é a qualidade necessária?
+R: 1080p Full HD (1920x1080) - OBS Studio faz isto por padrão.
+
+P: Quanto tempo vai levar?
+R: 6-8 horas total (spread ao longo de 1-2 semanas)
+
+P: E se cometer um erro durante gravação?
+R: Pode refazer apenas a secção com erro.
+
+P: Preciso de pagar por ferramentas?
+R: Não! Tudo é gratuito (OBS Studio, FFmpeg, Windows TTS)
+
+P: Qual é o idioma?
+R: Português de Portugal (PT-PT) - não brasileiro!
+
+P: Posso usar ElevenLabs para áudio melhor?
+R: Sim, mas não é necessário. Windows TTS é suficiente.
+
+P: Onde guardo os vídeos finais?
+R: Pasta videos/ e depois SharePoint da empresa
+
+P: Quanto espaço em disco preciso?
+R: ~2-3 GB para 12 vídeos em 1080p
+
+================================================================================
+CONTACTOS
+================================================================================
+
+Utilizador: Rui Simões
+Email: rui16simoes@gmail.com
+Empresa: DTE Instalações Especiais
+Departamento: Catenária
+
+Dúvidas? Contacte Claude Code.
+
+================================================================================
+PRÓXIMO PASSO
+================================================================================
+
+▶️ LER: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\documentacao\README_VIDEOS.md
+
+(Esse ficheiro tem todas as instruções detalhadas passo-a-passo)
+
+================================================================================
+Versão: 1.0
+Data: 14 de Outubro de 2026
+Criado por: Claude Haiku 4.5 (Anthropic)
+Status: ✅ PRONTO PARA COMEÇAR
+================================================================================

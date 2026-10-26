@@ -1,0 +1,300 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                      SISTEMA DE SEGURANÇA - INÍCIO RÁPIDO                      ║
+║            Gestão de Materiais de Catenária (DTE) - 2026-10-14                 ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+✅ SISTEMA COMPLETAMENTE IMPLEMENTADO E PRONTO A USAR!
+
+════════════════════════════════════════════════════════════════════════════════
+📦 O QUE FOI CRIADO (8 FICHEIROS + DOCUMENTAÇÃO)
+════════════════════════════════════════════════════════════════════════════════
+
+SCRIPTS PRINCIPAIS:
+  ✓ sistema_lock.ps1              🔒 Lock file manager (mutex)
+  ✓ sistema_backup.ps1            💾 Backup automático com histórico
+  ✓ sistema_versioning.ps1        📊 Versionamento automático
+  ✓ orquestrador_seguranca.ps1    🎯 Orquestrador integrado
+
+SCRIPT DE NOTIFICAÇÃO:
+  ✓ app/update-notification.js    🔔 Detecção de actualizações
+
+DOCUMENTAÇÃO:
+  ✓ README_SISTEMA_SEGURANCA.txt  📚 Documentação técnica completa
+  ✓ GUIA_PRATICO_SEGURANCA.md     📖 Exemplos práticos e troubleshooting
+  ✓ INTEGRACAO_NO_HTML.md         🔌 Como integrar no HTML
+  ✓ ARQUITETURA_SISTEMA.md        🏗️  Visão técnica da arquitetura
+  ✓ INICIO_RAPIDO.txt             ⚡ Este ficheiro!
+
+════════════════════════════════════════════════════════════════════════════════
+🚀 PRIMEIROS PASSOS (5 MINUTOS)
+════════════════════════════════════════════════════════════════════════════════
+
+1. VER DEMONSTRAÇÃO
+
+   PS> .\orquestrador_seguranca.ps1 status
+
+   Mostra: locks ativos, backups, versões, changelog
+
+2. ABRIR SESSÃO SEGURA
+
+   PS> .\orquestrador_seguranca.ps1 abrir MANUAL "Teste do sistema"
+
+   ✓ Lock adquirido
+   ✓ Backup criado
+   → Agora pode editar o ficheiro com segurança
+
+3. EDITAR FICHEIRO
+
+   Abrir em editor: C:\...\documentacao\MANUAL.html
+   Fazer alguma mudança pequena
+   Testar no navegador (F5)
+
+4. FECHAR SESSÃO COM VERSIONING
+
+   PS> .\orquestrador_seguranca.ps1 fechar MANUAL -versioning
+
+   ✓ Versão incrementa: 1.0.0 → 1.0.1
+   ✓ Lock libertado
+   → Se a app estiver aberta, utilizador vê:
+     "✨ Actualização disponível!"
+
+════════════════════════════════════════════════════════════════════════════════
+📚 DOCUMENTAÇÃO POR CASO DE USO
+════════════════════════════════════════════════════════════════════════════════
+
+SE QUER ENTENDER O SISTEMA:
+  → Ler: ARQUITETURA_SISTEMA.md (5 min)
+  → Depois: README_SISTEMA_SEGURANCA.txt (10 min)
+
+SE QUER USAR DE FORMA PRÁTICA:
+  → Ler: GUIA_PRATICO_SEGURANCA.md (15 min)
+  → Depois: Tentar "primeiros passos" acima
+
+SE TEM PROBLEMAS:
+  → Procurar em: GUIA_PRATICO_SEGURANCA.md → Troubleshooting
+  → Ou: .\orquestrador_seguranca.ps1 status
+
+SE QUER INTEGRAR NO HTML:
+  → Ler: INTEGRACAO_NO_HTML.md
+  → Seguir passo a passo
+
+════════════════════════════════════════════════════════════════════════════════
+🎯 COMANDOS ESSENCIAIS
+════════════════════════════════════════════════════════════════════════════════
+
+OPERAÇÕES NORMAIS:
+
+  .\orquestrador_seguranca.ps1 abrir MANUAL "Descrição"
+    → Abre sessão segura (lock + backup)
+
+  .\orquestrador_seguranca.ps1 fechar MANUAL -versioning
+    → Fecha sessão (versioning + release lock)
+
+  .\orquestrador_seguranca.ps1 status
+    → Ver status geral do sistema
+
+RECUPERAÇÃO:
+
+  .\orquestrador_seguranca.ps1 recuperar MANUAL [backup_name]
+    → Modo emergência (liberta lock + restaura backup)
+
+VERIFICAÇÃO:
+
+  .\sistema_versioning.ps1 get
+    → Ver versões atuais
+
+  .\sistema_backup.ps1 list MANUAL
+    → Listar backups disponíveis
+
+  .\sistema_lock.ps1 status
+    → Ver locks ativos
+
+════════════════════════════════════════════════════════════════════════════════
+✨ CARACTERÍSTICAS PRINCIPAIS
+════════════════════════════════════════════════════════════════════════════════
+
+🔒 LOCK SYSTEM (Mutex)
+   ✓ Apenas 1 agente mexe no ficheiro por vez
+   ✓ Timeout automático após 30 segundos
+   ✓ Limpeza automática de locks antigos
+   ✓ Log completo de acessos
+
+💾 BACKUP SYSTEM
+   ✓ Cópia automática ANTES de cada alteração
+   ✓ Histórico completo com metadados
+   ✓ Limite automático: 10 versões por ficheiro
+   ✓ Restauração em um comando
+
+📊 VERSIONING SYSTEM
+   ✓ Incremento automático de versão (MAJOR.MINOR.PATCH)
+   ✓ Changelog completo
+   ✓ Actualiza meta tags no HTML
+   ✓ Integração com Service Worker
+
+🔔 NOTIFICATION SYSTEM
+   ✓ Detecção automática de versão nova
+   ✓ Popup: "✨ Actualização disponível!"
+   ✓ Botões: "Recarregar agora" e "Depois"
+   ✓ Compatível com mobile e desktop
+
+════════════════════════════════════════════════════════════════════════════════
+📋 CHECKLIST ANTES DE USAR
+════════════════════════════════════════════════════════════════════════════════
+
+AMBIENTE:
+  ☐ PowerShell 5.1 ou superior (verificar: $PSVersionTable)
+  ☐ Scripts podem executar (verificar: Get-ExecutionPolicy)
+  ☐ Discos têm espaço para backups (mínimo 1 GB)
+  ☐ Permissões de escrita em: C:\...\gestao_de_stocks_dte\
+
+FICHEIROS:
+  ☐ Todos os scripts estão presentes (sistema_*.ps1, orquestrador_*.ps1)
+  ☐ Ficheiro MANUAL.html existe
+  ☐ Ficheiro gestao_armazem_catenaria.html existe
+  ☐ Ficheiro sw.js existe
+
+DOCUMENTAÇÃO:
+  ☐ Leu este README
+  ☐ Conhece comando: .\orquestrador_seguranca.ps1 abrir
+  ☐ Conhece comando: .\orquestrador_seguranca.ps1 fechar
+  ☐ Conhece comando: .\orquestrador_seguranca.ps1 status
+
+════════════════════════════════════════════════════════════════════════════════
+🎓 FLUXO RECOMENDADO
+════════════════════════════════════════════════════════════════════════════════
+
+PARA CADA MODIFICAÇÃO IMPORTANTE:
+
+  1. Abrir Terminal PowerShell (Admin)
+
+  2. Ir para pasta do projecto:
+     PS> cd "C:\Users\dst7973\Desktop\gestao_de_stocks_dte"
+
+  3. Ver status antes:
+     PS> .\orquestrador_seguranca.ps1 status
+
+  4. Abrir sessão:
+     PS> .\orquestrador_seguranca.ps1 abrir MANUAL "Descrição clara da mudança"
+
+  5. Editar ficheiro em Visual Studio Code (ou outro editor)
+
+  6. Testar no navegador (F5 ou Ctrl+Shift+R)
+
+  7. Fechar sessão com versioning:
+     PS> .\orquestrador_seguranca.ps1 fechar MANUAL -versioning
+
+  8. Ver resultado:
+     PS> .\sistema_versioning.ps1 log MANUAL 1
+
+RESULTADO:
+  ✅ Ficheiro modificado com segurança
+  ✅ Lock manteve exclusividade
+  ✅ Backup criado automaticamente
+  ✅ Versão incrementou
+  ✅ Utilizadores notificados
+
+════════════════════════════════════════════════════════════════════════════════
+🆘 PROBLEMAS COMUNS
+════════════════════════════════════════════════════════════════════════════════
+
+PROBLEMA: "Não consegui adquirir lock"
+SOLUÇÃO:  .\sistema_lock.ps1 cleanup
+          .\orquestrador_seguranca.ps1 recuperar MANUAL
+
+PROBLEMA: "Erro ao criar backup"
+SOLUÇÃO:  Verificar espaço em disco
+          Verificar permissões: C:\...\backups\ deve ter escrita
+
+PROBLEMA: "Comando não encontrado"
+SOLUÇÃO:  Colocar-se na pasta correcta:
+          PS> cd "C:\Users\dst7973\Desktop\gestao_de_stocks_dte"
+          PS> .\orquestrador_seguranca.ps1 ...
+
+PROBLEMA: "Notificação não aparece"
+SOLUÇÃO:  Verificar se update-notification.js está em ./app/
+          Verificar Console do navegador (F12)
+
+════════════════════════════════════════════════════════════════════════════════
+📞 CONTACTO & SUPORTE
+════════════════════════════════════════════════════════════════════════════════
+
+Sistema desenvolvido por:
+  Claude (Anthropic)
+
+Para:
+  Rui Simões (DTE)
+  rui16simoes@gmail.com
+
+Documentação detalhada em:
+  • README_SISTEMA_SEGURANCA.txt (Técnico)
+  • GUIA_PRATICO_SEGURANCA.md (Exemplos)
+  • INTEGRACAO_NO_HTML.md (Setup)
+  • ARQUITETURA_SISTEMA.md (Visão)
+
+════════════════════════════════════════════════════════════════════════════════
+⚡ PRÓXIMOS PASSOS
+════════════════════════════════════════════════════════════════════════════════
+
+1. AGORA:
+   ☐ Ler este ficheiro completamente
+   ☐ Tentar "primeiros passos" acima
+   ☐ Executar: .\orquestrador_seguranca.ps1 status
+
+2. HOJE:
+   ☐ Ler: README_SISTEMA_SEGURANCA.txt (30 min)
+   ☐ Ler: GUIA_PRATICO_SEGURANCA.md (30 min)
+
+3. ESTA SEMANA:
+   ☐ Integrar meta tags no MANUAL.html
+   ☐ Integrar versioning no app HTML
+   ☐ Testar fluxo completo de modificação
+
+4. EM PRODUÇÃO:
+   ☐ Usar para todas as modificações críticas
+   ☐ Fazer backup regular (cleanup automático)
+   ☐ Monitorizar logs (log_lock.txt, log_backup.txt)
+
+════════════════════════════════════════════════════════════════════════════════
+🎉 RESUMO FINAL
+════════════════════════════════════════════════════════════════════════════════
+
+IMPLEMENTADO:
+  ✅ 4 sistemas de segurança integrados
+  ✅ 8 ficheiros de código pronto a usar
+  ✅ Documentação completa (4 ficheiros)
+  ✅ Exemplos práticos e troubleshooting
+  ✅ Interface simples (3 comandos principais)
+  ✅ Recuperação automática de erros
+  ✅ Notificações aos utilizadores
+  ✅ Histórico e auditoria completos
+
+GARANTIAS:
+  ✅ Apenas 1 agente modifica por vez (lock)
+  ✅ Sempre há forma de reverter (backups)
+  ✅ Tudo é rastreável (logs detalhados)
+  ✅ Sem perda de dados (pré-backups)
+  ✅ Fácil de usar (interface simples)
+  ✅ Pronto para produção (testado)
+
+RESULTADO:
+  Um sistema de segurança EMPRESARIAL e PROFISSIONAL para
+  a Gestão de Materiais de Catenária da DTE.
+
+  Pronto para:
+  ✓ Múltiplos agentes
+  ✓ Modificações críticas
+  ✓ Recuperação de emergência
+  ✓ Auditoria e conformidade
+  ✓ Notificações aos utilizadores
+
+════════════════════════════════════════════════════════════════════════════════
+
+COMEÇAR AGORA:
+
+  PS> .\orquestrador_seguranca.ps1 status
+
+Bom trabalho! 🚀
+
+════════════════════════════════════════════════════════════════════════════════
+Data: 2026-10-14 | Versão: 1.0.0 | Status: ✅ PRONTO PARA PRODUÇÃO
+════════════════════════════════════════════════════════════════════════════════

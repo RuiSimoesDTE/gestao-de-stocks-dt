@@ -1,0 +1,99 @@
+================================================================================
+GESTÃO DE MATERIAIS DE CATENÁRIA DTE
+LOCALIZAÇÃO PRINCIPAL E SINCRONIZAÇÃO
+================================================================================
+
+Data: 14 de outubro de 2026
+Versão: 2026-10-14-07-catenaria
+
+LOCALIZAÇÃO PRINCIPAL (Produção e Referência)
+==============================================
+
+A partir de agora, a localização PRINCIPAL do programa é:
+
+C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A
+    \Obras_dte_IC - 00_Obras
+    \Programa_Catenaria
+    \gestao_de_stocks_dte
+
+Este é o caminho de referência para:
+✓ Ficheiros HTML, dados e scripts
+✓ Documentação e guias
+✓ Backups e histórico
+✓ Recursos (logos, ícones, módulos)
+✓ Tudo o que pertence à aplicação
+
+LOCALIZAÇÃO SECUNDÁRIA (Desenvolvimento Local)
+================================================
+
+C:\Users\dst7973\Desktop\gestao_de_stocks_dte
+
+Este é apenas um local de TRABALHO local e DESENVOLVIMENTO. Não é a fonte de verdade.
+Os ficheiros são sincronizados manualmente para SharePoint quando há alterações importantes.
+
+SINCRONIZAÇÃO
+==============
+
+Processo de sincronização (quando executado):
+1. Robocopy copia TODOS os ficheiros da pasta local para SharePoint
+2. Preserva a estrutura de directórios completa
+3. Atualiza versões em service worker (sw.js)
+4. Atualiza ficheiros de configuração e dados
+
+Última sincronização: 14 de outubro de 2026 14:35:29
+Ficheiros sincronizados: 36.140 ficheiros
+Tamanho total: 2.590 GB
+Tempo decorrido: 2 minutos 43 segundos
+
+MUDANÇAS NESTA ACTUALIZAÇÃO
+============================
+
+1. Logo de catenária:
+   - Novo: ../recursos/logo_catenaria.svg
+   - Antigo: ../recursos/logo_dte_dst.png
+   - Aplicado em: Header, operador, login e folhas de impressão
+
+2. Versão:
+   - Service worker atualizado para: 2026-10-14-07-catenaria
+   - Nova estratégia de cache pré-carrega o logo de catenária
+
+3. Sincronização completa:
+   - Todos os ficheiros copiados para SharePoint
+   - Estrutura de pastas mantida
+
+COMO USAR
+=========
+
+Abrir a aplicação:
+1. Opção A (Recomendado - SharePoint):
+   C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A
+       \Obras_dte_IC - 00_Obras\Programa_Catenaria\gestao_de_stocks_dte
+       \app\gestao_armazem_catenaria.html
+
+2. Opção B (Desenvolvimento):
+   C:\Users\dst7973\Desktop\gestao_de_stocks_dte\app\gestao_armazem_catenaria.html
+
+Ambas as cópias devem estar sincronizadas após esta actualização.
+
+BACKUPS
+=======
+
+Backup automático criado antes da alteração do logo:
+- Localização: backups/
+- Nome: gestao_armazem_catenaria_backup_antes_logo_catenaria_[timestamp].html
+
+NOTAS TÉCNICAS
+===============
+
+- localStorage: continua no navegador local (não é sincronizado)
+- Dados embebidos: SEED_DATA no HTML permanece como backup
+- Sincronização: via robocopy apenas de ficheiros (desenvolvimento → SharePoint)
+- Service worker: versão incrementada para forçar atualização de cache
+
+CONTACTO
+=========
+
+Rui Simões: rui16simoes@gmail.com
+DTE Instalações Especiais - Catenária
+
+================================================================================

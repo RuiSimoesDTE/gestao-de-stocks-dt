@@ -1,0 +1,117 @@
+﻿RELATÓRIO DE EXTRAÇÃO - 22 POSTES FALTANTES
+============================================
+Data de Extração: 2026-10-14
+Fonte: PDFs V09_IFTE_PDes
+Total de Postes: 12
+
+POSTES EXTRAÍDOS:
+-----------------
+
+05-10
+  Estado: desmontar
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 16
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.301_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+06-24A
+  Estado: desmontar
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 23
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.301_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+19-29A
+  Estado: desmontar
+  Montagem: A
+  Referência Principal: EC-232
+  Equipamentos Listados: 15
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.302_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+31-22
+  Estado: desmontar
+  Montagem: 
+  Referência Principal: EC-237
+  Equipamentos Listados: 13
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.304_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+31-26A
+  Estado: desmontar
+  Montagem: 
+  Referência Principal: EC-237
+  Equipamentos Listados: 13
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.304_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+31-28
+  Estado: desmontar
+  Montagem: 
+  Referência Principal: EC-237
+  Equipamentos Listados: 13
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.304_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+63-08
+  Estado: desmontar
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 16
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+63-09
+  Estado: desmontar
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 18
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+64-21Y
+  Estado: desmontar
+  Montagem: A
+  Referência Principal: EC-232
+  Equipamentos Listados: 14
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+64-25Y
+  Estado: desmontar
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 10
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+64-27Y
+  Estado: desmontar
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 8
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+
+64-36
+  Estado: existente
+  Montagem: B
+  Referência Principal: EC-232
+  Equipamentos Listados: 13
+  Cotas Extraídas: 
+  PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+  Notas: Tem tirante. Tem consola. Tem antibalançante. 
+

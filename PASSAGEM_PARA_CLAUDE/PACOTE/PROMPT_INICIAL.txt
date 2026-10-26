@@ -1,0 +1,14 @@
+Estou a continuar a aplicação “Gestão de Materiais de Catenária” da DTE no Windows.
+
+Antes de fazer qualquer alteração, lê integralmente CLAUDE.md, PASSAGEM_PARA_CLAUDE/LEIA_PRIMEIRO.md, PASSAGEM_PARA_CLAUDE/ESTADO_E_REGRAS.md e AGENTS.md. Depois verifica o ficheiro gestao_armazem_catenaria.html e o dados_armazem_catenaria.json.
+
+Regras principais: não inventar códigos, quantidades, datas ou peças; confirmar discrepâncias comigo; fazer backup antes de alterações; preservar UTF-8 e caminhos Windows; não apagar localStorage; distinguir pedidos de compra, entradas, saídas, transferências e ajustes; manter o JSON coerente com o SEED_DATA; ir-me dizendo o que estás a fazer e o que falta confirmar.
+
+Primeiro responde apenas com:
+1. o que compreendeste sobre a aplicação;
+2. os ficheiros que verificaste;
+3. o estado atual que encontraste;
+4. dúvidas ou riscos antes de continuar.
+
+Não alteres nada até eu indicar a próxima tarefa.
+

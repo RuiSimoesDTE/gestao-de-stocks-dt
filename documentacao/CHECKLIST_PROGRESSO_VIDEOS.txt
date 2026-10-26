@@ -1,0 +1,305 @@
+================================================================================
+  CHECKLIST DE PROGRESSO - 12 VÍDEOS TUTORIAIS
+  Gestão de Materiais de Catenária - DTE
+================================================================================
+
+Preencha este ficheiro conforme avança no projeto.
+Datas estimadas em parêntesis.
+
+================================================================================
+FASE 1: PREPARAÇÃO (30 minutos) - SEMANA X
+================================================================================
+
+[ ] Descarregar OBS Studio
+    Link: https://obsproject.com
+    Tempo: 5 min
+
+[ ] Instalar OBS Studio
+    Próximo > Próximo > Instalar
+    Tempo: 5 min
+
+[ ] Configurar OBS Studio
+    - Resolução: 1920x1080
+    - FPS: 30
+    - Bitrate: 8000-10000 kbps
+    Tempo: 10 min
+
+[ ] Descarregar FFmpeg
+    Link: https://ffmpeg.org/download.html
+    Tempo: 5 min
+
+[ ] Instalar FFmpeg e adicionar ao PATH
+    Tempo: 5 min
+
+[ ] Fazer teste de gravação
+    - Gravar 10 segundos
+    - Verificar ficheiro criado
+    Tempo: 10 min
+
+✅ FASE 1 COMPLETA: ___/___/___
+
+================================================================================
+FASE 2: GRAVAÇÃO DE VÍDEOS (3-4 horas) - SEMANA X
+================================================================================
+
+Gravação de Secções (cada uma ~15-20 min):
+
+[ ] VIDEO 01: Início e Menu Lateral (2:30)
+    Script: 01_inicio_menu_lateral_script.txt
+    Ficheiro: 01_inicio_menu_lateral.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 02: Stock - Consultar Materiais (3:00)
+    Script: 02_stock_consultar_materiais_script.txt
+    Ficheiro: 02_stock_consultar_materiais.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 03: Entradas - Registar Chegadas (3:30)
+    Script: 03_entradas_registar_chegadas_script.txt
+    Ficheiro: 03_entradas_registar_chegadas.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 04: Saídas - Registar Saídas (3:30)
+    Script: 04_saidas_registar_saidas_script.txt
+    Ficheiro: 04_saidas_registar_saidas.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 05: Transferências entre Armazéns (3:00)
+    Script: 05_transferencias_entre_armazens_script.txt
+    Ficheiro: 05_transferencias_entre_armazens.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 06: Encomendas - Pedidos de Compra (3:30)
+    Script: 06_encomendas_pedidos_de_compra_script.txt
+    Ficheiro: 06_encomendas_pedidos_de_compra.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 07: Consumos - Relatório de Saídas (3:00)
+    Script: 07_consumos_relatorio_de_saidas_script.txt
+    Ficheiro: 07_consumos_relatorio_de_saidas.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 08: Projeto - Visualizar Postes (3:30)
+    Script: 08_projeto_visualizar_postes_script.txt
+    Ficheiro: 08_projeto_visualizar_postes.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 09: Materiais por Poste (3:00)
+    Script: 09_materiais_por_poste_script.txt
+    Ficheiro: 09_materiais_por_poste.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 10: Relatórios - Análises (3:30)
+    Script: 10_relatorios_analises_script.txt
+    Ficheiro: 10_relatorios_analises.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 11: Backup e Restauração (2:30)
+    Script: 11_backup_e_restauracao_script.txt
+    Ficheiro: 11_backup_e_restauracao.mp4
+    Gravado em: ___/___/___
+
+[ ] VIDEO 12: Definições - Configurar (3:00)
+    Script: 12_definicoes_configurar_script.txt
+    Ficheiro: 12_definicoes_configurar.mp4
+    Gravado em: ___/___/___
+
+✅ FASE 2 COMPLETA: ___/___/___
+
+================================================================================
+FASE 3: GERAÇÃO DE ÁUDIO TTS (1-2 horas) - SEMANA X
+================================================================================
+
+[ ] Verificar Windows TTS (incluído no Windows 10+)
+
+[ ] Abrir PowerShell como Administrador
+
+[ ] Executar comando:
+    cd C:\Users\dst7973\Desktop\gestao_de_stocks_dte\documentacao
+    .\gerar_audio_tts.ps1
+
+    Duração estimada: 1-2 horas (automático)
+
+[ ] Verificar ficheiros gerados:
+    Pasta: audio_videos/
+    Ficheiros: 01_audio.wav até 12_audio.wav
+
+[ ] Ouvir alguns áudios para verificar qualidade
+    - Pronúncia clara
+    - Velocidade adequada
+    - Sem erros
+
+✅ FASE 3 COMPLETA: ___/___/___
+
+================================================================================
+FASE 4: PROCESSAMENTO COM FFmpeg (1-2 horas) - SEMANA X
+================================================================================
+
+Sincronização de Áudio + Vídeo:
+
+[ ] VIDEO 01: Sincronizar áudio + vídeo
+    Ficheiro final: 01_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 02: Sincronizar áudio + vídeo
+    Ficheiro final: 02_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 03: Sincronizar áudio + vídeo
+    Ficheiro final: 03_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 04: Sincronizar áudio + vídeo
+    Ficheiro final: 04_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 05: Sincronizar áudio + vídeo
+    Ficheiro final: 05_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 06: Sincronizar áudio + vídeo
+    Ficheiro final: 06_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 07: Sincronizar áudio + vídeo
+    Ficheiro final: 07_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 08: Sincronizar áudio + vídeo
+    Ficheiro final: 08_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 09: Sincronizar áudio + vídeo
+    Ficheiro final: 09_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 10: Sincronizar áudio + vídeo
+    Ficheiro final: 10_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 11: Sincronizar áudio + vídeo
+    Ficheiro final: 11_FINAL.mp4
+    Processado em: ___/___/___
+
+[ ] VIDEO 12: Sincronizar áudio + vídeo
+    Ficheiro final: 12_FINAL.mp4
+    Processado em: ___/___/___
+
+✅ FASE 4 COMPLETA: ___/___/___
+
+================================================================================
+FASE 5: INTEGRAÇÃO NO MANUAL.HTML (30 minutos) - SEMANA X
+================================================================================
+
+[ ] Abrir ficheiro: MANUAL.html
+
+[ ] Procurar secção: <!-- VÍDEOS TUTORIAIS -->
+
+[ ] Adicionar links para vídeos 1-12
+
+[ ] Verificar que cada vídeo tem:
+    - Título correto
+    - Duração
+    - Descrição breve
+    - Link funcional
+
+[ ] Testar em navegador:
+    - Chrome
+    - Edge
+    - Firefox
+
+[ ] Testar responsividade:
+    - Desktop (1920x1080)
+    - Tablet (768x1024)
+    - Telemóvel (375x667)
+
+[ ] Testar playback de vídeos:
+    - Play/Pause
+    - Fullscreen
+    - Controlo de volume
+
+✅ FASE 5 COMPLETA: ___/___/___
+
+================================================================================
+PUBLICAÇÃO NA SHAREPOINT
+================================================================================
+
+[ ] Copiar ficheiros para pasta SharePoint:
+    C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A\
+    Obras_dte_IC - 00_Obras\Gestao de Materiais de Catenaria\
+
+[ ] Criar pasta: /videos/
+
+[ ] Copiar 12 ficheiros MP4 finais
+
+[ ] Atualizar MANUAL.html na SharePoint
+
+[ ] Testar links na SharePoint
+
+[ ] Partilhar com equipa (se aplicável)
+
+[ ] Guardar backups em local seguro
+
+✅ PROJETO COMPLETO: ___/___/___
+
+================================================================================
+NOTAS & OBSERVAÇÕES
+================================================================================
+
+Anotações durante o processo:
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+
+Problemas encontrados:
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+
+Melhorias futuras:
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+================================================================================
+RESUMO FINAL
+================================================================================
+
+Data de início: ___/___/___
+
+Data de conclusão: ___/___/___
+
+Tempo total despendido: _____ horas
+
+Qualidade geral do resultado: ⭐ ⭐ ⭐ ⭐ ⭐
+
+Feedback de utilizadores:
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+
+Próximas ações:
+
+[ ] Publicar em SharePoint
+[ ] Partilhar com equipa
+[ ] Documentar lições aprendidas
+[ ] Planear atualizações futuras
+
+================================================================================

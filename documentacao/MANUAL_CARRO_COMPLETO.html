@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Gestão de Materiais de Catenária - Tipo Manual de Carro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .toc {
+            background: #f5f5f5;
+            padding: 30px;
+            border-bottom: 3px solid #0066cc;
+        }
+
+        .toc h2 {
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .toc-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #0066cc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toc-item:hover {
+            background: #e8f4ff;
+            transform: translateX(5px);
+        }
+
+        .toc-item a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .secao {
+            margin-bottom: 60px;
+            page-break-inside: avoid;
+            border: 2px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .secao h2 {
+            color: #0066cc;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #0066cc;
+        }
+
+        .secao-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .secao-imagem {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            text-align: center;
+        }
+
+        .secao-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .secao-texto {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .secao-texto h3 {
+            color: #0066cc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .secao-texto h3:first-child {
+            margin-top: 0;
+        }
+
+        .secao-texto p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .secao-texto ol,
+        .secao-texto ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .secao-texto li {
+            margin-bottom: 8px;
+        }
+
+        .secao-texto li strong {
+            color: #0066cc;
+        }
+
+        .anotacao {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .anotacao strong {
+            color: #ff6600;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-top: 3px solid #0066cc;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border: 3px dashed #0066cc;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .nota-importante {
+            background: #ffe6e6;
+            border-left: 5px solid #ff0000;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #cc0000;
+        }
+
+        .dica-rapida {
+            background: #e6f3ff;
+            border-left: 5px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #0066cc;
+        }
+
+        @media (max-width: 768px) {
+            .secao-layout {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .secao {
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .secao {
+                page-break-inside: avoid;
+                border: 1px solid #999;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📘 Manual de Gestão de Materiais de Catenária</h1>
+            <p>Tipo Manual de Carro - Guia Visual e Prático</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">DTE Instalações Especiais | Departamento de Catenária</p>
+        </header>
+
+        <div class="toc">
+            <h2>📋 Índice Completo</h2>
+            <div class="toc-list">
+                <div class="toc-item"><a href="#sec1">1. Início e Menu Lateral</a></div>
+                <div class="toc-item"><a href="#sec2">2. Stock - Consultar Materiais</a></div>
+                <div class="toc-item"><a href="#sec3">3. Entradas - Registar Chegadas</a></div>
+                <div class="toc-item"><a href="#sec4">4. Saídas - Registar Saídas</a></div>
+                <div class="toc-item"><a href="#sec5">5. Transferências Entre Armazéns</a></div>
+                <div class="toc-item"><a href="#sec6">6. Encomendas - Pedidos de Compra</a></div>
+                <div class="toc-item"><a href="#sec7">7. Consumos - Relatório de Saídas</a></div>
+                <div class="toc-item"><a href="#sec8">8. Projeto - Visualizar Postes</a></div>
+                <div class="toc-item"><a href="#sec9">9. Materiais por Poste</a></div>
+                <div class="toc-item"><a href="#sec10">10. Relatórios - Análises</a></div>
+                <div class="toc-item"><a href="#sec11">11. Backup e Restauração</a></div>
+                <div class="toc-item"><a href="#sec12">12. Definições - Configurar</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- SEÇÃO 1: INÍCIO E MENU -->
+            <div class="secao" id="sec1">
+                <h2>1️⃣ Início e Menu Lateral</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Menu Lateral Principal)<br><br>
+                            Será incluída a imagem com:<br>
+                            ➡️ Seta apontando para "Obra de Vendas Novas"<br>
+                            ➡️ Seta apontando para Menu Lateral<br>
+                            ➡️ Números destacando Projeto, Armazém, Gestão
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>A página inicial mostra o menu lateral com todas as funcionalidades da aplicação.
+                        Está organizada em 4 áreas principais: <strong>Obras</strong>, <strong>Projeto</strong>, <strong>Armazém</strong> e <strong>Gestão</strong>.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite navegar facilmente entre as diferentes funcionalidades sem perder dados.
+                        Mostra qual é a obra selecionada (Vendas Novas ou Pampilhosa) e permite mudar entre elas.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Trocar obra:</strong> Clica na obra desejada no topo do menu lateral (ex: "Obra de Vendas Novas")</li>
+                            <li><strong>Navegar:</strong> Clica em qualquer opção do menu lateral (Projeto, Stock, Entradas, etc.)</li>
+                            <li><strong>Expandir/Recolher:</strong> Clica na seta ao lado de cada secção (PROJETO, ARMAZÉM, GESTÃO)</li>
+                            <li><strong>Modo escuro/claro:</strong> Clica nos botões "Claro", "Escuro" ou "Auto" no topo</li>
+                        </ol>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ O botão "Novo material" (verde) cria um material novo rapidamente<br>
+                            ✅ Os botões "Claro", "Escuro" e "Auto" mudam o tema visual<br>
+                            ✅ O botão "Backup (JSON)" faz download de todos os dados actuais<br>
+                            ✅ O botão "Restaurar" carrega um backup anterior
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 2: STOCK -->
+            <div class="secao" id="sec2">
+                <h2>2️⃣ Stock - Consultar Materiais</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Painel de Stock com Tabela)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Campo "Pesquisar código"<br>
+                            2️⃣ Dropdown "Armazém"<br>
+                            3️⃣ Botão "Exportar CSV"<br>
+                            4️⃣ Tabela de materiais
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>O painel de Stock mostra todos os materiais disponíveis no armazém, com filtros por código,
+                        armazém, fornecedor e tipo. Calcula o valor total do stock com preços SAP.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite consultar rapidamente a quantidade disponível de qualquer material e saber se está em falta.
+                        Mostra os materiais com stock baixo ou esgotado em destaque.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Pesquisar:</strong> Escreve o código, descrição ou parcialmente no campo "Pesquisar código / descrição"</li>
+                            <li><strong>Filtrar por armazém:</strong> Seleciona no dropdown "Todos os armazém" se queres ver um armazém específico</li>
+                            <li><strong>Filtrar por fornecedor:</strong> Seleciona no dropdown "Todos os fornecedores"</li>
+                            <li><strong>Filtrar por tipo:</strong> Seleciona no dropdown "Todos os tipos"</li>
+                            <li><strong>Ver opções:</strong> Seleciona "Todos", "Só com stock", "Só stock baixo/esgotado"</li>
+                            <li><strong>Exportar:</strong> Clica "⬇ Exportar CSV" para fazer download em Excel</li>
+                            <li><strong>Ver detalhes:</strong> Clica no nome de um material para ver o histórico completo</li>
+                        </ol>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Materiais com "(empty)" = stock vazio<br>
+                            ✅ Materiais com "(sem código)" = precisam código SAP<br>
+                            ✅ Valor total = só conta materiais com preço SAP<br>
+                            ✅ Filtros funcionam em tempo real
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 3: ENTRADAS -->
+            <div class="secao" id="sec3">
+                <h2>3️⃣ Entradas - Registar Materiais que Chegam</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Formulário de Entradas)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Campo "Nº Pedido de Compra"<br>
+                            2️⃣ Campo "Data de entrega"<br>
+                            3️⃣ Botão "Registar entrada"<br>
+                            4️⃣ Opção "Entrada manual"
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Regista quando materiais chegam ao armazém. Pode ser por pedido de compra, manualmente ou
+                        importando do SAP (CSV).</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Actualiza o stock quando novos materiais chegam. Rastreia quem forneceu, quando chegou e
+                        qual era o pedido de compra associado.</p>
+
+                        <h3>COMO USAR - ENTRADA POR PEDIDO DE COMPRA</h3>
+                        <ol>
+                            <li>Escreve o nº do Pedido de Compra (ex: 4500851896)</li>
+                            <li>Seleciona a data de entrega (DD/MM/YYYY)</li>
+                            <li>Confirma o armazém de receção (ex: "Armazém Catenária")</li>
+                            <li>Escreve o documento/guia se tiver (nº da guia SAP)</li>
+                            <li>Clica <strong>"Registar entrada"</strong> (botão verde)</li>
+                        </ol>
+
+                        <h3>COMO USAR - ENTRADA MANUAL</h3>
+                        <ol>
+                            <li>Seleciona <strong>"Entrada manual"</strong></li>
+                            <li>Escreve o código do material (SAP ou interno)</li>
+                            <li>Escreve a quantidade que chegou</li>
+                            <li>Seleciona o armazém</li>
+                            <li>Seleciona a data</li>
+                            <li>Preenche opcionalmente: Nº Pedido, Documento/Guia, Fornecedor, Observações</li>
+                            <li>Clica <strong>"Registar entrada"</strong></li>
+                        </ol>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Se o pedido existe, mostra os materiais automaticamente<br>
+                            ✅ Sem pedido? Preenche os dados manualmente<br>
+                            ✅ Dados gravados aparecem no histórico com data/hora exacta<br>
+                            ✅ Pode fazer múltiplas entradas do mesmo pedido (parciais)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 4: SAÍDAS -->
+            <div class="secao" id="sec4">
+                <h2>4️⃣ Saídas - Registar Materiais que Saem</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Formulário de Saídas)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Dropdown "Tipo de saída"<br>
+                            2️⃣ Campo "Material"<br>
+                            3️⃣ Campo "Quantidade"<br>
+                            4️⃣ Botão "Registar saída"
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Regista quando materiais saem do armazém para a obra, para outro armazém (transferência)
+                        ou para outras actividades.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Reduz o stock quando materiais são usados ou movidos. Permite filtrar por datas e localizar
+                        saídas específicas no histórico.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Tipo de saída:</strong> Seleciona "Material individual" ou "Material de montagem"</li>
+                            <li><strong>Material:</strong> Escreve o código (aparece search automática)</li>
+                            <li><strong>Quantidade:</strong> Quanto está a sair (verifica stock disponível)</li>
+                            <li><strong>Armazém de origem:</strong> Onde está guardado</li>
+                            <li><strong>Data:</strong> Quando sai (DD/MM/YYYY)</li>
+                            <li><strong>Destino/Obra/Frente:</strong> Onde vai (ex: obra Vendas Novas, equipa de campo, etc.)</li>
+                            <li><strong>Opcional:</strong> Pedido, Requisição/Documento, Observações</li>
+                            <li>Clica <strong>"Registar saída"</strong></li>
+                        </ol>
+
+                        <h3>FILTRAR SAÍDAS ANTERIORES</h3>
+                        <ol>
+                            <li>Seleciona datas "De" e "Até"</li>
+                            <li>Escreve filtro (código, descrição, destino)</li>
+                            <li>Clica <strong>"Filtrar"</strong></li>
+                        </ol>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ⚠️ Stock insuficiente? A app mostra erro (não permite saída negativa)<br>
+                            ✅ Saídas para "montagem" descontam automaticamente dos componentes<br>
+                            ✅ Histórico mostra todas as saídas anteriores<br>
+                            ✅ Pode filtrar por múltiplos critérios
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 5: TRANSFERÊNCIAS -->
+            <div class="secao" id="sec5">
+                <h2>5️⃣ Transferências entre Armazéns</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Formulário de Transferências)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Campo "Material"<br>
+                            2️⃣ Dropdown "De (armazém)"<br>
+                            3️⃣ Dropdown "Para (armazém)"<br>
+                            4️⃣ Botão "Registar transferência"
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Move materiais entre armazéns diferentes (ex: Armazém Catenária → Estaleiro,
+                        ou Vendas Novas → Pampilhosa).</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite organizar stock entre vários locais. Reduz o stock de um armazém e aumenta no outro,
+                        mantendo rastreabilidade.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Material:</strong> Escreve o código (search automática)</li>
+                            <li><strong>Quantidade:</strong> Quanto está a mover</li>
+                            <li><strong>De (armazém):</strong> Seleciona origem</li>
+                            <li><strong>Para (armazém):</strong> Seleciona destino</li>
+                            <li><strong>Data:</strong> Quando acontece (DD/MM/YYYY)</li>
+                            <li><strong>Opcional:</strong> Documento/Guia, Observações</li>
+                            <li>Clica <strong>"Registar transferência"</strong></li>
+                        </ol>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Quantidade sai de um armazém e entra no outro no mesmo dia<br>
+                            ✅ Pode filtrar transferências por datas<br>
+                            ✅ Se mover para outra obra (Pampilhosa), regista também em "Guias AT"<br>
+                            ✅ Mantém histórico completo de movimentos
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 6: ENCOMENDAS -->
+            <div class="secao" id="sec6">
+                <h2>6️⃣ Encomendas - Pedidos de Compra (SAP)</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Tabela de Encomendas)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Campo de Pesquisa de PC<br>
+                            2️⃣ Filtro de Status<br>
+                            3️⃣ Coluna "Qtd Pedida"<br>
+                            4️⃣ Coluna "A ser Fornecida"
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Base de dados de todos os pedidos de compra (PC) do SAP. Mostra o material, quantidade pedida,
+                        quanto já foi entregue e quanto falta.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite saber qual é o status de cada encomenda e quando deve chegar material. Facilita registar
+                        entradas verificando o que foi encomendado.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Pesquisar:</strong> Escreve número do pedido (ex: 4500851896)</li>
+                            <li><strong>Filtros:</strong> Por status (Aberto, Parcialmente Recebido, Completo)</li>
+                            <li><strong>Ver detalhes:</strong> Clica numa linha para ver todos os materiais dessa PC</li>
+                            <li><strong>Criar entrada:</strong> Quando chega material, vai a "Entradas" e refere este nº de PC</li>
+                        </ol>
+
+                        <h3>SIGNIFICADO DOS VALORES</h3>
+                        <ul>
+                            <li><strong>Qtd Pedida:</strong> Total que foi encomendado</li>
+                            <li><strong>Qtd Recebida:</strong> Quanto já chegou</li>
+                            <li><strong>A ser Fornecida:</strong> Quanto ainda falta chegar</li>
+                            <li><strong>Status:</strong> Aberto = ainda falta; Completo = já chegou tudo</li>
+                        </ul>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Encomendas importadas do SAP periodicamente via CSV<br>
+                            ✅ Se "A ser fornecida" = 0, material chegou completamente<br>
+                            ✅ Clica na PC para ver histórico de recepções parciais<br>
+                            ✅ Útil para rastrear atrasos de fornecimentos
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 7: CONSUMOS -->
+            <div class="secao" id="sec7">
+                <h2>7️⃣ Consumos - Relatório de Saídas</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Relatório de Consumos)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Calendário "Data início"<br>
+                            2️⃣ Calendário "Data fim"<br>
+                            3️⃣ Botão "Exportar CSV"<br>
+                            4️⃣ Tabela de consumos
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Relatório de todos os materiais que sairam do armazém (consumos da obra).</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Mostra quanto se gastou de cada material em cada data e para qual obra/destino.
+                        Essencial para reconciliação com SAP e mapas de consumo.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Período:</strong> Seleciona datas de início e fim (ou deixa em branco para tudo)</li>
+                            <li><strong>Filtros:</strong> Por código, descrição, destino, obra, etc. (opcional)</li>
+                            <li><strong>Ver tabela:</strong> Mostra consumos agrupados por material e data</li>
+                            <li><strong>Exportar:</strong> Clica "Exportar CSV" para abrir em Excel</li>
+                        </ol>
+
+                        <h3>O QUE NÃO INCLUI</h3>
+                        <div class="nota-importante">
+                            ❌ Transferências entre armazéns<br>
+                            ❌ Ajustes de stock (a menos que marcados como consumo)<br>
+                            ❌ Roubos ou perdas não confirmadas
+                        </div>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Ideal para gerar mapas mensais de consumo<br>
+                            ✅ Pode filtrar por período (ex: 01/08 a 31/08)<br>
+                            ✅ Excel permite somas e gráficos automáticos<br>
+                            ✅ Usar para confirmar consumos real vs SAP
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 8: PROJETO -->
+            <div class="secao" id="sec8">
+                <h2>8️⃣ Projeto - Visualizar Postes e Desenhos</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Painel Projeto)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Campo "Pesquisar poste"<br>
+                            2️⃣ Secção "Cadernos de Montagem"<br>
+                            3️⃣ Lista de postes<br>
+                            4️⃣ Links para desenhos PDF
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Mostra os postes/pórticos da obra, os desenhos associados, componentes e montagens.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite ver rapidamente qual é a estrutura de cada poste, que desenhos utiliza,
+                        e que peças e quantidades são necessárias.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Pesquisar poste:</strong> Escreve o nº (ex: 04-26) ou parte da descrição</li>
+                            <li><strong>Ver detalhes:</strong> Clica num poste para expandir e ver desenhos + componentes</li>
+                            <li><strong>Ver desenho:</strong> Clica no nº do desenho para abrir o PDF</li>
+                            <li><strong>Ver componentes:</strong> Mostra peças, quantidades e submontagens</li>
+                        </ol>
+
+                        <h3>ESTRUTURA APRESENTADA</h3>
+                        <ul>
+                            <li><strong>Estruturas e Fundações</strong></li>
+                            <li><strong>Tirante</strong></li>
+                            <li><strong>Consola</strong></li>
+                            <li><strong>Antibalançante e Braço de Chamada</strong></li>
+                            <li><strong>Outros Equipamentos</strong></li>
+                            <li><strong>PDF Original</strong></li>
+                        </ul>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Postes organizados por categoria<br>
+                            ✅ Cada desenho lista peças com quantidades exactas<br>
+                            ✅ PDFs guardados localmente em projeto_vendas_novas/<br>
+                            ✅ Clica no desenho para ver imagem/especificações
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 9: MATERIAIS POR POSTE -->
+            <div class="secao" id="sec9">
+                <h2>9️⃣ Materiais por Poste - Material Necessário</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Painel Materiais por Poste)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Campo "Pesquisar poste"<br>
+                            2️⃣ Tabela de materiais<br>
+                            3️⃣ Coluna "Quantidade"<br>
+                            4️⃣ Filtros de tipo
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Lista todos os materiais necessários para cada poste, com as quantidades exactas.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite saber exactamente que materiais são necessários para cada poste e em que quantidade.
+                        Útil para confirmar material antes de sair do armazém e para auditorias.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Pesquisar:</strong> Escreve nº de poste (ex: 04-26)</li>
+                            <li><strong>Ver materiais:</strong> Clica no poste para ver todos os materiais necessários</li>
+                            <li><strong>Filtros:</strong> Por tipo de material, fornecedor, etc. (opcional)</li>
+                            <li><strong>Verificar stock:</strong> Confirma se temos quantidade suficiente em stock</li>
+                        </ol>
+
+                        <h3>INFORMAÇÕES MOSTRADAS</h3>
+                        <ul>
+                            <li><strong>Código:</strong> SAP ou código interno</li>
+                            <li><strong>Descrição:</strong> Nome do material</li>
+                            <li><strong>Quantidade:</strong> Unidades necessárias (nem sempre é 1)</li>
+                            <li><strong>Fornecedor:</strong> Quem fornece</li>
+                            <li><strong>Submontagens:</strong> Componentes que fazem parte de assemblies</li>
+                        </ul>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Quantidades exactas de cada material (extraídas de desenhos)<br>
+                            ✅ Inclui submontagens e componentes (não só peças finais)<br>
+                            ✅ Útil para confirmar material antes de sair do armazém<br>
+                            ✅ Comparar com stock disponível
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 10: RELATÓRIOS -->
+            <div class="secao" id="sec10">
+                <h2>🔟 Relatórios - Análises e Mapas</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Painel de Relatórios)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Menu de tipos de relatório<br>
+                            2️⃣ Filtros de período<br>
+                            3️⃣ Botão "Exportar"<br>
+                            4️⃣ Tabela de dados
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Gera relatórios de consumos, stock, valor, e comparações com dados SAP.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Permite fazer mapas mensais de consumo, auditorias de stock, e reconciliação com SAP.
+                        Essencial para gestão financeira e controlo de inventário.</p>
+
+                        <h3>COMO USAR</h3>
+                        <ol>
+                            <li><strong>Tipo de relatório:</strong> Seleciona o que precisas (Consumos, Stock, Valor, etc.)</li>
+                            <li><strong>Período:</strong> Seleciona datas de início e fim</li>
+                            <li><strong>Filtros:</strong> Obra, armazém, tipo de material, fornecedor, etc.</li>
+                            <li><strong>Gerar:</strong> A tabela aparece com os dados filtrados</li>
+                            <li><strong>Exportar:</strong> Clica "Exportar CSV" para abrir em Excel</li>
+                        </ol>
+
+                        <h3>TIPOS DE RELATÓRIO DISPONÍVEIS</h3>
+                        <ul>
+                            <li><strong>Consumos:</strong> Materiais que sairam do armazém</li>
+                            <li><strong>Stock:</strong> Estado actual do inventário</li>
+                            <li><strong>Valor do Stock:</strong> Avaliação monetária (preços SAP)</li>
+                            <li><strong>Comparação SAP:</strong> Diferenças entre dados locais e SAP</li>
+                            <li><strong>Histórico de Movimentos:</strong> Entradas, saídas e transferências</li>
+                        </ul>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Relatórios reflectem dados gravados (não cálculos automáticos)<br>
+                            ✅ Pode ser necessário ajustar datas para reconciliar com SAP<br>
+                            ✅ Exporta em CSV para processar em Excel<br>
+                            ✅ Manter histórico para auditorias posteriores
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 11: BACKUP -->
+            <div class="secao" id="sec11">
+                <h2>1️⃣1️⃣ Backup e Restauração</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Botões de Backup)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Botão "Backup (JSON)"<br>
+                            2️⃣ Botão "Restaurar"<br>
+                            3️⃣ Mensagem de confirmação<br>
+                            4️⃣ Ficheiro transferido
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Faz download de todos os dados (materiais, movimentos, encomendas, etc.) num ficheiro JSON.
+                        Permite restaurar dados anteriores se necessário.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Salvaguardar todos os dados antes de grandes alterações ou mudanças de computador.
+                        Protege contra perda de informação e permite recuperação rápida.</p>
+
+                        <h3>COMO FAZER BACKUP</h3>
+                        <ol>
+                            <li>Clica no botão <strong>"Backup (JSON)"</strong> no topo da página</li>
+                            <li>O ficheiro é automaticamente transferido para a pasta Downloads</li>
+                            <li>Nome do ficheiro: <strong>dte_backup_YYYYMMDD_HHMMSS.json</strong></li>
+                            <li>Guarda o ficheiro num local seguro (ex: OneDrive, pen, etc.)</li>
+                        </ol>
+
+                        <h3>COMO RESTAURAR</h3>
+                        <ol>
+                            <li>Clica no botão <strong>"Restaurar"</strong> no topo</li>
+                            <li>Seleciona um ficheiro JSON de backup anteriormente guardado</li>
+                            <li><strong>⚠️ ATENÇÃO:</strong> Confirma (substitui TODOS os dados actuais)</li>
+                            <li>A página recarrega com os dados do backup</li>
+                            <li>Verifica que tudo está correcto</li>
+                        </ol>
+
+                        <h3>BOAS PRÁTICAS</h3>
+                        <div class="nota-importante">
+                            ⚠️ Faz backup regularmente (pelo menos 1x por semana)<br>
+                            ⚠️ Antes de mudanças grandes (importações SAP, etc.)<br>
+                            ⚠️ Guarda backups com datas no nome para rastreabilidade<br>
+                            ⚠️ O backup inclui TUDO: materiais, movimentos, encomendas, desenhos, etc.
+                        </div>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Ficheiro JSON é texto (pode abrir com Bloco de Notas)<br>
+                            ✅ Cada backup é independent (podes ter múltiplos)<br>
+                            ✅ Restauração é instantânea (recarrega a página)<br>
+                            ✅ Antes de restaurar, faz backup do estado actual!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 12: DEFINIÇÕES -->
+            <div class="secao" id="sec12">
+                <h2>1️⃣2️⃣ Definições - Configurar Armazéns e Parâmetros</h2>
+                <div class="secao-layout">
+                    <div class="secao-imagem">
+                        <div class="screenshot-placeholder">
+                            📸 SCREENSHOT ANOTADA<br>
+                            (Painel de Definições)<br><br>
+                            Será incluída a imagem com:<br>
+                            1️⃣ Secção "Armazéns"<br>
+                            2️⃣ Secção "Tipos de Material"<br>
+                            3️⃣ Secção "Fornecedores"<br>
+                            4️⃣ Botões "Adicionar / Remover"
+                        </div>
+                    </div>
+                    <div class="secao-texto">
+                        <h3>O QUÊ</h3>
+                        <p>Permite configurar armazéns, tipos de material, fornecedores, e outros parâmetros da aplicação.
+                        Customiza a app para diferentes estruturas de armazém.</p>
+
+                        <h3>PARA QUÊ</h3>
+                        <p>Gerir os dados mestres da aplicação. Adicionar novos fornecedores, definir tipos de material,
+                        e controlar que locais de armazenagem estão disponíveis.</p>
+
+                        <h3>COMO USAR - ARMAZÉNS</h3>
+                        <ol>
+                            <li>Vai a <strong>"Definições"</strong> > <strong>"Armazéns"</strong></li>
+                            <li>Para adicionar: Escreve o nome e clica <strong>"Adicionar"</strong></li>
+                            <li>Para remover: Clica <strong>"Remover"</strong> (apenas se sem stock/movimentos)</li>
+                        </ol>
+
+                        <h3>COMO USAR - TIPOS DE MATERIAL</h3>
+                        <ol>
+                            <li>Vai a <strong>"Definições"</strong> > <strong>"Tipos"</strong></li>
+                            <li>Para adicionar: Escreve o tipo (ex: "Cabos", "Estrutura") e clica <strong>"Adicionar"</strong></li>
+                            <li>Tipos aparecem nos filtros e dropdowns automaticamente</li>
+                        </ol>
+
+                        <h3>COMO USAR - FORNECEDORES</h3>
+                        <ol>
+                            <li>Vai a <strong>"Definições"</strong> > <strong>"Fornecedores"</strong></li>
+                            <li>Para adicionar: Escreve o nome/código e clica <strong>"Adicionar"</strong></li>
+                            <li>Aparece na lista de fornecedores em entradas/encomendas</li>
+                        </ol>
+
+                        <h3>CUIDADOS IMPORTANTES</h3>
+                        <div class="nota-importante">
+                            ⚠️ NÃO apagar armazéns que têm stock ou movimentos históricos<br>
+                            ⚠️ Tipos e fornecedores usados aparecem nos filtros automaticamente<br>
+                            ⚠️ Mudanças de parâmetros afectam dados futuros (não retroactivos)<br>
+                            ⚠️ Faz backup antes de alterações grandes
+                        </div>
+
+                        <h3>DICAS RÁPIDAS</h3>
+                        <div class="dica-rapida">
+                            ✅ Armazéns devem ser únicos (evita duplicados)<br>
+                            ✅ Tipos e fornecedores podem ter nomes/códigos iguais aos do SAP<br>
+                            ✅ Configuração é local (não sincroniza com SAP)<br>
+                            ✅ Manter nomes consistentes para facilitar pesquisa
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO FINAL: GUIA RÁPIDA -->
+            <div class="secao">
+                <h2>⚡ Guia Rápida - Atalhos e Dicas Finais</h2>
+                <div class="secao-texto" style="background: linear-gradient(135deg, #e8f4ff 0%, #fff3e0 100%);">
+                    <h3>🎯 TAREFAS MAIS COMUNS</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                        <tr style="background: #0066cc; color: white;">
+                            <th style="padding: 10px; text-align: left; border: 1px solid #ddd;"><strong>TAREFA</strong></th>
+                            <th style="padding: 10px; text-align: left; border: 1px solid #ddd;"><strong>PASSOS</strong></th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Consultar stock de um material</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Stock → Pesquisa código → Vê quantidade</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Registar entrada de material</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Entradas → Nº PC ou entrada manual → Registar</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Sacar material para obra</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Saídas → Código + quantidade + obra → Registar</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Ver material de um poste</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Materiais por Poste → Nº poste → Ver lista</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Fazer mapa de consumos</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Consumos → Datas → Exportar CSV → Excel</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Mover material entre armazéns</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Transferências → Material + "De/Para" → Registar</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Fazer backup de segurança</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Backup (JSON) → Guardar ficheiro</td>
+                        </tr>
+                    </table>
+
+                    <h3>💡 DICAS DE OURO</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #00cc00; border-radius: 4px;">
+                            <strong>✅ Sempre preencher dados completos:</strong> Código, quantidade, data, origem/destino. Ajuda na auditoria.
+                        </li>
+                        <li style="margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #00cc00; border-radius: 4px;">
+                            <strong>✅ Usar os filtros:</strong> Pesquisa, período, armazém. Economiza tempo a encontrar dados.
+                        </li>
+                        <li style="margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #00cc00; border-radius: 4px;">
+                            <strong>✅ Verificar stock antes de sair:</strong> A app avisa se há falta. Nunca permite negativo.
+                        </li>
+                        <li style="margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #00cc00; border-radius: 4px;">
+                            <strong>✅ Fazer backup regular:</strong> Mínimo 1x por semana ou antes de mudanças grandes.
+                        </li>
+                        <li style="margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #00cc00; border-radius: 4px;">
+                            <strong>✅ Rastrear com documento/guia:</strong> Preenche nº de PC, guia AT ou documento SAP quando possível.
+                        </li>
+                        <li style="margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #00cc00; border-radius: 4px;">
+                            <strong>✅ Exportar para Excel:</strong> Muitos relatórios permitem exportar CSV para análises adicionais.
+                        </li>
+                    </ul>
+
+                    <h3>❓ PERGUNTAS FREQUENTES</h3>
+                    <div style="margin: 15px 0;">
+                        <p><strong>P: Posso fazer uma saída sem ter stock?</strong><br>
+                        R: Não. A app avisa e não permite saída negativa. Primeiro ajusta o stock ou faz entrada.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <p><strong>P: Onde estão os dados realmente guardados?</strong><br>
+                        R: Navegador (localStorage) + ficheiro HTML (SEED_DATA). Sempre faz backup para JSON.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <p><strong>P: Como restauro um backup antigo?</strong><br>
+                        R: Clica "Restaurar", seleciona o ficheiro JSON. Atenção: substitui dados actuais.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <p><strong>P: Posso usar isto em móvel/tablet?</strong><br>
+                        R: Sim! Layout adapta-se automaticamente. Dados sincronizam no navegador do dispositivo.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <p><strong>P: Como faço para conciliar com SAP?</strong><br>
+                        R: Vai a "Relatórios", compara consumos/stock com dados SAP. Usa filtros de período.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p><strong>📘 Manual de Gestão de Materiais de Catenária</strong></p>
+            <p>Tipo Manual de Carro - Guia Visual e Prático</p>
+            <p>Versão: 1.0 | Criado em: 14/10/2026</p>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+                Este manual foi criado para auxiliar utilizadores da aplicação de Gestão de Materiais de Catenária.<br>
+                <strong>DTE Instalações Especiais</strong> | Departamento de Catenária<br>
+                Contacto: Rui Simões (rui16simoes@gmail.com)
+            </p>
+            <p style="margin-top: 15px; font-size: 0.85em; opacity: 0.6;">
+                © 2026 DTE Instalações Especiais. Todos os direitos reservados.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8"><title>Saída por parte do poste — 18/09/2026</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;margin:24px;color:#1f2937;max-width:1100px;line-height:1.45}
+h1{font-size:23px;margin:0 0 4px}h2{font-size:18px;margin:26px 0 8px;color:#0b4a7d;border-bottom:2px solid #dbe7f3;padding-bottom:4px}
+.m{color:#6b7280;font-size:12px}table{border-collapse:collapse;width:100%;font-size:13px;margin:6px 0 14px}
+th,td{border:1px solid #d6dde6;padding:5px 7px;vertical-align:top;text-align:left}th{background:#eef4fa}
+.caixa{background:#f4f8fc;border:1px solid #cddbeb;border-radius:8px;padding:10px 14px;margin:10px 0}.ok{background:#edf8f0;border-color:#9fd3ad}.aviso{background:#fff7e6;border-color:#f2c46d}
+code{background:#eef2f7;padding:1px 5px;border-radius:4px}
+</style></head><body>
+<h1>Saída por parte do poste, com pesquisa</h1>
+<div class="m">Gestão de Materiais de Catenária · IC-0019 Vendas Novas · 18/09/2026</div>
+
+<h2>Como se usa</h2>
+<div class="caixa"><ol>
+<li><b>Saídas</b> → Tipo de saída: <b>"Parte de poste"</b> (ou, na ficha de um poste, o botão <b>"➖ Dar saída de partes deste poste"</b>).</li>
+<li>Na caixa de pesquisa escreve-se o que o pessoal disse:
+<ul>
+<li><code>06-29 consola</code> · <code>braço de chamada 15-07</code> · <code>50-36A tirante</code> — abre o poste e <b>marca sozinha</b> a parte certa;</li>
+<li>só <code>06-29</code> — abre o poste com todas as partes para marcar à mão;</li>
+<li><code>501A</code>, <code>E-6184 X</code>, <code>E-6182</code>, <code>suspensão</code> — <b>pesquisa ao contrário</b>: lista os postes e as partes onde essa peça, desenho ou equipamento entra (clicando, abre o poste com essas partes já marcadas).</li>
+</ul></li>
+<li>O poste aparece separado nas partes do caderno: <b>Tirante</b>, <b>Consola</b>, <b>Antibalançante e braço de chamada</b> (uma de cada por consola; nos postes de 2 ou 3 consolas aparecem todas) e cada linha dos <b>outros equipamentos</b> (suspensão do CDTA, shunt, conjunto de segurança, feeder, seccionador…). Cada parte diz <b>"por sair"</b> ou <b>"Saiu 18/09/2026"</b>.</li>
+<li>Marcam-se as partes que saem. Aparecem as peças a descontar, com o stock e o que fica (negativo a vermelho). Os tubos vêm em metros das medidas do caderno; se alguma linha estiver em "qb" (ex.: cabo 9C), o programa pergunta os metros.</li>
+<li><b>Registar saída.</b> Cada movimento fica com o poste e a parte ("Poste 06-29 — Consola"). Se a parte já tinha saído, o programa avisa antes.</li>
+</ol></div>
+
+<h2>Regras</h2>
+<ul>
+<li>As peças de cada parte são calculadas com <b>as mesmas regras dos Materiais Totais</b> (listas dos desenhos, ZT, cortes das consolas, alonga, abaixamento, EC-233, pêndulo 465/280…). Verificado: a soma das partes de um poste dá exatamente o total do poste.</li>
+<li>O estado "Saiu" vem dos movimentos: se se apagar o movimento, a parte volta a "por sair".</li>
+<li>Peças sem ficha de material e referências sem lista de peças aparecem à parte e não descontam stock.</li>
+<li>Os postes a desmontar não entram na pesquisa ao contrário.</li>
+</ul>
+
+<h2>Testado no browser</h2>
+<div class="caixa ok"><ul>
+<li>06-29, 31-02 (3 consolas), 50-36A (plataforma alta) e 64-39: partes e peças corretas; 06-29: soma das partes = total do poste (0 diferenças).</li>
+<li>"06-29 braço de chamada" → marcou só "Antibalançante e braço de chamada"; saída registada: 13 movimentos com poste/parte, cabo 9C "qb" pedido, braço 643 255 → 254, estado passou a "Saiu". Os movimentos de teste foram retirados a seguir.</li>
+<li>"501A" → 122 postes (98 novos + 24 existentes com consola 30x38); "E-6184 X" → 221 postes; "suspensão" → 236.</li>
+<li>Ficha do poste 31-02: mostra as 9 partes + suspensão com o estado, e o botão abre a saída já com o poste.</li>
+<li>Sintaxe dos 14 blocos de JavaScript sem erros; consola do browser sem erros.</li>
+</ul></div>
+<div class="caixa aviso"><b>A ter em conta:</b> o braço de chamada que aparece é o da lista antiga do E-6184 X (peça 643) — está nas perguntas pendentes da revisão (#53). Algumas fichas de cabo (ex.: 9Q) ainda têm a unidade "un" em vez de "m"; a quantidade está em metros.</div>
+</body></html>

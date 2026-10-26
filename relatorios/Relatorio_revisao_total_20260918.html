@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8"><title>Revisão total do programa — 18/09/2026</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;margin:24px;color:#1f2937;max-width:1250px;line-height:1.45}
+h1{font-size:23px;margin:0 0 4px}h2{font-size:18px;margin:30px 0 8px;color:#0b4a7d;border-bottom:2px solid #dbe7f3;padding-bottom:4px}
+h3{font-size:15px;margin:18px 0 6px}
+.m{color:#6b7280;font-size:12px}table{border-collapse:collapse;width:100%;font-size:13px;margin:6px 0 14px}
+th,td{border:1px solid #d6dde6;padding:5px 7px;vertical-align:top;text-align:left}th{background:#eef4fa}
+.caixa{background:#f4f8fc;border:1px solid #cddbeb;border-radius:8px;padding:10px 14px;margin:10px 0}
+.erro{background:#fdecec;border-color:#f0a3a3}.aviso{background:#fff7e6;border-color:#f2c46d}.ok{background:#edf8f0;border-color:#9fd3ad}
+.g{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;font-weight:700;color:#fff}
+.alta{background:#b42318}.media{background:#c77700}.baixa{background:#6b7280}
+.ref{color:#6b7280;font-size:11px;white-space:nowrap}
+.kpi{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.kpi div{background:#f4f8fc;border:1px solid #cddbeb;border-radius:8px;padding:8px 14px;min-width:150px}
+.kpi b{font-size:22px;display:block}
+</style></head><body>
+<h1>Revisão total do programa</h1>
+<div class="m">Gestão de Materiais de Catenária · IC-0019 Vendas Novas · 18/09/2026 · revisão só de leitura (nada foi alterado)</div>
+
+<div class="kpi">
+<div><b>96</b>apontamentos das 4 frentes</div>
+<div><b>72</b>erros diferentes (depois de juntar os repetidos)</div>
+<div><b style="color:#b42318">29</b>graves</div>
+<div><b>17</b>perguntas para o Rui</div>
+</div>
+
+<div class="caixa"><b>Como foi feito:</b> quatro revisões em paralelo, cada uma com uma parte do programa:
+<b>A</b> código de stock, entradas e saídas;
+<b>B</b> encomendas, SAP, relatórios e o resto do código;
+<b>C</b> projeto, postes e catálogo de montagens;
+<b>D</b> todos os dados (fichas, movimentos e encomendas).
+Cada erro foi provado a correr o próprio código do programa sobre os dados reais. Os mais graves foram depois confirmados por mim (marcados ✔).
+Os relatórios completos, com a prova de cada erro, estão em <code>relatorios/revisao_total_20260918/</code> (A, B, C e D), com as listas em CSV.
+Não se repete aqui o que já estava pendente no POR_FAZER.</div>
+
+<div class="caixa erro"><b>O mais importante, em 5 linhas</b><ol>
+<li><b>O programa desfaz trabalho quando é reaberto ✔.</b> O que se apaga volta a aparecer. As receções registadas nas encomendas que vieram do SAP voltam a "Em encomenda", mas a entrada no stock fica, o que permite receber a mesma coisa duas vezes. Com dois separadores abertos, um apaga o que se fez no outro.</li>
+<li><b>Os consumos incluem o que não é consumo.</b> Ajustes, o roubo e as transferências para a Pampilhosa contam como consumo real: são 108 saídas e 12 118 unidades. O acerto de stock feito no ecrã nem sequer marca o movimento como ajuste.</li>
+<li><b>Há material contado duas vezes no stock.</b> A encomenda da EIP entrou duas vezes ✔ (≈1 414 un., ≈8,3 k€). Há ainda a Senttro, a Sacyr, as mangas termo e 3 postes com duas saídas. Tudo isto precisa de confirmação tua antes de se mexer.</li>
+<li><b>Há fichas repetidas da mesma peça, com o stock partido entre elas.</b> São 115 peças; em 24 delas as duas fichas têm stock. Um acerto pelo n.º SAP pode ir parar à ficha com 0 e duplicar o stock (ex.: tubo 19x26 com 1 047 m passaria a 2 047).</li>
+<li><b>Os Materiais Totais do projeto dizem "0 pendências", mas faltam coisas</b>: os 5 pórticos, as peças das submontagens (transformadores, seccionadores), as peças sem código juntas numa linha, e o braço de chamada E-6184 X, que já não existe no desenho atual ✔.</li>
+</ol></div>
+
+<h2>1. O programa perde ou desfaz trabalho</h2>
+<table><tr><th style="width:26px">#</th><th>Erro</th><th style="width:70px">Gravidade</th><th>O que acontece</th><th style="width:70px">Origem</th></tr>
+<tr><td>1</td><td><b>Tudo o que se apaga volta ao reabrir</b> ✔</td><td><span class="g alta">alta</span></td><td>Ao abrir, o programa volta a juntar os dados que vêm dentro do ficheiro e repõe tudo o que falta: movimentos, fichas, encomendas e montagens apagados. "Apagar tudo" também volta (reaparecem 2 447 movimentos).</td><td class="ref">A1 · B1</td></tr>
+<tr><td>2</td><td><b>Receções das encomendas SAP desfeitas ao reabrir</b> ✔</td><td><span class="g alta">alta</span></td><td>As 601 linhas de encomenda e as 374 fichas vindas do SAP são reescritas em cada arranque. Uma entrega registada volta a "Em encomenda" e a entrada fica no stock, o que permite uma segunda receção. Há 37 linhas ainda por receber nesta situação. O stock mínimo e as edições destas fichas também se perdem.</td><td class="ref">A2 · B1</td></tr>
+<tr><td>3</td><td><b>Dois separadores abertos apagam-se um ao outro</b></td><td><span class="g media">média</span></td><td>Cada separador grava tudo de 30 em 30 s. O que estiver desatualizado apaga o que se registou no outro, sem aviso.</td><td class="ref">B14</td></tr>
+<tr><td>4</td><td><b>Botão "🔄 Recarregar": a cópia de segurança só leva a obra aberta</b></td><td><span class="g alta">alta</span></td><td>O botão apaga todas as obras, mas a cópia só guarda a que está aberta. Se se restaurar essa cópia, a Pampilhosa fica vazia ou os movimentos dela passam para Vendas Novas.</td><td class="ref">A7 · B16 · A22</td></tr>
+<tr><td>5</td><td><b>Abrir e gravar uma montagem estraga a lista de peças</b></td><td><span class="g alta">alta</span></td><td>Ao gravar: as linhas "qb" passam a 1, as linhas perdem o código e o nome da peça, as linhas a 0 desaparecem, e uma linha sem ficha passa a apontar para a primeira ficha da lista.</td><td class="ref">A8</td></tr>
+<tr><td>6</td><td>Correções automáticas desfazem edições feitas à mão</td><td><span class="g baixa">baixa</span></td><td>Algumas correções antigas (E-6182, EC-219, E-6181, linhas do caderno) voltam a aplicar-se em cada arranque. Se mudares esses valores à mão, voltam ao que estava.</td><td class="ref">A19</td></tr>
+<tr><td>7</td><td>O programa não abre se faltar uma linha da PC 4500883493</td><td><span class="g baixa">baixa</span></td><td>Não acontece hoje; é um risco para uma importação futura.</td><td class="ref">A21</td></tr>
+</table>
+
+<h2>2. Entradas, saídas e stock (código)</h2>
+<table><tr><th style="width:26px">#</th><th>Erro</th><th style="width:70px">Gravidade</th><th>O que acontece</th><th style="width:70px">Origem</th></tr>
+<tr><td>8</td><td><b>Saída por montagem com tubo ou cabo "qb" não desconta nada</b> ✔</td><td><span class="g alta">alta</span></td><td>A quantidade fica inválida. O tubo não sai do stock e não aparece aviso de falta. São 14 montagens, entre elas a E-6181 Tc, as E-6182 e o C-3410. Ainda não há movimentos estragados.</td><td class="ref">A3</td></tr>
+<tr><td>9</td><td><b>Peça repetida dentro da mesma montagem deixa o stock negativo sem aviso</b></td><td><span class="g alta">alta</span></td><td>A verificação de stock é feita linha a linha, por isso duas linhas da mesma peça passam cada uma sozinha. Acontece mesmo com a opção "bloquear". São 22 montagens (ex.: C-160 SC).</td><td class="ref">A4</td></tr>
+<tr><td>10</td><td>Apagar uma entrada pode deixar o stock negativo sem aviso</td><td><span class="g media">média</span></td><td>O programa não verifica o stock que resulta de apagar a entrada.</td><td class="ref">A9</td></tr>
+<tr><td>11</td><td>As duas obras geram os mesmos números de registo</td><td><span class="g media">média</span></td><td>Uma montagem criada numa obra e outra na Pampilhosa podem ficar com o mesmo id. Depois, editar ou apagar uma apanha a outra.</td><td class="ref">A10 · A11</td></tr>
+<tr><td>12</td><td>Fichas com código repetido não se deixam editar</td><td><span class="g media">média</span></td><td>O SAP usa o mesmo código para vários tamanhos (luvas, fatos): são 212 fichas. Gravar qualquer uma delas dá "já existe um material com esse código".</td><td class="ref">A12</td></tr>
+<tr><td>13</td><td>A data "de hoje" está em hora UTC</td><td><span class="g media">média</span></td><td>Entre a meia-noite e a 1 h de verão fica a data do dia anterior. O período sugerido de "mês passado" sai com um dia de desfasamento (31/07 a 30/08).</td><td class="ref">A15 · B10</td></tr>
+</table>
+
+<h2>3. Consumos, ajustes e relatórios</h2>
+<table><tr><th style="width:26px">#</th><th>Erro</th><th style="width:70px">Gravidade</th><th>O que acontece</th><th style="width:70px">Origem</th></tr>
+<tr><td>14</td><td><b>Ajustes, roubo e transferências contam como consumo</b></td><td><span class="g alta">alta</span></td><td>O programa nunca olha para as marcas de ajuste, transferência ou empréstimo. Hoje entram nos consumos e no relatório 108 saídas (12 118 un.): 88 "ajuste SAP", o roubo de 08/06 e as transferências para a IC-0018.</td><td class="ref">A6 · B3 · D8</td></tr>
+<tr><td>15</td><td><b>O acerto de stock do ecrã não marca "ajuste"</b></td><td><span class="g alta">alta</span></td><td>Uma saída de acerto fica igual a uma saída de obra. O stock inicial de uma ficha nova também não fica marcado.</td><td class="ref">A6 · B4</td></tr>
+<tr><td>16</td><td><b>103 movimentos que são ajustes estão sem a marca</b></td><td><span class="g media">média</span></td><td>São as 88 saídas "Ajuste −N (TMv 221)" de 12/06, as entradas da lista de equipamentos, os ajustes iniciais de cabo e as 3 entradas fictícias sem data. A lista está em CSV.</td><td class="ref">D8 · A18</td></tr>
+<tr><td>17</td><td>26 saídas para a Pampilhosa sem a marca de transferência</td><td><span class="g media">média</span></td><td>São a GT 3203 (20 linhas), a saída de 06/07 (4) e a de 14/07 (2). Do lado da Pampilhosa só existem as receções da GT 2979.</td><td class="ref">D9 · A17</td></tr>
+<tr><td>18</td><td><b>A folha de consumos lê a coluna errada do ficheiro SAP</b></td><td><span class="g alta">alta</span></td><td>Com a folha real de agosto, lê a descrição em vez do n.º SAP. Resultado: 0 linhas cruzadas por SAP (deviam ser 13) e 184 linhas marcadas por engano como "Material não no JSON".</td><td class="ref">B2</td></tr>
+<tr><td>19</td><td>O relatório por datas está escrito duas vezes; a versão em uso arredonda</td><td><span class="g media">média</span></td><td>Mostra 17,42 m como 17 e 0,1 como 0, e soma metros com unidades. Os filtros por armazém e por fornecedor desapareceram.</td><td class="ref">B12</td></tr>
+<tr><td>20</td><td>Os históricos de entradas e saídas não se atualizam sozinhos</td><td><span class="g media">média</span></td><td>Só mudam quando se carrega em "Filtrar", também depois de mudar de obra.</td><td class="ref">B11</td></tr>
+<tr><td>21</td><td>Exportações CSV partidas ou mal formatadas</td><td><span class="g baixa">baixa</span></td><td>As aspas nas descrições partem as colunas (33 linhas da folha de agosto têm aspas). Os acentos saem trocados no Excel. Os decimais saem com ponto (1527.5; 537.9699999999998).</td><td class="ref">B17 · A20 · C19</td></tr>
+<tr><td>22</td><td>Botão "Marcar saídas com etiqueta" falha com apóstrofo e marca tudo</td><td><span class="g baixa">baixa</span></td><td>Uma etiqueta como "Agosto'26" parte o botão. O botão marca todas as saídas do período, incluindo ajustes. Ainda não foi usado.</td><td class="ref">B18</td></tr>
+<tr><td>23</td><td>Tabelas sem proteção contra "&lt;" nas descrições</td><td><span class="g baixa">baixa</span></td><td>Na folha, nos históricos e no relatório, um "&lt;" numa descrição ou observação corta a célula.</td><td class="ref">B19</td></tr>
+</table>
+
+<h2>4. Importação do SAP e fichas repetidas</h2>
+<table><tr><th style="width:26px">#</th><th>Erro</th><th style="width:70px">Gravidade</th><th>O que acontece</th><th style="width:70px">Origem</th></tr>
+<tr><td>24</td><td><b>Importação CSV lê mal os milhares</b></td><td><span class="g alta">alta</span></td><td>"1.200,000" entra como 1,2 e "1.003" entra como 1,003. Só acontece nas quantidades; o preço lê bem.</td><td class="ref">A5 · B7</td></tr>
+<tr><td>25</td><td><b>As importações criam fichas repetidas</b></td><td><span class="g alta">alta</span></td><td>A ficha é procurada só pelo código, nunca pelo n.º SAP. A importação de 17/08 criou uma ficha por cada linha de encomenda: das 374 fichas criadas, 322 têm um n.º SAP que já existia noutra ficha, e 59 são repetidas mesmo (mesma descrição).</td><td class="ref">B6 · A16</td></tr>
+<tr><td>26</td><td><b>A mesma peça em várias fichas, com o stock partido</b></td><td><span class="g alta">alta</span></td><td>115 códigos de peça têm mais do que uma ficha; em 24 há stock nas duas (ex.: 442 com 115 + 1 944; 640 com 300 + 1 000). A causa: 72 fichas têm no campo SAP o código IP (75…) em vez do n.º SAP. Em 3 casos, a 28/08, fez-se uma entrada fictícia para tapar um negativo quando a peça tinha stock na outra ficha: 465, 113A e 111A.</td><td class="ref">D5 · D19</td></tr>
+<tr><td>27</td><td><b>Pesquisa e acerto por n.º SAP escolhem a ficha com stock 0</b></td><td><span class="g alta">alta</span></td><td>Exemplo: acertar o tubo 19x26 (SAP 4026296, 1 047 m) para os 1 000 m contados escolhe a ficha repetida com stock 0 e regista +1 000. O total passa a 2 047 m.</td><td class="ref">B8</td></tr>
+<tr><td>28</td><td>As encomendas apontam para fichas diferentes das que têm o stock</td><td><span class="g media">média</span></td><td>Em 183 códigos SAP, a encomenda está numa ficha e o stock noutra. Das 688 combinações encomenda/ficha, 165 não batem com as entradas (lista em CSV).</td><td class="ref">D10</td></tr>
+<tr><td>29</td><td><b>Aceita receber mais do que se encomendou</b></td><td><span class="g alta">alta</span></td><td>Não avisa. A entrada importada por CSV também não atualiza o "recebido" da encomenda. Nos dados há 28 linhas recebidas a mais, 25 delas exatamente em dobro (ver a EIP abaixo).</td><td class="ref">B5</td></tr>
+<tr><td>30</td><td>Importar o mesmo ficheiro duas vezes duplica tudo</td><td><span class="g media">média</span></td><td>Não há proteção contra isso. As entradas ficam com a data do dia da importação, não a do documento, e sem o n.º do item da encomenda.</td><td class="ref">B9 · A16</td></tr>
+<tr><td>31</td><td>Preço da ficha atualizado pela ordem do ficheiro</td><td><span class="g media">média</span></td><td>Fica o preço da última linha do ficheiro, não o da compra mais recente, e com a data de hoje.</td><td class="ref">B15</td></tr>
+<tr><td>32</td><td>Contratos-quadro 4600… com quantidade 0 ficam sempre "Em encomenda"</td><td><span class="g baixa">baixa</span></td><td>São 4 linhas (M3942–M3944 e M3978).</td><td class="ref">B20 · D21</td></tr>
+<tr><td>33</td><td>21 fichas com um código de 7 dígitos que parece SAP mas não é</td><td><span class="g baixa">baixa</span></td><td>São referências de fornecedor (Hilti, Ferramaq) e podem confundir a importação.</td><td class="ref">D22</td></tr>
+</table>
+
+<h2>5. Dados com stock errado — precisam de ti antes de mexer</h2>
+<table><tr><th style="width:26px">#</th><th>Caso</th><th style="width:70px">Gravidade</th><th>O que se vê</th><th style="width:70px">Origem</th></tr>
+<tr><td>34</td><td><b>EIP, PC 4500851945, entrou duas vezes</b> ✔</td><td><span class="g alta">alta</span></td><td>As mesmas 30 peças com as mesmas quantidades entraram a 17/06 pela guia GT326/475 e outra vez a 24/06 como "Entrada SAP". São ≈1 414 un. (≈8,3 k€) a mais. Se se anular, a 731A (M4064) fica em −2.</td><td class="ref">D1 · B5</td></tr>
+<tr><td>35</td><td><b>Senttro, PC 4500864211, entrou duas vezes</b></td><td><span class="g alta">alta</span></td><td>As importações de maio e de junho registaram a mesma compra, e em maio com quantidades partidas (3,7 / 1,1) em peças contadas à unidade. São ≈350 un. a mais em 3 fichas.</td><td class="ref">D2</td></tr>
+<tr><td>36</td><td><b>Sacyr: mapa de 25/05 e compras com as mesmas quantidades</b></td><td><span class="g alta">alta</span></td><td>5 materiais estão contados duas vezes: tubo 30x38 48 m, tubo 40x49 36 m, 510, 442 ×144 e 511. A PC 4500872735 repete a 4500872979 e continua "por receber".</td><td class="ref">D3</td></tr>
+<tr><td>37</td><td><b>Três postes com duas saídas</b></td><td><span class="g alta">alta</span></td><td>50-16: 12/03 e GT 3187 (07/09). 64-19: 12/03 e 02/06. 64-25: 02/06 e 02/07.</td><td class="ref">D4</td></tr>
+<tr><td>38</td><td><b>Tubo 30x38 da Fergrupo: 20 em vez de 120 m</b></td><td><span class="g alta">alta</span></td><td>A observação da entrada mv4510 diz "6 m cada = 120 m", mas a quantidade ficou 20.</td><td class="ref">D6</td></tr>
+<tr><td>39</td><td><b>Manga termo GMW 22/6: 1 560 em duas fichas</b></td><td><span class="g alta">alta</span></td><td>O programa tem 3 087,5; o SAP recebeu 1 629. <b>Atenção:</b> o acerto de "−1 560" previsto na POR_FAZER 1.7c, se for feito na ficha MTR0001, conta-as uma terceira vez.</td><td class="ref">D7</td></tr>
+<tr><td>40</td><td>Azevedo: 2 PC recebidos no SAP sem entrada nem saída</td><td><span class="g media">média</span></td><td>PC 4500879064 e PC 4500878381: chaves Iseo, cabo de aço, nível, esticador. Falta ver se as chaves já entraram no acerto de 17/09.</td><td class="ref">D11</td></tr>
+<tr><td>41</td><td>9 linhas diferentes do EXPORT SAP de 17/09</td><td><span class="g media">média</span></td><td>La Farga 4500857392 (já conhecida), pinça CdTA 154/281, transformador 20/21, corda, portes. Os postes HEA 180 c/10,4 da PO 4500838598 estão ligados à ficha do HEA 200.</td><td class="ref">B13</td></tr>
+<tr><td>42</td><td>Movimentos exatamente iguais</td><td><span class="g media">média</span></td><td>3 entradas SAP repetidas com o mesmo documento (marcador, válvula, autocolante). Há mais 17 grupos vindos do Mapa de Stock que só se decidem com a folha em papel.</td><td class="ref">D13</td></tr>
+<tr><td>43</td><td>Saídas registadas antes da entrada</td><td><span class="g media">média</span></td><td>Em 27 casos o stock fica negativo durante semanas, o que indica uma data errada na saída ou na entrada. Lista em CSV.</td><td class="ref">D12</td></tr>
+<tr><td>44</td><td>Serviços com stock no armazém</td><td><span class="g media">média</span></td><td>Transporte, portes e taxas: 25 "unidades" e 351 € no valor do stock.</td><td class="ref">D14</td></tr>
+<tr><td>45</td><td>Tubos com a unidade "un" em vez de metros</td><td><span class="g media">média</span></td><td>As quantidades já estão em metros; só a unidade da ficha está errada. Algumas montagens dizem "1" para um tubo com comprimento L.</td><td class="ref">D15 · A14</td></tr>
+<tr><td>46</td><td>26 entradas sem documento nenhum</td><td><span class="g media">média</span></td><td>9 "vindo Pampilhosa" (mv4436–4444), 3 da Fergrupo, a bobine Sacyr, o regresso da Ferramaq e o desbobinador.</td><td class="ref">D17</td></tr>
+<tr><td>47</td><td>Fichas "#N/A" com stock e fichas com campos fora do formato</td><td><span class="g media">média</span></td><td>6 fichas "#N/A" com 73 un. Outras 3 fichas (m3907, m3911, m3981) têm os campos fora do formato e 2 delas não têm unidade.</td><td class="ref">D18 · A23</td></tr>
+<tr><td>48</td><td>EC-219 IIIA com três versões diferentes</td><td><span class="g media">média</span></td><td>A correção que corre ao abrir apaga a linha "Cabo de aço inox L=12". O ficheiro de dados e o JSON têm outra coisa cada um.</td><td class="ref">A13 · D16</td></tr>
+</table>
+
+<h2>6. Projeto: postes, catálogo e Materiais Totais</h2>
+<table><tr><th style="width:26px">#</th><th>Erro</th><th style="width:70px">Gravidade</th><th>O que acontece</th><th style="width:70px">Origem</th></tr>
+<tr><td>49</td><td><b>Os 5 pórticos não entram nos Materiais Totais</b></td><td><span class="g alta">alta</span></td><td>26-23A_24A, 27-41_42, 64-13_14, 64-29_30 e 64-31_32: nenhuma peça nem cabo é somado, e não aparece aviso. A lista dos 3 pórticos feita a 17/09 existe, mas à parte.</td><td class="ref">C1</td></tr>
+<tr><td>50</td><td><b>Material novo em postes existentes fica fora do total</b></td><td><span class="g alta">alta</span></td><td>O filtro "Novos" deixa de fora, por exemplo, 11 postes existentes com "desmontar consola", que levam consola nova: tubos 10A 93 m, 10E 79 m, isoladores 65 ×42 e 67 ×34, pinças 501A ×24.</td><td class="ref">C2</td></tr>
+<tr><td>51</td><td><b>Peças sem código juntas numa só linha</b></td><td><span class="g alta">alta</span></td><td>A linha "Cone de sujeição do aço ×94" mistura cones, porcas, 9 transformadores de medida, 9 ligações entre neutros e 13 isoladores.</td><td class="ref">C3</td></tr>
+<tr><td>52</td><td><b>Submontagens contadas como peças</b></td><td><span class="g alta">alta</span></td><td>Aparecem linhas como "EC-388 transformador 50 kVA ×13" e "EC-344 seccionador ×13", e as peças reais delas nunca são somadas. Afeta os 22 postes de transformador.</td><td class="ref">C4</td></tr>
+<tr><td>53</td><td><b>E-6184 X já não existe no desenho</b> ✔</td><td><span class="g alta">alta</span></td><td>A rev. H (11-2022) diz "Retiradas as Mont. X a XVII". O programa usa a lista antiga, que compra a peça 643 "Braço de chamada (catenária LP5)", e a obra é LP10. São 211 braços em 181 postes novos.</td><td class="ref">C5</td></tr>
+<tr><td>54</td><td><b>E-6182 Tb/Sb: pinça com esquadro ou anilha errados</b></td><td><span class="g alta">alta</span></td><td>É a pergunta de ontem. Na Tb (33 consolas) está a anilha 280 e 2 parafusos 442; a rev. C diz esquadro 465 e 1 parafuso 442. A Sb não tem o 465. Nas duas Ta sem pêndulo (64-33 e 64-45) devia ser a anilha 280.</td><td class="ref">C6</td></tr>
+<tr><td>55</td><td><b>E-6181 Sc: o parafuso 17I está ligado a uma cantoneira</b> ✔</td><td><span class="g alta">alta</span></td><td>Foi escrito "171" em vez de "17I" e ficou ligado à ficha M4214 "Cantoneira de travamento". Afeta 6 postes novos.</td><td class="ref">C7</td></tr>
+<tr><td>56</td><td><b>Peças do E-6181 contadas a dobrar</b></td><td><span class="g alta">alta</span></td><td>Quando o caderno repete o tirante no campo da consola, o tubo está protegido, mas as outras peças saem ×2. São 48 consolas, todas nos 55 postes de duas consolas. Tem de ficar corrigido antes do lote 3.</td><td class="ref">C8</td></tr>
+<tr><td>57</td><td><b>E-6177 TLT com peças a mais</b></td><td><span class="g alta">alta</span></td><td>No desenho rev. I, o TLT só leva 2 ligadores 662. A lista antiga tem ainda parafusos 16B4, cabo 9U1 e o terminal 660A (20 aplicações).</td><td class="ref">C9</td></tr>
+<tr><td>58</td><td>O total diz "só listas confirmadas", mas usa as antigas sem aviso</td><td><span class="g media">média</span></td><td>São 1 058 aplicações da lista Caide; 270 das 318 linhas do total têm contributo delas.</td><td class="ref">C10</td></tr>
+<tr><td>59</td><td>A procura da montagem pode apanhar outra variante</td><td><span class="g media">média</span></td><td>"IA" apanha "IIA". Hoje está escondido, mas pode trocar montagens em silêncio.</td><td class="ref">C11</td></tr>
+<tr><td>60</td><td>Espias sem comprimento</td><td><span class="g media">média</span></td><td>49 espias de 8,7 a 10,25 m são somadas como "14B ×49", sem metros.</td><td class="ref">C12</td></tr>
+<tr><td>61</td><td>Códigos de peça que não são códigos</td><td><span class="g media">média</span></td><td>"172A/B", "14B (7,45 m)", "1 1/4"sm", e 31 números SAP sem ficha.</td><td class="ref">C13</td></tr>
+<tr><td>62</td><td>Cotas das consolas com as letras trocadas</td><td><span class="g media">média</span></td><td>H, D, S e E ficaram guardados como F, A, C e B (159 consolas). Só afeta o que se mostra, não as quantidades.</td><td class="ref">C14</td></tr>
+<tr><td>63</td><td>Existentes sem isolamento: consola contada pelo KL</td><td><span class="g media">média</span></td><td>Dá +19 m de tubo nas vistas "Todos" e "Existentes".</td><td class="ref">C15</td></tr>
+<tr><td>64</td><td>A ficha 513 tem a descrição da ponteira (516)</td><td><span class="g media">média</span></td><td>No E-6181, o 513 é a articulação do tirante. A ficha tem o SAP 4026519.</td><td class="ref">C16</td></tr>
+<tr><td>65</td><td>Isolador do tirante E-6181 Tc: 65 ou 60?</td><td><span class="g media">média</span></td><td>A lista confirmada diz 65 (como o desenho). O catálogo diz 60, "conforme uso real".</td><td class="ref">C17</td></tr>
+<tr><td>66</td><td>A ficha do poste mostra peças diferentes do total</td><td><span class="g media">média</span></td><td>A ficha não aplica as trocas ZM→ZT nem as regras novas. Mostra isoladores 70/68 onde o total usa 67/65.</td><td class="ref">C18</td></tr>
+<tr><td>67</td><td>Cabos sem unidade nos totais</td><td><span class="g media">média</span></td><td>9P 1047, 9U2 131… sem dizer se são metros.</td><td class="ref">C20</td></tr>
+<tr><td>68–72</td><td>Pequenos</td><td><span class="g baixa">baixa</span></td><td>Valores por defeito mostrados como se fossem reais (CF=0, NIV=−0,85); RENUM/DESM nas pendências; ZM→ZT falha em silêncio para 69/72; nome errado na troca do EC-233; 17D/17C com código novo diferente entre o desenho e o manual; cabo em "1 unidade" no E-6169; referências dos pórticos por encontrar; defeitos no catálogo sem uso.</td><td class="ref">C21–C28</td></tr>
+</table>
+
+<div class="caixa ok"><b>O que está bem</b> (verificado)<ul>
+<li>O stock final não é negativo em nenhuma ficha. As contas de entradas e saídas estão certas e todas as quantidades são números.</li>
+<li>Não há ids repetidos nem movimentos sem ficha. O JSON e os dados do programa batem registo a registo (exceto o EC-219 IIIA, #48).</li>
+<li>Os preços das 700 linhas de encomenda batem com o EXPORT de 17/09, incluindo as 64 com unidade de preço acima de 1.</li>
+<li>Estão iguais ao desenho normativo: as fórmulas de corte das consolas (a menos de 8 mm do K do caderno) e a troca ZM→ZT. Também batem as listas E-6183 E/F, E-6181 Tc, E-6182 Ta, E-6188 I e E-6177 TL/TRLA/TRLB.</li>
+<li>Os postes não têm códigos repetidos e as medidas (TL/TT, KL/K, dimensões dos tubos) são coerentes nos postes de consola simples.</li>
+</ul></div>
+
+<h2>7. Plano de correção proposto</h2>
+<table><tr><th>Bloco</th><th>O quê</th><th>Precisa de ti?</th></tr>
+<tr><td><b>1 — Proteger os dados</b></td><td>#1–#13, #18–#24, #27, #30: ao abrir, deixa de ressuscitar apagados e de desfazer receções; cópias de segurança de todas as obras; aviso de dois separadores; gravar montagem sem estragar; saídas com qb, peça repetida e apagar entradas; milhares no CSV; datas; folha de consumos; relatórios; exportações. <b>Só código.</b></td><td>Não. Posso começar já.</td></tr>
+<tr><td><b>2 — Consumo real</b></td><td>#14–#17: os consumos e relatórios passam a excluir ajustes, roubo e transferências; o acerto passa a marcar "ajuste"; marcar os 103 ajustes e as 26 transferências para a Pampilhosa.</td><td>Só confirmar que as 26 saídas para a Pampilhosa são transferências.</td></tr>
+<tr><td><b>3 — Fichas repetidas</b></td><td>#25–#28, #31–#33: a importação passa a procurar por n.º SAP + descrição; juntar as fichas repetidas da mesma peça (lista para aprovares, como se fez com a 483); anular os 3 acertos fictícios de 28/08 que deixam de ser precisos.</td><td>Sim: aprovar a lista de fichas a juntar.</td></tr>
+<tr><td><b>4 — Stock errado</b></td><td>#34–#48: um a um, com a tua confirmação.</td><td>Sim: perguntas 1–8.</td></tr>
+<tr><td><b>5 — Projeto</b></td><td>#49–#72: corrigir já o 17I (#55), o E-6181 a dobrar (#56), as peças sem código (#51), as submontagens (#52), a procura exata (#59) e o aviso das listas antigas (#58). Pôr os pórticos no total (#49). O resto depois das tuas respostas.</td><td>Em parte: perguntas 9–17.</td></tr>
+<tr><td>Depois</td><td>Lote 3 (55 postes de duas consolas) e a <b>saída por parte do poste com pesquisa</b>.</td><td>—</td></tr>
+</table>
+
+<h2>8. Perguntas para ti</h2>
+<table><tr><th style="width:26px">#</th><th>Pergunta</th><th>Onde vês isto</th></tr>
+<tr><td>1</td><td><b>EIP 4500851945:</b> houve uma só entrega (guia GT326/475 a 17/06)? Se sim, anulo a "Entrada SAP" de 24/06. E a 731A (2 un.) saiu de onde?</td><td>SAP (movimentos do PC) ou a guia</td></tr>
+<tr><td>2</td><td><b>Senttro 4500864211:</b> as entradas de maio e de junho são a mesma compra? O que eram os 3,7 / 1,1 (kg, caixas)?</td><td>SAP (movimentos do PC)</td></tr>
+<tr><td>3</td><td><b>Sacyr:</b> o mapa de 25/05 e as compras à Sacyr são o mesmo material? A PC 4500872735 foi anulada?</td><td>SAP / mapa Sacyr</td></tr>
+<tr><td>4</td><td><b>Postes 50-16, 64-19 e 64-25:</b> qual das duas saídas é a verdadeira?</td><td>Folhas de saída / GT 3187</td></tr>
+<tr><td>5</td><td><b>Fergrupo mv4510:</b> eram 20 varas de 6 m (120 m)?</td><td>Guia Fergrupo</td></tr>
+<tr><td>6</td><td><b>Manga termo GMW 22/6:</b> há 1 560 ou 3 120?</td><td>Contagem no armazém</td></tr>
+<tr><td>7</td><td><b>Serviços com stock</b> (transporte, portes, taxas): posso dar-lhes saída a 0?</td><td>—</td></tr>
+<tr><td>8</td><td><b>Entradas "vindo Pampilhosa"</b> (mv4436–4444) e da Fergrupo sem documento: há guia? Se não houver, marco-as como ajuste.</td><td>Guias</td></tr>
+<tr><td>9</td><td><b>E-6184 X:</b> que braço de chamada se monta de facto (a peça 643 é LP5)? Quem fez o projeto indicou outro?</td><td>Montagem / projetista</td></tr>
+<tr><td>10</td><td><b>E-6177 TLT:</b> leva só 2 ligadores 662, como diz o desenho rev. I?</td><td>Montagem</td></tr>
+<tr><td>11</td><td><b>Isolador do tirante E-6181 Tc:</b> monta-se o 65 (cerâmico 5 t) ou o 60 (sintético)?</td><td>Montagem</td></tr>
+<tr><td>12</td><td><b>Pinça de suspensão:</b> 1 ou 2 parafusos 442? Esquadro 465 nas consolas com pêndulo?</td><td>Montagem</td></tr>
+<tr><td>13</td><td><b>50-36A:</b> antibalançante em tubo 24x32 ou 40x49?</td><td>Projetista / terreno</td></tr>
+<tr><td>14</td><td><b>SAP 4026519:</b> é a ponteira do tubo 19x26 ou a articulação do tirante?</td><td>SAP</td></tr>
+<tr><td>15</td><td><b>Postes existentes com consola nova:</b> esse material entra na conta do que é preciso comprar?</td><td>—</td></tr>
+<tr><td>16</td><td><b>Pampilhosa:</b> registo as receções também do lado da Pampilhosa, como na GT 2979?</td><td>—</td></tr>
+<tr><td>17</td><td><b>EC-219 IIIA:</b> leva o cabo de aço inox L=12?</td><td>Desenho EC-219</td></tr>
+</table>
+
+<div class="m">Relatórios completos: <code>relatorios/revisao_total_20260918/A_codigo_stock.md</code>, <code>B_codigo_encomendas_sap.md</code>, <code>C_projeto_catalogo_postes.md</code>, <code>D_dados.md</code> e as listas <code>D_dados_*.csv</code>.</div>
+</body></html>

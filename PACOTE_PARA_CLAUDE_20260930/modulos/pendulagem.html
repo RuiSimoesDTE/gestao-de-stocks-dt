@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pendulagem CAT — calculadora de vão</title>
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { background: #F7F8F6; }
+  @media (prefers-color-scheme: dark) { body { background: #10161D; } }
+  html[data-theme="light"] body { background: #F7F8F6; }
+  html[data-theme="dark"] body { background: #10161D; }
+</style>
+</head>
+<body>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface:        #F7F8F6;
+    --surface-raised: #FFFFFF;
+    --surface-sunken: #EEF1EE;
+    --text-primary:   #16202B;
+    --text-secondary: #55606B;
+    --text-muted:     #87929C;
+    --border:         #D8DEE3;
+    --border-strong:  #B7C0C7;
+    --accent:         #2a78d6;
+    --accent-ink:     #ffffff;
+    --series-cs:      #2a78d6;
+    --series-fc:      #eb6834;
+    --warn-bg:        #FBF0DC;
+    --warn-ink:       #7A4E00;
+    --warn-border:    #E7C273;
+    --danger-bg:      #FBE4E3;
+    --danger-ink:     #8A2523;
+    --danger-border:  #EFAAA8;
+    --input-bg:       #FFFDF7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .viz-root {
+      color-scheme: dark;
+      --surface:        #10161D;
+      --surface-raised: #171F28;
+      --surface-sunken: #0C1116;
+      --text-primary:   #F2F5F7;
+      --text-secondary: #B9C2CB;
+      --text-muted:     #7C8892;
+      --border:         #29333C;
+      --border-strong:  #3B4650;
+      --accent:         #3987e5;
+      --accent-ink:     #08111C;
+      --series-cs:      #3987e5;
+      --series-fc:      #d95926;
+      --warn-bg:        #2B2410;
+      --warn-ink:       #F0C978;
+      --warn-border:    #5A4A1C;
+      --danger-bg:      #2E1615;
+      --danger-ink:     #F5A6A4;
+      --danger-border:  #5C2826;
+      --input-bg:       #131A22;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface:        #10161D;
+    --surface-raised: #171F28;
+    --surface-sunken: #0C1116;
+    --text-primary:   #F2F5F7;
+    --text-secondary: #B9C2CB;
+    --text-muted:     #7C8892;
+    --border:         #29333C;
+    --border-strong:  #3B4650;
+    --accent:         #3987e5;
+    --accent-ink:     #08111C;
+    --series-cs:      #3987e5;
+    --series-fc:      #d95926;
+    --warn-bg:        #2B2410;
+    --warn-ink:       #F0C978;
+    --warn-border:    #5A4A1C;
+    --danger-bg:      #2E1615;
+    --danger-ink:     #F5A6A4;
+    --danger-border:  #5C2826;
+    --input-bg:       #131A22;
+  }
+
+  .viz-root {
+    background: var(--surface);
+    color: var(--text-primary);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100%;
+    padding: clamp(16px, 3vw, 40px);
+    box-sizing: border-box;
+  }
+  .viz-root * { box-sizing: border-box; }
+  .mono {
+    font-family: ui-monospace, "JetBrains Mono", "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  }
+  .tabular { font-variant-numeric: tabular-nums; }
+
+  .page { max-width: 1180px; margin: 0 auto; }
+
+  header.top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; margin-bottom: 22px; padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand { display: flex; align-items: baseline; gap: 12px; }
+  .brand .mark {
+    font-family: ui-monospace, monospace; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--accent); border-radius: 3px; padding: 3px 7px;
+  }
+  h1 {
+    font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    font-size: clamp(20px, 2.4vw, 26px); font-weight: 700; margin: 0;
+    letter-spacing: -0.01em; text-wrap: balance;
+  }
+  .subtitle { color: var(--text-secondary); font-size: 14px; margin-top: 3px; }
+  .top-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .top-links { font-size: 12.5px; color: var(--text-muted); text-align: right; line-height: 1.6; }
+
+  .layout {
+    display: grid; grid-template-columns: 340px 1fr; gap: 22px; align-items: start;
+  }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+
+  .panel {
+    background: var(--surface-raised); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 18px 20px;
+  }
+  .panel + .panel { margin-top: 18px; }
+
+  .section-label {
+    font-family: ui-monospace, monospace; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+    margin: 0 0 12px;
+  }
+  .section-label.first { margin-top: 0; }
+
+  .field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 11px; }
+  .field label { font-size: 12.5px; color: var(--text-secondary); }
+  .field input[type="number"], .field select {
+    font: inherit; font-family: ui-monospace, monospace; font-size: 13.5px;
+    background: var(--input-bg); color: var(--text-primary);
+    border: 1px solid var(--border-strong); border-radius: 6px;
+    padding: 7px 9px; width: 100%;
+  }
+  .field input:focus, .field select:focus, button:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 1px;
+  }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .check {
+    display: flex; align-items: center; gap: 7px; font-size: 12.5px;
+    color: var(--text-secondary); margin: 4px 0 13px;
+  }
+  .check input { accent-color: var(--accent); }
+
+  .btn {
+    font-family: ui-monospace, monospace; font-size: 12.5px; font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase; border-radius: 6px;
+    padding: 10px 16px; cursor: pointer; border: 1px solid var(--border-strong);
+    background: var(--surface-sunken); color: var(--text-primary);
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn:hover { filter: brightness(1.06); }
+  .btn:active { filter: brightness(0.96); }
+  .btn-row { display: flex; gap: 8px; margin-top: 14px; }
+
+  .banner {
+    border-radius: 8px; padding: 11px 13px; font-size: 13px; line-height: 1.5;
+    margin-bottom: 14px; border: 1px solid;
+  }
+  .banner.warn { background: var(--warn-bg); color: var(--warn-ink); border-color: var(--warn-border); }
+  .banner.danger { background: var(--danger-bg); color: var(--danger-ink); border-color: var(--danger-border); }
+  .banner ul { margin: 4px 0 0; padding-left: 18px; }
+
+  .stat-strip {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+    gap: 10px; margin-bottom: 18px;
+  }
+  .stat {
+    background: var(--surface-sunken); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 12px;
+  }
+  .stat .k { font-size: 11px; color: var(--text-muted); letter-spacing: 0.03em; }
+  .stat .v {
+    font-family: ui-monospace, monospace; font-size: 19px; font-weight: 700;
+    margin-top: 2px; color: var(--text-primary);
+  }
+  .stat .v .unit { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 620px; }
+  thead th {
+    text-align: right; font-family: ui-monospace, monospace; font-size: 10.5px;
+    letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted);
+    font-weight: 600; padding: 9px 10px; background: var(--surface-sunken);
+    border-bottom: 1px solid var(--border); white-space: nowrap;
+  }
+  thead th:first-child, tbody td:first-child { text-align: left; }
+  tbody td {
+    text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--border);
+    font-family: ui-monospace, monospace; color: var(--text-primary);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: var(--surface-sunken); }
+  input.carga-add {
+    width: 68px; text-align: right; font-family: ui-monospace, monospace;
+    font-size: 12.5px; background: var(--input-bg); color: var(--text-primary);
+    border: 1px solid var(--border-strong); border-radius: 5px; padding: 4px 6px;
+  }
+
+  .chart-card { margin-top: 18px; }
+  .legend { display: flex; gap: 18px; font-size: 12.5px; color: var(--text-secondary); margin-bottom: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+
+  details.instructions {
+    margin-top: 18px; background: var(--surface-raised); border: 1px solid var(--border);
+    border-radius: 10px; padding: 4px 18px;
+  }
+  details.instructions summary {
+    cursor: pointer; padding: 14px 0; font-family: ui-monospace, monospace;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  details.instructions[open] summary { border-bottom: 1px solid var(--border); }
+  .instructions-body { padding: 14px 0 18px; font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .instructions-body h3 {
+    font-size: 13px; color: var(--text-primary); margin: 18px 0 6px;
+    font-family: ui-monospace, monospace; letter-spacing: 0.02em;
+  }
+  .instructions-body h3:first-child { margin-top: 0; }
+  .instructions-body code {
+    font-family: ui-monospace, monospace; background: var(--surface-sunken);
+    padding: 1px 5px; border-radius: 4px; font-size: 12.5px; color: var(--text-primary);
+  }
+  .instructions-body ul { padding-left: 20px; margin: 6px 0; }
+  .instructions-body .sources { font-size: 12.5px; color: var(--text-muted); }
+
+  footer.foot {
+    margin-top: 22px; font-size: 12px; color: var(--text-muted); text-align: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .panel, .btn { transition: filter 0.12s ease; }
+  }
+</style>
+
+<div class="viz-root">
+  <div class="page">
+    <header class="top">
+      <div class="brand">
+        <span class="mark">⚡ CAT</span>
+        <div>
+          <h1>Pendulagem — calculadora de vão</h1>
+          <div class="subtitle">Posição e comprimento dos pêndulos entre dois apoios de catenária</div>
+        </div>
+      </div>
+      <div class="top-right">
+        <div class="top-links">Sem instalação · corre no navegador<br>Motor igual ao pendulagem_calc.py / Pendulagem_CAT.xlsx</div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- ============ FORM ============ -->
+      <form class="panel" id="form">
+        <p class="section-label first">Catenária</p>
+
+        <div class="field">
+          <label for="vao">Vão [m]</label>
+          <input type="number" id="vao" step="0.1" value="45" required>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="aberturaInicial">Abertura inicial [m]</label>
+            <input type="number" id="aberturaInicial" step="0.01" value="1.40">
+          </div>
+          <div class="field">
+            <label for="aberturaFinal">Abertura final [m]</label>
+            <input type="number" id="aberturaFinal" step="0.01" value="1.40">
+          </div>
+        </div>
+        <div class="field">
+          <label for="alturaFC">Altura do FC [m]</label>
+          <input type="number" id="alturaFC" step="0.01" value="5.50">
+        </div>
+        <div class="field">
+          <label for="tipoPendulagem">Tipo de pendulagem</label>
+          <select id="tipoPendulagem">
+            <option value="CONVENCIONAL" selected>Convencional (LP1/LP2/LP3/LP10)</option>
+            <option value="ALTA_VELOCIDADE">Alta Velocidade (LP300)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="modoFlecha">Flecha inicial do FC</label>
+          <select id="modoFlecha">
+            <option value="nao">Não (nível)</option>
+            <option value="sim" selected>Sim (entre 1º e último pêndulo)</option>
+            <option value="total">Total (apoio a apoio)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="flechaPct">Flecha [%]</label>
+          <input type="number" id="flechaPct" step="0.01" value="0.10">
+        </div>
+
+        <p class="section-label">Tensões e pesos</p>
+        <div class="row2">
+          <div class="field">
+            <label for="forcaFC">Tensora FC [kgf]</label>
+            <input type="number" id="forcaFC" step="10" value="1200">
+          </div>
+          <div class="field">
+            <label for="forcaCS">Tensora CS [kgf]</label>
+            <input type="number" id="forcaCS" step="10" value="1200">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="pesoFC">Peso FC [kg/m]</label>
+            <input type="number" id="pesoFC" step="0.001" value="0.951">
+          </div>
+          <div class="field">
+            <label for="pesoCS">Peso CS [kg/m]</label>
+            <input type="number" id="pesoCS" step="0.001" value="0.615">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="pesoCSProtegido">Peso CS protegido [kg/m]</label>
+            <input type="number" id="pesoCSProtegido" step="0.001" value="1.056">
+          </div>
+          <div class="field">
+            <label for="pesoPendulo">Peso pêndulo [kg]</label>
+            <input type="number" id="pesoPendulo" step="0.01" value="0.35">
+          </div>
+        </div>
+        <label class="check"><input type="checkbox" id="csProtegido"> CS protegido</label>
+
+        <div class="field">
+          <label for="pesoBraco">Peso braço de chamada [kg]</label>
+          <input type="number" id="pesoBraco" step="0.1" value="1.2">
+        </div>
+        <label class="check"><input type="checkbox" id="catenariaY"> Catenária com "Y"</label>
+
+        <p class="section-label">Fio de Contacto Sobreelevado</p>
+        <label class="check"><input type="checkbox" id="fcSobreelevado"> FC Sobreelevado (vão em curva)</label>
+        <div class="row2">
+          <div class="field">
+            <label for="sobreConsola">Sobrelevação do FC [m]</label>
+            <input type="number" id="sobreConsola" step="0.01" value="0.50">
+          </div>
+          <div class="field">
+            <label for="sobrePenduloFixo">Sobrelevação no Pêndulo Fixo [m]</label>
+            <input type="number" id="sobrePenduloFixo" step="0.01" value="0.20">
+          </div>
+        </div>
+        <div class="field">
+          <label for="penduloFixoNx">Pêndulo Sobrelevação Fixa (N-x)</label>
+          <input type="number" id="penduloFixoNx" step="1" value="3">
+        </div>
+        <p id="sugestaoSobrelevacao" style="font-size:11.5px;color:var(--text-muted);margin:-4px 0 11px;line-height:1.5;"></p>
+
+        <div class="btn-row">
+          <button type="submit" class="btn primary">Calcular</button>
+          <button type="button" class="btn" id="btnLimpar">Limpar</button>
+        </div>
+      </form>
+
+      <!-- ============ RESULTS ============ -->
+      <div id="results">
+        <div class="panel" id="placeholder">
+          <p style="color: var(--text-secondary); font-size: 14px; margin: 4px 0;">
+            Preenche o vão e carrega em <strong>Calcular</strong> — os resultados aparecem aqui
+            (tal como no programa e na folha de Excel).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <details class="instructions">
+      <summary>Método de cálculo, fontes e avisos</summary>
+      <div class="instructions-body">
+        <h3>O que é a "pendulagem"</h3>
+        <p>Numa catenária ferroviária, o Fio de Contacto (FC) é suspenso do Cabo de Suporte (CS)
+        por uma série de pêndulos verticais. Como o CS descreve uma curva (flecha) entre dois
+        apoios enquanto o FC fica aproximadamente direito à altura de projeto, cada pêndulo tem um
+        comprimento diferente. "Fazer a pendulagem" é calcular onde colocar cada pêndulo e que
+        comprimento deve ter.</p>
+
+        <h3>Distância entre pêndulos</h3>
+        <ul>
+          <li>Apoio → 1º pêndulo: <code>2,25 m</code> (Convencional) ou <code>4,50 m</code> (Alta Velocidade).</li>
+          <li>Distância máxima entre pêndulos interiores: <code>9,00 m</code> (Convencional — GR.IT.CAT.034 §7.2)
+          ou <code>6,75 m</code> (Alta Velocidade, com secções extremas/de acerto a 4,50 m — GR.IT.CAT.066 §10.2).</li>
+          <li>Para vãos normalizados de Alta Velocidade com abertura 1,40 m, é usada a tabela
+          <strong>oficial</strong> da GR.IT.CAT.066 Anexo A.</li>
+        </ul>
+
+        <h3>Flecha do CS (parábola)</h3>
+        <p><code>y(x) = w · x · (vão − x) / (2 · T_CS)</code>, com w = peso do FC + peso do CS [kg/m]
+        e T_CS = tensão do CS [kgf] — aproximação parabólica standard para cabos suspensos com
+        flecha pequena face ao vão.</p>
+
+        <h3>Comprimento do pêndulo</h3>
+        <p><code>comprimento(x) = altura_CS(x) − altura_FC(x)</code>, em que altura_FC(x) inclui a
+        pré-flecha alvo definida pela % indicada (ver opção "Flecha inicial") e, se ativada, a
+        sobrelevação. As alturas mostradas (tabela, gráfico, "a meio vão") são <strong>absolutas</strong>
+        — a "Altura do FC" que indicas mais a variação de cada cabo nesse ponto — tal como na PendCAT;
+        o comprimento do pêndulo não depende desse valor, só a forma como as alturas são apresentadas.</p>
+
+        <h3>Sobrelevação (vãos em curva)</h3>
+        <p>Ativa "FC Sobreelevado" para vãos onde o fio de contacto sobe de um lado (curva). A
+        sobrelevação faz-se sempre do lado esquerdo do vão (apoio inicial) e é definida por dois
+        pontos: o valor na consola (apoio) e o valor no "pêndulo fixo" (indicado como N-x, contado a
+        partir do fim do vão) — a transição entre os dois é modelada como uma rampa linear. A regra
+        oficial preferencial (mostrada como sugestão depois de calculares) é: vão ≥ 43 m → consola
+        0,50 m, pêndulo fixo = 4º a partir do fim (N-x=3), sobrelevação 0,20 m; vão &lt; 43 m → consola
+        até 0,50 m, pêndulo fixo = 1º a partir do início (N-x=N-1), sobrelevação mínima.</p>
+
+        <h3>Validação</h3>
+        <p>O modelo foi comparado, pêndulo a pêndulo, com a tabela oficial de vãos normalizados da
+        GR.IT.CAT.066 (8 vãos, LP300): erro médio ≈ 1 a 3 cm. A regra "Convencional" reproduz
+        <strong>exatamente</strong> 5 quadros de pendulagem reais de projeto, incluindo um vão
+        irregular de 49,1 m.</p>
+
+        <h3>Aviso</h3>
+        <p>Esta é uma ferramenta <strong>auxiliar</strong> de cálculo/verificação — não substitui a
+        aplicação oficial "Pendulagem" da IP nem a validação por um projetista de catenária
+        habilitado. A curva de transição da sobrelevação (rampa linear) é uma aproximação — as fontes
+        disponíveis só definem os dois pontos-âncora, não a forma exata entre eles. Não faz a
+        verificação de gabarito sob Passagem Superior — usa o programa Python
+        (<code>pendulagem_calc.py</code>) para esse caso.</p>
+
+        <p class="sources">Fontes: GR.IT.CAT.006 (Tabela 1), GR.IT.CAT.034 §7.2, GR.IT.CAT.066 §10 +
+        Anexo A, ficheiro de projeto real 39_II.xlsx, e a estrutura de dados/instruções da aplicação
+        PendCAT da IP.</p>
+      </div>
+    </details>
+
+    <footer class="foot">Pendulagem CAT · cálculo local no navegador, nenhum dado é enviado para fora</footer>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------------
+  // Tema herdado do programa principal; "Auto" segue o sistema.
+  // ---------------------------------------------------------------------
+  (function initTema() {
+    const root = document.documentElement;
+    const STORAGE_KEY = "dte-programa-theme";
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function aplicarTema(modo) {
+      const valido = modo === "light" || modo === "dark" ? modo : "auto";
+      root.setAttribute("data-theme", valido === "auto" ? (media.matches ? "dark" : "light") : valido);
+      root.setAttribute("data-theme-mode", valido);
+    }
+
+    let guardado = "auto";
+    try { guardado = localStorage.getItem(STORAGE_KEY) || "auto"; } catch (e) { /* ok */ }
+    aplicarTema(guardado);
+
+    window.addEventListener("message", (evento) => {
+      if (evento.data && evento.data.tipo === "dte-programa-theme") aplicarTema(evento.data.modo);
+    });
+    media.addEventListener?.("change", () => {
+      if ((root.getAttribute("data-theme-mode") || "auto") === "auto") aplicarTema("auto");
+    });
+  })();
+
+  // ---------------------------------------------------------------------
+  // Motor de cálculo — porta direta de pendulagem_calc.py (ver esse
+  // ficheiro para a documentação completa de cada função e as fontes).
+  // ---------------------------------------------------------------------
+
+  const REGRAS = {
+    CONVENCIONAL: { edge: 2.25, base: 6.75, alt: 9.00, passo: 7.5, regraN: "round" },
+    ALTA_VELOCIDADE: { edge: 4.50, base: 6.75, alt: 4.50, passo: 6.75, regraN: "ceil" },
+  };
+
+  const TABELA_LP300_1400 = {
+    63.0: [4.50, 6.75, 6.75, 6.75, 6.75, 6.75, 6.75, 6.75, 6.75, 4.50],
+    58.5: [4.50, 6.75, 6.75, 6.75, 4.50, 4.50, 6.75, 6.75, 6.75, 4.50],
+    54.0: [4.50, 6.75, 6.75, 6.75, 4.50, 6.75, 6.75, 6.75, 4.50],
+    49.5: [4.50, 6.75, 6.75, 6.75, 6.75, 6.75, 6.75, 4.50],
+    45.0: [4.50, 6.75, 6.75, 4.50, 4.50, 6.75, 6.75, 4.50],
+    40.5: [4.50, 6.75, 6.75, 4.50, 6.75, 6.75, 4.50],
+    36.0: [4.50, 6.75, 6.75, 6.75, 6.75, 4.50],
+    31.5: [4.50, 6.75, 4.50, 4.50, 6.75, 4.50],
+  };
+
+  function centroParaFora(n) {
+    const centro = (n - 1) / 2;
+    return Array.from({ length: n }, (_, i) => i)
+      .sort((a, b) => Math.abs(a - centro) - Math.abs(b - centro) || a - b);
+  }
+
+  function gerarDistribuicao(vao, tipo) {
+    tipo = tipo.toUpperCase();
+    if (tipo === "ALTA_VELOCIDADE") {
+      for (const k of Object.keys(TABELA_LP300_1400)) {
+        if (Math.abs(parseFloat(k) - vao) < 0.01) return TABELA_LP300_1400[k].slice();
+      }
+    }
+    const regra = REGRAS[tipo];
+    const { edge, base, alt, passo } = regra;
+    const interior = vao - 2 * edge;
+    if (interior <= 1e-6) {
+      throw new Error(
+        `Vão de ${vao.toFixed(2)} m é demasiado curto para pendulagem automática ` +
+        `(distância apoio-1º pêndulo = ${edge} m de cada lado). Define um vão maior.`
+      );
+    }
+    const nInt = regra.regraN === "round"
+      ? Math.max(1, Math.round(interior / passo))
+      : Math.max(1, Math.ceil(interior / passo - 1e-9));
+
+    const ordem = centroParaFora(nInt);
+    const valores = new Array(nInt).fill(base);
+    const step = alt - base;
+    const extra = interior - base * nInt;
+    let nAlt = step ? Math.round(extra / step) : 0;
+    nAlt = Math.min(Math.max(nAlt, 0), nInt);
+    for (let k = 0; k < nAlt; k++) valores[ordem[k]] = alt;
+
+    let resid = interior - valores.reduce((a, b) => a + b, 0);
+    const resto = ordem.slice(nAlt);
+    let j = 0;
+    while (Math.abs(resid) > 1e-9 && j < resto.length) {
+      const centro = (nInt - 1) / 2;
+      let par, delta;
+      if (j + 1 < resto.length &&
+          Math.abs(Math.abs(resto[j] - centro) - Math.abs(resto[j + 1] - centro)) < 1e-9) {
+        par = [resto[j], resto[j + 1]]; delta = resid / 2; j += 2;
+      } else {
+        par = [resto[j]]; delta = resid; j += 1;
+      }
+      for (const i of par) valores[i] += delta;
+      resid = interior - valores.reduce((a, b) => a + b, 0);
+    }
+    return [edge, ...valores, edge];
+  }
+
+  function posicoesDosPendulos(distancias) {
+    const pos = [];
+    let acc = 0;
+    for (let i = 0; i < distancias.length - 1; i++) { acc += distancias[i]; pos.push(acc); }
+    return pos;
+  }
+
+  function alturaCS(x, vao, aIni, aFim, pesoFC, pesoCS, tensaoCS) {
+    const corda = aIni + (aFim - aIni) * x / vao;
+    const w = pesoFC + pesoCS;
+    const y = (w * x * (vao - x)) / (2 * tensaoCS);
+    return corda - y;
+  }
+
+  // Perfil de pré-flecha do FC (0 = altura de projeto nos apoios/pêndulos
+  // extremos, conforme o modo). Ver docstring de altura_fc em pendulagem_calc.py.
+  function preFlechaFC(x, vao, flechaPct, modo, x1, xN) {
+    if (flechaPct <= 0 || modo === "nao") return 0;
+    if (modo === "total") {
+      const f = (flechaPct / 100) * vao;
+      return (-4 * f * x * (vao - x)) / (vao * vao);
+    }
+    if (x1 == null || xN == null || x < x1 || x > xN) return 0;
+    const Lp = xN - x1;
+    if (Lp <= 0) return 0;
+    const f = (flechaPct / 100) * Lp;
+    const xp = x - x1;
+    return (-4 * f * xp * (Lp - xp)) / (Lp * Lp);
+  }
+
+  // Rampa linear da sobrelevação do FC entre o apoio inicial (x=0, valor
+  // sobreConsola) e o pêndulo fixo (x=xFixo, valor sobrePenduloFixo); nula
+  // depois disso. Ver perfil_sobreelevacao em pendulagem_calc.py.
+  function perfilSobreelevacao(x, xFixo, sobreConsola, sobrePenduloFixo) {
+    if (xFixo <= 0) return 0;
+    if (x <= 0) return sobreConsola;
+    if (x > xFixo) return 0;
+    return sobreConsola + (sobrePenduloFixo - sobreConsola) * (x / xFixo);
+  }
+
+  // Método de cálculo PREFERENCIAL de sobrelevação (regra oficial, ver
+  // regra_sobreelevacao em pendulagem_calc.py / secção "Instruções").
+  function sugestaoSobrelevacao(vao, nPendulos) {
+    if (vao >= 43) {
+      const idx = Math.max(0, Math.min(nPendulos - 1, nPendulos - 1 - 3));
+      return { nx: 3, consola: 0.50, pfixo: 0.20, idx };
+    }
+    return { nx: nPendulos - 1, consola: 0.50, pfixo: 0.05, idx: 0 };
+  }
+
+  function cargasTotais(distancias, pesoFC, pesoPendulo) {
+    const n = distancias.length - 1;
+    const out = [];
+    for (let i = 0; i < n; i++) out.push(pesoFC * ((distancias[i] + distancias[i + 1]) / 2) + pesoPendulo);
+    return out;
+  }
+
+  function calcularVao(d) {
+    const avisos = [];
+    const pesoCSef = d.csProtegido ? d.pesoCSProtegido : d.pesoCS;
+    const pesoFCef = d.pesoFC * (d.catenariaY ? 2 : 1);
+    if (d.catenariaY) {
+      avisos.push('Catenária com "Y": o peso do FC foi duplicado para a flecha do CS, mas a ' +
+        "geometria em Y não é modelada em detalhe — confirmar com desenho E-7180.");
+    }
+
+    const distancias = gerarDistribuicao(d.vao, d.tipoPendulagem);
+    const posicoes = posicoesDosPendulos(distancias);
+    if (posicoes.length === 0) throw new Error("A distribuição calculada não gerou nenhum pêndulo.");
+    const x1 = posicoes[0], xN = posicoes[posicoes.length - 1];
+    const n = posicoes.length;
+
+    const cargas = cargasTotais(distancias, pesoFCef, d.pesoPendulo);
+
+    let idxFixo = null, xFixo = null;
+    const sugestao = sugestaoSobrelevacao(d.vao, n);
+    if (d.fcSobreelevado) {
+      if (d.sobreConsola <= 0) {
+        avisos.push('A sobrelevação tem de ter um valor positivo — "Sobrelevação do FC" ' +
+          "ignorada (mensagem original da PendCAT).");
+      } else {
+        idxFixo = Math.max(0, Math.min(n - 1, n - 1 - d.penduloFixoNx));
+        xFixo = posicoes[idxFixo];
+      }
+    }
+
+    // Alturas ABSOLUTAS (acima do carril): altura de projeto do FC + perfil
+    // relativo de cada cabo. O comprimento do pêndulo (CS - FC) não muda
+    // com este deslocamento — só a forma como as alturas são apresentadas.
+    function alturaFCAbs(x) {
+      let rel = preFlechaFC(x, d.vao, d.flechaPct, d.modoFlecha, x1, xN);
+      if (idxFixo !== null) rel += perfilSobreelevacao(x, xFixo, d.sobreConsola, d.sobrePenduloFixo);
+      return d.alturaFC + rel;
+    }
+    function alturaCSAbs(x) {
+      return d.alturaFC + alturaCS(x, d.vao, d.aberturaInicial, d.aberturaFinal, pesoFCef, pesoCSef, d.forcaCS);
+    }
+
+    const pendulos = posicoes.map((x, i) => {
+      const hFC = alturaFCAbs(x);
+      const hCS = alturaCSAbs(x);
+      const comprimento = hCS - hFC;
+      if (comprimento <= 0) {
+        avisos.push(`Pêndulo ${i + 1} (x=${x.toFixed(2)} m): comprimento calculado ≤ 0 ` +
+          `(${comprimento.toFixed(3)} m) — dados de entrada incoerentes (ex: tensão do CS ` +
+          "baixa demais para este vão).");
+      }
+      return {
+        indice: i + 1, distanciaAoAnterior: distancias[i], posicao: x,
+        comprimento, cargaTotal: cargas[i], cargaAdicional: 0, alturaFC: hFC,
+      };
+    });
+
+    const meio = d.vao / 2;
+    const alturaFCMeio = alturaFCAbs(meio);
+    const alturaCSMeio = alturaCSAbs(meio);
+
+    let extensaoNivel;
+    if (d.modoFlecha === "sim") extensaoNivel = x1 + (d.vao - xN);
+    else if (d.modoFlecha === "nao") extensaoNivel = d.vao;
+    else extensaoNivel = 0;
+
+    const pesoConsola = (pesoFCef + pesoCSef) * d.vao + d.pesoBraco;
+    avisos.push('"Peso na Consola" é uma estimativa simplificada (assume vão adjacente igual a ' +
+      "este vão) — em projeto real depende dos dois vãos adjacentes e do estado de carga considerado.");
+
+    return {
+      dados: d, distancias, pendulos, x1, xN, nPendulos: n,
+      alturaFCAbs, alturaCSAbs, idxFixo, sugestao,
+      alturaFCMeio, alturaCSMeio, extensaoNivel, pesoConsola, avisos,
+    };
+  }
+
+  // ---------------------------------------------------------------------
+  // UI
+  // ---------------------------------------------------------------------
+
+  const $ = (id) => document.getElementById(id);
+  const form = $("form");
+  const resultsEl = $("results");
+  const fmt = (n, dec) => Number(n).toLocaleString("pt-PT", { minimumFractionDigits: dec, maximumFractionDigits: dec });
+
+  function lerDados() {
+    return {
+      vao: parseFloat($("vao").value),
+      aberturaInicial: parseFloat($("aberturaInicial").value),
+      aberturaFinal: parseFloat($("aberturaFinal").value),
+      alturaFC: parseFloat($("alturaFC").value),
+      tipoPendulagem: $("tipoPendulagem").value,
+      modoFlecha: $("modoFlecha").value,
+      flechaPct: parseFloat($("flechaPct").value),
+      forcaFC: parseFloat($("forcaFC").value),
+      forcaCS: parseFloat($("forcaCS").value),
+      pesoFC: parseFloat($("pesoFC").value),
+      pesoCS: parseFloat($("pesoCS").value),
+      pesoCSProtegido: parseFloat($("pesoCSProtegido").value),
+      csProtegido: $("csProtegido").checked,
+      pesoPendulo: parseFloat($("pesoPendulo").value),
+      pesoBraco: parseFloat($("pesoBraco").value),
+      catenariaY: $("catenariaY").checked,
+      fcSobreelevado: $("fcSobreelevado").checked,
+      sobreConsola: parseFloat($("sobreConsola").value),
+      sobrePenduloFixo: parseFloat($("sobrePenduloFixo").value),
+      penduloFixoNx: parseInt($("penduloFixoNx").value, 10),
+    };
+  }
+
+  function construirSVG(dados, r) {
+    const W = 760, H = 260, padL = 46, padR = 20, padT = 18, padB = 30;
+    const innerW = W - padL - padR, innerH = H - padT - padB;
+    const n = 160;
+    const xs = Array.from({ length: n }, (_, i) => (dados.vao * i) / (n - 1));
+    const csVals = xs.map((x) => r.alturaCSAbs(x));
+    const fcVals = xs.map((x) => r.alturaFCAbs(x));
+    const yMin = Math.min(...csVals, ...fcVals);
+    const yMax = Math.max(...csVals, ...fcVals);
+    const pad = (yMax - yMin) * 0.12 || 0.05;
+    const y0 = yMin - pad, y1 = yMax + pad;
+
+    const sx = (x) => padL + (innerW * x) / dados.vao;
+    const sy = (y) => padT + innerH - (innerH * (y - y0)) / (y1 - y0);
+
+    const pathFrom = (vals) => xs.map((x, i) => `${i === 0 ? "M" : "L"}${sx(x).toFixed(1)},${sy(vals[i]).toFixed(1)}`).join(" ");
+
+    const apoioY = sy(dados.alturaFC);
+    let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Perfil do CS e do FC ao longo do vão" style="width:100%;height:auto;display:block;">`;
+    svg += `<line x1="${padL}" y1="${apoioY}" x2="${W - padR}" y2="${apoioY}" stroke="var(--border)" stroke-dasharray="3 3" stroke-width="1"/>`;
+    svg += `<text x="${padL}" y="${apoioY - 5}" font-size="9.5" font-family="ui-monospace,monospace" fill="var(--text-muted)">altura do FC nos apoios (${fmt(dados.alturaFC, 2)} m)</text>`;
+
+    svg += `<path d="${pathFrom(csVals)}" fill="none" stroke="var(--series-cs)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`;
+    svg += `<path d="${pathFrom(fcVals)}" fill="none" stroke="var(--series-fc)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`;
+
+    r.pendulos.forEach((p) => {
+      const xx = sx(p.posicao);
+      const yFC = sy(p.alturaFC), yCS = sy(p.alturaFC + p.comprimento);
+      svg += `<line x1="${xx.toFixed(1)}" y1="${yFC.toFixed(1)}" x2="${xx.toFixed(1)}" y2="${yCS.toFixed(1)}" stroke="var(--text-muted)" stroke-width="1"/>`;
+      svg += `<circle cx="${xx.toFixed(1)}" cy="${yFC.toFixed(1)}" r="2.6" fill="var(--series-fc)"/>`;
+      svg += `<circle cx="${xx.toFixed(1)}" cy="${yCS.toFixed(1)}" r="2.6" fill="var(--series-cs)"/>`;
+    });
+
+    // eixo X (posição)
+    svg += `<line x1="${padL}" y1="${padT + innerH}" x2="${W - padR}" y2="${padT + innerH}" stroke="var(--border)" stroke-width="1"/>`;
+    [0, dados.vao / 2, dados.vao].forEach((xv) => {
+      const xx = sx(xv);
+      svg += `<text x="${xx.toFixed(1)}" y="${H - 8}" font-size="10" text-anchor="middle" font-family="ui-monospace,monospace" fill="var(--text-muted)">${xv.toFixed(1)} m</text>`;
+    });
+    svg += `</svg>`;
+    return svg;
+  }
+
+  function construirTabela(r) {
+    let html = `<div class="table-wrap"><table><thead><tr>
+      <th>Pêndulo</th><th>Distância&nbsp;[m]</th><th>Posição&nbsp;[m]</th>
+      <th>Comprimento&nbsp;[m]</th><th>Carga total&nbsp;[kg]</th>
+      <th>Carga adic.&nbsp;[kg]</th><th>Altura FC&nbsp;[m]</th>
+    </tr></thead><tbody>`;
+    r.pendulos.forEach((p) => {
+      html += `<tr>
+        <td class="tabular">${p.indice}</td>
+        <td class="tabular">${fmt(p.distanciaAoAnterior, 2)}</td>
+        <td class="tabular">${fmt(p.posicao, 2)}</td>
+        <td class="tabular">${fmt(p.comprimento, 3)}</td>
+        <td class="tabular">${fmt(p.cargaTotal, 2)}</td>
+        <td class="tabular"><input class="carga-add" type="number" step="0.1" value="0" data-idx="${p.indice - 1}"></td>
+        <td class="tabular">${fmt(p.alturaFC, 3)}</td>
+      </tr>`;
+    });
+    html += `</tbody></table></div>`;
+    return html;
+  }
+
+  function renderResultados(dados, r) {
+    let html = "";
+
+    if (r.avisos.length) {
+      html += `<div class="banner warn"><strong>Avisos</strong><ul>${r.avisos.map((a) => `<li>${a}</li>`).join("")}</ul></div>`;
+    }
+
+    html += `<div class="panel">`;
+    html += `<div class="stat-strip">
+      <div class="stat"><div class="k">Nº pêndulos</div><div class="v tabular">${r.pendulos.length}</div></div>
+      <div class="stat"><div class="k">Altura FC a meio vão</div><div class="v tabular">${fmt(r.alturaFCMeio, 3)} <span class="unit">m</span></div></div>
+      <div class="stat"><div class="k">Altura CS a meio vão</div><div class="v tabular">${fmt(r.alturaCSMeio, 3)} <span class="unit">m</span></div></div>
+      <div class="stat"><div class="k">Extensão FC nível</div><div class="v tabular">${fmt(r.extensaoNivel, 2)} <span class="unit">m</span></div></div>
+      <div class="stat"><div class="k">Peso na consola</div><div class="v tabular">${fmt(r.pesoConsola, 1)} <span class="unit">kg</span></div></div>
+    </div>`;
+
+    html += construirTabela(r);
+    html += `<div class="btn-row"><button type="button" class="btn" id="btnCSV">Descarregar quadro (CSV)</button></div>`;
+    html += `</div>`;
+
+    html += `<div class="panel chart-card">
+      <p class="section-label first">Perfil do vão</p>
+      <div class="legend">
+        <span><span class="swatch" style="background:var(--series-cs)"></span>Cabo de Suporte (CS)</span>
+        <span><span class="swatch" style="background:var(--series-fc)"></span>Fio de Contacto (FC)</span>
+      </div>
+      ${construirSVG(dados, r)}
+    </div>`;
+
+    resultsEl.innerHTML = html;
+
+    const sugEl = $("sugestaoSobrelevacao");
+    if (sugEl) {
+      const s = r.sugestao;
+      const regra = dados.vao >= 43
+        ? "vão ≥ 43 m: consola 0,50 m, pêndulo fixo = 4º a partir do fim (N-x=3), sobrelevação 0,20 m"
+        : "vão < 43 m: consola até 0,50 m, pêndulo fixo = 1º a partir do início (N-x=N-1), sobrelevação mínima";
+      let texto = `Sugestão da regra oficial para este vão (${regra}): ` +
+        `N-x=${s.nx}, consola=${fmt(s.consola, 2)} m, pêndulo fixo=${fmt(s.pfixo, 2)} m ` +
+        `(pêndulo nº ${s.idx + 1} de ${r.nPendulos}).`;
+      if (r.idxFixo !== null) {
+        texto += ` Com os valores atuais, o pêndulo fixo é o nº ${r.idxFixo + 1}.`;
+      }
+      sugEl.textContent = texto;
+    }
+
+    document.querySelectorAll(".carga-add").forEach((inp) => {
+      inp.addEventListener("input", () => {
+        const idx = parseInt(inp.dataset.idx, 10);
+        const val = parseFloat(inp.value) || 0;
+        r.pendulos[idx].cargaAdicional = val;
+        r.pendulos[idx].cargaTotal = r.pendulos[idx].cargaTotal - (r.pendulos[idx]._prevAdd || 0) + val;
+        r.pendulos[idx]._prevAdd = val;
+      });
+    });
+
+    $("btnCSV").addEventListener("click", () => descarregarCSV(r));
+  }
+
+  function renderErro(msg) {
+    resultsEl.innerHTML = `<div class="panel"><div class="banner danger">
+      <strong>Não foi possível calcular a pendulagem.</strong><br>${msg}
+    </div></div>`;
+  }
+
+  function descarregarCSV(r) {
+    const linhas = [["Pêndulo", "Distância [m]", "Posição [m]", "Comprimento [m]", "Carga Total [kg]", "Carga Adicional [kg]", "Altura FC [m]"]];
+    r.pendulos.forEach((p) => linhas.push([p.indice, p.distanciaAoAnterior.toFixed(3), p.posicao.toFixed(3),
+      p.comprimento.toFixed(4), p.cargaTotal.toFixed(3), p.cargaAdicional.toFixed(3), p.alturaFC.toFixed(4)]));
+    const csv = linhas.map((l) => l.join(";")).join("\n");
+    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `quadro_pendulagem_vao_${r.dados.vao}m.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  form.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    try {
+      const dados = lerDados();
+      if (!(dados.vao > 0)) throw new Error("Indica um vão válido.");
+      const r = calcularVao(dados);
+      renderResultados(dados, r);
+    } catch (err) {
+      renderErro(err.message);
+    }
+  });
+
+  $("btnLimpar").addEventListener("click", () => {
+    resultsEl.innerHTML = `<div class="panel" id="placeholder">
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 4px 0;">
+        Preenche o vão e carrega em <strong>Calcular</strong> — os resultados aparecem aqui.
+      </p></div>`;
+  });
+
+  // cálculo inicial com os valores por omissão
+  form.dispatchEvent(new Event("submit", { cancelable: true }));
+})();
+</script>
+
+
+</body>
+</html>

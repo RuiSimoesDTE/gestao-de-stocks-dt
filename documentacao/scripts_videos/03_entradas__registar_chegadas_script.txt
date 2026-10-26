@@ -1,0 +1,53 @@
+﻿VIDEO 3: ENTRADAS - REGISTAR CHEGADAS
+Duração estimada: 3:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Agora vamos aprender a registar uma entrada de material no armazém.
+
+Uma entrada pode vir de três fontes principais:
+
+Primeira: Um pedido de compra ao fornecedor. Tem o número do pedido de compra 
+e a guia de remessa.
+
+Segunda: Uma importação do SAP, quando recebe um ficheiro Excel com movimentos.
+
+Terceira: Uma entrada manual, quando tem material que não está ligado a um pedido.
+
+Vamos começar com uma entrada por número de pedido de compra.
+
+Clique em ARMAZÉM e depois em Entradas ou Registar Chegadas.
+
+Escolha a opção "Por número de pedido de compra".
+
+Preencha ou procure o número do pedido. Selecione o fornecedor.
+
+O sistema mostra as linhas desse pedido que ainda não foram recebidas.
+
+Para cada linha, introduza a quantidade recebida e a data da entrada.
+
+Se recebeu parcialmente, introduza a quantidade parcial.
+
+Quando confirma, o stock é atualizado automaticamente.
+
+A entrada fica registada com a data, o fornecedor, o pedido, a guia de remessa 
+e o utilizador que a registou.
+
+Isto permite rastrear exactamente de onde vem cada material.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [armazem_entradas] Abrir secção Entradas
+ 2. [entrada_por_pedido] Escolher entrada por número de pedido
+ 3. [formulario_entrada] Formulário preenchido
+ 4. [quantidade_recebida] Campo de quantidade visível
+ 5. [data_entrada] Data da entrada preenchida
+ 6. [confirmar_entrada] Botão confirmar clicado
+
+
+================================================================================

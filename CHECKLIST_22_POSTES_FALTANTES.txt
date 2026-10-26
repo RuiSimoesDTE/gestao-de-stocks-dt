@@ -1,0 +1,335 @@
+═══════════════════════════════════════════════════════════════════════════════
+CHECKLIST: INTEGRAR 22 POSTES FALTANTES AO PROGRAMA
+═══════════════════════════════════════════════════════════════════════════════
+
+INSTRUÇÕES:
+1. Abra o ficheiro PDF indicado (localizado em: projeto_vendas_novas/V09_IFTE_PDes/)
+2. Navegue para a página indicada
+3. Leia o desenho de montagem seguindo as coordenadas XY
+4. Preencha os campos abaixo
+5. Adicione ao programa
+6. Marque [X] quando concluído
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+1. POSTE 05-10
+   Localização: 42517.PE.09.IFT.00.301_03.pdf, Página 23
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+2. POSTE 06-24A
+   Localização: 42517.PE.09.IFT.00.301_03.pdf, Página 58
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+3. POSTE 19-29A
+   Localização: 42517.PE.09.IFT.00.302_03.pdf, Página 32
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+4. POSTE 31-22
+   Localização: 42517.PE.09.IFT.00.304_03.pdf, Página 9
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+5. POSTE 31-26A
+   Localização: 42517.PE.09.IFT.00.304_03.pdf, Página 10
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+6. POSTE 31-28
+   Localização: 42517.PE.09.IFT.00.304_03.pdf, Página 11
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+7. POSTE 63-08
+   Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 30
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+8. POSTE 63-09
+   Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 32
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+9. POSTE 64-21Y
+   Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 48
+
+   [ ] Poste lido
+   [ ] Tipo de montagem: ________________
+   [ ] Materiais identificados: ________________
+   [ ] Códigos SAP anotados: ________________
+   [ ] Quantidades confirmadas: ________________
+   [ ] Entrada criada no programa
+
+   Notas: ________________________________________________________________________
+   _____________________________________________________________________________
+
+
+10. POSTE 64-23A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 51
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+11. POSTE 64-25A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 54
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+12. POSTE 64-25Y
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 55
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+13. POSTE 64-26A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 57
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+14. POSTE 64-27A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 59
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+15. POSTE 64-27Y
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 60
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+16. POSTE 64-28A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 62
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+17. POSTE 64-29
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 64
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+18. POSTE 64-29A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 65
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+19. POSTE 64-30A
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 66
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+20. POSTE 64-31
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 68
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+21. POSTE 64-35
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 73
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+22. POSTE 64-36
+    Localização: 42517.PE.09.IFT.00.306_05_NOVO.pdf, Página 74
+
+    [ ] Poste lido
+    [ ] Tipo de montagem: ________________
+    [ ] Materiais identificados: ________________
+    [ ] Códigos SAP anotados: ________________
+    [ ] Quantidades confirmadas: ________________
+    [ ] Entrada criada no programa
+
+    Notas: ________________________________________________________________________
+    _____________________________________________________________________________
+
+
+═══════════════════════════════════════════════════════════════════════════════
+RESUMO DE CONCLUSÃO
+═══════════════════════════════════════════════════════════════════════════════
+
+Total de postes processados:        [ ] / 22
+Data de conclusão estimada:         ________________
+Responsável:                        ________________
+Observações finais:                 ________________________________________________________________________
+                                    ________________________________________________________________________
+                                    ________________________________________________________________________
+
+═══════════════════════════════════════════════════════════════════════════════

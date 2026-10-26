@@ -1,0 +1,53 @@
+﻿VIDEO 6: ENCOMENDAS - PEDIDOS DE COMPRA
+Duração estimada: 3:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Vamos aprender a consultar e gerir pedidos de compra.
+
+Um pedido de compra é uma encomenda que fez ao fornecedor.
+
+O programa tem ligação com o SAP onde se registam todos os pedidos.
+
+Clique em ARMAZÉM e depois em Encomendas ou Pedidos de Compra.
+
+Pode ver todos os pedidos da obra selecionada, organizados por estado.
+
+Cada pedido mostra:
+- O número do pedido de compra
+- O fornecedor
+- A data do pedido
+- A quantidade pedida de cada material
+- A quantidade a ser fornecida ainda
+
+Se a quantidade "A ser fornecida" é maior que zero, significa que ainda não 
+recebeu todo o pedido.
+
+Quando faz uma entrada de material, a quantidade "A ser fornecida" diminui 
+automaticamente.
+
+Quando chega a zero, significa que recebeu toda a encomenda.
+
+Pode filtrar os pedidos por fornecedor, por período de data ou por estado.
+
+Se recebeu um ficheiro de importação do SAP, pode usar o botão de importação 
+para atualizar os pedidos.
+
+Esta secção é essencial para controlar o que encomendou e o que já chegou.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [armazem_encomendas] Abrir secção Encomendas
+ 2. [lista_pedidos] Lista de pedidos visível
+ 3. [numero_pedido] Número do pedido
+ 4. [fornecedor_pedido] Fornecedor
+ 5. [status_fornecimento] Campo 'A ser fornecida'
+ 6. [filtrar_pedidos] Filtros de pedidos
+
+
+================================================================================

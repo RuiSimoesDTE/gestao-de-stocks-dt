@@ -1,0 +1,3185 @@
+{
+ "nota": "Linhas de encomenda da primeira importação SAP (sem número de item), arquivadas a 17/09/2026 por ordem do Rui. Cada uma repete uma linha certa (com item) do mesmo PC; os 30 PCs estão completos nas linhas certas. \"substituidaPor\" lista as linhas certas com a mesma quantidade.",
+ "encomendas": [
+  {
+   "id": "M3190",
+   "pedido": "4500855444",
+   "mat": "M2458",
+   "qtdEnc": 394,
+   "qtdRecebida": 394,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-40"
+   ]
+  },
+  {
+   "id": "M3191",
+   "pedido": "4500855000",
+   "mat": "M2460",
+   "qtdEnc": 144,
+   "qtdRecebida": 144,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-30"
+   ]
+  },
+  {
+   "id": "M3192",
+   "pedido": "4500855000",
+   "mat": "M2462",
+   "qtdEnc": 400,
+   "qtdRecebida": 400,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-20"
+   ]
+  },
+  {
+   "id": "M3193",
+   "pedido": "4500855000",
+   "mat": "M2464",
+   "qtdEnc": 82,
+   "qtdRecebida": 82,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-10"
+   ]
+  },
+  {
+   "id": "M3194",
+   "pedido": "4500851945",
+   "mat": "M1752",
+   "qtdEnc": 4,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-240",
+    "sap20260817-enc-4500851945-390",
+    "sap20260817-enc-4500851945-520"
+   ]
+  },
+  {
+   "id": "M3195",
+   "pedido": "4500851945",
+   "mat": "M157",
+   "qtdEnc": 29,
+   "qtdRecebida": 29,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-400",
+    "sap20260817-enc-4500851945-510"
+   ]
+  },
+  {
+   "id": "M3196",
+   "pedido": "4500851945",
+   "mat": "M367",
+   "qtdEnc": 56,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-20",
+    "sap20260817-enc-4500851945-90"
+   ]
+  },
+  {
+   "id": "M3197",
+   "pedido": "4500851945",
+   "mat": "M2466",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3198",
+   "pedido": "4500851945",
+   "mat": "M413",
+   "qtdEnc": 30,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-130"
+   ]
+  },
+  {
+   "id": "M3199",
+   "pedido": "4500851945",
+   "mat": "M179",
+   "qtdEnc": 21,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-50",
+    "sap20260817-enc-4500851945-500"
+   ]
+  },
+  {
+   "id": "M3200",
+   "pedido": "4500851945",
+   "mat": "M472",
+   "qtdEnc": 35,
+   "qtdRecebida": 35,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-30"
+   ]
+  },
+  {
+   "id": "M3201",
+   "pedido": "4500851945",
+   "mat": "M353",
+   "qtdEnc": 20,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-10",
+    "sap20260817-enc-4500851945-150",
+    "sap20260817-enc-4500851945-170"
+   ]
+  },
+  {
+   "id": "M3202",
+   "pedido": "4500851945",
+   "mat": "M461",
+   "qtdEnc": 56,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-20",
+    "sap20260817-enc-4500851945-90"
+   ]
+  },
+  {
+   "id": "M3203",
+   "pedido": "4500851945",
+   "mat": "M387",
+   "qtdEnc": 64,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-250"
+   ]
+  },
+  {
+   "id": "M3204",
+   "pedido": "4500851945",
+   "mat": "M490",
+   "qtdEnc": 44,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-190"
+   ]
+  },
+  {
+   "id": "M3205",
+   "pedido": "4500851945",
+   "mat": "M399",
+   "qtdEnc": 47,
+   "qtdRecebida": 47,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-160"
+   ]
+  },
+  {
+   "id": "M3206",
+   "pedido": "4500851945",
+   "mat": "M158",
+   "qtdEnc": 20,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-10",
+    "sap20260817-enc-4500851945-150",
+    "sap20260817-enc-4500851945-170"
+   ]
+  },
+  {
+   "id": "M3207",
+   "pedido": "4500851945",
+   "mat": "M374",
+   "qtdEnc": 9,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-180",
+    "sap20260817-enc-4500851945-220"
+   ]
+  },
+  {
+   "id": "M3208",
+   "pedido": "4500851945",
+   "mat": "M356",
+   "qtdEnc": 45,
+   "qtdRecebida": 45,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-140",
+    "sap20260817-enc-4500851945-440"
+   ]
+  },
+  {
+   "id": "M3209",
+   "pedido": "4500851945",
+   "mat": "M339",
+   "qtdEnc": 20,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-10",
+    "sap20260817-enc-4500851945-150",
+    "sap20260817-enc-4500851945-170"
+   ]
+  },
+  {
+   "id": "M3210",
+   "pedido": "4500851945",
+   "mat": "M185",
+   "qtdEnc": 10,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-70",
+    "sap20260817-enc-4500851945-280"
+   ]
+  },
+  {
+   "id": "M3211",
+   "pedido": "4500851945",
+   "mat": "M185",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3212",
+   "pedido": "4500851945",
+   "mat": "M2478",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3213",
+   "pedido": "4500851945",
+   "mat": "M162",
+   "qtdEnc": 24,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-60",
+    "sap20260817-enc-4500851945-110"
+   ]
+  },
+  {
+   "id": "M3214",
+   "pedido": "4500851945",
+   "mat": "M483",
+   "qtdEnc": 24,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-60",
+    "sap20260817-enc-4500851945-110"
+   ]
+  },
+  {
+   "id": "M3215",
+   "pedido": "4500851945",
+   "mat": "M380",
+   "qtdEnc": 76,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-260"
+   ]
+  },
+  {
+   "id": "M3216",
+   "pedido": "4500851945",
+   "mat": "M368",
+   "qtdEnc": 27,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-270"
+   ]
+  },
+  {
+   "id": "M3217",
+   "pedido": "4500851945",
+   "mat": "M390",
+   "qtdEnc": 69,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-230"
+   ]
+  },
+  {
+   "id": "M3218",
+   "pedido": "4500851945",
+   "mat": "M2484",
+   "qtdEnc": 4,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-240",
+    "sap20260817-enc-4500851945-390",
+    "sap20260817-enc-4500851945-520"
+   ]
+  },
+  {
+   "id": "M3219",
+   "pedido": "4500851945",
+   "mat": "M363",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3220",
+   "pedido": "4500851945",
+   "mat": "M330",
+   "qtdEnc": 50,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-300"
+   ]
+  },
+  {
+   "id": "M3221",
+   "pedido": "4500851945",
+   "mat": "M2488",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3222",
+   "pedido": "4500851945",
+   "mat": "M2490",
+   "qtdEnc": 3,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-470",
+    "sap20260817-enc-4500851945-490"
+   ]
+  },
+  {
+   "id": "M3223",
+   "pedido": "4500851945",
+   "mat": "M2492",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3224",
+   "pedido": "4500851945",
+   "mat": "M2494",
+   "qtdEnc": 3,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-470",
+    "sap20260817-enc-4500851945-490"
+   ]
+  },
+  {
+   "id": "M3225",
+   "pedido": "4500851945",
+   "mat": "M187",
+   "qtdEnc": 26,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-290"
+   ]
+  },
+  {
+   "id": "M3226",
+   "pedido": "4500851945",
+   "mat": "M184",
+   "qtdEnc": 10,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-70",
+    "sap20260817-enc-4500851945-280"
+   ]
+  },
+  {
+   "id": "M3227",
+   "pedido": "4500851945",
+   "mat": "M422",
+   "qtdEnc": 28,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-320"
+   ]
+  },
+  {
+   "id": "M3228",
+   "pedido": "4500851945",
+   "mat": "M165",
+   "qtdEnc": 1,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-310",
+    "sap20260817-enc-4500851945-330"
+   ]
+  },
+  {
+   "id": "M3229",
+   "pedido": "4500851945",
+   "mat": "M2498",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-310",
+    "sap20260817-enc-4500851945-330"
+   ]
+  },
+  {
+   "id": "M3230",
+   "pedido": "4500851945",
+   "mat": "M304",
+   "qtdEnc": 21,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-50",
+    "sap20260817-enc-4500851945-500"
+   ]
+  },
+  {
+   "id": "M3231",
+   "pedido": "4500851945",
+   "mat": "M190",
+   "qtdEnc": 288,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-210"
+   ]
+  },
+  {
+   "id": "M3232",
+   "pedido": "4500851945",
+   "mat": "M2502",
+   "qtdEnc": 9,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-180",
+    "sap20260817-enc-4500851945-220"
+   ]
+  },
+  {
+   "id": "M3233",
+   "pedido": "4500851945",
+   "mat": "M166",
+   "qtdEnc": 14,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-430"
+   ]
+  },
+  {
+   "id": "M3234",
+   "pedido": "4500851945",
+   "mat": "M500",
+   "qtdEnc": 45,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-140",
+    "sap20260817-enc-4500851945-440"
+   ]
+  },
+  {
+   "id": "M3235",
+   "pedido": "4500851945",
+   "mat": "M3133",
+   "qtdEnc": 41,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-450"
+   ]
+  },
+  {
+   "id": "M3236",
+   "pedido": "4500851945",
+   "mat": "M556",
+   "qtdEnc": 280,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-420"
+   ]
+  },
+  {
+   "id": "M3237",
+   "pedido": "4500848628",
+   "mat": "M2506",
+   "qtdEnc": 252,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-110"
+   ]
+  },
+  {
+   "id": "M3238",
+   "pedido": "4500848628",
+   "mat": "M2508",
+   "qtdEnc": 116,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-120"
+   ]
+  },
+  {
+   "id": "M3239",
+   "pedido": "4500851945",
+   "mat": "M2679",
+   "qtdEnc": 29,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-400",
+    "sap20260817-enc-4500851945-510"
+   ]
+  },
+  {
+   "id": "M3240",
+   "pedido": "4500848628",
+   "mat": "M2510",
+   "qtdEnc": 322,
+   "qtdRecebida": 27,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-10"
+   ]
+  },
+  {
+   "id": "M3241",
+   "pedido": "4500848628",
+   "mat": "M2512",
+   "qtdEnc": 280,
+   "qtdRecebida": 26,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-20"
+   ]
+  },
+  {
+   "id": "M3242",
+   "pedido": "4500848628",
+   "mat": "M2514",
+   "qtdEnc": 168,
+   "qtdRecebida": 90,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-30"
+   ]
+  },
+  {
+   "id": "M3243",
+   "pedido": "4500851945",
+   "mat": "M321",
+   "qtdEnc": 4,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-240",
+    "sap20260817-enc-4500851945-390",
+    "sap20260817-enc-4500851945-520"
+   ]
+  },
+  {
+   "id": "M3244",
+   "pedido": "4500851945",
+   "mat": "M202",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3245",
+   "pedido": "4500851945",
+   "mat": "M203",
+   "qtdEnc": 419,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-350"
+   ]
+  },
+  {
+   "id": "M3246",
+   "pedido": "4500851945",
+   "mat": "M174",
+   "qtdEnc": 8,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-410"
+   ]
+  },
+  {
+   "id": "M3247",
+   "pedido": "4500851945",
+   "mat": "M175",
+   "qtdEnc": 120,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-370"
+   ]
+  },
+  {
+   "id": "M3248",
+   "pedido": "4500851945",
+   "mat": "M176",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3249",
+   "pedido": "4500851945",
+   "mat": "M1750",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-40",
+    "sap20260817-enc-4500851945-80",
+    "sap20260817-enc-4500851945-100",
+    "sap20260817-enc-4500851945-120",
+    "sap20260817-enc-4500851945-340",
+    "sap20260817-enc-4500851945-360",
+    "sap20260817-enc-4500851945-380",
+    "sap20260817-enc-4500851945-460",
+    "sap20260817-enc-4500851945-480"
+   ]
+  },
+  {
+   "id": "M3250",
+   "pedido": "4500864792",
+   "mat": "M2518",
+   "qtdEnc": 300,
+   "qtdRecebida": 300,
+   "un": "un",
+   "fornecedor": "Lapp Portugal, SA",
+   "data": "2026-05-18",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500864792-20"
+   ]
+  },
+  {
+   "id": "M3251",
+   "pedido": "4500864792",
+   "mat": "M213",
+   "qtdEnc": 5010,
+   "qtdRecebida": 5010,
+   "un": "m",
+   "fornecedor": "Lapp Portugal, SA",
+   "data": "2026-05-18",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500864792-10"
+   ]
+  },
+  {
+   "id": "M3252",
+   "pedido": "4500864211",
+   "mat": "M2537",
+   "qtdEnc": 8.9,
+   "qtdRecebida": 10,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3253",
+   "pedido": "4500864211",
+   "mat": "M2539",
+   "qtdEnc": 3.7,
+   "qtdRecebida": 110,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3254",
+   "pedido": "4500864211",
+   "mat": "M2539",
+   "qtdEnc": 110,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-150",
+    "sap20260817-enc-4500864211-160",
+    "sap20260817-enc-4500864211-170",
+    "sap20260817-enc-4500864211-180"
+   ]
+  },
+  {
+   "id": "M3255",
+   "pedido": "4500848364",
+   "mat": "M207",
+   "qtdEnc": 29,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848364-20"
+   ]
+  },
+  {
+   "id": "M3256",
+   "pedido": "4500851305",
+   "mat": "M2554",
+   "qtdEnc": 4,
+   "qtdRecebida": 4,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-30",
+    "sap20260817-enc-4500851305-40"
+   ]
+  },
+  {
+   "id": "M3257",
+   "pedido": "4500851305",
+   "mat": "M417",
+   "qtdEnc": 4,
+   "qtdRecebida": 4,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-30",
+    "sap20260817-enc-4500851305-40"
+   ]
+  },
+  {
+   "id": "M3258",
+   "pedido": "4500855444",
+   "mat": "M477",
+   "qtdEnc": 282,
+   "qtdRecebida": 141,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-120"
+   ]
+  },
+  {
+   "id": "M3259",
+   "pedido": "4500854997",
+   "mat": "M2565",
+   "qtdEnc": 26,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-350",
+    "sap20260817-enc-4500854997-360"
+   ]
+  },
+  {
+   "id": "M3260",
+   "pedido": "4500855000",
+   "mat": "M314",
+   "qtdEnc": 279,
+   "qtdRecebida": 279,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-60"
+   ]
+  },
+  {
+   "id": "M3261",
+   "pedido": "4500855444",
+   "mat": "M2569",
+   "qtdEnc": 288,
+   "qtdRecebida": 288,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-250"
+   ]
+  },
+  {
+   "id": "M3262",
+   "pedido": "4500858970",
+   "mat": "M2573",
+   "qtdEnc": 68,
+   "qtdRecebida": 68,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500858970-60"
+   ]
+  },
+  {
+   "id": "M3263",
+   "pedido": "4500855444",
+   "mat": "M2585",
+   "qtdEnc": 147,
+   "qtdRecebida": 147,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-380"
+   ]
+  },
+  {
+   "id": "M3264",
+   "pedido": "4500855444",
+   "mat": "M2587",
+   "qtdEnc": 84,
+   "qtdRecebida": 84,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-390"
+   ]
+  },
+  {
+   "id": "M3265",
+   "pedido": "4500855444",
+   "mat": "M2589",
+   "qtdEnc": 164,
+   "qtdRecebida": 82,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-60"
+   ]
+  },
+  {
+   "id": "M3266",
+   "pedido": "4500855444",
+   "mat": "M435",
+   "qtdEnc": 29,
+   "qtdRecebida": 29,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-70",
+    "sap20260817-enc-4500855444-360"
+   ]
+  },
+  {
+   "id": "M3267",
+   "pedido": "4500851305",
+   "mat": "M2591",
+   "qtdEnc": 248,
+   "qtdRecebida": 248,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-50"
+   ]
+  },
+  {
+   "id": "M3268",
+   "pedido": "4500851305",
+   "mat": "M2593",
+   "qtdEnc": 8,
+   "qtdRecebida": 8,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-60"
+   ]
+  },
+  {
+   "id": "M3269",
+   "pedido": "4500857392",
+   "mat": "M2607",
+   "qtdEnc": 620,
+   "qtdRecebida": 0,
+   "un": "m",
+   "fornecedor": "La Farga Yourcoppersolutions, SA",
+   "data": "2026-04-16",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500857392-30"
+   ]
+  },
+  {
+   "id": "M3270",
+   "pedido": "4500857392",
+   "mat": "sap20260817-mat-4500857392-40",
+   "qtdEnc": 18200,
+   "qtdRecebida": 0,
+   "un": "m",
+   "fornecedor": "La Farga Yourcoppersolutions, SA",
+   "data": "2026-04-16",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500857392-40"
+   ]
+  },
+  {
+   "id": "M3271",
+   "pedido": "4500857392",
+   "mat": "M575",
+   "qtdEnc": 21650,
+   "qtdRecebida": 0,
+   "un": "m",
+   "fornecedor": "La Farga Yourcoppersolutions, SA",
+   "data": "2026-04-16",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500857392-10"
+   ]
+  },
+  {
+   "id": "M3272",
+   "pedido": "4500851885",
+   "mat": "M2625",
+   "qtdEnc": 3,
+   "qtdRecebida": 3,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851885-20"
+   ]
+  },
+  {
+   "id": "M3273",
+   "pedido": "4500854997",
+   "mat": "M2638",
+   "qtdEnc": 16,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-440",
+    "sap20260817-enc-4500854997-450"
+   ]
+  },
+  {
+   "id": "M3274",
+   "pedido": "4500858970",
+   "mat": "M2645",
+   "qtdEnc": 1190,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-23",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500858970-140"
+   ]
+  },
+  {
+   "id": "M3275",
+   "pedido": "4500852546",
+   "mat": "M2617",
+   "qtdEnc": 1,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "Nippon Gases Portugal, Unip Lda",
+   "data": "2026-03-25",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500852546-10",
+    "sap20260817-enc-4500852546-70"
+   ]
+  },
+  {
+   "id": "M3276",
+   "pedido": "4500862037",
+   "mat": "M2448",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "Nippon Gases Portugal, Unip Lda",
+   "data": "2026-05-06",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500862037-10",
+    "sap20260817-enc-4500862037-20",
+    "sap20260817-enc-4500862037-30",
+    "sap20260817-enc-4500862037-50"
+   ]
+  },
+  {
+   "id": "M3277",
+   "pedido": "4500844782",
+   "mat": "M2446",
+   "qtdEnc": 2,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Nippon Gases Portugal, Unip Lda",
+   "data": "2026-02-20",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500844782-50",
+    "sap20260817-enc-4500844782-60"
+   ]
+  },
+  {
+   "id": "M3278",
+   "pedido": "4500844782",
+   "mat": "M2448",
+   "qtdEnc": 2,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Nippon Gases Portugal, Unip Lda",
+   "data": "2026-02-20",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500844782-50",
+    "sap20260817-enc-4500844782-60"
+   ]
+  },
+  {
+   "id": "M3279",
+   "pedido": "4500855444",
+   "mat": "M2661",
+   "qtdEnc": 64,
+   "qtdRecebida": 64,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-190"
+   ]
+  },
+  {
+   "id": "M3280",
+   "pedido": "4500855444",
+   "mat": "M2663",
+   "qtdEnc": 24,
+   "qtdRecebida": 24,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-320"
+   ]
+  },
+  {
+   "id": "M3281",
+   "pedido": "4500855444",
+   "mat": "M554",
+   "qtdEnc": 1226,
+   "qtdRecebida": 1226,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-310"
+   ]
+  },
+  {
+   "id": "M3282",
+   "pedido": "4500855444",
+   "mat": "M552",
+   "qtdEnc": 279,
+   "qtdRecebida": 279,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-10"
+   ]
+  },
+  {
+   "id": "M3283",
+   "pedido": "4500855444",
+   "mat": "M2671",
+   "qtdEnc": 661,
+   "qtdRecebida": 661,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-160"
+   ]
+  },
+  {
+   "id": "M3284",
+   "pedido": "4500855444",
+   "mat": "M2673",
+   "qtdEnc": 79,
+   "qtdRecebida": 79,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-180"
+   ]
+  },
+  {
+   "id": "M3285",
+   "pedido": "4500855444",
+   "mat": "M547",
+   "qtdEnc": 1457,
+   "qtdRecebida": 1457,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-170"
+   ]
+  },
+  {
+   "id": "M3286",
+   "pedido": "4500855000",
+   "mat": "M2679",
+   "qtdEnc": 29,
+   "qtdRecebida": 29,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-70"
+   ]
+  },
+  {
+   "id": "M3287",
+   "pedido": "4500861505",
+   "mat": "M2681",
+   "qtdEnc": 2,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Domingos da Silva Teixeira, S.A.",
+   "data": "2026-05-05",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500861505-10"
+   ]
+  },
+  {
+   "id": "M3288",
+   "pedido": "4500857392",
+   "mat": "M570",
+   "qtdEnc": 17150,
+   "qtdRecebida": 0,
+   "un": "m",
+   "fornecedor": "La Farga Yourcoppersolutions, SA",
+   "data": "2026-04-16",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500857392-20"
+   ]
+  },
+  {
+   "id": "M3289",
+   "pedido": "4500857392",
+   "mat": "M2703",
+   "qtdEnc": 1100,
+   "qtdRecebida": 0,
+   "un": "m",
+   "fornecedor": "La Farga Yourcoppersolutions, SA",
+   "data": "2026-04-16",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500857392-60"
+   ]
+  },
+  {
+   "id": "M3290",
+   "pedido": "4500854997",
+   "mat": "M445",
+   "qtdEnc": 29,
+   "qtdRecebida": 12,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-460"
+   ]
+  },
+  {
+   "id": "M3291",
+   "pedido": "4500851945",
+   "mat": "M2722",
+   "qtdEnc": 52,
+   "qtdRecebida": 52,
+   "un": "un",
+   "fornecedor": "EIP - Serviços, S.A.",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851945-200"
+   ]
+  },
+  {
+   "id": "M3292",
+   "pedido": "4500851211",
+   "mat": "M2731",
+   "qtdEnc": 7,
+   "qtdRecebida": 7,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851211-40"
+   ]
+  },
+  {
+   "id": "M3293",
+   "pedido": "4500851211",
+   "mat": "M2733",
+   "qtdEnc": 4,
+   "qtdRecebida": 4,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851211-10"
+   ]
+  },
+  {
+   "id": "M3294",
+   "pedido": "4500851211",
+   "mat": "M2735",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851211-20",
+    "sap20260817-enc-4500851211-50",
+    "sap20260817-enc-4500851211-70"
+   ]
+  },
+  {
+   "id": "M3295",
+   "pedido": "4500851211",
+   "mat": "M2737",
+   "qtdEnc": 48,
+   "qtdRecebida": 48,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851211-30"
+   ]
+  },
+  {
+   "id": "M3296",
+   "pedido": "4500851211",
+   "mat": "M2739",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851211-20",
+    "sap20260817-enc-4500851211-50",
+    "sap20260817-enc-4500851211-70"
+   ]
+  },
+  {
+   "id": "M3297",
+   "pedido": "4500855000",
+   "mat": "M2743",
+   "qtdEnc": 28,
+   "qtdRecebida": 28,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-80"
+   ]
+  },
+  {
+   "id": "M3298",
+   "pedido": "4500855444",
+   "mat": "M484",
+   "qtdEnc": 94,
+   "qtdRecebida": 94,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-340"
+   ]
+  },
+  {
+   "id": "M3299",
+   "pedido": "4500855444",
+   "mat": "M442",
+   "qtdEnc": 37,
+   "qtdRecebida": 37,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-350"
+   ]
+  },
+  {
+   "id": "M3300",
+   "pedido": "4500855444",
+   "mat": "M368",
+   "qtdEnc": 56,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-330"
+   ]
+  },
+  {
+   "id": "M3301",
+   "pedido": "4500852843",
+   "mat": "M2760",
+   "qtdEnc": 94500,
+   "qtdRecebida": 52000,
+   "un": "m",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-03-26",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500852843-40"
+   ]
+  },
+  {
+   "id": "M3302",
+   "pedido": "4500848628",
+   "mat": "M2773",
+   "qtdEnc": 21,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-40",
+    "sap20260817-enc-4500848628-70"
+   ]
+  },
+  {
+   "id": "M3303",
+   "pedido": "4500848628",
+   "mat": "M2775",
+   "qtdEnc": 13,
+   "qtdRecebida": 12,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-50",
+    "sap20260817-enc-4500848628-60",
+    "sap20260817-enc-4500848628-90"
+   ]
+  },
+  {
+   "id": "M3304",
+   "pedido": "4500854997",
+   "mat": "M2780",
+   "qtdEnc": 15,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-150",
+    "sap20260817-enc-4500854997-170",
+    "sap20260817-enc-4500854997-250",
+    "sap20260817-enc-4500854997-330",
+    "sap20260817-enc-4500854997-380"
+   ]
+  },
+  {
+   "id": "M3305",
+   "pedido": "4500855444",
+   "mat": "M2783",
+   "qtdEnc": 542,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-30"
+   ]
+  },
+  {
+   "id": "M3306",
+   "pedido": "4500848364",
+   "mat": "M2787",
+   "qtdEnc": 10,
+   "qtdRecebida": 10,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500848364-10"
+   ]
+  },
+  {
+   "id": "M3307",
+   "pedido": "4500858970",
+   "mat": "M2789",
+   "qtdEnc": 486,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-23",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500858970-130"
+   ]
+  },
+  {
+   "id": "M3308",
+   "pedido": "4500858970",
+   "mat": "M2794",
+   "qtdEnc": 3000,
+   "qtdRecebida": 3000,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500858970-50"
+   ]
+  },
+  {
+   "id": "M3309",
+   "pedido": "4500848628",
+   "mat": "M2800",
+   "qtdEnc": 21,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-40",
+    "sap20260817-enc-4500848628-70"
+   ]
+  },
+  {
+   "id": "M3310",
+   "pedido": "4500848628",
+   "mat": "M2802",
+   "qtdEnc": 13,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-50",
+    "sap20260817-enc-4500848628-60",
+    "sap20260817-enc-4500848628-90"
+   ]
+  },
+  {
+   "id": "M3311",
+   "pedido": "4500853867",
+   "mat": "M2804",
+   "qtdEnc": 92,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-03-31",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500853867-10"
+   ]
+  },
+  {
+   "id": "M3312",
+   "pedido": "4500855444",
+   "mat": "M568",
+   "qtdEnc": 785,
+   "qtdRecebida": 785,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-230"
+   ]
+  },
+  {
+   "id": "M3313",
+   "pedido": "4500855444",
+   "mat": "M537",
+   "qtdEnc": 78,
+   "qtdRecebida": 78,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-210",
+    "sap20260817-enc-4500855444-240"
+   ]
+  },
+  {
+   "id": "M3314",
+   "pedido": "4500855444",
+   "mat": "M2832",
+   "qtdEnc": 58,
+   "qtdRecebida": 58,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-90"
+   ]
+  },
+  {
+   "id": "M3315",
+   "pedido": "4500855444",
+   "mat": "M2840",
+   "qtdEnc": 19,
+   "qtdRecebida": 19,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-100",
+    "sap20260817-enc-4500855444-260"
+   ]
+  },
+  {
+   "id": "M3316",
+   "pedido": "4500858970",
+   "mat": "M2850",
+   "qtdEnc": 46,
+   "qtdRecebida": 48,
+   "un": "m",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3317",
+   "pedido": "4500864211",
+   "mat": "M2860",
+   "qtdEnc": 2.5,
+   "qtdRecebida": 2.5,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-90"
+   ]
+  },
+  {
+   "id": "M3318",
+   "pedido": "4500864211",
+   "mat": "M2862",
+   "qtdEnc": 0.2,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3319",
+   "pedido": "4500864211",
+   "mat": "M2864",
+   "qtdEnc": 5,
+   "qtdRecebida": 5,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-120"
+   ]
+  },
+  {
+   "id": "M3320",
+   "pedido": "4500864211",
+   "mat": "M2866",
+   "qtdEnc": 0.8,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3321",
+   "pedido": "4500864211",
+   "mat": "M2868",
+   "qtdEnc": 0.5,
+   "qtdRecebida": 0.5,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-130",
+    "sap20260817-enc-4500864211-140"
+   ]
+  },
+  {
+   "id": "M3322",
+   "pedido": "4500864211",
+   "mat": "M2870",
+   "qtdEnc": 1.1,
+   "qtdRecebida": 110,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3323",
+   "pedido": "4500864211",
+   "mat": "M2872",
+   "qtdEnc": 0.6,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3324",
+   "pedido": "4500864211",
+   "mat": "M405",
+   "qtdEnc": 0.5,
+   "qtdRecebida": 0.5,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-130",
+    "sap20260817-enc-4500864211-140"
+   ]
+  },
+  {
+   "id": "M3325",
+   "pedido": "4500864211",
+   "mat": "M2870",
+   "qtdEnc": 110,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-150",
+    "sap20260817-enc-4500864211-160",
+    "sap20260817-enc-4500864211-170",
+    "sap20260817-enc-4500864211-180"
+   ]
+  },
+  {
+   "id": "M3326",
+   "pedido": "4500851896",
+   "mat": "M2883",
+   "qtdEnc": 80,
+   "qtdRecebida": 80,
+   "un": "un",
+   "fornecedor": "M.Rocha & J.Serra - Metalurgica Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851896-480"
+   ]
+  },
+  {
+   "id": "M3327",
+   "pedido": "4500851896",
+   "mat": "M2897",
+   "qtdEnc": 238,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "M.Rocha & J.Serra - Metalurgica Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500851896-500",
+    "sap20260817-enc-4500851896-640"
+   ]
+  },
+  {
+   "id": "M3328",
+   "pedido": "4500851896",
+   "mat": "M542",
+   "qtdEnc": 116,
+   "qtdRecebida": 116,
+   "un": "un",
+   "fornecedor": "M.Rocha & J.Serra - Metalurgica Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851896-600"
+   ]
+  },
+  {
+   "id": "M3329",
+   "pedido": "4500851896",
+   "mat": "M2919",
+   "qtdEnc": 136,
+   "qtdRecebida": 136,
+   "un": "un",
+   "fornecedor": "M.Rocha & J.Serra - Metalurgica Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851896-780"
+   ]
+  },
+  {
+   "id": "M3330",
+   "pedido": "4500851896",
+   "mat": "M2921",
+   "qtdEnc": 24,
+   "qtdRecebida": 24,
+   "un": "un",
+   "fornecedor": "M.Rocha & J.Serra - Metalurgica Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851896-240",
+    "sap20260817-enc-4500851896-620",
+    "sap20260817-enc-4500851896-630",
+    "sap20260817-enc-4500851896-720",
+    "sap20260817-enc-4500851896-840"
+   ]
+  },
+  {
+   "id": "M3331",
+   "pedido": "4500851896",
+   "mat": "M2923",
+   "qtdEnc": 478,
+   "qtdRecebida": 478,
+   "un": "un",
+   "fornecedor": "M.Rocha & J.Serra - Metalurgica Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851896-660"
+   ]
+  },
+  {
+   "id": "M3332",
+   "pedido": "4500855000",
+   "mat": "M2688",
+   "qtdEnc": 270,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-90"
+   ]
+  },
+  {
+   "id": "M3333",
+   "pedido": "4500855000",
+   "mat": "M2932",
+   "qtdEnc": 4,
+   "qtdRecebida": 4,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-100"
+   ]
+  },
+  {
+   "id": "M3334",
+   "pedido": "4500855444",
+   "mat": "M2934",
+   "qtdEnc": 40,
+   "qtdRecebida": 40,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-150"
+   ]
+  },
+  {
+   "id": "M3335",
+   "pedido": "4500855000",
+   "mat": "M358",
+   "qtdEnc": 61,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-50"
+   ]
+  },
+  {
+   "id": "M3336",
+   "pedido": "4500855444",
+   "mat": "M2943",
+   "qtdEnc": 281,
+   "qtdRecebida": 20,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-140"
+   ]
+  },
+  {
+   "id": "M3337",
+   "pedido": "4500855444",
+   "mat": "M2957",
+   "qtdEnc": 239,
+   "qtdRecebida": 239,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-20"
+   ]
+  },
+  {
+   "id": "M3338",
+   "pedido": "4500854997",
+   "mat": "M2959",
+   "qtdEnc": 12,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-30",
+    "sap20260817-enc-4500854997-40",
+    "sap20260817-enc-4500854997-470"
+   ]
+  },
+  {
+   "id": "M3339",
+   "pedido": "4500864211",
+   "mat": "M584",
+   "qtdEnc": 8.9,
+   "qtdRecebida": 10,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3340",
+   "pedido": "4500864211",
+   "mat": "M2961",
+   "qtdEnc": 3.7,
+   "qtdRecebida": 110,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3341",
+   "pedido": "4500864211",
+   "mat": "M2961",
+   "qtdEnc": 110,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-150",
+    "sap20260817-enc-4500864211-160",
+    "sap20260817-enc-4500864211-170",
+    "sap20260817-enc-4500864211-180"
+   ]
+  },
+  {
+   "id": "M3342",
+   "pedido": "4500864211",
+   "mat": "M584",
+   "qtdEnc": 8.9,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3343",
+   "pedido": "4500864211",
+   "mat": "M2961",
+   "qtdEnc": 3.7,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": []
+  },
+  {
+   "id": "M3344",
+   "pedido": "4500864211",
+   "mat": "M2961",
+   "qtdEnc": 110,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Senttro - Sist. Fixacao, Unip Lda",
+   "data": "2026-05-14",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500864211-150",
+    "sap20260817-enc-4500864211-160",
+    "sap20260817-enc-4500864211-170",
+    "sap20260817-enc-4500864211-180"
+   ]
+  },
+  {
+   "id": "M3345",
+   "pedido": "4500848628",
+   "mat": "M2970",
+   "qtdEnc": 34,
+   "qtdRecebida": 8,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-130"
+   ]
+  },
+  {
+   "id": "M3346",
+   "pedido": "4500855444",
+   "mat": "M3098",
+   "qtdEnc": 116,
+   "qtdRecebida": 116,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-280"
+   ]
+  },
+  {
+   "id": "M3347",
+   "pedido": "4500855444",
+   "mat": "M3100",
+   "qtdEnc": 390,
+   "qtdRecebida": 390,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-270"
+   ]
+  },
+  {
+   "id": "M3348",
+   "pedido": "4500854997",
+   "mat": "M3108",
+   "qtdEnc": 16,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-440",
+    "sap20260817-enc-4500854997-450"
+   ]
+  },
+  {
+   "id": "M3349",
+   "pedido": "4500855444",
+   "mat": "M3112",
+   "qtdEnc": 671,
+   "qtdRecebida": 671,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-200"
+   ]
+  },
+  {
+   "id": "M3350",
+   "pedido": "4500855444",
+   "mat": "M3116",
+   "qtdEnc": 78,
+   "qtdRecebida": 78,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-210",
+    "sap20260817-enc-4500855444-240"
+   ]
+  },
+  {
+   "id": "M3351",
+   "pedido": "4500851885",
+   "mat": "M3118",
+   "qtdEnc": 16,
+   "qtdRecebida": 16,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851885-10"
+   ]
+  },
+  {
+   "id": "M3352",
+   "pedido": "4500855444",
+   "mat": "M3133",
+   "qtdEnc": 41,
+   "qtdRecebida": 41,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-370"
+   ]
+  },
+  {
+   "id": "M3353",
+   "pedido": "4500851305",
+   "mat": "M3135",
+   "qtdEnc": 217,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-10"
+   ]
+  },
+  {
+   "id": "M3354",
+   "pedido": "4500851305",
+   "mat": "M460",
+   "qtdEnc": 39,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-20"
+   ]
+  },
+  {
+   "id": "M3355",
+   "pedido": "4500855000",
+   "mat": "M302",
+   "qtdEnc": 35,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Arruti Catenaria S.A.",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500855000-40"
+   ]
+  },
+  {
+   "id": "M3356",
+   "pedido": "4500858970",
+   "mat": "M601",
+   "qtdEnc": 13000,
+   "qtdRecebida": 5300,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-23",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500858970-80"
+   ]
+  },
+  {
+   "id": "M3357",
+   "pedido": "4500848628",
+   "mat": "M3147",
+   "qtdEnc": 80,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-80"
+   ]
+  },
+  {
+   "id": "M3358",
+   "pedido": "4500848628",
+   "mat": "M3151",
+   "qtdEnc": 13,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sellon - Sol. Engenharia Unip. Lda",
+   "data": "2026-03-09",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500848628-50",
+    "sap20260817-enc-4500848628-60",
+    "sap20260817-enc-4500848628-90"
+   ]
+  },
+  {
+   "id": "M3359",
+   "pedido": "4500851872",
+   "mat": "M3153",
+   "qtdEnc": 21,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Tecnerga - Tecn. Electricidade, Lda",
+   "data": "2026-03-23",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500851872-10"
+   ]
+  },
+  {
+   "id": "M3360",
+   "pedido": "4500851305",
+   "mat": "M2972",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "vg",
+   "fornecedor": "Galland",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851305-70"
+   ]
+  },
+  {
+   "id": "M3361",
+   "pedido": "4500851088",
+   "mat": "M3157",
+   "qtdEnc": 18,
+   "qtdRecebida": 18,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-10"
+   ]
+  },
+  {
+   "id": "M3362",
+   "pedido": "4500851088",
+   "mat": "M3159",
+   "qtdEnc": 1086,
+   "qtdRecebida": 1086,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-20"
+   ]
+  },
+  {
+   "id": "M3363",
+   "pedido": "4500851088",
+   "mat": "M3161",
+   "qtdEnc": 696,
+   "qtdRecebida": 696,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-30"
+   ]
+  },
+  {
+   "id": "M3364",
+   "pedido": "4500851088",
+   "mat": "M3163",
+   "qtdEnc": 150,
+   "qtdRecebida": 150,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-40"
+   ]
+  },
+  {
+   "id": "M3365",
+   "pedido": "4500851088",
+   "mat": "M3165",
+   "qtdEnc": 660,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-50"
+   ]
+  },
+  {
+   "id": "M3366",
+   "pedido": "4500851088",
+   "mat": "M3167",
+   "qtdEnc": 156,
+   "qtdRecebida": 150,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-60"
+   ]
+  },
+  {
+   "id": "M3367",
+   "pedido": "4500851088",
+   "mat": "M3169",
+   "qtdEnc": 324,
+   "qtdRecebida": 306,
+   "un": "un",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-70"
+   ]
+  },
+  {
+   "id": "M3368",
+   "pedido": "4500851088",
+   "mat": "M3171",
+   "qtdEnc": 180,
+   "qtdRecebida": 180,
+   "un": "m",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-80"
+   ]
+  },
+  {
+   "id": "M3369",
+   "pedido": "4500851088",
+   "mat": "M3173",
+   "qtdEnc": 48,
+   "qtdRecebida": 48,
+   "un": "m",
+   "fornecedor": "Penta Electrical Safety Products Pt",
+   "data": "2026-03-19",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500851088-90"
+   ]
+  },
+  {
+   "id": "M3370",
+   "pedido": "4500854997",
+   "mat": "M3182",
+   "qtdEnc": 13,
+   "qtdRecebida": 11,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-04-07",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Entrega parcial",
+   "substituidaPor": [
+    "sap20260817-enc-4500854997-220",
+    "sap20260817-enc-4500854997-370",
+    "sap20260817-enc-4500854997-480",
+    "sap20260817-enc-4500854997-490"
+   ]
+  },
+  {
+   "id": "M3371",
+   "pedido": "4500855444",
+   "mat": "M436",
+   "qtdEnc": 321,
+   "qtdRecebida": 321,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-80"
+   ]
+  },
+  {
+   "id": "M3372",
+   "pedido": "4500855444",
+   "mat": "M443",
+   "qtdEnc": 29,
+   "qtdRecebida": 29,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-04-08",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500855444-70",
+    "sap20260817-enc-4500855444-360"
+   ]
+  },
+  {
+   "id": "M3894",
+   "pedido": "4500858157",
+   "mat": "M289",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-20",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500858157-10",
+    "sap20260817-enc-4500858157-30"
+   ]
+  },
+  {
+   "id": "M3895",
+   "pedido": "4500858157",
+   "mat": "M290",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Jobasi - Aces. Elect. e Bronzes, SA",
+   "data": "2026-04-20",
+   "obs": "Importado do EXPORT SAP",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500858157-20"
+   ]
+  },
+  {
+   "id": "E3896",
+   "pedido": "4500869852",
+   "mat": "M4049",
+   "qtdEnc": 1800,
+   "qtdRecebida": 1800,
+   "un": "un",
+   "fornecedor": "Nicolau de Freitas, Lda",
+   "data": "2026-06-08",
+   "obs": "Importado do EXPORT SAP 11/06/2026 — 442-PARAFUSO PONTO M12X22/22",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500869852-10"
+   ]
+  },
+  {
+   "id": "E3897",
+   "pedido": "4500869925",
+   "mat": "M302",
+   "qtdEnc": 35,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-06-08",
+   "obs": "Importado do EXPORT SAP 11/06/2026 — Suporte de fixação p/ aparelho tensor",
+   "substituidaPor": [
+    "sap20260817-enc-4500869925-10"
+   ]
+  },
+  {
+   "id": "E3898",
+   "pedido": "4500869925",
+   "mat": "M358",
+   "qtdEnc": 61,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "MPL - Metal Processo, Lda",
+   "data": "2026-06-08",
+   "obs": "Importado do EXPORT SAP 11/06/2026 — Peça de amarração da espia",
+   "substituidaPor": [
+    "sap20260817-enc-4500869925-20"
+   ]
+  },
+  {
+   "id": "E3899",
+   "pedido": "4500871362",
+   "mat": "M4052",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-17",
+   "obs": "Importado do EXPORT SAP 18/06/2026 — SPRAY TINTA BRANCO OPACO 400ML",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500871362-10",
+    "sap20260817-enc-4500871362-20"
+   ]
+  },
+  {
+   "id": "E3900",
+   "pedido": "4500871362",
+   "mat": "M4053",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-17",
+   "obs": "Importado do EXPORT SAP 18/06/2026 — SPRAY TINTA VERM.RAL 3000 400M",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500871362-10",
+    "sap20260817-enc-4500871362-20"
+   ]
+  },
+  {
+   "id": "E3901",
+   "pedido": "4500871362",
+   "mat": "M4054",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-17",
+   "obs": "Importado do EXPORT SAP 18/06/2026 — FITA PAPEL MASKING 38 MM",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500871362-30",
+    "sap20260817-enc-4500871362-40"
+   ]
+  },
+  {
+   "id": "E3902",
+   "pedido": "4500871362",
+   "mat": "M4055",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-17",
+   "obs": "Importado do EXPORT SAP 18/06/2026 — BALDE PRETO 10 LT ESPECIAL",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500871362-30",
+    "sap20260817-enc-4500871362-40"
+   ]
+  },
+  {
+   "id": "E3903",
+   "pedido": "4500871362",
+   "mat": "M4004",
+   "qtdEnc": 5,
+   "qtdRecebida": 5,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-17",
+   "obs": "Importado do EXPORT SAP 18/06/2026 — CHAVES UNIVERSAIS UL050",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500871362-50"
+   ]
+  },
+  {
+   "id": "E3904",
+   "pedido": "4500872735",
+   "mat": "M566",
+   "qtdEnc": 24,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sacyr Somague, S.A.",
+   "data": "2026-06-23",
+   "obs": "Importado SAP 24/06/2026 — Cód. 10C – Tubo de aço 24x32",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500872735-10"
+   ]
+  },
+  {
+   "id": "E3905",
+   "pedido": "4500872735",
+   "mat": "M473",
+   "qtdEnc": 36,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sacyr Somague, S.A.",
+   "data": "2026-06-23",
+   "obs": "Importado SAP 24/06/2026 — Cód. 10A – Tubo de aço 19x26",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500872735-20"
+   ]
+  },
+  {
+   "id": "E3906",
+   "pedido": "4500872735",
+   "mat": "M529",
+   "qtdEnc": 17.5,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sacyr Somague, S.A.",
+   "data": "2026-06-23",
+   "obs": "Importado SAP 24/06/2026 — Cód. 10F – Tubo de aço 34x42",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500872735-30"
+   ]
+  },
+  {
+   "id": "E3907",
+   "pedido": "4500872979",
+   "mat": "M566",
+   "qtdEnc": 24,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sacyr Neopul, SA",
+   "data": "2026-06-23",
+   "obs": "Importado SAP 24/06/2026 — Cód. 10C – Tubo de aço 24x32",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500872979-10"
+   ]
+  },
+  {
+   "id": "E3908",
+   "pedido": "4500872979",
+   "mat": "M473",
+   "qtdEnc": 36,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sacyr Neopul, SA",
+   "data": "2026-06-23",
+   "obs": "Importado SAP 24/06/2026 — Cód. 10A – Tubo de aço 19x26",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500872979-20"
+   ]
+  },
+  {
+   "id": "E3909",
+   "pedido": "4500872979",
+   "mat": "M529",
+   "qtdEnc": 17.5,
+   "qtdRecebida": 0,
+   "un": "un",
+   "fornecedor": "Sacyr Neopul, SA",
+   "data": "2026-06-23",
+   "obs": "Importado SAP 24/06/2026 — Cód. 10F – Tubo de aço 34x42",
+   "estado": "Em encomenda",
+   "substituidaPor": [
+    "sap20260817-enc-4500872979-30"
+   ]
+  },
+  {
+   "id": "M3983",
+   "pedido": "4500873696",
+   "mat": "M3988",
+   "qtdEnc": 10,
+   "qtdRecebida": 10,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-29",
+   "obs": "Importado EXPORT SAP 02/07 | PEP IC-0019 | Item — buscado em Julho",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500873696-10"
+   ]
+  },
+  {
+   "id": "M3984",
+   "pedido": "4500873696",
+   "mat": "M4488",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "kg",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-29",
+   "obs": "Importado EXPORT SAP 02/07 | PEP IC-0019 | Item — buscado em Julho",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500873696-20"
+   ]
+  },
+  {
+   "id": "M3985",
+   "pedido": "4500873704",
+   "mat": "M4489",
+   "qtdEnc": 1,
+   "qtdRecebida": 1,
+   "un": "l",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-29",
+   "obs": "Importado EXPORT SAP 02/07 | PEP IC-0019 | Item — buscado em Julho",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500873704-10",
+    "sap20260817-enc-4500873704-30",
+    "sap20260817-enc-4500873704-40"
+   ]
+  },
+  {
+   "id": "M3986",
+   "pedido": "4500873704",
+   "mat": "M4490",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "un",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-29",
+   "obs": "Importado EXPORT SAP 02/07 | PEP IC-0019 | Item — buscado em Julho",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500873704-20"
+   ]
+  },
+  {
+   "id": "M3987",
+   "pedido": "4500873704",
+   "mat": "M4491",
+   "qtdEnc": 2,
+   "qtdRecebida": 2,
+   "un": "l",
+   "fornecedor": "Joao S. Azevedo, Lda",
+   "data": "2026-06-29",
+   "obs": "Importado EXPORT SAP 02/07 | PEP IC-0019 | Item — buscado em Julho",
+   "estado": "Concluída",
+   "substituidaPor": [
+    "sap20260817-enc-4500873704-20"
+   ]
+  }
+ ],
+ "movimentos": [
+  {
+   "id": "mvM3990",
+   "data": "2026-06-24",
+   "tipo": "entrada",
+   "mat": "M2464",
+   "qtd": 82,
+   "arm": "Armazém Catenária",
+   "armDst": null,
+   "pedido": "4500855000",
+   "doc": "",
+   "origem": "Arruti Catenaria S.A.",
+   "dest": "",
+   "obs": "Entrega da encomenda 4500855000",
+   "user": "",
+   "ref": null,
+   "motivo": "Repete a entrada mv4514 (82 meias pinças 348, PC 4500855000, 24/06/2026) já registada na ficha M403; apontava para a ficha inexistente M2464."
+  }
+ ]
+}

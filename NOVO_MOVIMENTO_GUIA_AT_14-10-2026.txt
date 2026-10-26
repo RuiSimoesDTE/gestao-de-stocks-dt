@@ -1,0 +1,77 @@
+================================================================================
+NOVO MOVIMENTO - GUIA AT 14-10-2026
+================================================================================
+
+DADOS DA GUIA AT:
+─────────────────────────────────────────────────────────────────────────────
+
+Número Documento:      GT-ATDT202601GT/18215
+Identificador Único:   19845213874
+Data do Documento:     14-10-2026
+Hora Comunicação:      14-10-2026 16:24
+
+REMETENTE:
+─────────────────────────────────────────────────────────────────────────────
+Firma/Nome:           DOMINGOS SILVA TEIXEIRA SA
+Sede/Domicílio:       R DE PITANCINHOS
+Local:                4700-727 PALMEIRA
+NIF:                  501489126
+
+DESTINATÁRIO:
+─────────────────────────────────────────────────────────────────────────────
+Firma/Nome:           DTE, INSTALAÇÕES ESPECIAIS, S.A.
+Sede/Domicílio:       R dos Pintacinhos
+Local:                4700-727 Braga
+NIF:                  501866116
+
+TRANSPORTE:
+─────────────────────────────────────────────────────────────────────────────
+Local de Carga:       IC-0019 - Modernização da Linha Vendas Novas
+                      Antigas Instalações da DAI (Coruche)
+Local de Descarga:    AGOLADA
+
+Horário:
+  Início:             14-10-2026 às 18:00
+  Fim:                15-10-2026 às 18:00
+  Matrícula:          CF-75-QX
+
+MATERIAL TRANSPORTADO:
+─────────────────────────────────────────────────────────────────────────────
+Designação:          BOBINE SUPORTE 1050 METROS
+Quantidade:          1,0000
+Unidade:             1
+Valor:               €0,00 (Interno)
+
+INFORMAÇÃO PARA PROGRAMA:
+─────────────────────────────────────────────────────────────────────────────
+Tipo de Movimento:   ENTRADA (Transferência interna de armazém)
+Material:            BOBINE SUPORTE 1050 METROS
+Código:              (A definir ou verificar com material existente)
+Quantidade:          1
+Data:                14-10-2026
+Origem:              Domingos Silva Teixeira SA / Palmeira (armazém externo)
+Destino:             DTE Braga / Agolada (IC-0019)
+Guia AT Referência:  GT-ATDT202601GT/18215
+Ficheiro PDF:        guias_at/Guia_AT_GT-ATDT202601GT-18215_14-10-2026.pdf
+Observações:         Transferência interna para projeto Vendas Novas
+
+AÇÕES NECESSÁRIAS:
+─────────────────────────────────────────────────────────────────────────────
+[ ] 1. Verificar se material "BOBINE SUPORTE 1050 METROS" existe no programa
+[ ] 2. Se não existir, criar entrada com código apropriado
+[ ] 3. Registar movimento de entrada no programa
+[ ] 4. Atualizar stock de AGOLADA/IC-0019
+[ ] 5. Vincular guia AT ao movimento
+[ ] 6. Confirmar receção em AGOLADA (actualizar data de recebimento)
+
+DOCUMENTO ARQUIVADO:
+─────────────────────────────────────────────────────────────────────────────
+Localização: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\guias_at\
+Ficheiro:    Guia_AT_GT-ATDT202601GT-18215_14-10-2026.pdf
+Tamanho:     37 KB
+Data Arquivo: 2026-10-15
+
+Registado por: Claude Haiku 4.5
+Data Registro: 2026-10-15
+
+================================================================================

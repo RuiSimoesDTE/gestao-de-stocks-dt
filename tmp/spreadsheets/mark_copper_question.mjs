@@ -1,0 +1,14 @@
+import fs from "node:fs/promises";
+import { SpreadsheetFile } from "@oai/artifact-tool";
+const file = "C:/Users/dst7973/Desktop/gestao_de_stocks_dte/outputs/consumos_202607_20260821/IC-0019_Consumos_01-07_a_21-08-2026_PREENCHIDO.xlsx";
+const wb = await SpreadsheetFile.importXlsx(await fs.readFile(file));
+const simple = wb.worksheets.getItem("Linhas para preencher");
+simple.getRange("A71:F71").values = [["?", "?", "Bobine de cobre — GT ATDT202601GT/2558", "IC-0019-P-01", "?", "Confirmar secção/SAP e metros efetivamente aplicados. Não lançar os 1.539 m transportados."]];
+simple.getRange("A71:F71").format = { fill: "#FFF2CC", font: { bold: true, color: "#7F6000" }, borders: { preset: "outside", style: "thin", color: "#BF9000" }, wrapText: true, verticalAlignment: "top" };
+simple.getRange("A71:F71").format.rowHeight = 58;
+const pending = wb.worksheets.getItem("Pendentes");
+pending.getRange("A4:B4").values = [["?", "?"]];
+const out = await SpreadsheetFile.exportXlsx(wb);
+await out.save(file);
+const check = await wb.inspect({ kind: "table", range: "Linhas para preencher!A68:F71", include: "values,formulas", tableMaxRows: 10, tableMaxCols: 6, maxChars: 5000 });
+console.log(check.ndjson);

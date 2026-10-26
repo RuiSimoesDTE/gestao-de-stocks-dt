@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "authentication": {
+    "status": "pending-central-service",
+    "note": "Os perfis estão preparados, mas a autenticação segura ainda não está ativa."
+  },
+  "users": [
+    {
+      "id": "rui-simoes",
+      "name": "Rui Simões",
+      "email": "rui.simoes@dte.pt",
+      "role": "super_admin",
+      "roleLabel": "Administrador máximo",
+      "status": "active"
+    }
+  ],
+  "roles": [
+    {
+      "id": "super_admin",
+      "label": "Administrador máximo",
+      "permissions": ["*"]
+    },
+    {
+      "id": "manager",
+      "label": "Gestor",
+      "permissions": ["stock:read", "stock:write", "orders:manage", "reports:read"]
+    },
+    {
+      "id": "operator",
+      "label": "Operador",
+      "permissions": ["stock:read", "movements:create"]
+    },
+    {
+      "id": "viewer",
+      "label": "Consulta",
+      "permissions": ["stock:read", "reports:read"]
+    }
+  ]
+}

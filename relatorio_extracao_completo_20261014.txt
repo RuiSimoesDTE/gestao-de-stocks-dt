@@ -1,0 +1,370 @@
+﻿╔════════════════════════════════════════════════════════════════╗
+║  RELATÓRIO FINAL DE EXTRAÇÃO DE POSTES                        ║
+║  Modernização da Linha de Vendas Novas - DTE Catenária        ║
+╚════════════════════════════════════════════════════════════════╝
+
+DATA DE EXTRAÇÃO: 2026-10-14
+FONTE: PDFs V09_IFTE_PDes (volumes 301, 302, 304, 306, 107)
+TOTAL DE POSTES EXTRAÍDOS: 36
+
+═════════════════════════════════════════════════════════════════
+RESUMO EXECUTIVO
+═════════════════════════════════════════════════════════════════
+
+  • Estado 'desmontar': 28 postes
+  • Estado 'existente': 8 postes
+
+  Tipos de Montagem:
+    - Montagem B: 24 postes
+    - Montagem A: 6 postes
+    - Montagem C: 3 postes
+
+═════════════════════════════════════════════════════════════════
+LISTAGEM DETALHADA DE POSTES
+═════════════════════════════════════════════════════════════════
+
+POSTE: 05-10
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 16 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.301_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 06-24A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 23 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.301_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 19-29A
+├─ Estado: desmontar
+├─ Montagem: Tipo A
+├─ Referência Principal: EC-232
+├─ Equipamentos: 15 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.302_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 31-22
+├─ Estado: desmontar
+├─ Montagem: não identificada
+├─ Referência Principal: EC-237
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.304_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 31-26A
+├─ Estado: desmontar
+├─ Montagem: não identificada
+├─ Referência Principal: EC-237
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.304_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 31-28
+├─ Estado: desmontar
+├─ Montagem: não identificada
+├─ Referência Principal: EC-237
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.304_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 63-08
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 16 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 63-09
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 18 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-21
+├─ Estado: desmontar
+├─ Montagem: Tipo A
+├─ Referência Principal: C-1602
+├─ Equipamentos: 14 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-21Y
+├─ Estado: desmontar
+├─ Montagem: Tipo A
+├─ Referência Principal: EC-232
+├─ Equipamentos: 14 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-22
+├─ Estado: desmontar
+├─ Montagem: Tipo A
+├─ Referência Principal: C-1602
+├─ Equipamentos: 14 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-23
+├─ Estado: desmontar
+├─ Montagem: Tipo C
+├─ Referência Principal: E-6180
+├─ Equipamentos: 14 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-23A
+├─ Estado: desmontar
+├─ Montagem: Tipo C
+├─ Referência Principal: EC-232
+├─ Equipamentos: 12 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-24
+├─ Estado: desmontar
+├─ Montagem: Tipo C
+├─ Referência Principal: EC-232
+├─ Equipamentos: 12 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-25
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6180
+├─ Equipamentos: 12 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-25A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-25Y
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-26
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-26A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 12 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-27
+├─ Estado: desmontar
+├─ Montagem: Tipo A
+├─ Referência Principal: E-6180
+├─ Equipamentos: 12 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-27A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 8 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-27Y
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 8 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-28
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6179
+├─ Equipamentos: 8 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-28A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 9 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-29
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-29A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-30A
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-31
+├─ Estado: desmontar
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-31A
+├─ Estado: existente
+├─ Montagem: Tipo A
+├─ Referência Principal: E-6179
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-33
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6179
+├─ Equipamentos: 10 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-33A
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6179
+├─ Equipamentos: 9 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-34
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6177
+├─ Equipamentos: 12 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-35A
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6179
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-35-P
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: E-6177
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-36
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+POSTE: 64-36-P
+├─ Estado: existente
+├─ Montagem: Tipo B
+├─ Referência Principal: EC-232
+├─ Equipamentos: 13 listados
+├─ Cotas: nenhuma
+├─ PDF Fonte: 42517.PE.09.IFT.00.306_03.txt
+└─ Notas: Tem tirante. Tem consola. Tem antibalançante.
+═════════════════════════════════════════════════════════════════
+ESTRUTURA DOS FICHEIROS JSON GERADOS
+═════════════════════════════════════════════════════════════════
+
+Cada poste contém os seguintes campos:
+
+  numero: Identificação do poste (ex: 05-10)
+  estado: Estado do poste (existente, novo, desmontar)
+  montagem: Tipo de montagem (A, B, C ou vazio)
+  montagem_ref: Referência de montagem (EC-232, E-6177, etc)
+  tirFix: Código de fixação do tirante
+  consFix: Código de fixação da consola
+  outrosEquip: Array com equipamentos adicionais
+    - cod: código da peça (EC-xxx, E-xxxx, C-xxxxx, SAP 7 dígitos)
+    - desc: descrição ou referência
+  desmontar: Array com peças a desmontar (DESM01, etc)
+  cotas: Object com cotas extraídas (H, D, S, E, F, A, C, B)
+  notas: Observações (presença de tirante, consola, antibalançante)
+  pdf: Ficheiro PDF origem
+
+═════════════════════════════════════════════════════════════════
+FICHEIROS GERADOS
+═════════════════════════════════════════════════════════════════
+
+1. postes_consolidado_completo_20261014.json
+   └─ JSON consolidado com os 36 postes extraídos
+
+2. postes_22_extraidos_20261014.json
+   └─ JSON com os 12 postes iniciais (05-10, 06-24A, 19-29A, etc)
+
+3. postes_64_21Y_a_64_36_extraidos_20261014.json
+   └─ JSON com os 28 postes do intervalo 64-21Y a 64-36
+
+4. relatorio_extracao_postes.txt
+   └─ Relatório em formato texto
+
+═════════════════════════════════════════════════════════════════
+INTEGRAÇÃO NO SEED_DATA DO HTML
+═════════════════════════════════════════════════════════════════
+
+Os dados podem ser integrados no SEED_DATA da aplicação HTML seguindo
+a estrutura de cada poste. Recomenda-se:
+
+1. Validar os códigos SAP (7 dígitos) com o SAP
+2. Confirmar as montagens (tipo A, B, C) com os desenhos originais
+3. Verificar as cotas com o caderno de montagem
+4. Validar a lista de equipamentos por poste
+5. Confirmar o estado de cada poste (existente/novo/desmontar)
+
+═════════════════════════════════════════════════════════════════
+CONTACTO
+═════════════════════════════════════════════════════════════════
+
+Extração realizada por: Claude Haiku 4.5
+Data: 2026-10-14
+Utilizador: rui16simoes@gmail.com
+

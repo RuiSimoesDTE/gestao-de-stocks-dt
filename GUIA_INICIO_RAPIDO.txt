@@ -1,0 +1,181 @@
+================================================================================
+GUIA DE INICIO RAPIDO - AUTOMACAO COMPLETA
+Gestao de Materiais de Catenaria DTE
+================================================================================
+
+PASSO 1: PREPARAR
+================================================================================
+1. Abra PowerShell como ADMINISTRADOR
+2. Navegue para a pasta do projeto:
+   cd C:\Users\dst7973\Desktop\gestao_de_stocks_dte
+
+3. Verifique que todos os ficheiros existem:
+   ls file_watcher.ps1
+   ls agentes_agendados.ps1
+   ls automacao_config.json
+
+PASSO 2: INSTALAR AUTOMACAO
+================================================================================
+Execute este comando (como Administrador):
+
+powershell -NoProfile -ExecutionPolicy Bypass -File iniciar_automacao.ps1 -Acao instalar
+
+O que vai acontecer:
+  ? Cria directorio logs/
+  ? Cria directorio locks/
+  ? Cria directorio backups/
+  ? Cria directorio sistemas/
+  ? Valida configuracao
+  ? Registra agentes no Task Scheduler
+  ? Gera scripts de rotinas
+
+Tempo: ~2 minutos
+
+PASSO 3: INICIAR FILE WATCHER
+================================================================================
+Abra uma SEGUNDA janela PowerShell (pode ser normal, nao precisa admin).
+
+Execute:
+powershell -NoProfile -ExecutionPolicy Bypass -File iniciar_automacao.ps1 -Acao iniciar
+
+Output esperado:
+[2026-10-14 14:30:00] FILE WATCHER iniciado
+[2026-10-14 14:30:00] Monitorando: app, documentacao, recursos
+[2026-10-14 14:30:00] Intervalo: 5000ms
+[2026-10-14 14:30:00] Watchers registados. Aguardando mudancas...
+
+DEIXE ESTA JANELA ABERTA!
+
+PASSO 4: VERIFICAR STATUS
+================================================================================
+Abra uma TERCEIRA janela PowerShell e execute:
+
+powershell -NoProfile -ExecutionPolicy Bypass -File iniciar_automacao.ps1 -Acao status
+
+O que vai ver:
+  ? FICHEIROS:
+     ? file_watcher.ps1
+     ? agentes_agendados.ps1
+     ...
+  ? DIRECTORIO:
+     ? logs (0 itens)
+     ? backups (0 itens)
+     ...
+  ? AGENTES AGENDADOS:
+     ? GestaoMateriais_SyncHoraria - Ready
+     ? GestaoMateriais_BackupDiario - Ready
+     ? GestaoMateriais_LimpezaSemanal - Ready
+
+PASSO 5: TESTAR SISTEMA
+================================================================================
+Para verificar que tudo esta funcionando, faca uma mudanca pequena:
+
+1. Edite o HTML: app/gestao_armazem_catenaria.html
+2. Altere algo pequeno (ex: adicione um comentario)
+3. Guarde o ficheiro
+
+O que deve acontecer:
+  [2026-10-14 14:35:00] Mudanca detectada: app/gestao_armazem_catenaria.html
+  [2026-10-14 14:35:00] Lock adquirido
+  [2026-10-14 14:35:01] Backup criado: gestao_armazem_catenaria_20261014_143501.html
+  [2026-10-14 14:35:01] Versao incrementada para v1
+  [2026-10-14 14:35:02] Sincronizado para OneDrive: gestao_armazem_catenaria.html
+  [2026-10-14 14:35:02] Lock liberado
+  [2026-10-14 14:35:02] Processo completo
+
+Verificar resultados:
+  ls backups\hourl\*             (ver backup criado)
+  ls app\gestao*.version         (ver ficheiro de versao)
+  Get-Content logs\log_watcher.txt -Tail 10  (ver log)
+
+PASSO 6: ACOMPANHAMENTO
+================================================================================
+Para acompanhar o sistema em tempo real:
+
+Ver logs continuamente:
+  Get-Content logs\log_watcher.txt -Tail 20 -Wait
+
+Ver agentes agendados:
+  Get-ScheduledTask -TaskName "GestaoMateriais_*" | ft TaskName, State, NextRunTime
+
+Ver ficheiros sincronizados:
+  ls C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A... (seu caminho OneDrive)
+
+Ver uso de disco:
+  du -sh backups\
+
+================================================================================
+DICAS E DICAS
+================================================================================
+
+? MANTENHA O FILE WATCHER ABERTO
+   - Sem ele, nao ha protecao em tempo real
+   - Agentes agendados ainda funcionam, mas sem deteccao imediata
+
+? CONFIGURE STARTUP AUTOMATICO (opcional)
+   - Para evitar abrir manualmente cada vez
+   - Use Task Scheduler ou shell:startup
+
+? VERIFIQUE ONEDRIVE REGULARMENTE
+   - Confirme que ficheiros estao sincronizados
+   - Se houver problemas, consulte TROUBLESHOOTING
+
+? ACOMPANHE OS LOGS
+   - logs/log_automacao.txt - log principal
+   - logs/log_watcher.txt - file watcher
+   - logs/log_backup_daily.txt - backup
+
+? RESPEITE O CRONOGRAMA
+   - Sync Horaria: Cada hora
+   - Backup Diario: 22:00
+   - Limpeza: Sexta 18:00
+
+================================================================================
+SE ALGO NAO FUNCIONAR
+================================================================================
+
+1. Consulte: TROUBLESHOOTING_AUTOMACAO.md
+2. Verifique logs: Get-Content logs\log_*.txt -Tail 50
+3. Teste componentes individualmente:
+   - powershell -NoProfile -ExecutionPolicy Bypass -File file_watcher.ps1
+   - powershell -NoProfile -ExecutionPolicy Bypass -File agentes_agendados.ps1 listar
+
+4. Se preciso, desinstale e reinstale:
+   powershell -NoProfile -ExecutionPolicy Bypass -File agentes_agendados.ps1 desinstalar
+   powershell -NoProfile -ExecutionPolicy Bypass -File iniciar_automacao.ps1 -Acao instalar
+
+================================================================================
+CHECKLIST FINAL
+================================================================================
+
+[ ] PowerShell aberto como Administrador
+[ ] Na pasta correcta: C:\Users\dst7973\Desktop\gestao_de_stocks_dte
+[ ] Instalacao concluida (passo 2)
+[ ] File Watcher iniciado (passo 3, janela aberta)
+[ ] Status mostra tudo OK (passo 4)
+[ ] Teste funcionou (passo 5)
+[ ] Logs aparecem em log_watcher.txt
+[ ] OneDrive esta acessivel
+[ ] Task Scheduler mostra 3 agentes
+[ ] Espaço em disco > 500 MB
+
+================================================================================
+PARABENS!
+================================================================================
+
+O sistema de automacao esta totalmente funcional e pronto para proteger seus dados!
+
+Agora voce tem:
+  ? Monitorizacao em tempo real
+  ? Backups automaticos
+  ? Versionamento
+  ? Sincronizacao OneDrive
+  ? Limpeza automatica
+  ? Logs completos
+  ? Seguranca em primeiro lugar
+
+Qualquer duvida, consulte a documentacao!
+
+================================================================================
+Versao: 1.0 | Data: 2026-10-14
+================================================================================

@@ -1,0 +1,101 @@
+================================================================================
+RESUMO DE FITAS MÉTRICAS - Gestão de Materiais de Catenária DTE
+================================================================================
+Data do relatório: 15/10/2026
+Fonte: Análise completa do programa + todos os backups (27 ficheiros)
+
+================================================================================
+MATERIAIS ENCONTRADOS NO CATÁLOGO
+================================================================================
+
+1. FITA MÉTRICA STANLEY 5 MT TYLON
+   ID do Sistema: M92
+   Código SAP: (sem SAP)
+   Unidade: un
+   Status: Catalogado, sem movimentos
+   Aplicação: Ferramenta de trabalho
+
+2. FITA METRICA CAIXA METALICA 5MT
+   ID do Sistema: M4020
+   Código SAP: 5001896
+   Unidade: un
+   Status: Catalogado, sem movimentos
+   Fonte de Dados: SAP TMv 101
+
+3. FITA METRICA BIMAT STANLEY 8MT
+   ID do Sistema: sap20260812-mat-4500881595-40
+   Código SAP: 5001894
+   Unidade: un
+   Status: Catalogado (importado de PC 4500881595), sem movimentos
+   Fornecedor: (PC 4500881595)
+
+================================================================================
+HISTÓRICO DE COMPRAS
+================================================================================
+
+RESUMO GERAL:
+  Total de encomendas encontradas: 0 linhas
+  Total comprado: 0 unidades
+  Total recebido: 0 unidades
+
+RESULTADO: Nenhuma encomenda registada no sistema para as fitas métricas.
+
+Os códigos SAP (5001896 e 5001894) existem no catálogo mas não têm
+linhas de pedidos de compra associadas em nenhum backup.
+
+FORNECEDORES: Nenhum fornecedor identificado para compra de fitas.
+
+================================================================================
+STOCK ACTUAL
+================================================================================
+
+Vendas Novas (IC-0019):
+  • FITA MÉTRICA STANLEY 5 MT TYLON (M92): 0 unidades
+  • FITA METRICA CAIXA METALICA 5MT (M4020): 0 unidades
+  • FITA METRICA BIMAT STANLEY 8MT (sap20260812-mat-4500881595-40): 0 unidades
+
+Pampilhosa (IC-0018):
+  • FITA MÉTRICA STANLEY 5 MT TYLON (M92): 0 unidades
+  • FITA METRICA CAIXA METALICA 5MT (M4020): 0 unidades
+  • FITA METRICA BIMAT STANLEY 8MT (sap20260812-mat-4500881595-40): 0 unidades
+
+================================================================================
+MOVIMENTOS REGISTADOS
+================================================================================
+
+Total de movimentos encontrados: 0 entradas, saídas ou transferências
+Periodo analisado: Desde criação do programa até 15/10/2026
+
+RESULTADO: Nenhum movimento de entrada, saída ou transferência registado.
+
+================================================================================
+CONSUMIDO
+================================================================================
+
+Consumo total: 0 unidades
+Status: Sem movimentos de saída/consumo
+
+================================================================================
+CONCLUSÕES E RECOMENDAÇÕES
+================================================================================
+
+STATUS ACTUAL:
+  ✓ As fitas métricas existem como materiais no catálogo
+  ✓ Stock = 0 em ambas as obras
+  ✓ Histórico de compras = 0 unidades
+  ✓ Consumo = 0 unidades
+
+OBSERVAÇÕES:
+  • M4020 (SAP 5001896) e sap20260812-mat-4500881595-40 (SAP 5001894) têm
+    integração com SAP TMv 101, sugerindo que poderiam ser compradas
+  • M92 não tem SAP atribuído
+
+PRÓXIMOS PASSOS SUGERIDOS:
+  1. Se forem necessárias fitas métricas, criar encomenda com fornecedor
+  2. Registar entrada em armazém após receção
+  3. Registar saída quando forem utilizadas em obra
+  4. Se já foram usadas no passado, investigar se houve entrada sem registro
+
+FICHEIRO GERADO: FITA_METRICA_RESUMO.txt
+VERSÃO: 1.0
+DATA: 15/10/2026 08:45

@@ -1,0 +1,53 @@
+﻿VIDEO 9: MATERIAIS POR POSTE
+Duração estimada: 3:00
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Nesta secção vamos ver os materiais necessários para cada poste.
+
+Esta é uma vista comercial muito importante para saber quanto material precisa 
+para executar uma obra.
+
+Clique em PROJETO e depois em Materiais por Poste.
+
+Procure o número do poste que pretende consultar.
+
+O programa mostra uma lista completa de todos os materiais necessários para 
+esse poste.
+
+Para cada material mostra:
+- O código SAP
+- O código interno
+- A descrição
+- A quantidade exacta necessária
+- O tipo de material
+- O estado da disponibilidade em armazém
+
+Se tem avarias ou sobresselentes especiais, aparecem aqui também.
+
+Pode clicar em qualquer material para ver o histórico de preços ou as notas 
+técnicas.
+
+Esta lista é actualizada automaticamente quando os desenhos mudam.
+
+Se precisa de saber quanto material precisa para vários postes, pode gerar 
+um relatório consolidado.
+
+Isto torna muito fácil fazer orçamentos e pedidos de compra pré-calculados.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [projeto_materiais_poste] Abrir secção Materiais por Poste
+ 2. [procurar_poste_materiais] Procurar poste
+ 3. [lista_materiais_poste] Lista de materiais
+ 4. [quantidade_exacta] Quantidades por material
+ 5. [estado_disponibilidade] Indicador de disponibilidade
+ 6. [detalhe_material] Detalhes de um material
+
+
+================================================================================

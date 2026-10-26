@@ -1,0 +1,58 @@
+﻿VIDEO 10: RELATÓRIOS - ANÁLISES
+Duração estimada: 3:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Vamos aprender a usar os relatórios de análise do programa.
+
+Os relatórios são muito importantes para tomar decisões sobre gestão de stock.
+
+Clique em GESTÃO e depois em Relatórios ou Análises.
+
+Tem vários tipos de relatório disponíveis:
+
+Primeiro: Relatório de Stock - mostra o valor total do stock em armazém 
+e distribuição por material.
+
+Segundo: Relatório de Movimentos - mostra todas as entradas e saídas num 
+período.
+
+Terceiro: Relatório de Consumos - resumo dos consumos por poste ou por período.
+
+Quarto: Relatório de Encomendas Pendentes - mostra o que ainda está à espera 
+de chegar.
+
+Quinto: Análise de Rotação - mostra quais os materiais que mais se movem 
+e quais estão parados.
+
+Para cada relatório pode:
+- Escolher o período de tempo
+- Filtrar por categoria de material
+- Filtrar por obra
+- Exportar para Excel ou PDF
+
+Os gráficos ajudam a visualizar os dados de forma rápida.
+
+Se precisa de informação mais detalhada, pode sempre descer para a tabela 
+completa.
+
+Esta secção é perfeita para apresentações ao departamento comercial ou 
+à direcção.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [gestao_relatorios] Abrir secção Relatórios
+ 2. [tipo_relatorio] Escolher tipo de relatório
+ 3. [periodo_relatorio] Selecionar período
+ 4. [filtros_relatorio] Filtros aplicados
+ 5. [grafico_relatorio] Gráfico visível
+ 6. [tabela_relatorio] Tabela de dados
+ 7. [exportar_relatorio] Botão exportar
+
+
+================================================================================

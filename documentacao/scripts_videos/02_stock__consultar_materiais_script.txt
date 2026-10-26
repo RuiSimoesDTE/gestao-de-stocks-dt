@@ -1,0 +1,51 @@
+﻿VIDEO 2: STOCK - CONSULTAR MATERIAIS
+Duração estimada: 3:00
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Vamos aprender a consultar o stock de materiais no programa.
+
+Clique na secção ARMAZÉM e depois em Stock ou Consultar Materiais.
+
+Aqui pode ver todos os materiais disponíveis, organizados por código SAP ou 
+código interno.
+
+Cada material mostra:
+- O código
+- A descrição
+- A quantidade atual em armazém
+- O tipo de material
+- O armazém onde se encontra
+
+Tem várias formas de pesquisar:
+
+Primeira: Use a barra de pesquisa no topo para procurar por código ou descrição.
+
+Segunda: Use os filtros para filtrar por tipo de material, armazém ou fornecedor.
+
+Terceira: Ordene a tabela clicando nos cabeçalhos das colunas.
+
+Se quiser exportar os dados para Excel, tem um botão de exportação no topo.
+
+Isto é muito útil para fazer análises fora do programa ou para partilhar 
+com colegas.
+
+Pode consultar o histórico de movimentos de qualquer material clicando 
+no código.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [armazem_menu] Expandir menu ARMAZÉM
+ 2. [stock_consultar] Abrir secção Stock
+ 3. [tabela_completa] Tabela de materiais visível
+ 4. [pesquisa_ativa] Barra de pesquisa em uso
+ 5. [filtros_vistos] Filtros disponíveis
+ 6. [exportar_excel] Botão de exportar para Excel
+
+
+================================================================================

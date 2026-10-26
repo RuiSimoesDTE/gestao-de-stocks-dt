@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Recursos - Manual de Gestão de Catenária</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        header .subtitle {
+            font-size: 0.95em;
+            opacity: 0.8;
+            margin-top: 15px;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section-title {
+            color: #0066cc;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #0066cc;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .resource-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-card:hover {
+            border-color: #0066cc;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .resource-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .resource-card h2 {
+            color: #0066cc;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .resource-card p {
+            color: #666;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .resource-card .features {
+            list-style: none;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .resource-card .features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .resource-card .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00cc00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95em;
+        }
+
+        .btn:hover {
+            background: #0052a3;
+            transform: scale(1.05);
+        }
+
+        .btn.secondary {
+            background: #ff6600;
+        }
+
+        .btn.secondary:hover {
+            background: #ff5500;
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .video-section h3 {
+            color: #ff6600;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .video-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6600;
+        }
+
+        .video-item h4 {
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .video-item p {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .video-item .btn {
+            width: 100%;
+            text-align: center;
+            background: #ff6600;
+        }
+
+        .video-item .btn:hover {
+            background: #ff5500;
+        }
+
+        .quick-start {
+            background: #f0f8ff;
+            border: 2px solid #0066cc;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .quick-start h3 {
+            color: #0066cc;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .quick-start ol {
+            margin-left: 20px;
+        }
+
+        .quick-start li {
+            margin-bottom: 12px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-top: 3px solid #0066cc;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Centro de Recursos</h1>
+            <p>Manual de Gestão de Materiais de Catenária</p>
+            <p class="subtitle">DTE Instalações Especiais | Departamento de Catenária</p>
+        </header>
+
+        <div class="content">
+            <!-- INÍCIO RÁPIDO -->
+            <div class="quick-start">
+                <h3>🚀 Começar Rápido</h3>
+                <p>Escolha como prefere aceder ao manual:</p>
+                <ol>
+                    <li><strong>Versão Web Interactiva:</strong> Melhor para usar no computador, com links clicáveis e filtros</li>
+                    <li><strong>Versão PDF:</strong> Perfeita para imprimir, enviar por email ou consultar offline</li>
+                    <li><strong>Vídeos Tutorial:</strong> Demonstrações visuais de cada funcionalidade (em desenvolvimento)</li>
+                </ol>
+            </div>
+
+            <!-- RECURSOS PRINCIPAIS -->
+            <h2 class="section-title">📦 Recursos Principais</h2>
+            <div class="resources-grid">
+                <!-- MANUAL HTML -->
+                <div class="resource-card">
+                    <div class="resource-icon">📄</div>
+                    <h2>Manual Web Interactivo</h2>
+                    <p>Versão completa com navegação, filtros e links clicáveis</p>
+                    <ul class="features">
+                        <li>Layout responsivo (funciona em tablet/móvel)</li>
+                        <li>Índice com links rápidos</li>
+                        <li>Placeholders para vídeos integrados</li>
+                        <li>Dicas e notas em destaque</li>
+                        <li>Tabela de tarefas rápidas</li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="MANUAL.html" class="btn">Abrir Manual</a>
+                    </div>
+                </div>
+
+                <!-- MANUAL PDF -->
+                <div class="resource-card">
+                    <div class="resource-icon">📕</div>
+                    <h2>Manual em PDF</h2>
+                    <p>Versão para imprimir, A4, pronta para papel</p>
+                    <ul class="features">
+                        <li>Optimizado para impressão (cores vivas)</li>
+                        <li>Tamanho A4 com margens apropriadas</li>
+                        <li>Índice e números de página</li>
+                        <li>Pronto para enviar por email</li>
+                        <li>Consulta offline (sem internet)</li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="MANUAL.pdf" class="btn">Descarregar PDF</a>
+                        <button class="btn secondary" onclick="window.print()">Imprimir Esta Página</button>
+                    </div>
+                </div>
+
+                <!-- VÍDEOS -->
+                <div class="resource-card">
+                    <div class="resource-icon">🎬</div>
+                    <h2>Vídeos Tutorial</h2>
+                    <p>Demonstrações visuais de cada funcionalidade</p>
+                    <ul class="features">
+                        <li>Gravações de ecrã com narração</li>
+                        <li>Um vídeo por secção do manual</li>
+                        <li>Duração: 2-4 minutos cada</li>
+                        <li>Disponíveis em português</li>
+                        <li>Acesso directo do manual</li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#videos" class="btn">Ver Vídeos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECÇÃO DE VÍDEOS -->
+            <div id="videos" class="video-section">
+                <h3>🎬 Biblioteca de Vídeos Tutorial</h3>
+                <p style="margin-bottom: 25px; color: #333;">
+                    Cada vídeo é uma demonstração prática de como usar uma secção específica da aplicação.
+                    <strong>Status:</strong> Placeholders em preparação - em breve serão adicionados os vídeos reais.
+                </p>
+
+                <div class="video-list">
+                    <div class="video-item">
+                        <h4>1️⃣ Início e Menu Lateral</h4>
+                        <p>Como navegar pela aplicação (2 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>2️⃣ Stock - Consultar Materiais</h4>
+                        <p>Pesquisar e filtrar materiais (3 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>3️⃣ Entradas - Registar Chegadas</h4>
+                        <p>Como registar recepções (4 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>4️⃣ Saídas - Registar Saídas</h4>
+                        <p>Como registar saques da obra (4 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>5️⃣ Transferências Entre Armazéns</h4>
+                        <p>Mover material entre locais (2 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>6️⃣ Encomendas - Pedidos de Compra</h4>
+                        <p>Acompanhar encomendas SAP (2 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>7️⃣ Consumos - Relatório de Saídas</h4>
+                        <p>Gerar mapas de consumo (3 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>8️⃣ Projeto - Visualizar Postes</h4>
+                        <p>Explorar desenhos e componentes (3 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>9️⃣ Materiais por Poste</h4>
+                        <p>Consultar material necessário (2 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>🔟 Relatórios - Análises</h4>
+                        <p>Criar relatórios e gráficos (3 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>1️⃣1️⃣ Backup e Restauração</h4>
+                        <p>Salvaguardar dados (2 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+
+                    <div class="video-item">
+                        <h4>1️⃣2️⃣ Definições - Configurar</h4>
+                        <p>Adicionar armazéns e fornecedores (2 min)</p>
+                        <button class="btn" onclick="alert('Em breve: Vídeo de tutorial')">▶ Ver Vídeo</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFORMAÇÕES ADICIONAIS -->
+            <h2 class="section-title">❓ Informações Adicionais</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #0066cc;">
+                    <h3 style="color: #0066cc; margin-bottom: 15px;">📧 Contactos</h3>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        <strong>Responsável:</strong> Rui Simões
+                    </p>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        <strong>Email:</strong> rui16simoes@gmail.com
+                    </p>
+                    <p style="color: #666;">
+                        <strong>Departamento:</strong> Catenária - DTE Instalações Especiais
+                    </p>
+                </div>
+
+                <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6600;">
+                    <h3 style="color: #ff6600; margin-bottom: 15px;">📋 Versão do Manual</h3>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        <strong>Versão:</strong> 1.0
+                    </p>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        <strong>Data:</strong> 14 de Outubro de 2026
+                    </p>
+                    <p style="color: #666;">
+                        <strong>Status:</strong> Publicado (com placeholders de vídeo)
+                    </p>
+                </div>
+
+                <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #00cc00;">
+                    <h3 style="color: #00cc00; margin-bottom: 15px;">🔄 Atualizações Futuras</h3>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        ✓ Vídeos de demonstração (em produção)
+                    </p>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        ✓ Integração com YouTube/Vimeo
+                    </p>
+                    <p style="color: #666;">
+                        ✓ FAQ e troubleshooting expandido
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p><strong>Centro de Recursos - Gestão de Materiais de Catenária</strong></p>
+            <p>DTE Instalações Especiais | Departamento de Catenária</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                © 2026 DTE Instalações Especiais. Todos os direitos reservados.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

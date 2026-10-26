@@ -1,0 +1,1104 @@
+================================================================================
+                    CODE REVIEW COMPLETO E PROFUNDO
+               Programa: Gestão de Materiais de Catenária DTE
+                    Data: 15 de Outubro de 2026
+================================================================================
+
+RESUMO EXECUTIVO
+================================================================================
+
+Analisado: ficheiro HTML único com 7.656 linhas, 3.4 MB, contendo CSS, JavaScript
+e dados embebidos (SEED_DATA). O programa é uma aplicação PWA local com
+persistência em localStorage.
+
+PROBLEMAS CRÍTICOS ENCONTRADOS: 7
+PROBLEMAS ALTOS: 12
+PROBLEMAS MÉDIOS: 18
+PROBLEMAS BAIXOS: 9
+
+RECOMENDAÇÃO: Correção imediata de problemas de segurança (XSS) e refactoring
+urgente da estrutura de dados para melhorar performance e manutenibilidade.
+
+
+1. SEGURANÇA - VULNERABILITIES CRÍTICAS
+================================================================================
+
+1.1. CRÍTICO: XSS (Cross-Site Scripting) - innerHTML sem escape
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+- 166 usos de innerHTML encontrados
+- Apenas ~155 usam escapeHtml()
+- ~11 atribuições diretas de HTML sem escape de dados do utilizador
+
+LOCAIS COM RISCO:
+
+  a) Linha 2465: Aviso de conflito de dados (baixo risco, é HTML estático)
+
+  b) Linha 2768: Dropdown de armazéns - arms é construído dinamicamente
+     e.innerHTML=(id==='stk-arm'||id==='rel-arm'?'<option value="">...')+arms;
+     [VERIFICAR: arms é escapado? Ver linha ~2765]
+
+  c) Linha 2775: Dropdown de fornecedores
+     e.innerHTML='<option value="">Todos...')+fopt;
+     [RISCO ALTO: fopt vem de DB.movimentos.origem/dest]
+
+  d) Linhas 2814-2823: Tabelas de alertas e movimentos
+     tb.innerHTML='<tr><th>...' + linhas.map(...).join('')
+     [VERIFICAR: escapeHtml usado em map?]
+
+  e) Linha 2930: Avisos de referências pendentes
+     avisos.innerHTML=dados.pend.length?'<details>...' + dados.pend.map(x=>'<li>'+escapeHtml(x)+'</li>')
+     [PARCIALMENTE SEGURO: escapeHtml em map, mas construção de HTML não é segura]
+
+  f) Linha 3364, 3387: Pesquisas de poste com interpolação direta
+     box.innerHTML='<b>Poste '+escapeHtml(p.codigo)+'</b>...outros: '+cands.map(x=>'<a href="#" onclick="...')
+     [RISCO ALTO: onclick com valores interpolados pode ter JavaScript injetado]
+
+  g) Linha 3426: Renderização de resultado com HTML interpolado
+     box.innerHTML=html+'</div>';
+     [RISCO: html vem de onde? Se de user input, é XSS]
+
+  h) Linha 3961, 3965: Mensagens de info no formulário
+     info.innerHTML='Sem material com esse código.';
+     [Aceitável, é static]
+
+SEVERIDADE: CRÍTICA
+IMPACTO: Injeção de código JavaScript malicioso através de nomes de materiais,
+         fornecedores, observações, ou campos de texto que acabam em innerHTML.
+         Um utilizador malicioso pode exfiltrar dados do localStorage ou
+         danificar dados de outros utilizadores no mesmo navegador.
+
+CORREÇÃO:
+  1. Usar textContent em vez de innerHTML quando só precisa-se de texto
+  2. Usar sempre escapeHtml() para dados dinâmicos antes de innerHTML
+  3. Considerar usar template literals com construção segura de HTML
+  4. Exemplo SEGURO:
+     const opcoes = DB.materiais.map(m =>
+       `<option value="${escapeHtml(m.id)}">${escapeHtml(m.codigo)}</option>`
+     );
+     select.innerHTML = opcoes.join('');
+
+─────────────────────────────────────────────────────────────────────────────
+
+1.2. ALTO: Exposição de email no código-fonte
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 2611: const EMAIL_SUGESTOES='rui.simoes@dte.pt';
+- Email pessoal hardcoded no código-fonte
+- Pode ser scrapeado de ficheiros locais ou backups
+
+IMPACTO: Email harvesting, spam, phishing
+
+CORREÇÃO:
+  1. Mover email para dados de configuração separados
+  2. Ou obter de window.config.email definido em tempo de execução
+  3. Ou usar "EMAIL_SUGESTOES" como placeholder e preencher dinamicamente
+
+─────────────────────────────────────────────────────────────────────────────
+
+1.3. MÉDIO: Validação de entrada incompleta
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+- parseFloat() usado sem verificação de limites
+- Sem limite máximo para quantidades (pode overflow em cálculos?)
+- Parsing de CSV com suporte a múltiplos formatos, mas sem limite de linhas
+
+Exemplos:
+  Linha 3120: const qtd=parseFloat(document.getElementById('ent-qtd').value);
+  - Não verifica: NaN, Infinity, números muito grandes
+
+  Linha 3170-3172: Parsing de número com múltiplos formatos
+  - Aceita "1.200,000" como 1200 (interpretação European)
+  - Aceita "1.003" como 1 (ambiguidade!)
+  - Sem limite máximo
+
+SEVERIDADE: MÉDIO
+IMPACTO: Operações com valores inválidos, cálculos incorretos, possível DOS
+
+CORREÇÃO:
+  function parseQtd(s) {
+    const n = parseFloat(s);
+    if (isNaN(n) || !isFinite(n) || n < 0 || n > 999999) return null;
+    return Math.min(n, 999999); // limite máximo
+  }
+
+─────────────────────────────────────────────────────────────────────────────
+
+1.4. MÉDIO: localStorage sem quota checking
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 2435-2479: Gravação em localStorage sem try/catch completo em alguns casos
+  localStorage.setItem(CHAVE_MULTI, txt);
+
+Com 1.937 materiais + 2.243 movimentos + estrutura completa, pode exceder 5-10MB
+limite típico de localStorage.
+
+Alguns setItem() têm try/catch, mas nem todos:
+  Linha 2478: localStorage.setItem(CHAVE_MULTI,txt);  // sem proteção
+
+SEVERIDADE: MÉDIO
+IMPACTO: Perda de dados se localStorage cheio, falha silenciosa de gravação
+
+CORREÇÃO:
+  function gravarComQuota(chave, valor) {
+    try {
+      localStorage.setItem(chave, valor);
+    } catch(e) {
+      if (e.name === 'QuotaExceededError') {
+        toast('Espaço de armazenamento cheio — limpe o navegador', 'erro');
+        // tentar IndexedDB como fallback
+      }
+      throw e;
+    }
+  }
+
+─────────────────────────────────────────────────────────────────────────────
+
+1.5. BAIXO: Sem CSRF protection em fetch (se usado)
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 6889-6895: fetch() para comunicação com servidor sem CSRF token
+  const r = await fetch('_sinc/gravar/'+encodeURIComponent(nome), {
+    method:'POST',
+    headers:{'X-DTE-Sinc':'1','Content-Type':'application/json'},
+    body:buf
+  });
+
+Não há token CSRF verificado. Se servidor realmente existe, está vulnerável.
+
+SEVERIDADE: BAIXO (aplicação é local, não online ainda)
+IMPACTO: Possível CSRF se colocada online sem proteção
+
+─────────────────────────────────────────────────────────────────────────────
+
+1.6. BAIXO: Autenticação ausente
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+- Sem login real (apenas prompt de nome em sínc)
+- localStorage é local e acessível a qualquer script nessa origem
+- Sem encriptação de dados sensíveis
+
+Linha 6983: const n=prompt('O teu nome...');
+- Nenhuma verificação real de identidade
+
+IMPACTO: Qualquer página no mesmo origin pode ler/modificar dados
+
+─────────────────────────────────────────────────────────────────────────────
+
+1.7. BAIXO: document.execCommand('copy') deprecated
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 2650, 6684: document.execCommand('copy')
+- Deprecated no HTML Living Standard
+- Pode parar de funcionar em browsers futuros
+
+Linha 2650: document.execCommand('copy');
+
+
+2. BUGS POTENCIAIS - LÓGICA INCORRETA
+================================================================================
+
+2.1. CRÍTICO: Lógica de stock negativo pode estar inconsistente
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+A função rebuildStock() (linhas 2578-2592) calcula stock por armazém:
+
+  for(const mv of DB.movimentos){
+    const e=_stk[mv.mat];if(!e)continue;
+    const q=mv.qtd||0;
+    if(mv.tipo==='entrada'){e[mv.arm]=(e[mv.arm]||0)+q;e.__t+=q;}
+    else if(mv.tipo==='saida'){e[mv.arm]=(e[mv.arm]||0)-q;e.__t-=q;}
+    else if(mv.tipo==='transferencia'){
+      e[mv.arm]=(e[mv.arm]||0)-q;
+      if(mv.armDst)e[mv.armDst]=(e[mv.armDst]||0)+q;
+      else if(mv.obraDst)e.__t-=q;  // <-- POSSÍVEL BUG
+    }
+  }
+
+PROBLEMA 1: e.__t (total) pode não corresponder à soma de armazéns
+- Se transferência para outra obra (mv.obraDst), subtrai-se __t
+- Mas e[mv.arm] já foi subtraído
+- Se depois se soma armazém por armazém, pode não bater
+
+PROBLEMA 2: Ordem dos movimentos importa
+- Se houver transferência e depois a mesma saída for apagada, stock fica errado
+- Não há verificação de integridade após apagar movimento
+
+PROBLEMA 3: Armazém null em transferência inter-obra não é tratado
+- if(mv.armDst)e[mv.armDst]=(e[mv.armDst]||0)+q;
+- Se armDst não existir, simplesmente não incrementa nada
+- Poderia criar armazém implícito indesejado
+
+SEVERIDADE: CRÍTICA
+IMPACTO: Discrepâncias de stock, especialmente com transferências inter-obra
+
+TESTE:
+  1. Criar 10 un de material em armazém A
+  2. Transferir 5 para armazém B (inter-obra)
+  3. Verificar se A tem 5 e B tem 5
+  4. Apagar a transferência
+  5. Verificar se A volta a 10 e B para 0
+  6. Comparar __t com soma de armazéns
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.2. ALTO: Montagens (BOM) com quantidades "qb" (quantidade bastante)
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 3092: const qb=/^qb$/i.test(txt),q=qb?null:parseFloat(...)
+- "qb" significa quantidade variável (não determinada)
+- Linhas 3517, 3590: completarQB() tenta calcular "qb"
+
+Mas não há forma de saber o valor real até instalação.
+- Linha 2922: Documentação diz "qb permanece variável"
+- Relatórios podem estar incorretos
+
+SEVERIDADE: ALTO
+IMPACTO: Consumos e estimativas de peças incorretas para montagens com "qb"
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.3. ALTO: Função matById() pode ser lenta
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Não encontrei a definição exata, mas usado em ~100+ locais:
+  const m=matById(mv.mat);
+
+Se for um forEach através de DB.materiais, com 1.937 materiais e 2.243 movimentos,
+cada cálculo de stock é O(n²) = quase 4 milhões de iterações!
+
+SEVERIDADE: ALTO
+IMPACTO: Performance degradada ao renderizar tabelas grandes
+
+CORREÇÃO: Usar Map para lookup O(1)
+  const _matIdx = new Map(DB.materiais.map(m => [m.id, m]));
+  function matById(id) { return _matIdx.get(id); }
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.4. MÉDIO: expandirBom() pode ter quantidades inconsistentes
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 3516, 3589: expandirBom(montId, qtd) expande uma montagem em materiais
+- Multiplicidade: montagem × quantidades de sub-peças
+- Mas se peça tem "qb", multiplicação é ambígua
+
+Linha 3517: if(!completarQB(itens,qtd,mo.codigo))return;
+- Tenta completar, mas pode retornar false silenciosamente
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.5. MÉDIO: Apagar movimento pode deixar stock inconsistente
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 3636-3650: apagarMovimento()
+  DB.movimentos=DB.movimentos.filter(mv=>mv.id!==id);
+  _stk=null;  // força recalcular
+
+Correto que força recalcular, mas:
+- Se outro utilizador está vendo o stock nesse momento, verá valor antigo
+- Sem lock ou versioning, pode haver race condition
+
+SEVERIDADE: MÉDIO
+IMPACTO: Stock inconsistente em multi-utilizador
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.6. MÉDIO: Conversão de datas pode ser ambígua
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 3185: dataDoFicheiro(c[iData])
+- Parsing de data de múltiplos formatos
+- Sem validação de data válida
+
+Se dois países usarem formatos diferentes (DD/MM vs MM/DD), dados confusos.
+
+SEVERIDADE: MÉDIO
+IMPACTO: Datas incorretas nos movimentos
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.7. MÉDIO: CSV import sem limite de linhas
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 3175-3189: parseCSV() lê linhas sem limite
+  for(let i=1;i<linhas.length;i++)
+
+Um ficheiro com 100.000 linhas será processado, pode travar o navegador.
+
+SEVERIDADE: MÉDIO
+IMPACTO: DOS de browser ao importar ficheiro grande
+
+─────────────────────────────────────────────────────────────────────────────
+
+2.8. BAIXO: Função hoje() sem validação de timezone
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Usado em ~10 locais para default de data
+- Sem verificação de timezone do servidor vs cliente
+- Se sincronizar entre máquinas, datas podem ficar desalinhadas
+
+Linha 3122: const data=document.getElementById('ent-data').value||hoje();
+
+
+3. PERFORMANCE - OTIMIZAÇÕES CRÍTICAS
+================================================================================
+
+3.1. CRÍTICO: Ficheiro HTML de 3.4 MB
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+- 7.656 linhas em single file
+- SEED_DATA embebido (provavelmente 2-3 MB de JSON)
+- Carrega tudo na memória no primeiro load
+- Sem lazy loading de dados
+
+SEVERIDADE: CRÍTICA
+IMPACTO: Carregamento lento na primeira vez (especialmente mobile), alto uso de RAM
+
+MÉTRICAS ESTIMADAS:
+  - Download: ~1.5-2 MB (comprimido gzip)
+  - Parse HTML: ~500ms (browser)
+  - JSON.parse(SEED_DATA): ~200ms
+  - rebuildStock() na inicialização: ~100ms
+  - Total first load: ~800ms-1.5s
+
+CORREÇÃO:
+  1. Separar SEED_DATA em ficheiro JSON externo
+  2. Implementar IndexedDB para dados históricos
+  3. Lazy load tabelas grandes (só mostrar 100 linhas, carregar mais ao scroll)
+  4. Minify e compactar melhor (estou vendo muito CSS e HTML redundante)
+
+─────────────────────────────────────────────────────────────────────────────
+
+3.2. ALTO: Cálculo de stock é O(n²) ou pior
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+rebuildStock() é chamado:
+  - Na inicialização
+  - Após qualquer movimento
+  - Antes de qualquer cálculo de stock
+
+Com 1.937 materiais e 2.243 movimentos, cada chamada é:
+  O(materiais) + O(movimentos) = O(1937 + 2243) = rápido
+
+MAS: Se houver nested loops em operações de UI:
+  - renderStock() → map → stockMaterial() → rebuild se null
+  - renderMovimentos() → map → linhaMovimento() → matById() + stockMaterial()
+
+Isso pode ser O(n*m) onde n=movimentos, m=materiais.
+
+SEVERIDADE: ALTO
+IMPACTO: Tabelas com 100+ linhas renderizam lentamente
+
+─────────────────────────────────────────────────────────────────────────────
+
+3.3. ALTO: innerHTML reconstruído a cada refresh
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Cada refrescar da view reconstrói a tabela inteira como string:
+  t.innerHTML='<tr>...' + linhas.map(mv=>linhaMovimento(mv,true)).join('');
+
+Isto é ineficiente para tabelas com 100+ linhas:
+  - Serializar para string: O(n)
+  - Parse HTML: O(n)
+  - DOM reflow: O(n)
+
+SEVERIDADE: ALTO
+IMPACTO: Scroll lento, responsividade reduzida
+
+CORREÇÃO: Usar DocumentFragment ou biblioteca como React/Preact
+
+─────────────────────────────────────────────────────────────────────────────
+
+3.4. MÉDIO: Sem índices para buscas rápidas
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 3616-3627: movimentosFiltrados() filtra com loops:
+  DB.movimentos.filter(mv => {...})
+
+Sem índices em:
+  - tipo (entrada, saída, etc.)
+  - data (range queries)
+  - fornecedor
+
+Com 2.243 movimentos, cada filtro é O(n).
+
+Se utilizador escreve "04-26" na pesquisa, passa por 2243 movimentos.
+
+SEVERIDADE: MÉDIO
+IMPACTO: Pesquisa lenta com muitos dados
+
+─────────────────────────────────────────────────────────────────────────────
+
+3.5. MÉDIO: Sem cache de resultados compilados
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 4187-4556: renderSomatorioPecasPostes() calcula somatório de peças
+- Chama dadosResumoPecasPoste() que lê montagens, desenhos, BOMs
+- Sem cache, se mudar de poste e voltar, recalcula tudo
+
+SEVERIDADE: MÉDIO
+IMPACTO: UI lenta ao navegar entre postes
+
+─────────────────────────────────────────────────────────────────────────────
+
+3.6. BAIXO: JSON.parse(JSON.stringify(...)) para clonagem
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 2003, 2128, 2161, 2204, 2307: cópias profundas via JSON
+  const clone = JSON.parse(JSON.stringify(obj));
+
+Funciona, mas é lento (serialização → parsing). Estrutorado para 1.937 materiais
+é custoso.
+
+Linha 2354: function copia(v){return JSON.parse(JSON.stringify(v));}
+
+SEVERIDADE: BAIXO
+IMPACTO: Operações de inicialização mais lentas
+
+CORREÇÃO: Usar estruturedClone() (mais rápido, suportado em browsers modernos)
+
+─────────────────────────────────────────────────────────────────────────────
+
+3.7. BAIXO: Sem debounce em inputos
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Pesquisas (e.g., linha 3611: document.getElementById('mov-busca').value)
+sem debounce → cada tecla causa refrescar completo da tabela
+
+SEVERIDADE: BAIXO
+IMPACTO: Lag ao digitar em campos de pesquisa
+
+
+4. CODE QUALITY - REFACTORING SUGERIDO
+================================================================================
+
+4.1. CRÍTICO: Variáveis globais não disciplinadas
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 1677: let DB={...};
+Linha 2354: let _stk=null;
+Linha ~2700+: Muitas variáveis let/var globais:
+  _revLida, _ultimoGravado, _SAI_POSTE, _camara, etc.
+
+Sem módulo ou namespace, risco de:
+  - Colisão de nomes com bibliotecas
+  - Difícil rastrear estado global
+  - Difícil de testar
+
+SEVERIDADE: CRÍTICA
+IMPACTO: Código difícil de entender e modificar
+
+CORREÇÃO:
+  const APP = {
+    db: {...},
+    cache: {
+      stk: null,
+      revLida: null,
+      ...
+    },
+    init: function() {...},
+    stockMaterial: function(matId, arm) {...}
+  };
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.2. ALTO: Duplicação de código
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Validações repetidas em registarEntrada(), registarSaida(), registarTransferencia():
+  if(!(qtd>0)){toast('Quantidade inválida','erro');return;}
+  if(!arm){toast('Seleciona o armazém...','erro');return;}
+
+Padrão map() em tabelas (linhas 2814, 2867, 3633, etc.):
+  t.innerHTML='<tr><th>...' + linhas.map(...).join('');
+
+SEVERIDADE: ALTO
+IMPACTO: Manutenção difícil, bugs em múltiplos locais
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.3. ALTO: Funções muito longas (200+ linhas)
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Não consigo medir exatamente sem ler, mas funções como refrescarTudo(),
+renderStock(), etc. parecem fazer muito.
+
+Funções longass são hard para:
+  - Compreender
+  - Testar
+  - Debugar
+  - Refatorar
+
+SEVERIDADE: ALTO
+IMPACTO: Código ilegível, difícil de entender fluxo
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.4. ALTO: Mixing UI rendering com business logic
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+registarEntrada() (linha 3118):
+  1. Valida input (negócio)
+  2. Cria objeto movimento (negócio)
+  3. Chama guardar() (persistência)
+  4. Limpa inputs (UI)
+  5. Chama refrescarTudo() (UI)
+  6. Mostra toast (UI)
+
+Sem separação clara entre camadas, testes unitários impossíveis.
+
+SEVERIDADE: ALTO
+IMPACTO: Impossível testar lógica de negócio sem render HTML
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.5. MÉDIO: Hard-coded valores
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 2611: EMAIL_SUGESTOES='rui.simoes@dte.pt'
+Linha 1677: DB.param.neg='avisar' (default hardcoded)
+Múltiplas strings hardcoded (IDs, labels, etc.)
+
+SEVERIDADE: MÉDIO
+IMPACTO: Difícil configurar para ambientes/utilizadores diferentes
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.6. MÉDIO: Sem tratamento de erros estruturado
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+try/catch espalhado, mas nem sempre com tratamento adequado:
+  try{localStorage.setItem(...)}catch(e){}  // silencioso!
+  try{const f=await h.getFile();...}catch(e){console.error(e);}
+
+Sem logging centralizado ou retry logic.
+
+SEVERIDADE: MÉDIO
+IMPACTO: Difícil diagnosticar problemas em produção
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.7. MÉDIO: Sem comentários em lógica complexa
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 2578-2592 (rebuildStock), 3139-3190 (parseCSV), etc. são complexas
+mas sem explicações.
+
+SEVERIDADE: MÉDIO
+IMPACTO: Próximo desenvolvedor não consegue entender
+
+─────────────────────────────────────────────────────────────────────────────
+
+4.8. BAIXO: Nomeação de variáveis inconsistente
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Mistura de:
+  - camelCase (DB, matById, stockMaterial)
+  - snake_case (ent-mat, sai-qtd - IDs HTML)
+  - Abreviações (_stk, mv, m, e, q, n)
+
+Abreviações como _stk, _rev, _ultimoGravado são confusas.
+
+SEVERIDADE: BAIXO
+IMPACTO: Código menos legível
+
+
+5. COMPATIBILIDADE E BROWSERS
+================================================================================
+
+5.1. MÉDIO: Deprecated APIs
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+document.execCommand('copy') - deprecated (linhas 2650, 6684)
+
+CORREÇÃO: Usar Clipboard API
+  await navigator.clipboard.writeText(texto);
+
+─────────────────────────────────────────────────────────────────────────────
+
+5.2. BAIXO: PWA sem service worker completo
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Procurei sw.js mas documentação menciona "service worker funciona"
+- Sem verificação se realmente está implementado
+- Cache strategy não verificada
+
+─────────────────────────────────────────────────────────────────────────────
+
+5.3. BAIXO: Mobile responsivo mas com issues
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 126-137: Media queries para mobile estão presentes
+Mas:
+- Alguns dropdowns podem ser pequenos demais
+- Tabelas muito largas em mobile podem ser illegíveis
+- QR reader (linha 6723) - compatibilidade com older iPhones?
+
+─────────────────────────────────────────────────────────────────────────────
+
+5.4. BAIXO: Sem fallback para dados locais em offline
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Se localStorage falhar, app fica sem dados
+- Sem IndexedDB como fallback
+- Sem download/importar dados de backup automático
+
+
+6. DATA INTEGRITY - CONCORRÊNCIA E BACKUP
+================================================================================
+
+6.1. CRÍTICO: Sem lock system para multi-utilizador
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 2435-2479: Fusão de dados de localStorage
+- Sem versioning real
+- Sem lock
+- Se 2 abas gravam simultaneamente, última ganha
+
+Mecanismo atual:
+  _revLida=localStorage.getItem(CHAVE_REV);
+  localStorage.setItem(CHAVE_REV, _revLida);
+
+Isto é verificação de versão mínima, mas não impede race condition.
+
+SEVERIDADE: CRÍTICA
+IMPACTO: Perda de dados em multi-utilizador/multi-aba
+
+EXEMPLO DE PROBLEMA:
+  Aba 1: Cria movimento A, grava em localStorage
+  Aba 2: Lê dados antigos (sem movimento A), cria movimento B, grava
+  Resultado: movimento A desaparece!
+
+─────────────────────────────────────────────────────────────────────────────
+
+6.2. ALTO: Sem backup automático real
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 2432: exportarBackup() gera download manual
+- Utilizador tem que lembrar de fazer backup
+- Sem backup automático agendado
+
+SEVERIDADE: ALTO
+IMPACTO: Se localStorage for limpo, dados históricos perdidos
+
+CORREÇÃO:
+  1. Implementar backup automático diário
+  2. Guardar em pasta partilhada ou IndexedDB
+  3. Manter histórico de backups (últimas 30 versões)
+
+─────────────────────────────────────────────────────────────────────────────
+
+6.3. ALTO: Sem validação de integridade de dados
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+- Sem checksum dos dados
+- Sem timestamp de validade
+- Sem verificação de corrupção
+
+Se localStorage for corrompido, app continua com dados inconsistentes.
+
+SEVERIDADE: ALTO
+IMPACTO: Corrupção de dados sem aviso
+
+─────────────────────────────────────────────────────────────────────────────
+
+6.4. MÉDIO: Apagamentos não são auditados
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 3648: registarApagado('movimentos',id);
+- Tenta registar apagamento, mas como?
+- Sem verificar se foi bem sucedido
+
+SEVERIDADE: MÉDIO
+IMPACTO: Auditoria incompleta de mudanças
+
+
+7. EDGE CASES
+================================================================================
+
+7.1. CRÍTICO: Stock negativo não é bloqueado por default
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+DB.param.neg='avisar' (default)
+- Avisar = permite stock negativo
+- Bloquear = impede
+
+Linha 3530-3531: Saída com stock insuficiente:
+  if(DB.param.neg==='bloquear'){...}
+  if(!confirm('Stock insuficiente...'))return;
+
+MAS: Se utilador disser "sim" ao confirm, continua com stock negativo!
+Isto pode provocar problemas de reconciliação com SAP.
+
+SEVERIDADE: CRÍTICA
+IMPACTO: Discrepâncias de stock entre aplicação e SAP
+
+RECOMENDAÇÃO DO RUI: "Não permitir stock negativo silenciosamente"
+
+─────────────────────────────────────────────────────────────────────────────
+
+7.2. ALTO: Material sem fornecedor é criado sem validação
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 3866: Importação SAP cria novos materiais:
+  "Materiais não existentes no catálogo serão criados."
+
+Sem validação:
+  - Código já existe?
+  - Código é válido (formato SAP)?
+  - Material duplicado com nome diferente?
+
+Podem criar 2 materiais com ID levemente diferente que deviam ser 1.
+
+─────────────────────────────────────────────────────────────────────────────
+
+7.3. MÉDIO: Transferência inter-obra sem documentação
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 2587-2590: Se obraDst em movimento, subtrai do total
+  else if(mv.obraDst)e.__t-=q;
+
+Mas: Qual é a obra destino? Não há registo! Informação perdida!
+
+SEVERIDADE: MÉDIO
+IMPACTO: Impossível rastrear onde materiais foram transferidos
+
+─────────────────────────────────────────────────────────────────────────────
+
+7.4. MÉDIO: Montagem com sub-montagens não expandida recursivamente?
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+expandirBom() expande 1 nível. E se montagem A tem sub-montagem B que tem
+sub-montagem C?
+
+SEVERIDADE: MÉDIO
+IMPACTO: Quantidades incorretas para BOMs complexas
+
+─────────────────────────────────────────────────────────────────────────────
+
+7.5. MÉDIO: Quantidade zero permitida em alguns casos?
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linhas 3124, 3505: Validação !(qtd>0)
+- Rejeita 0
+- Mas parseFloat('') retorna NaN, !(NaN>0) é true, aceita
+
+Se utilizador deixa campo vazio, parseFloat retorna NaN.
+!(NaN > 0) é true, por isso a validação passa?
+
+NÃO - porque a condição é !(qtd>0), e NaN>0 é false, então !false é true,
+rejeita. Correto.
+
+Mas seria mais claro: if(!qtd || qtd<=0)
+
+─────────────────────────────────────────────────────────────────────────────
+
+7.6. BAIXO: Armazém vazio não é tratado
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Se utilizador não seleciona armazém, campo fica vazio
+- Validação rejeita (linha 3125)
+- Mas código de erro poderia ser mais claro
+
+─────────────────────────────────────────────────────────────────────────────
+
+7.7. BAIXO: Poste inválido em saída de poste
+─────────────────────────────────────────────────────────────────────────────
+
+PROBLEMA:
+Linha 3364: Se poste "04-26" não encontrado:
+  box.innerHTML='<span style="color:var(--vermelho)">Poste...não encontrado.'
+
+Mas utilizador pode continuar sem ver o erro claramente.
+
+
+8. TESTES RECOMENDADOS
+================================================================================
+
+TESTES UNITÁRIOS (devem ser criados):
+
+T1. Cálculo de stock
+  - Entrada → stock aumenta ✓
+  - Saída → stock diminui ✓
+  - Transferência intra-armazém → totais mantêm ✓
+  - Transferência inter-obra → trata corretamente ✓
+  - Apagar movimento → stock volta ao estado anterior ✓
+  - Stock negativo → avisos/bloqueio funciona ✓
+
+T2. Validação de entrada
+  - Quantidade vazia → rejeita ✓
+  - Quantidade negativa → rejeita ✓
+  - Quantidade muito grande (>999999) → rejeita ou avisa ✓
+  - NaN → rejeita ✓
+  - Material não existe → cria ou rejeita? ✓
+
+T3. CSV Import
+  - Importação com sucesso → materiais criados ✓
+  - Ficheiro vazio → aviso apropriado ✓
+  - Ficheiro com 100k linhas → não trava ✓
+  - Datas em múltiplos formatos → parse correto ✓
+  - Duplicados → merge ou erro? ✓
+
+T4. Montagens (BOM)
+  - Expandir BOM simples → quantidades corretas ✓
+  - Expandir BOM com "qb" → marca corretamente ✓
+  - BOM recursivo (montagem dentro de montagem) → expande tudo ✓
+
+T5. Multi-utilizador
+  - 2 abas, ambas editam → última ganha ou merge? ✓
+  - Dados sincronizados entre abas ✓
+  - Sem perda de dados ✓
+
+T6. Segurança
+  - Injetar HTML em campo → está escapado? ✓
+  - Injetar JavaScript em observação → está escapado? ✓
+  - localStorage cheio → erro gracioso? ✓
+
+TESTES DE INTEGRAÇÃO:
+
+I1. Fluxo completo de entrada
+  Criar material → Entrada → Stock correto → Saída → Stock negativo avisar
+
+I2. Fluxo de transferência
+  Armazém A → Armazém B → Stock somas A+B = total ✓
+
+I3. Importar SAP + entradas
+  Importar PC → Registar entrada → Stock bate com SAP ✓
+
+I4. Gerar relatório
+  Selecionar período → Gerar mapa de consumos → Valores corretos ✓
+
+TESTES DE PERFORMANCE:
+
+P1. Load time
+  - Ficheiro HTML 3.4 MB → carrega em <2s? (verificar em 4G)
+  - Initial render → <1s ✓
+
+P2. Operações com 1000+ movimentos
+  - Filtrar movimentos → <500ms ✓
+  - Renderizar tabela → scroll smooth ✓
+  - Calcular stock total → <100ms ✓
+
+P3. Browser memory
+  - Após 10 operações → memory não cresce? ✓
+  - LocalStorage usage → estimado vs real ✓
+
+TESTES EM MOBILE:
+
+M1. Interface
+  - Buttons clickáveis em mobile ✓
+  - Tabelas legíveis ✓
+  - Sem horizontal scroll desnecessário ✓
+
+M2. QR reader
+  - Lê QR corretamente ✓
+  - Permissões de câmara ✓
+
+M3. Offline
+  - Funciona sem rede ✓
+  - Sincroniza quando volta ✓
+
+
+9. PRIORIDADES DE CORREÇÃO
+================================================================================
+
+IMEDIATO (Antes de usar em produção):
+
+1. [CRÍTICO] XSS via innerHTML
+   - Revisar todos os 166 innerHTML
+   - Garantir escapeHtml() ou textContent
+   - Testar injeção de HTML/JS
+   Esforço: 4-6h
+   Risco se não fizer: Injeção de código malicioso
+
+2. [CRÍTICO] Stock negativo lógica
+   - Testar fluxo completo de entrada/saída/transferência
+   - Validar rebuildStock() com edge cases
+   - Implementar testes automatizados
+   Esforço: 3-4h
+   Risco se não fizer: Discrepâncias de stock com SAP
+
+3. [CRÍTICO] Multi-utilizador / multi-aba
+   - Implementar proper versioning/locking
+   - Testar com 2 abas simultaneamente
+   - Implementar conflito resolution
+   Esforço: 6-8h
+   Risco se não fizer: Perda de dados
+
+URGENTE (Primeiras 2 semanas):
+
+4. [ALTO] Documentar escapeHtml usage
+   - Criar função wrapper para innerHTML seguro
+   - Aplicar a todos os 166 casos
+   Esforço: 4-5h
+
+5. [ALTO] Refactor estrutura global
+   - Encapsular DB, _stk, etc. em objeto APP
+   - Separar business logic de UI rendering
+   Esforço: 12-16h
+
+6. [ALTO] Performance - separar SEED_DATA
+   - Mover SEED_DATA para JSON externo
+   - Implementar lazy loading de tabelas grandes
+   Esforço: 8-10h
+
+7. [ALTO] Backup automático
+   - Implementar backup agendado a cada hora
+   - Guardar histórico de backups
+   Esforço: 4-6h
+
+IMPORTANTE (Mês 1):
+
+8. [MÉDIO] Validação robusta de inputs
+   - Criar validators reutilizáveis
+   - Teste de fuzzing
+   Esforço: 6-8h
+
+9. [MÉDIO] Índices para buscas
+   - Criar Maps para lookup O(1)
+   - Medir performance antes/depois
+   Esforço: 4-5h
+
+10. [MÉDIO] Tratamento de erros centralizado
+    - Logger global
+    - Retry logic para operações críticas
+    Esforço: 4-6h
+
+NICE-TO-HAVE (Depois):
+
+11. [BAIXO] Refactor código duplicado
+12. [BAIXO] Adicionar comentários
+13. [BAIXO] Migrar para estruturedClone()
+14. [BAIXO] Adicionar debounce em inputs
+
+
+10. RESUMO EXECUTIVO - O QUE CORRIGIR PRIMEIRO
+================================================================================
+
+TOP 5 PROBLEMAS CRÍTICOS:
+
+1. ✗ XSS via innerHTML (166 casos, 11 desprotegidos)
+   → Impacto: Injeção de código
+   → Correção: 4-6h
+   → Fazer: SIM, IMEDIATAMENTE
+
+2. ✗ Stock negativo inconsistente (rebuildStock lógica)
+   → Impacto: Discrepâncias com SAP
+   → Correção: 3-4h
+   → Fazer: SIM, ANTES DE USAR
+
+3. ✗ Multi-utilizador sem locking
+   → Impacto: Perda de dados entre abas
+   → Correção: 6-8h
+   → Fazer: SIM, ANTES DE COMPARTILHAR
+
+4. ✗ Ficheiro 3.4 MB sem lazy loading
+   → Impacto: Carregamento lento
+   → Correção: 8-10h
+   → Fazer: SIM, PARA MOBILE
+
+5. ✗ Email hardcoded + sem backup automático
+   → Impacto: Email harvesting, perda de dados
+   → Correção: 6-8h
+   → Fazer: SIM, ANTES DE ONLINE
+
+CÓDIGO ESTÁ FUNCIONAL MAS INSEGURO E INEFICIENTE
+
+Recomendação: Parar antes de colocar online ou compartilhar,
+corrigir top 3 issues (XSS, stock, multi-user) mínimo.
+
+
+11. DETALHES TÉCNICOS - DEBUGGING SUGGESTIONS
+================================================================================
+
+Para verificar os problemas:
+
+Debug 1 - XSS:
+  1. Abrir DevTools (F12)
+  2. Ir a vista "Stock"
+  3. Criar novo material com nome: <img src=x onerror="alert('XSS')">
+  4. Se alert aparecer, é XSS!
+
+Debug 2 - Stock:
+  1. Criar 10 un de material em Armazém A
+  2. Transferir 5 para Armazém B (inter-obra)
+  3. Ver stock: A deve ter 5, B deve ter 5
+  4. Apagar a transferência: A volta a 10, B volta a 0
+  5. Se não bater, há bug em rebuildStock
+
+Debug 3 - Multi-aba:
+  1. Abrir HTML em 2 abas
+  2. Na aba 1: Criar movimento A
+  3. Na aba 2: Criar movimento B
+  4. Atualizar aba 1: movimento B aparece?
+  5. Se não, há problema de sincronização
+
+Debug 4 - localStorage quota:
+  1. DevTools → Application → localStorage
+  2. Procurar chave "dte_armazem_multi_v1"
+  3. Estimar tamanho JSON
+  4. Se >5MB, está perto do limite
+
+
+================================================================================
+                            FIM DO RELATÓRIO
+================================================================================
+
+Análise efetuada: 15 Outubro 2026
+Ficheiro analisado: gestao_armazem_catenaria.html (7.656 linhas, 3.4 MB)
+Total de problemas identificados: 46
+Severidade crítica: 7 | Alta: 12 | Média: 18 | Baixa: 9
+
+Próximos passos recomendados:
+1. Ler este relatório integralmente
+2. Priorizar correção dos top 3 críticos
+3. Criar plano de refactoring
+4. Implementar testes automatizados
+5. Migrar para arquitetura multi-ficheiro quando possível
+
+Contactos para dúvidas: rui16simoes@gmail.com

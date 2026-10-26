@@ -1,0 +1,1588 @@
+================================================================================
+LISTA DETALHADA - CÓDIGOS SAP DUPLICADOS
+================================================================================
+
+Total de códigos com duplicação: 50
+Total de materiais envolvidos: 175
+
+OBSERVAÇÃO IMPORTANTE:
+  Manter a entrada original (ex: M####)
+  Mesclar dados de importações SAP (sap20260XXX-mat-...)
+  Redirecionar referências cruzadas
+================================================================================
+
+
+[GRUPO 1] CÓDIGO '3000021' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500847268-40
+  Origem: IMPORTADO SAP
+  SAP: 3000021
+  Descrição: LUVAS GLOVA TAM 8
+  Preço: 2.55
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500847268-50
+  Origem: IMPORTADO SAP
+  SAP: 3000021
+  Descrição: LUVAS GLOVA TAM 9
+  Preço: 2.55
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500847268-60
+  Origem: IMPORTADO SAP
+  SAP: 3000021
+  Descrição: LUVAS GLOVA TAM 10
+  Preço: 2.55
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500847268-40, sap20260817-mat-4500847268-50, sap20260817-mat-4500847268-60
+
+[GRUPO 2] CÓDIGO '3000059' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M3184
+  Origem: ORIGINAL
+  SAP: 3000059
+  Descrição: VASSOURA DESP.Nº5 EXTRA C/FERR
+  Preço: 0
+  Fornecedor: Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500846008-20
+  Origem: IMPORTADO SAP
+  SAP: 3000059
+  Descrição: Vassoura lava carros-mcf
+  Preço: 5.28
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500859283-20
+  Origem: IMPORTADO SAP
+  SAP: 3000059
+  Descrição: VASSOURA DESP.Nº5 EXTRA C/FERR
+  Preço: 3.09
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M3184
+    Mesclar: sap20260817-mat-4500846008-20, sap20260817-mat-4500859283-20
+
+[GRUPO 3] CÓDIGO '3000076' — 4 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2814
+  Origem: ORIGINAL
+  SAP: 3000076
+  Descrição: Luvas Glova Tam 10
+  Preço: 2.55
+  Fornecedor: J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-50
+  Origem: IMPORTADO SAP
+  SAP: 3000076
+  Descrição: Luvas Glova Tam 8
+  Preço: 2.55
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-60
+  Origem: IMPORTADO SAP
+  SAP: 3000076
+  Descrição: Luvas Glova Tam 9
+  Preço: 2.55
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-70
+  Origem: IMPORTADO SAP
+  SAP: 3000076
+  Descrição: Luvas Glova Tam 10
+  Preço: 2.55
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2814
+    Mesclar: sap20260817-mat-4500832586-50, sap20260817-mat-4500832586-60, sap20260817-mat-4500832586-70
+
+[GRUPO 4] CÓDIGO '3002308' — 5 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2629
+  Origem: ORIGINAL
+  SAP: 3002308
+  Descrição: CALÇAS CHATER WINTER (AMARELO FLUO) - 52
+  Preço: 20.9
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-10
+  Origem: IMPORTADO SAP
+  SAP: 3002308
+  Descrição: Calças Tamanho Payper Winter Tam XS
+  Preço: 20.9
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-20
+  Origem: IMPORTADO SAP
+  SAP: 3002308
+  Descrição: Calças Tamanho Payper Winter Tam S
+  Preço: 20.9
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-30
+  Origem: IMPORTADO SAP
+  SAP: 3002308
+  Descrição: Calças Tamanho Payper Winter Tam M
+  Preço: 20.9
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500832586-40
+  Origem: IMPORTADO SAP
+  SAP: 3002308
+  Descrição: Calças Tamanho Payper Winter Tam L
+  Preço: 20.9
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2629
+    Mesclar: sap20260817-mat-4500832586-10, sap20260817-mat-4500832586-20, sap20260817-mat-4500832586-30, sap20260817-mat-4500832586-40
+
+[GRUPO 5] CÓDIGO '3002314' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260812-mat-4500883493-30
+  Origem: IMPORTADO SAP
+  SAP: 3002314
+  Descrição: Cordas I/Farprotec - Amortecedor c/2mts
+  Preço: 30.5
+  Fornecedor: 220104477  Farprotec -Com.de Uniformes e
+
+  ID: sap20260812-mat-4500883493-40
+  Origem: IMPORTADO SAP
+  SAP: 3002314
+  Descrição: Cordas Y/Patacho (Ref. CU-933/Y/KIT5)
+  Preço: 29.9
+  Fornecedor: 220104477  Farprotec -Com.de Uniformes e
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260812-mat-4500883493-30, sap20260812-mat-4500883493-40
+
+[GRUPO 6] CÓDIGO '3002380' — 5 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2753
+  Origem: ORIGINAL
+  SAP: 3002380
+  Descrição: FATO IMPERMIAVEL B CAMP WORK - TAM L
+  Preço: 28
+  Fornecedor: J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500852558-50
+  Origem: IMPORTADO SAP
+  SAP: 3002380
+  Descrição: FATO IMPERMIAVEL B CAMP WORK - TAM S
+  Preço: 28
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500852558-60
+  Origem: IMPORTADO SAP
+  SAP: 3002380
+  Descrição: FATO IMPERMIAVEL B CAMP WORK - TAM M
+  Preço: 28
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500852558-70
+  Origem: IMPORTADO SAP
+  SAP: 3002380
+  Descrição: FATO IMPERMIAVEL B CAMP WORK - TAM L
+  Preço: 28
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  ID: sap20260817-mat-4500852558-80
+  Origem: IMPORTADO SAP
+  SAP: 3002380
+  Descrição: FATO IMPERMIAVEL B CAMP WORK - TAM XL
+  Preço: 28
+  Fornecedor: 220117748  J.gomes & C.gomes, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2753
+    Mesclar: sap20260817-mat-4500852558-50, sap20260817-mat-4500852558-60, sap20260817-mat-4500852558-70, sap20260817-mat-4500852558-80
+
+[GRUPO 7] CÓDIGO '4001935' — 5 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2456
+  Origem: ORIGINAL
+  SAP: 4001935
+  Descrição: FECHADURA CAIXA CORREIO MACFER LM603
+  Preço: 0
+  Fornecedor: Joao S. Azevedo, Lda
+
+  ID: sap20260812-mat-4500881595-10
+  Origem: IMPORTADO SAP
+  SAP: 4001935
+  Descrição: CRC FECHADURA GANCHO 600GC 12 ESQ
+  Preço: 31.6667
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500853041-30
+  Origem: IMPORTADO SAP
+  SAP: 4001935
+  Descrição: "FECHADURA CAIXA CORREIO MACFER LM603
+  Preço: 2.276
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260910-mat-4500889272-20
+  Origem: IMPORTADO SAP
+  SAP: 4001935
+  Descrição: CRC CHAVE REF. CH600 P/720
+  Preço: 1.79
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260910-mat-4500889287-10
+  Origem: IMPORTADO SAP
+  SAP: 4001935
+  Descrição: CRC FECHADURA SOBREPOR T/YALE REF.
+  Preço: 21.91
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2456
+    Mesclar: sap20260812-mat-4500881595-10, sap20260817-mat-4500853041-30, sap20260910-mat-4500889272-20, sap20260910-mat-4500889287-10
+
+[GRUPO 8] CÓDIGO '4002706' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2561
+  Origem: ORIGINAL
+  SAP: 4002706
+  Descrição: Arame zincado/KG
+  Preço: 2.36
+  Fornecedor: Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260910-mat-4500886654-60
+  Origem: IMPORTADO SAP
+  SAP: 4002706
+  Descrição: ARAME ZINCADO 8/11/12/14
+  Preço: 2.93
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2561
+    Mesclar: sap20260910-mat-4500886654-60
+
+[GRUPO 9] CÓDIGO '4003679' — 7 entradas
+--------------------------------------------------------------------------------
+
+  ID: M3110
+  Origem: ORIGINAL
+  SAP: 4003679
+  Descrição: EXTENSAO ELECT. SADY 3 ENT. 1.5MM X 3
+  Preço: 6.3
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: M4820
+  Origem: ORIGINAL
+  SAP: 4003679
+  Descrição: " EXTENSAO QUINTUPLA C/INT 5 SAIDAS +
+  Preço: 18.66
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500784975-30
+  Origem: IMPORTADO SAP
+  SAP: 4003679
+  Descrição: SANDY - EXTENSAO 3S 3G1,5-3MTS
+  Preço: 5.61
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500839687-10
+  Origem: IMPORTADO SAP
+  SAP: 4003679
+  Descrição: Extensao 3S c/int.3G1,5-3mts
+  Preço: 7.24
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500839687-20
+  Origem: IMPORTADO SAP
+  SAP: 4003679
+  Descrição: Extensao 6S c/int.3G1,5-3mts
+  Preço: 8.54
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260910-mat-4500887538-30
+  Origem: IMPORTADO SAP
+  SAP: 4003679
+  Descrição: EXTENSAO TRIPLA C/INT 3 SAIDAS + USB 3 M
+  Preço: 18.29
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20261002-mat-4500895273-10
+  Origem: IMPORTADO SAP
+  SAP: 4003679
+  Descrição: EXTENSAO QUINTUPLA C/INT 5 SAIDAS +
+  Preço: 0
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M3110
+    Mesclar: sap20260817-mat-4500784975-30, sap20260817-mat-4500839687-10, sap20260817-mat-4500839687-20, sap20260910-mat-4500887538-30, sap20261002-mat-4500895273-10
+
+[GRUPO 10] CÓDIGO '4004400' — 5 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2961
+  Origem: ORIGINAL
+  SAP: 4004400
+  Descrição: PORCA AUTOBLOC. DIN 985 INOX A2 M12
+  Preço: 5
+  Fornecedor: Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-160
+  Origem: IMPORTADO SAP
+  SAP: 4004400
+  Descrição: PORCA SEXT DIN 934 INOX A4 M12
+  Preço: 7.85
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-170
+  Origem: IMPORTADO SAP
+  SAP: 4004400
+  Descrição: PORCA AUTOBLOC. DIN 985 INOX A4 M12
+  Preço: 8.7
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-60
+  Origem: IMPORTADO SAP
+  SAP: 4004400
+  Descrição: PORCA SEXT DIN 934 INOX A2 M12
+  Preço: 5
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-70
+  Origem: IMPORTADO SAP
+  SAP: 4004400
+  Descrição: PORCA AUTOBLOC. DIN 985 INOX A2 M12
+  Preço: 5.2
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2961
+    Mesclar: sap20260817-mat-4500864211-160, sap20260817-mat-4500864211-170, sap20260817-mat-4500864211-60, sap20260817-mat-4500864211-70
+
+[GRUPO 11] CÓDIGO '4004403' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500864211-20
+  Origem: IMPORTADO SAP
+  SAP: 4004403
+  Descrição: PORCA SEXT DIN 934 INOX A2 M10
+  Preço: 3.4
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-30
+  Origem: IMPORTADO SAP
+  SAP: 4004403
+  Descrição: PORCA AUTOBLOC. DIN 985 INOX A2 M10
+  Preço: 3.8
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500864211-20, sap20260817-mat-4500864211-30
+
+[GRUPO 12] CÓDIGO '4004491' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500831194-10
+  Origem: IMPORTADO SAP
+  SAP: 4004491
+  Descrição: Cerra Cabos Gal.16mm
+  Preço: 1.07
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500851166-20
+  Origem: IMPORTADO SAP
+  SAP: 4004491
+  Descrição: Cerra cabo EN 13411-5 12-13mm
+  Preço: 0.74
+  Fornecedor: 220101815  Oliveira Sa, S.A.
+
+  ID: sap20260910-mat-4500887538-10
+  Origem: IMPORTADO SAP
+  SAP: 4004491
+  Descrição: CERRA CABOS M16 - 5/8
+  Preço: 1.46
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500831194-10, sap20260817-mat-4500851166-20, sap20260910-mat-4500887538-10
+
+[GRUPO 13] CÓDIGO '4010121' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2685
+  Origem: ORIGINAL
+  SAP: 4010121
+  Descrição: CINTA TUB S/FIM 1 MT 1 TON (ÚTIL
+  Preço: 3.55
+  Fornecedor: Sicorlis - Aprestos Mar. Com. Lda
+
+  ID: sap20260817-mat-4500859309-10
+  Origem: IMPORTADO SAP
+  SAP: 4010121
+  Descrição: CINTA TUB S/FIM 1 MT 1 TON (ÚTIL
+  Preço: 3.55
+  Fornecedor: 220103678  Sicorlis - Aprestos Mar. Com. Lda
+
+  ID: sap20260817-mat-4500859309-20
+  Origem: IMPORTADO SAP
+  SAP: 4010121
+  Descrição: CINTA TUB S/FIM 2 MT 2 TON (ÚTIL)
+  Preço: 7.55
+  Fornecedor: 220103678  Sicorlis - Aprestos Mar. Com. Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2685
+    Mesclar: sap20260817-mat-4500859309-10, sap20260817-mat-4500859309-20
+
+[GRUPO 14] CÓDIGO '4015267' — 4 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2529
+  Origem: ORIGINAL
+  SAP: 4015267
+  Descrição: ACOPLAMENTO PLANO MACHO 1/4 1000BAR-MACH
+  Preço: 19.58
+  Fornecedor: Rebelo & Oliveira, Lda
+
+  ID: sap20260817-mat-4500856280-30
+  Origem: IMPORTADO SAP
+  SAP: 4015267
+  Descrição: ACOPLAMENTOS 700BAR ISSO - MACHO 3/8 NPT
+  Preço: 19.58
+  Fornecedor: 220110754  Rebelo & Oliveira, Lda
+
+  ID: sap20260817-mat-4500856280-40
+  Origem: IMPORTADO SAP
+  SAP: 4015267
+  Descrição: ACOPLAMENTOS 700BAR ISSO - FEMEA 3/8 NPT
+  Preço: 24.89
+  Fornecedor: 220110754  Rebelo & Oliveira, Lda
+
+  ID: sap20260817-mat-4500856280-50
+  Origem: IMPORTADO SAP
+  SAP: 4015267
+  Descrição: ACOPLAMENTO PLANO MACHO 1/4 1000BAR-MACH
+  Preço: 65
+  Fornecedor: 220110754  Rebelo & Oliveira, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2529
+    Mesclar: sap20260817-mat-4500856280-30, sap20260817-mat-4500856280-40, sap20260817-mat-4500856280-50
+
+[GRUPO 15] CÓDIGO '4015739' — 5 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2448
+  Origem: ORIGINAL
+  SAP: 4015739
+  Descrição: CARTUCHO SO-1/4 OXIGENO (Valvula Antire
+  Preço: 20.2
+  Fornecedor: Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500844782-30
+  Origem: IMPORTADO SAP
+  SAP: 4015739
+  Descrição: CARTUCHO RO-1/4 OXY
+  Preço: 20.2
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500844782-50
+  Origem: IMPORTADO SAP
+  SAP: 4015739
+  Descrição: CARTUCHO SO-1/4 OXIGENO (Valvula Antiret
+  Preço: 20.2
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500862037-10
+  Origem: IMPORTADO SAP
+  SAP: 4015739
+  Descrição: CARTUCHO RO-1/4 OXY
+  Preço: 20.2
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500862037-20
+  Origem: IMPORTADO SAP
+  SAP: 4015739
+  Descrição: "CARTUCHO SO-1/4 OXIGENO (Valvula Antire
+  Preço: 20.2
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2448
+    Mesclar: sap20260817-mat-4500844782-30, sap20260817-mat-4500844782-50, sap20260817-mat-4500862037-10, sap20260817-mat-4500862037-20
+
+[GRUPO 16] CÓDIGO '4019688' — 9 entradas
+--------------------------------------------------------------------------------
+
+  ID: M4004
+  Origem: ORIGINAL
+  SAP: 4019688
+  Descrição: CHAVE PONTOS ISEO 15
+  Preço: 5.2846
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260812-mat-4500882423-10
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES DE PORTAS CB6
+  Preço: 1.5854
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260812-mat-4500882423-20
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES EM CRUZ CCF 5 RODES ANT
+  Preço: 6.5041
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500843080-20
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES UNIVERSAIS UL050
+  Preço: 1.585
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500845007-10
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES UNIVERSAIS UL050
+  Preço: 1.585
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500860435-10
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES UNIVERSAIS UL050
+  Preço: 1.59
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500871362-50
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES UNIVERSAIS UL050
+  Preço: 1.5854
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260824-mat-4500886473-20
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES DE PORTAS CB6
+  Preço: 1.59
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260910-mat-4500886654-20
+  Origem: IMPORTADO SAP
+  SAP: 4019688
+  Descrição: CHAVES UNIVERSAIS UL050
+  Preço: 1.59
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M4004
+    Mesclar: sap20260812-mat-4500882423-10, sap20260812-mat-4500882423-20, sap20260817-mat-4500843080-20, sap20260817-mat-4500845007-10, sap20260817-mat-4500860435-10, sap20260817-mat-4500871362-50, sap20260824-mat-4500886473-20, sap20260910-mat-4500886654-20
+
+[GRUPO 17] CÓDIGO '4019846' — 5 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2446
+  Origem: ORIGINAL
+  SAP: 4019846
+  Descrição: CARTUCHO SE-3/8-IZQ.GAS COMB. ( Valvula
+  Preço: 18.96
+  Fornecedor: Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500844782-40
+  Origem: IMPORTADO SAP
+  SAP: 4019846
+  Descrição: CARTUCHO RE-3/8-IZQ.GAS COMB.
+  Preço: 23.24
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500844782-60
+  Origem: IMPORTADO SAP
+  SAP: 4019846
+  Descrição: CARTUCHO SE-3/8-IZQ.GAS COMB. ( Valvula
+  Preço: 18.96
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500862037-30
+  Origem: IMPORTADO SAP
+  SAP: 4019846
+  Descrição: "CARTUCHO SE-3/8-IZQ.GAS COMB. ( Valvula
+  Preço: 18.96
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500862037-40
+  Origem: IMPORTADO SAP
+  SAP: 4019846
+  Descrição: CARTUCHO RE-3/8-IZQ.GAS COMB
+  Preço: 23.24
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2446
+    Mesclar: sap20260817-mat-4500844782-40, sap20260817-mat-4500844782-60, sap20260817-mat-4500862037-30, sap20260817-mat-4500862037-40
+
+[GRUPO 18] CÓDIGO '4023516' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2539
+  Origem: ORIGINAL
+  SAP: 4023516
+  Descrição: ANILHA CHAPA DIN 125/ISO 7089 INOX A2 M1
+  Preço: 1.8
+  Fornecedor: Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-180
+  Origem: IMPORTADO SAP
+  SAP: 4023516
+  Descrição: ANILHA CHAPA DIN 125/ISO 7089 INOX A4 M1
+  Preço: 3.4
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-80
+  Origem: IMPORTADO SAP
+  SAP: 4023516
+  Descrição: ANILHA CHAPA DIN 125/ISO 7089 INOX A2 M1
+  Preço: 1.8
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2539
+    Mesclar: sap20260817-mat-4500864211-180, sap20260817-mat-4500864211-80
+
+[GRUPO 19] CÓDIGO '4026296' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851088-20
+  Origem: IMPORTADO SAP
+  SAP: 4026296
+  Descrição: Tubo de aço 19x26
+  Preço: 6.57
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  ID: sap20260817-mat-4500872735-20
+  Origem: IMPORTADO SAP
+  SAP: 4026296
+  Descrição: Cód. 10A – Tubo de aço 19x26
+  Preço: 8.76
+  Fornecedor: 220101858  Sacyr Somague, S.A.
+
+  ID: sap20260817-mat-4500872979-20
+  Origem: IMPORTADO SAP
+  SAP: 4026296
+  Descrição: Cód. 10A – Tubo de aço 19x26
+  Preço: 8.76
+  Fornecedor: 220114952  Sacyr Neopul, SA
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851088-20, sap20260817-mat-4500872735-20, sap20260817-mat-4500872979-20
+
+[GRUPO 20] CÓDIGO '4026297' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851088-30
+  Origem: IMPORTADO SAP
+  SAP: 4026297
+  Descrição: Tubo de aço 24x32
+  Preço: 9.34
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  ID: sap20260817-mat-4500872735-10
+  Origem: IMPORTADO SAP
+  SAP: 4026297
+  Descrição: Cód. 10C – Tubo de aço 24x32
+  Preço: 12.27
+  Fornecedor: 220101858  Sacyr Somague, S.A.
+
+  ID: sap20260817-mat-4500872979-10
+  Origem: IMPORTADO SAP
+  SAP: 4026297
+  Descrição: Cód. 10C – Tubo de aço 24x32
+  Preço: 12.27
+  Fornecedor: 220114952  Sacyr Neopul, SA
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851088-30, sap20260817-mat-4500872735-10, sap20260817-mat-4500872979-10
+
+[GRUPO 21] CÓDIGO '4026299' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851088-50
+  Origem: IMPORTADO SAP
+  SAP: 4026299
+  Descrição: Tubo de aço 30x38
+  Preço: 10.37
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  ID: sap20260817-mat-4500869173-10
+  Origem: IMPORTADO SAP
+  SAP: 4026299
+  Descrição: Cód. 10E – Tubo de aço 30x38
+  Preço: 14.93
+  Fornecedor: 220114952  Sacyr Neopul, SA
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851088-50, sap20260817-mat-4500869173-10
+
+[GRUPO 22] CÓDIGO '4026300' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851088-60
+  Origem: IMPORTADO SAP
+  SAP: 4026300
+  Descrição: Tubo de aço 34x42
+  Preço: 11.53
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  ID: sap20260817-mat-4500872735-30
+  Origem: IMPORTADO SAP
+  SAP: 4026300
+  Descrição: Cód. 10F – Tubo de aço 34x42
+  Preço: 16.33
+  Fornecedor: 220101858  Sacyr Somague, S.A.
+
+  ID: sap20260817-mat-4500872979-30
+  Origem: IMPORTADO SAP
+  SAP: 4026300
+  Descrição: Cód. 10F – Tubo de aço 34x42
+  Preço: 16.33
+  Fornecedor: 220114952  Sacyr Neopul, SA
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851088-60, sap20260817-mat-4500872735-30, sap20260817-mat-4500872979-30
+
+[GRUPO 23] CÓDIGO '4026301' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260812-mat-4500880013-10
+  Origem: IMPORTADO SAP
+  SAP: 4026301
+  Descrição: Tubo de aço 40x9
+  Preço: 21.17
+  Fornecedor: 220114952  Sacyr Neopul, SA
+
+  ID: sap20260817-mat-4500851088-70
+  Origem: IMPORTADO SAP
+  SAP: 4026301
+  Descrição: Tubo de aço 40x49
+  Preço: 14.88
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260812-mat-4500880013-10, sap20260817-mat-4500851088-70
+
+[GRUPO 24] CÓDIGO '4026373' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851945-450
+  Origem: IMPORTADO SAP
+  SAP: 4026373
+  Descrição: 464A Suporte de 2 cabos
+  Preço: 5.77
+  Fornecedor: 220112950  EIP-Electricidade Industrial
+
+  ID: sap20260817-mat-4500855444-370
+  Origem: IMPORTADO SAP
+  SAP: 4026373
+  Descrição: Suporte de 2 cabos
+  Preço: 12.99
+  Fornecedor: 220110657  Nicolau de Freitas, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851945-450, sap20260817-mat-4500855444-370
+
+[GRUPO 25] CÓDIGO '4026376' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851896-470
+  Origem: IMPORTADO SAP
+  SAP: 4026376
+  Descrição: Parafuso M10x45/45  Hu+Hm
+  Preço: 0.6
+  Fornecedor: 220108534  M.Rocha & J.Serra - Metalurgica Lda
+
+  ID: sap20260817-mat-4500851896-750
+  Origem: IMPORTADO SAP
+  SAP: 4026376
+  Descrição: Parafuso M10x45/45 com Hu + Hm IN
+  Preço: 1.18
+  Fornecedor: 220108534  M.Rocha & J.Serra - Metalurgica Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851896-470, sap20260817-mat-4500851896-750
+
+[GRUPO 26] CÓDIGO '4026462' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851896-430
+  Origem: IMPORTADO SAP
+  SAP: 4026462
+  Descrição: Parafuso M16x60/38 com Hu
+  Preço: 0.62
+  Fornecedor: 220108534  M.Rocha & J.Serra - Metalurgica Lda
+
+  ID: sap20260817-mat-4500851896-740
+  Origem: IMPORTADO SAP
+  SAP: 4026462
+  Descrição: Parafuso M16x60/38 com Hu + Hm
+  Preço: 1.91
+  Fornecedor: 220108534  M.Rocha & J.Serra - Metalurgica Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851896-430, sap20260817-mat-4500851896-740
+
+[GRUPO 27] CÓDIGO '4026516' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500855000-40
+  Origem: IMPORTADO SAP
+  SAP: 4026516
+  Descrição: Suporte de fixação p/ aparelho tensor
+  Preço: 61.34
+  Fornecedor: 220201398  Arruti Catenaria S.A.
+
+  ID: sap20260817-mat-4500869173-20
+  Origem: IMPORTADO SAP
+  SAP: 4026516
+  Descrição: Cód. 510 - Suporte de fixação p/ aparelh
+  Preço: 67.89
+  Fornecedor: 220114952  Sacyr Neopul, SA
+
+  ID: sap20260817-mat-4500869925-10
+  Origem: IMPORTADO SAP
+  SAP: 4026516
+  Descrição: Suporte de fixação p/ aparelho tensor
+  Preço: 110
+  Fornecedor: 220110718  MPL - Metal Processo, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500855000-40, sap20260817-mat-4500869173-20, sap20260817-mat-4500869925-10
+
+[GRUPO 28] CÓDIGO '4026524' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851305-30
+  Origem: IMPORTADO SAP
+  SAP: 4026524
+  Descrição: Aperta tubo articulado p/ tubo 24x32
+  Preço: 39.5
+  Fornecedor: 220200938  Galland
+
+  ID: sap20260817-mat-4500854997-340
+  Origem: IMPORTADO SAP
+  SAP: 4026524
+  Descrição: Aperta tubo c/ articulação p/ tubo 24x32
+  Preço: 44.2
+  Fornecedor: 220110718  MPL - Metal Processo, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851305-30, sap20260817-mat-4500854997-340
+
+[GRUPO 29] CÓDIGO '4026549' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500854997-460
+  Origem: IMPORTADO SAP
+  SAP: 4026549
+  Descrição: Coronha c/ manga de aperto p/ tubo 19x26
+  Preço: 61.9
+  Fornecedor: 220110718  MPL - Metal Processo, Lda
+
+  ID: sap20260817-mat-4500854997-470
+  Origem: IMPORTADO SAP
+  SAP: 4026549
+  Descrição: Coronha c/ manga de aperto p/ tubo 24x32
+  Preço: 63.95
+  Fornecedor: 220110718  MPL - Metal Processo, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500854997-460, sap20260817-mat-4500854997-470
+
+[GRUPO 30] CÓDIGO '4027442' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2870
+  Origem: ORIGINAL
+  SAP: 4027442
+  Descrição: PARAF C/SEXT DIN 933 A2 12X45
+  Preço: 14.65
+  Fornecedor: Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-110
+  Origem: IMPORTADO SAP
+  SAP: 4027442
+  Descrição: PARAF C/SEXT DIN 933 A2 12X45
+  Preço: 14.65
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  ID: sap20260817-mat-4500864211-150
+  Origem: IMPORTADO SAP
+  SAP: 4027442
+  Descrição: PARAF C/SEXT DIN 933 A4 12X45
+  Preço: 24.8
+  Fornecedor: 220110664  Senttro - Sist. Fixacao, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2870
+    Mesclar: sap20260817-mat-4500864211-110, sap20260817-mat-4500864211-150
+
+[GRUPO 31] CÓDIGO '4036964' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851896-280
+  Origem: IMPORTADO SAP
+  SAP: 4036964
+  Descrição: 423H Vara suspensão contrapesos L=1150
+  Preço: 18.39
+  Fornecedor: 220108534  M.Rocha & J.Serra - Metalurgica Lda
+
+  ID: sap20260817-mat-4500855444-360
+  Origem: IMPORTADO SAP
+  SAP: 4036964
+  Descrição: Vara de suspensão dos contrapesos
+  Preço: 44.19
+  Fornecedor: 220110657  Nicolau de Freitas, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851896-280, sap20260817-mat-4500855444-360
+
+[GRUPO 32] CÓDIGO '4037047' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260817-mat-4500851945-510
+  Origem: IMPORTADO SAP
+  SAP: 4037047
+  Descrição: 566 Cinta p/tubo guia contrapesos
+  Preço: 14.84
+  Fornecedor: 220112950  EIP-Electricidade Industrial
+
+  ID: sap20260817-mat-4500855000-70
+  Origem: IMPORTADO SAP
+  SAP: 4037047
+  Descrição: Cinta p/tubo Guia Contrapesos
+  Preço: 34.59
+  Fornecedor: 220201398  Arruti Catenaria S.A.
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260817-mat-4500851945-510, sap20260817-mat-4500855000-70
+
+[GRUPO 33] CÓDIGO '4049802' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: M4814
+  Origem: ORIGINAL
+  SAP: 4049802
+  Descrição: FITA ACO INOX 304 1/2"-13x0,7mm ROLO DE
+  Preço: 18
+  Fornecedor: 220102161  Jobasi - Aces. Elect. e Bronzes, SA
+
+  ID: M4815
+  Origem: ORIGINAL
+  SAP: 4049802
+  Descrição: FERRAMENTA P/ FITA AÇO INOX C001
+  Preço: 69.5
+  Fornecedor: 220102161  Jobasi - Aces. Elect. e Bronzes, SA
+
+  RECOMENDAÇÃO:
+    Manter: M4814
+    Mesclar: 
+
+[GRUPO 34] CÓDIGO '5000284' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2579
+  Origem: ORIGINAL
+  SAP: 5000284
+  Descrição: Bitubo Oxigénio-Acetileno 8+8x16
+  Preço: 23.32
+  Fornecedor: Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500844782-70
+  Origem: IMPORTADO SAP
+  SAP: 5000284
+  Descrição: Bitubo Oxigénio-Acetileno 8+8x16
+  Preço: 3.68
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500852546-30
+  Origem: IMPORTADO SAP
+  SAP: 5000284
+  Descrição: GOXS1BG (Oxigénio - 10,6mm3)
+  Preço: 23.32
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2579
+    Mesclar: sap20260817-mat-4500844782-70, sap20260817-mat-4500852546-30
+
+[GRUPO 35] CÓDIGO '5000535' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2597
+  Origem: ORIGINAL
+  SAP: 5000535
+  Descrição: Broca Hss-Multinox 13mm
+  Preço: 10.37
+  Fornecedor: Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500846844-100
+  Origem: IMPORTADO SAP
+  SAP: 5000535
+  Descrição: Broca Hssm2-12,50mm-Mcf
+  Preço: 3.12
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500852942-60
+  Origem: IMPORTADO SAP
+  SAP: 5000535
+  Descrição: Broca Hss-Multinox 13mm
+  Preço: 10.37
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2597
+    Mesclar: sap20260817-mat-4500846844-100, sap20260817-mat-4500852942-60
+
+[GRUPO 36] CÓDIGO '5001724' — 4 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2621
+  Origem: ORIGINAL
+  SAP: 5001724
+  Descrição: Cadeado lat.40-blist
+  Preço: 4.356
+  Fornecedor: Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500838039-10
+  Origem: IMPORTADO SAP
+  SAP: 5001724
+  Descrição: Cadeado lat.40-blist
+  Preço: 4.356
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500864228-20
+  Origem: IMPORTADO SAP
+  SAP: 5001724
+  Descrição: CADEADO MACFER 30MM
+  Preço: 3.74
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260910-mat-4500886654-30
+  Origem: IMPORTADO SAP
+  SAP: 5001724
+  Descrição: CHAVES P/CADEADOS GL 13R
+  Preço: 1.59
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2621
+    Mesclar: sap20260817-mat-4500838039-10, sap20260817-mat-4500864228-20, sap20260910-mat-4500886654-30
+
+[GRUPO 37] CÓDIGO '5001863' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2619
+  Origem: ORIGINAL
+  SAP: 5001863
+  Descrição: Cadeado lat, retang. 60-blist.
+  Preço: 11.34
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20261002-mat-4500893077-20
+  Origem: IMPORTADO SAP
+  SAP: 5001863
+  Descrição: CADEADO SADY 50 MM
+  Preço: 0
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2619
+    Mesclar: sap20261002-mat-4500893077-20
+
+[GRUPO 38] CÓDIGO '5001894' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2858
+  Origem: ORIGINAL
+  SAP: 5001894
+  Descrição: PAQUIMETRO ANALOGICO MACFER
+  Preço: 12.6016
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260812-mat-4500881595-40
+  Origem: IMPORTADO SAP
+  SAP: 5001894
+  Descrição: FITA METRICA BIMAT STANLEY 8MT
+  Preço: 10.9756
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2858
+    Mesclar: sap20260812-mat-4500881595-40
+
+[GRUPO 39] CÓDIGO '5002179' — 4 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2535
+  Origem: ORIGINAL
+  SAP: 5002179
+  Descrição: Almotolia Pressolo FLX 5133/250
+  Preço: 0
+  Fornecedor: Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500846844-120
+  Origem: IMPORTADO SAP
+  SAP: 5002179
+  Descrição: Tayg-Jerrican Plastº 5lt
+  Preço: 10.16
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500846844-130
+  Origem: IMPORTADO SAP
+  SAP: 5002179
+  Descrição: Tayg-Jerrican Plastº 20lt
+  Preço: 20.24
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500858851-10
+  Origem: IMPORTADO SAP
+  SAP: 5002179
+  Descrição: Almotolia Pressolo FLX 5133/250
+  Preço: 7.32
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2535
+    Mesclar: sap20260817-mat-4500846844-120, sap20260817-mat-4500846844-130, sap20260817-mat-4500858851-10
+
+[GRUPO 40] CÓDIGO '5003236' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260812-mat-4500880263-10
+  Origem: IMPORTADO SAP
+  SAP: 5003236
+  Descrição: CADEADO RETANGULAR TRAVESSAO 90MM
+  Preço: 21.5447
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260812-mat-4500881595-20
+  Origem: IMPORTADO SAP
+  SAP: 5003236
+  Descrição: CADEADO TRAVESSAO MACFER 2002 70MM
+  Preço: 14.2276
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260812-mat-4500881595-30
+  Origem: IMPORTADO SAP
+  SAP: 5003236
+  Descrição: CADEADO MACFER AC 60MM
+  Preço: 13.7805
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260812-mat-4500880263-10, sap20260812-mat-4500881595-20, sap20260812-mat-4500881595-30
+
+[GRUPO 41] CÓDIGO '5003472' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260812-mat-4500883493-10
+  Origem: IMPORTADO SAP
+  SAP: 5003472
+  Descrição: Arnêses 2 s/ cinto com dois pontos ancor
+  Preço: 16.9
+  Fornecedor: 220104477  Farprotec -Com.de Uniformes e
+
+  ID: sap20260812-mat-4500883493-20
+  Origem: IMPORTADO SAP
+  SAP: 5003472
+  Descrição: Arnêses Protex 51EmX (Ref: TAAPRO1P51E)
+  Preço: 82.38
+  Fornecedor: 220104477  Farprotec -Com.de Uniformes e
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260812-mat-4500883493-10, sap20260812-mat-4500883493-20
+
+[GRUPO 42] CÓDIGO '5003751' — 4 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2617
+  Origem: ORIGINAL
+  SAP: 5003751
+  Descrição: C-306 Acetileno 90-480
+  Preço: 90
+  Fornecedor: Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500844782-80
+  Origem: IMPORTADO SAP
+  SAP: 5003751
+  Descrição: C-306 Acetileno 90-480
+  Preço: 94.66
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500852546-10
+  Origem: IMPORTADO SAP
+  SAP: 5003751
+  Descrição: Carro 2B-Oxigénio/Acetileno
+  Preço: 90
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500852546-20
+  Origem: IMPORTADO SAP
+  SAP: 5003751
+  Descrição: GADINBG (Acetileno - 7,0 kg)
+  Preço: 144.913
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2617
+    Mesclar: sap20260817-mat-4500844782-80, sap20260817-mat-4500852546-10, sap20260817-mat-4500852546-20
+
+[GRUPO 43] CÓDIGO '5004487' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M4021
+  Origem: ORIGINAL
+  SAP: 5004487
+  Descrição: Broca Sds 6X110
+  Preço: 2.21
+  Fornecedor: SAP TMv 101
+
+  ID: sap20260817-mat-4500846844-110
+  Origem: IMPORTADO SAP
+  SAP: 5004487
+  Descrição: Sds plus broca 3500-06x110
+  Preço: 2.21
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500847837-20
+  Origem: IMPORTADO SAP
+  SAP: 5004487
+  Descrição: BROCA SDS PLUS JORAN 6X110MM
+  Preço: 3.9837
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M4021
+    Mesclar: sap20260817-mat-4500846844-110, sap20260817-mat-4500847837-20
+
+[GRUPO 44] CÓDIGO '5004696' — 6 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2454
+  Origem: ORIGINAL
+  SAP: 5004696
+  Descrição: FACA ALCATIFA PROF. MET. C/TRAVAO
+  Preço: 0
+  Fornecedor: Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500835783-10
+  Origem: IMPORTADO SAP
+  SAP: 5004696
+  Descrição: Fita serra M42 1735x13x0,9-6/10-Wikus
+  Preço: 29.15
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500851435-20
+  Origem: IMPORTADO SAP
+  SAP: 5004696
+  Descrição: FOLHA C/FERRO BI-METAL SADYFLEX
+  Preço: 1.98
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500860403-40
+  Origem: IMPORTADO SAP
+  SAP: 5004696
+  Descrição: "FACA ALCATIFA PROF. MET. C/TRAVAO
+  Preço: 5.65
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500860403-50
+  Origem: IMPORTADO SAP
+  SAP: 5004696
+  Descrição: CANIVETE MULTIUSOS 141.1101.11
+  Preço: 12.97
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500860403-60
+  Origem: IMPORTADO SAP
+  SAP: 5004696
+  Descrição: CANIVETE 141.1031.09
+  Preço: 11.06
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2454
+    Mesclar: sap20260817-mat-4500835783-10, sap20260817-mat-4500851435-20, sap20260817-mat-4500860403-40, sap20260817-mat-4500860403-50, sap20260817-mat-4500860403-60
+
+[GRUPO 45] CÓDIGO '5005185' — 7 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2768
+  Origem: ORIGINAL
+  SAP: 5005185
+  Descrição: Fresa base. Hss 50x18-mcf
+  Preço: 4.8
+  Fornecedor: Equifermaq - Com de Maq e Fer, Lda
+
+  ID: M4816
+  Origem: ORIGINAL
+  SAP: 5005185
+  Descrição: CRANEANA BIM 22MM
+  Preço: 4.8
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500852942-10
+  Origem: IMPORTADO SAP
+  SAP: 5005185
+  Descrição: Fresa TCT Base Mag 30x32
+  Preço: 34.6
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500852942-20
+  Origem: IMPORTADO SAP
+  SAP: 5005185
+  Descrição: Fresa TCT Base Mag 30x18
+  Preço: 33.15
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500852942-30
+  Origem: IMPORTADO SAP
+  SAP: 5005185
+  Descrição: Fresa TCT Base Mag 35x13
+  Preço: 33.15
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500852942-40
+  Origem: IMPORTADO SAP
+  SAP: 5005185
+  Descrição: Fresa base. Hss 50x18-mcf
+  Preço: 25.62
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260910-mat-4500885797-20
+  Origem: IMPORTADO SAP
+  SAP: 5005185
+  Descrição: Cranª bim.22mm/mcf
+  Preço: 4.8
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2768
+    Mesclar: sap20260817-mat-4500852942-10, sap20260817-mat-4500852942-20, sap20260817-mat-4500852942-30, sap20260817-mat-4500852942-40, sap20260910-mat-4500885797-20
+
+[GRUPO 46] CÓDIGO '5015801' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: sap20260910-mat-4500889272-10
+  Origem: IMPORTADO SAP
+  SAP: 5015801
+  Descrição: LIXA FERRO RHYNOMETAL GRÃO 120
+  Preço: 1.46
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  ID: sap20261002-mat-4500893077-10
+  Origem: IMPORTADO SAP
+  SAP: 5015801
+  Descrição: LIXA FERRO RHYNOMETAL GRÃO 120
+  Preço: 0
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Sem original - escolher um como principal
+    Opções: sap20260910-mat-4500889272-10, sap20261002-mat-4500893077-10
+
+[GRUPO 47] CÓDIGO '5016685' — 2 entradas
+--------------------------------------------------------------------------------
+
+  ID: M4025
+  Origem: ORIGINAL
+  SAP: 5016685
+  Descrição: Adaptador P/ Serra Craneanas
+  Preço: 4.8
+  Fornecedor: SAP TMv 101
+
+  ID: sap20260910-mat-4500885797-10
+  Origem: IMPORTADO SAP
+  SAP: 5016685
+  Descrição: Suporte cranª 14 >30
+  Preço: 4.8
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M4025
+    Mesclar: sap20260910-mat-4500885797-10
+
+[GRUPO 48] CÓDIGO '5016700' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2613
+  Origem: ORIGINAL
+  SAP: 5016700
+  Descrição: BUCHA NAYLON P/TIJOLO M6
+  Preço: 0
+  Fornecedor: Joao S. Azevedo, Lda
+
+  ID: sap20260817-mat-4500846844-30
+  Origem: IMPORTADO SAP
+  SAP: 5016700
+  Descrição: Bucha nyl mcf c/b 06-%
+  Preço: 1.61
+  Fornecedor: 220110767  Equifermaq - Com de Maq e Fer, Lda
+
+  ID: sap20260817-mat-4500847837-10
+  Origem: IMPORTADO SAP
+  SAP: 5016700
+  Descrição: BUCHA NAYLON P/TIJOLO M6
+  Preço: 0.0407
+  Fornecedor: 220117781  Joao S. Azevedo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2613
+    Mesclar: sap20260817-mat-4500846844-30, sap20260817-mat-4500847837-10
+
+[GRUPO 49] CÓDIGO '9001520' — 12 entradas
+--------------------------------------------------------------------------------
+
+  ID: M2972
+  Origem: ORIGINAL
+  SAP: 9001520
+  Descrição: Transporte
+  Preço: 20
+  Fornecedor: 220102161  Jobasi - Aces. Elect. e Bronzes, SA
+
+  ID: sap20260817-mat-4500844782-100
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: Portes
+  Preço: 15
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500849110-80
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: SERVICO TRANSP/FRETES MATERIAIS (VG)
+  Preço: 10.5
+  Fornecedor: 220102161  Jobasi - Aces. Elect. e Bronzes, SA
+
+  ID: sap20260817-mat-4500851088-110
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: SERVICO TRANSP/FRETES MATERIAIS (VG)
+  Preço: 950
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  ID: sap20260817-mat-4500851211-70
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: SERVICO TRANSP/FRETES MATERIAIS (VG)
+  Preço: 850
+  Fornecedor: 220118406  Penta Electrical Safety Products Pt
+
+  ID: sap20260817-mat-4500851305-70
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: Transporte
+  Preço: 580
+  Fornecedor: 220200938  Galland
+
+  ID: sap20260817-mat-4500851564-20
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: PORTES
+  Preço: 15
+  Fornecedor: 220107756  Joalida
+
+  ID: sap20260817-mat-4500854997-500
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: SERVICO TRANSP/FRETES MATERIAIS (VG)
+  Preço: 100
+  Fornecedor: 220110718  MPL - Metal Processo, Lda
+
+  ID: sap20260817-mat-4500855000-110
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: SERVICO TRANSP/FRETES MATERIAIS (VG)
+  Preço: 450
+  Fornecedor: 220201398  Arruti Catenaria S.A.
+
+  ID: sap20260817-mat-4500858157-30
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: SERVICO TRANSP/FRETES MATERIAIS (VG)
+  Preço: 8.5
+  Fornecedor: 220102161  Jobasi - Aces. Elect. e Bronzes, SA
+
+  ID: sap20260817-mat-4500862037-50
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: Portes
+  Preço: 20
+  Fornecedor: 220101533  Nippon Gases Portugal, Unip Lda
+
+  ID: sap20260817-mat-4500869925-30
+  Origem: IMPORTADO SAP
+  SAP: 9001520
+  Descrição: Transporte
+  Preço: 100
+  Fornecedor: 220110718  MPL - Metal Processo, Lda
+
+  RECOMENDAÇÃO:
+    Manter: M2972
+    Mesclar: sap20260817-mat-4500844782-100, sap20260817-mat-4500849110-80, sap20260817-mat-4500851088-110, sap20260817-mat-4500851211-70, sap20260817-mat-4500851305-70, sap20260817-mat-4500851564-20, sap20260817-mat-4500854997-500, sap20260817-mat-4500855000-110, sap20260817-mat-4500858157-30, sap20260817-mat-4500862037-50, sap20260817-mat-4500869925-30
+
+[GRUPO 50] CÓDIGO 'SNL0002' — 3 entradas
+--------------------------------------------------------------------------------
+
+  ID: M3130
+  Origem: ORIGINAL
+  SAP: SNL0002
+  Descrição: SINAL AG PÓ 20X10
+  Preço: 0
+  Fornecedor: Positivorisco - Sistemas Contra
+
+  ID: sap20260817-mat-4500855198-20
+  Origem: IMPORTADO SAP
+  SAP: SNL0002
+  Descrição: SINAL EXTINTOR 15X15
+  Preço: 5
+  Fornecedor: 220108419  Positivorisco - Sistemas Contra
+
+  ID: sap20260817-mat-4500855198-30
+  Origem: IMPORTADO SAP
+  SAP: SNL0002
+  Descrição: SINAL AG PÓ 20X10
+  Preço: 5
+  Fornecedor: 220108419  Positivorisco - Sistemas Contra
+
+  RECOMENDAÇÃO:
+    Manter: M3130
+    Mesclar: sap20260817-mat-4500855198-20, sap20260817-mat-4500855198-30

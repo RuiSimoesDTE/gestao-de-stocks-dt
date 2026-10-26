@@ -1,0 +1,70 @@
+{
+  "hooks": {
+    "before_file_write": {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File sistema_lock.ps1 adquirir $file",
+      "description": "Adquire lock antes de editar ficheiro",
+      "enabled": true,
+      "timeout_seconds": 10,
+      "on_error": "warn"
+    },
+    "after_file_write": {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File sistema_backup_versioning.ps1 processar $file",
+      "description": "Cria backup + incrementa versão após edição",
+      "enabled": true,
+      "timeout_seconds": 30,
+      "on_error": "warn"
+    },
+    "before_git_push": {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File validar_antes_publicacao.ps1",
+      "description": "Valida integridade antes de git push",
+      "enabled": true,
+      "timeout_seconds": 15,
+      "on_error": "warn"
+    },
+    "after_git_push": {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File sincronizar_onedrive.ps1",
+      "description": "Sincroniza para OneDrive após publicação",
+      "enabled": true,
+      "timeout_seconds": 20,
+      "on_error": "warn"
+    }
+  },
+
+  "automation": {
+    "file_watcher": {
+      "enabled": true,
+      "startup_command": "powershell -NoProfile -ExecutionPolicy Bypass -File file_watcher.ps1",
+      "description": "Monitora ficheiros em tempo real",
+      "auto_start": true
+    },
+    "scheduled_agents": {
+      "enabled": true,
+      "setup_command": "powershell -NoProfile -ExecutionPolicy Bypass -File agentes_agendados.ps1 instalar",
+      "description": "Agentes no Task Scheduler",
+      "requires_admin": true
+    }
+  },
+
+  "notifications": {
+    "enabled": true,
+    "type": "log_and_popup",
+    "log_path": "logs/log_automacao.txt",
+    "popup_enabled": true,
+    "email_enabled": false,
+    "notification_queue_path": "logs/notification_queue.txt"
+  },
+
+  "security": {
+    "create_backups": true,
+    "preserve_versions": true,
+    "allow_delete_files": false,
+    "audit_logging": true,
+    "lock_timeout_minutes": 30
+  },
+
+  "configuration": {
+    "config_file": "automacao_config.json",
+    "log_level": "detailed",
+    "debug_mode": false
+  }
+}

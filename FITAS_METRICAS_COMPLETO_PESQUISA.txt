@@ -1,0 +1,93 @@
+===== RELATÓRIO COMPLETO DE FITAS MÉTRICAS - 15/10/2026 =====
+
+RESUMO EXECUTIVO:
+================
+
+Com base na análise de:
+- Catálogo de materiais (SEED_DATA)
+- Relatórios anteriores já existentes (FITA_METRICA_RESUMO.txt e FITAS_METROS_COMPLETO.txt)
+- HTML principal (gestao_armazem_catenaria.html)
+
+MATERIAIS DE FITA MÉTRICA IDENTIFICADOS:
+========================================
+
+1. FITA MÉTRICA STANLEY 5 MT TYLON
+   ID Sistema: M92
+   Código Interno: FIT-001
+   Código SAP: Não tem SAP
+   Unidade: unidade
+   Stock IC-0019: 2 unidades (FITAS_METROS_COMPLETO.txt)
+   Stock IC-0018: 0 unidades
+
+2. FITA METRICA CAIXA METALICA 5MT
+   ID Sistema: M4020
+   Código Interno: 5001896
+   Código SAP: 5001896
+   Unidade: unidade
+   Stock IC-0019: 2 unidades (FITAS_METROS_COMPLETO.txt)
+   Stock IC-0018: 0 unidades
+   Integração: TMv 101 (movimento SAP)
+
+3. FITA METRICA BIMAT STANLEY 8MT
+   ID Sistema: sap20260812-mat-4500881595-40
+   Código Interno: Importado de PC 4500881595
+   Código SAP: 5001894
+   Unidade: unidade
+   Stock IC-0019: 1 unidade (FITAS_METROS_COMPLETO.txt)
+   Stock IC-0018: 0 unidades
+   Fornecedor: João S. Azevedo, Lda (PC 4500881595)
+
+HISTORICO DE COMPRAS:
+====================
+
+- SAP 5001896 (FITA METRICA CAIXA METALICA):
+  Sem encomenda de compra registada no programa
+  Integrada via SAP TMv 101 (entrada pelo movimento 101)
+
+- SAP 5001894 (FITA METRICA BIMAT STANLEY):
+  PC 4500848767 - Data: 2026-03-10 - 1 un - Joao S. Azevedo, Lda (recebida)
+  PC 4500881595 - Data: 2026-07-30 - 1 un - Joao S. Azevedo, Lda (recebida)
+
+STOCK ATUAL (15/10/2026):
+=========================
+
+Vendas Novas (IC-0019):
+  • FITA MÉTRICA STANLEY 5 MT TYLON (M92): 2 unidades
+  • FITA METRICA CAIXA METALICA 5MT (M4020): 2 unidades
+  • FITA METRICA BIMAT STANLEY 8MT (sap20260812-mat-4500881595-40): 1 unidade
+  • TOTAL: 5 unidades de fitas métricas
+
+Pampilhosa (IC-0018):
+  • Sem stock de fitas métricas
+
+MOVIMENTOS REGISTADOS:
+=====================
+
+Sem movimentos de saída ou consumo registados.
+Stock = Entradas no sistema
+
+OUTRAS "FITAS" ENCONTRADAS NO PROGRAMA (NÃO SÃO MÉTRICAS):
+========================================================
+
+Material | SAP | Descrição | Stock IC-0019
+---------|-----|-----------|---------------
+30 | | Fita de aço cobreado 3,5x30 mm | 26,000 m
+4038467 | | Fita de Aço Cobreado 30x3,5mm | 52,000 m
+4003803 | | FITA ISOLADORA AZUL | 3 un
+4003806 | | FITA ISOLADORA PRETA | 3 un
+4003809 | | FITA ISOLADORA VERMELHA | 3 un
+4003810 | | Fita Perfurada Zincada 12X0,8 | 220 m
+5000663 | | Fita Papel Masking 38 Mm | 2 un
+800622 | | Fita Serra M42 1735x13x0,9-6/10-Wikus | 2 un
+2100039 | | FITA COLA LARGA 50X66 TRANSP | 2 un
+
+CONCLUSÕES:
+===========
+
+✓ Foram encontradas 3 fitas métricas diferentes no catálogo
+✓ Total em stock: 5 unidades (todas em Vendas Novas IC-0019)
+✓ Nenhuma saída/consumo registado no período analisado
+✓ Histórico de compra: 2 encomendas registadas (PC 4500848767 e PC 4500881595)
+✓ Fornecedores: João S. Azevedo, Lda (fitas BIMAT e STANLEY 8MT)
+
+Gerado em: 15/10/2026 

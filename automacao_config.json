@@ -1,0 +1,172 @@
+{
+  "projeto": {
+    "nome": "Gestão de Materiais de Catenária",
+    "versao": "1.0",
+    "data_criacao": "2026-10-14",
+    "descricao": "Sistema completo de automação com File Watcher, Agentes Agendados e Hooks"
+  },
+
+  "file_watcher": {
+    "habilitado": true,
+    "pastas_monitoradas": [
+      "app",
+      "documentacao",
+      "recursos"
+    ],
+    "intervalo_verificacao": 5000,
+    "extensoes": [
+      ".html",
+      ".json",
+      ".pdf"
+    ],
+    "ignorar_padroes": [
+      ".lock*",
+      "*.tmp",
+      "*.swp",
+      "node_modules",
+      ".git",
+      "notification_queue.txt"
+    ]
+  },
+
+  "scheduled_agents": {
+    "sync_horaria": {
+      "habilitado": true,
+      "descricao": "Sincronização automática a cada 60 minutos",
+      "cronograma": "0 * * * *",
+      "intervalo_minutos": 60,
+      "acao": "backup + versioning + publicação"
+    },
+    "backup_diario": {
+      "habilitado": true,
+      "descricao": "Backup completo diariamente às 22:00",
+      "cronograma": "0 22 * * *",
+      "hora": "22:00",
+      "dias": "todos",
+      "acao": "backup ZIP completo"
+    },
+    "limpeza_semanal": {
+      "habilitado": true,
+      "descricao": "Limpeza e compactação de histórico",
+      "cronograma": "0 18 * * 5",
+      "dia_semana": "Friday",
+      "hora": "18:00",
+      "acao": "limpeza de logs > 60 dias, backups > 30 dias"
+    }
+  },
+
+  "backup": {
+    "pasta_backup_horaria": "backups/hourl",
+    "pasta_backup_diaria": "backups/dailies",
+    "pasta_backup_semanal": "backups/weekly",
+    "dias_retencao_diario": 30,
+    "dias_retencao_logs": 60,
+    "compressao": true,
+    "formato_compressao": "zip"
+  },
+
+  "onedrive": {
+    "habilitado": true,
+    "destino": "C:\\Users\\dst7973\\OneDrive - Domingos da Silva Teixeira, S.A\\Obras_dte_IC - 00_Obras\\Gestao de Materiais de Catenaria",
+    "sincronizar_automaticamente": true,
+    "tipos_ficheiros": [
+      "*.html",
+      "*.json",
+      "*.pdf",
+      "*.lock",
+      "*.version"
+    ]
+  },
+
+  "versionamento": {
+    "habilitado": true,
+    "tipo": "incremental",
+    "formato_versao": "v{numero}",
+    "armazenar_historico": true,
+    "max_versoes_por_ficheiro": 100
+  },
+
+  "notificacoes": {
+    "habilitado": true,
+    "tipo_log": true,
+    "tipo_popup": true,
+    "tipo_email": false,
+    "fila_notificacoes": "logs/notification_queue.txt",
+    "intervalo_verificacao_ms": 10000
+  },
+
+  "locks": {
+    "habilitado": true,
+    "pasta_locks": "locks",
+    "timeout_minutos": 30,
+    "retry_intervalo_segundos": 2
+  },
+
+  "hooks_claudecode": {
+    "habilitado": true,
+    "before_file_write": {
+      "descricao": "Adquire lock antes de editar",
+      "habilitado": true
+    },
+    "after_file_write": {
+      "descricao": "Backup + Versioning após edição",
+      "habilitado": true
+    },
+    "before_git_push": {
+      "descricao": "Valida antes de publicar",
+      "habilitado": true
+    },
+    "after_git_push": {
+      "descricao": "Notifica utilizadores após publicação",
+      "habilitado": true
+    }
+  },
+
+  "seguranca": {
+    "criar_backups_antes_alteracao": true,
+    "preservar_versoes_anteriores": true,
+    "permitir_deletar_ficheiros": false,
+    "audit_log": true,
+    "audit_pasta": "logs"
+  },
+
+  "logs": {
+    "pasta_logs": "logs",
+    "ficheiro_principal": "logs/log_automacao.txt",
+    "ficheiro_watcher": "logs/log_watcher.txt",
+    "ficheiro_sync": "logs/log_sync_hourly.txt",
+    "ficheiro_backup": "logs/log_backup_daily.txt",
+    "ficheiro_limpeza": "logs/log_cleanup_weekly.txt",
+    "ficheiro_hooks": "logs/log_hooks.txt",
+    "nivel_verbosidade": "detalhado",
+    "formato_timestamp": "yyyy-MM-dd HH:mm:ss",
+    "manter_dias": 60
+  },
+
+  "ficheiros_monitorados": {
+    "aplicacao_principal": "app/gestao_armazem_catenaria.html",
+    "dados": "dados_armazem_catenaria.json",
+    "manual_html": "documentacao/MANUAL.html",
+    "manual_pdf": "documentacao/MANUAL.pdf",
+    "logo": "recursos/logo_dte_dst.png"
+  },
+
+  "integracoes": {
+    "git": {
+      "habilitado": true,
+      "auto_commit": true,
+      "auto_push": false,
+      "branch_padrao": "main"
+    },
+    "claudecode": {
+      "habilitado": true,
+      "hooks_path": ".claude/settings.json"
+    }
+  },
+
+  "desenvolvimento": {
+    "debug": false,
+    "modo_teste": false,
+    "simular_mudancas": false
+  }
+}

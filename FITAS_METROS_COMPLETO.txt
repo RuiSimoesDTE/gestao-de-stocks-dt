@@ -1,0 +1,153 @@
+==========================================================================================
+FITAS E METROS - RELATÓRIO COMPLETO DE GESTÃO DE STOCK
+==========================================================================================
+
+
+1. HISTÓRICO DE COMPRAS (Encomendas Registadas)
+------------------------------------------------------------------------------------------
+
+Total de encomendas: 14
+Total de fornecedores diferentes: 3
+Total metros comprados (por encomendas): 52,160 m
+
+220102161  Jobasi - Aces. Elect. e Bronzes, SA
+  Encomendas: 5
+  Total metros: 52,050 m
+  Data         | Material   | Qtd Encom  | Qtd Receb  | Un     | Status     | PC          
+  2026-01-15   | 4038467    |         0 |         0 | m      | ✓ OK       | 4600042111  
+  2026-03-26   | 4038467    |     94500 |     52000 | m      | ⚠ Entrega parcial | 4500852843  
+  2026-04-23   | 4001553    |        48 |        48 | m      | ✓ OK       | 4500858970  
+  2026-07-14   | 4049802    |         1 |         1 | m      | ✓ OK       | 4500877501  
+  2026-07-14   | 4049802    |         1 |         1 | m      | ✓ OK       | 4500877501  
+
+220110767  Equifermaq - Com de Maq e Fer, Lda
+  Encomendas: 2
+  Total metros: 110 m
+  Data         | Material   | Qtd Encom  | Qtd Receb  | Un     | Status     | PC          
+  2026-01-12   | 5004696    |         2 |         2 | un     | ✓ OK       | 4500835783  
+  2026-03-02   | 4003810    |       110 |       110 | m      | ✓ OK       | 4500846844  
+
+220117781  Joao S. Azevedo, Lda
+  Encomendas: 7
+  Data         | Material   | Qtd Encom  | Qtd Receb  | Un     | Status     | PC          
+  2026-03-10   | 5001894    |         1 |         1 | un     | ✓ OK       | 4500848767  
+  2026-04-08   | 4003809    |         3 |         3 | un     | ✓ OK       | 4500855224  
+  2026-04-08   | 4003806    |         3 |         3 | un     | ✓ OK       | 4500855224  
+  2026-04-08   | 4003803    |         3 |         3 | un     | ✓ OK       | 4500855224  
+  2026-06-17   | 5000663    |         2 |         2 | un     | ✓ OK       | 4500871362  
+  2026-07-30   | 5001894    |         1 |         1 | un     | ✓ OK       | 4500881595  
+  2026-07-30   | 2100039    |         2 |         2 | un     | ✓ OK       | 4500881595  
+
+
+2. STOCK ATUAL POR MATERIAL E ARMAZÉM
+------------------------------------------------------------------------------------------
+
+2201060 - Paquimetro Analogico
+  Armazém Catenária: 1 un
+  SUBTOTAL: 1 un
+
+261045 - Serrote Fita Optisaw S150G Vario 230v
+  Armazém Equipamentos: 1 un
+  SUBTOTAL: 1 un
+
+30 - Fita de aço cobreado 3,5x30 mm
+  Armazém Catenária: 26,000 m
+  SUBTOTAL: 26,000 m
+
+4042448886262 - Tesa Rolo Fita Isoladora vermelho
+  Armazém Catenária: 3 un
+  SUBTOTAL: 3 un
+
+4042448886224 - Tesa Rolo Fita Isoladora preto
+  Armazém Catenária: 3 un
+  SUBTOTAL: 3 un
+
+4042448886248 - Tesa Rolo Fita Isoladora azul
+  Armazém Catenária: 3 un
+  SUBTOTAL: 3 un
+
+4038467 - Fita de Aço Cobreado 30x3,5mm
+  Armazém Catenária: 52,000 m
+  SUBTOTAL: 52,000 m
+
+4003803 - FITA ISOLADORA AZUL
+  Armazém Catenária: 3 un
+  SUBTOTAL: 3 un
+
+4003806 - FITA ISOLADORA PRETA
+  Armazém Catenária: 3 un
+  SUBTOTAL: 3 un
+
+4003809 - FITA ISOLADORA VERMELHA
+  Armazém Catenária: 3 un
+  SUBTOTAL: 3 un
+
+KLKWeld - MOLDE GRAFITE KLK FITA DE AÇO
+  Armazém Catenária: 40 un
+  SUBTOTAL: 40 un
+
+4001553 - METRO TUBO GALV.S/L 1" (33MM) C/ 6MT
+  Armazém Catenária: 48 m
+  SUBTOTAL: 48 m
+
+5001894 - PAQUIMETRO ANALOGICO MACFER
+  Armazém Catenária: 1 un
+  SUBTOTAL: 1 un
+
+4003810 - Fita Perfurada Zincada 12X0,8
+  Armazém Catenária: 220 m
+  SUBTOTAL: 220 m
+
+5001896 - Fita Metrica Caixa Metalica 5Mt
+  Armazém Catenária: 2 un
+  SUBTOTAL: 2 un
+
+5000663 - Fita Papel Masking 38 Mm
+  Armazém Catenária: 2 un
+  SUBTOTAL: 2 un
+
+2243401 - Fita perfurada zin 12-rolo 10mt
+  Armazém Catenária: 110 un
+  SUBTOTAL: 110 un
+
+20222060040 - Agl zi ce 60x60 p/diâmetro
+  Armazém Catenária: 5 CT
+  SUBTOTAL: 5 CT
+
+4049802 - FITA ACO INOX 304 1/2"-13x0,7mm ROLO DE
+  Armazém Catenária: 1 m
+  SUBTOTAL: 1 m
+
+4049802 - FERRAMENTA P/ FITA AÇO INOX C001
+  Armazém Catenária: 1 m
+  SUBTOTAL: 1 m
+
+800622 - Fita Serra M42 1735x13x0,9-6/10-Wikus
+  Armazém Catenária: 2 un
+  SUBTOTAL: 2 un
+
+FIT-001 - FITA MÉTRICA STANLEY 5 MT TYLON
+  Armazém Catenária: 2 un
+  SUBTOTAL: 2 un
+
+5001894 - FITA METRICA BIMAT STANLEY 8MT
+  Armazém Catenária: 1 un
+  SUBTOTAL: 1 un
+
+2100039 - FITA COLA LARGA 50X66 TRANSP
+  Armazém Catenária: 2 un
+  SUBTOTAL: 2 un
+
+
+3. RESUMO E ANÁLISE
+------------------------------------------------------------------------------------------
+
+Compras registadas via encomendas: 52,160 m
+Entradas registadas nos movimentos: 78,270 m
+Stock actual: 78,270 m
+
+Metros consumidos/transferidos: 0 m
+Percentual em stock: 100.0%
+
+==========================================================================================
+Data do relatório: 15/10/2026 08:41:28

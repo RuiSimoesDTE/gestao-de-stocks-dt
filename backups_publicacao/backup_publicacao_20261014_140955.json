@@ -1,0 +1,36 @@
+﻿{
+    "tipo":  "publicacao_sharepoint_completa",
+    "descricao":  "Publicacao completa de todos os componentes da aplicacao",
+    "tamanho_mb":  3.34,
+    "localizacao_sharepoint":  "C:\\Users\\[user]\\OneDrive - Domingos da Silva Teixeira, S.A\\Obras_dte_IC - 00_Obras\\Gestao de Materiais de Catenaria",
+    "status":  "sucesso",
+    "data_publicacao":  "2026-10-14 14:09:55",
+    "utilizador":  "Claude",
+    "versao_html":  "2026.10.14",
+    "ficheiro_principal":  "gestao_materiais_catenaria.html",
+    "componentes_publicados":  {
+                                   "SW":  "sw.js",
+                                   "Pastas":  [
+                                                  "app",
+                                                  "icons",
+                                                  "modulos",
+                                                  "guias_at",
+                                                  "guias_transferencia",
+                                                  "documentacao",
+                                                  "projeto_vendas_novas"
+                                              ],
+                                   "Manifestos":  [
+                                                      "manifest.webmanifest",
+                                                      "manifest-operador.webmanifest"
+                                                  ],
+                                   "Scripts":  [
+                                                   "orquestrador_seguranca.ps1",
+                                                   "sistema_backup.ps1",
+                                                   "sistema_lock.ps1",
+                                                   "sistema_versioning.ps1"
+                                               ],
+                                   "Logo":  "logo_dte_dst.png",
+                                   "Entrada":  "entrada.html",
+                                   "HTML":  "gestao_materiais_catenaria.html"
+                               }
+}

@@ -1,0 +1,18 @@
+*** Begin Patch
+*** Update File: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\gestao_armazem_catenaria.html
+@@
+       <div class="projeto-guia">
+@@
+         </ol>
+       </div>
++      <div class="card" style="background:#f8fafc;margin:0 0 18px">
++        <h3 style="margin-top:0">Consultar o necessário por poste</h3>
++        <p class="muted">Escolhe o número do poste para ver a folha do caderno traduzida para uma lista de trabalho.</p>
++        <div class="row">
++          <div style="min-width:230px"><label>Poste</label><select id="proj-poste-sel" onchange="renderProjetoPoste()"><option value="">— escolher poste —</option></select></div>
++          <div style="flex:2"><label>Pesquisar rapidamente</label><input id="proj-poste-busca" placeholder="ex.: 63-23" oninput="filtrarProjetoPostes()"></div>
++        </div>
++        <div id="proj-poste-resultado" style="margin-top:14px"></div>
++      </div>
+       <div class="projeto-docs-grid">
+*** End Patch

@@ -1,0 +1,66 @@
+{"kind":"match","sheet":"Sheet1","address":"K2","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L2","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K4","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L4","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K5","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L5","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K7","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L7","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K8","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L8","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K9","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L9","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K10","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L10","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K11","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L11","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K12","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L12","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K13","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L13","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K14","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L14","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K15","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L15","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K16","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L16","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K17","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L17","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K18","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L18","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K19","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L19","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K20","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L20","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K21","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L21","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K22","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L22","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K23","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L23","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K24","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L24","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K25","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L25","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K26","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L26","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K27","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L27","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K29","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L29","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K30","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L30","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K31","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L31","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K32","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L32","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K34","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L34","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K35","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L35","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K36","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L36","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K37","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"L37","value":"#VALUE!","formula":"(Tabela1[[#This Row],[Valor total]]/Tabela1[[#This Row],[Estoque total]])*Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"match","sheet":"Sheet1","address":"K38","value":"#VALUE!","formula":"Tabela1[[#This Row],[Estoque total]]-Tabela1[[#This Row],[Consumo]]","match":"value"}
+{"kind":"notice","message":"Truncated: omitted 36 lines. Increase maxChars, narrow range, or use tableMaxRows/tableMaxCols/tableMaxCellChars."}

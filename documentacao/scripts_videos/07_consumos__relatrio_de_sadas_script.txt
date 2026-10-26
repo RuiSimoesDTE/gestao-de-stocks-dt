@@ -1,0 +1,51 @@
+﻿VIDEO 7: CONSUMOS - RELATÓRIO DE SAÍDAS
+Duração estimada: 3:00
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Nesta secção vamos ver como consultar um relatório de consumos.
+
+Um consumo é o material que saiu da DTE para ser usado numa obra.
+
+Este relatório é muito importante para medir o custo de cada obra e para 
+reconciliação mensal com o SAP.
+
+Clique em GESTÃO e depois em Consumos ou Relatório de Saídas.
+
+O programa mostra um sumário de consumos por período.
+
+Pode escolher o período que pretende consultar: mensal, trimestral ou 
+personalizado.
+
+O relatório mostra:
+- O código do material
+- A descrição
+- A quantidade consumida
+- O valor unitário do material
+- O valor total
+
+Pode filtrar por material, por tipo de material ou por data.
+
+Se quiser, pode exportar para Excel para fazer análises mais profundas.
+
+O programa soma automaticamente os consumos e calcula o valor total.
+
+Este relatório é usado mensalmente para reconciliar com o SAP e garantir 
+que os números batem.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [gestao_consumos] Abrir secção Consumos
+ 2. [selecionar_periodo] Escolher período
+ 3. [tabela_consumos] Tabela de consumos
+ 4. [sumario_consumos] Sumário total
+ 5. [filtros_consumos] Filtros disponíveis
+ 6. [exportar_consumos] Botão exportar para Excel
+
+
+================================================================================

@@ -1,0 +1,145 @@
+================================================================================
+RESUMO EXECUTIVO - AUDITORIA DO PROGRAMA
+Gestão de Materiais de Catenária DTE
+Data: 2026-10-15
+================================================================================
+
+PROBLEMAS ENCONTRADOS: 52 CRÍTICOS + 9 AVISOS
+Status: VÁRIOS PROBLEMAS, MAS RESOLÚVEIS
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ CRÍTICOS (Corrigir HOJE/AMANHÃ)                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. [50 GRUPOS] Códigos SAP Duplicados
+   Problema: Um código SAP tem múltiplas entradas de material
+   Impacto: Confusão ao registar consumos, risco de movimentos incorretos
+   Exemplo: SAP 4019688 tem 9 entradas diferentes (M4004, sap20260812-mat-..., etc)
+   Ação: Consolidar para UMA entrada por código SAP
+   Ficheiro: LISTA_DETALHADA_CODIGOS_DUPLICADOS.txt
+
+2. [227 POSTES] Sem Montagem
+   Problema: 227 de 448 postes não têm referência a montagem
+   Breakdown:
+     - Novo: 97 postes SEM MONTAGEM ⚠⚠⚠ CRÍTICO
+     - Existente: 130 (é normal, vão desmontar)
+     - Desmontar: 0 (OK)
+   Ação: Completar 97 postes "novo" com montagem correta
+   Prioridade: ALTA (obra depende disto)
+
+3. [3 MOVIMENTOS] Sem Data
+   IDs: mv4419, mv4420, mv4421
+   Problema: Não é possível saber quando ocorreram
+   Impacto: Stock pode estar incorreto
+   Ação: Completar data ou eliminar se duplicados
+
+4. [1 MATERIAL] Sem Código SAP
+   ID: M900001
+   Ação: Adicionar código ou confirmar com Rui
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ AVISOS (Corrigir esta semana)                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. [678 MATERIAIS] Sem SAP
+   Observação: Pode ser normal (ferramentas, peças genéricas)
+   Ação: Confirmar com Rui a intenção
+
+2. [886 MATERIAIS] Com Preço Zerado
+   Observação: Pode ser normal (doados, emprestados)
+   Ação: Confirmar com Rui se é intencional
+
+3. [39 MONTAGENS] Sem BOM Completo
+   Tipo: Geralmente montagens genéricas (A, B, C)
+   Ação: Validar se realmente precisam BOM
+
+4. [24 ENCOMENDAS] Com Estado Inválido
+   Problema: Formato inconsistente de status
+   Ação: Padronizar estados
+
+5. [4 ENCOMENDAS] Marcadas "Concluída" sem Quantidade Recebida
+   Impacto: Reconciliação com SAP prejudicada
+   Ação: Completar quantidade recebida
+
+6. [517 MATERIAIS] Órfãos (não usados)
+   Problema: Não referenciados em nenhum movimento/poste/montagem/encomenda
+   Ação: Revisar com Rui - consolidar ou eliminar
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ O QUE ESTÁ BOM ✓                                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Materiais:
+  ✓ 99.9% com código (1.565 de 1.566)
+  ✓ 100% com descrição
+  ✓ Todos têm ID único válido
+
+Movimentos:
+  ✓ 99.9% com data (2.876 de 2.879)
+  ✓ 100% com material identificado
+  ✓ 99.9% com quantidade
+  ✓ Tipos válidos (entrada/saída)
+
+Encomendas:
+  ✓ 100% com data
+  ✓ 100% com fornecedor
+  ✓ 99.4% com quantidade encomendada
+  ✓ 96% com quantidade recebida
+
+Postes:
+  ✓ 100% com código (número)
+  ✓ Dados técnicos bem preenchidos
+
+Montagens:
+  ✓ 100% com código
+  ✓ 94.2% com BOM (lista de peças)
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PLANO DE AÇÃO - FASES                                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+FASE 1 - HOJE (2 horas)
+  1. Fazer backup: gestao_armazem_catenaria_backup_antes_correcoes.html
+  2. Revisar lista LISTA_DETALHADA_CODIGOS_DUPLICADOS.txt
+  3. Decidir: qual entrada manter para cada código duplicado
+  4. Investigar movimentos sem data (mv4419, mv4420, mv4421)
+
+FASE 2 - AMANHÃ (4 horas)
+  1. Consolidar materiais com código duplicado
+  2. Redirecionar referências cruzadas
+  3. Testar movimentos e stock
+
+FASE 3 - ESTA SEMANA (3-4 horas)
+  1. Completar 97 postes "novo" com montagem
+  2. Validar 4 encomendas "Concluída" sem qtd recebida
+  3. Confirmar com Rui: materiais sem SAP e preços zerados
+  4. Validar os 517 materiais órfãos
+
+FASE 4 - PRÓXIMA SEMANA (2 horas)
+  1. Revisar estrutura de montagens sem BOM
+  2. Limpeza final de dados órfãos
+  3. Teste completo do programa
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ FICHEIROS GERADOS                                                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. AUDITORIA_COMPLETA_ERROS_PROGRAMA.txt
+   Relatório técnico completo com todas as análises
+
+2. LISTA_DETALHADA_CODIGOS_DUPLICADOS.txt
+   Lista dos 50 grupos de códigos duplicados
+   Recomendações de qual entrada manter
+
+3. RESUMO_EXECUTIVO_AUDITORIA.txt (este ficheiro)
+   Resumo rápido para decisão executiva
+
+================================================================================
+CONCLUSÃO: PROGRAMA OPERACIONAL MAS COM LIMPEZA NECESSÁRIA
+
+A estrutura está sólida (>99% de preenchimento nos campos críticos).
+Os problemas identificados são RESOLÚVEIS em 1-2 semanas de trabalho.
+
+Após correções, sistema estará PRONTO PARA PRODUÇÃO e MULTIUTILIZADOR.
+
+================================================================================

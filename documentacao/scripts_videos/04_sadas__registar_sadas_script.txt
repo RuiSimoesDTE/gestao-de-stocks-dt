@@ -1,0 +1,50 @@
+﻿VIDEO 4: SAÍDAS - REGISTAR SAÍDAS
+Duração estimada: 3:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Vamos aprender a registar uma saída de material do armazém.
+
+Uma saída significa que o material sai da DTE, quer para ser usado numa obra, 
+quer para outras fins.
+
+Clique em ARMAZÉM e depois em Saídas.
+
+Escolha a obra de destino onde o material vai ser usado.
+
+Procure o código do material que pretende usar.
+
+O programa mostra a quantidade disponível em armazém.
+
+Se tentar sair mais material do que tem disponível, o programa avisa e não 
+deixa prosseguir.
+
+Introduza a quantidade que vai usar, a data da saída, e o destino especifico 
+se necessário.
+
+Pode adicionar notas sobre a saída, por exemplo "Poste 05-15" ou "Manutenção".
+
+Quando confirma, o stock é atualizado e a saída fica registada com todos 
+os detalhes.
+
+Depois pode consultar o histórico de saídas em qualquer altura.
+
+Se cometeu um erro, tem a opção de reverter a saída e o stock volta ao estado 
+anterior.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [armazem_saidas] Abrir secção Saídas
+ 2. [selecionar_obra] Escolher obra de destino
+ 3. [procurar_material] Procurar material
+ 4. [quantidade_disponivel] Quantidade em stock visível
+ 5. [quantidade_sair] Campo de quantidade a sair
+ 6. [confirmar_saida] Confirmar a saída
+
+
+================================================================================

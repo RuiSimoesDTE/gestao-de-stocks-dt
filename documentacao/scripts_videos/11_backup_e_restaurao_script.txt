@@ -1,0 +1,54 @@
+﻿VIDEO 11: BACKUP E RESTAURAÇÃO
+Duração estimada: 2:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Vamos aprender como fazer backup e restaurar dados.
+
+Os dados do programa são guardados no navegador, no localStorage.
+
+Se por alguma razão perder dados ou precisar de recuperar uma versão anterior, 
+pode usar o backup.
+
+Para fazer um backup, clique no botão "Backup (JSON)" no topo.
+
+O programa gera um ficheiro JSON com todos os seus dados e baixa-o 
+automaticamente.
+
+Guarde este ficheiro num local seguro, como a pasta OneDrive da empresa ou 
+um USB.
+
+O nome do ficheiro inclui a data e hora, facilitando a identificação de qual 
+era a versão.
+
+Faça backup regularmente, especialmente antes de fazer grandes mudanças nos 
+dados.
+
+Se precisar de restaurar, clique no botão "Restaurar" e escolha o ficheiro 
+JSON que tem guardado.
+
+O programa mostra uma confirmação antes de restaurar, para evitar erros.
+
+Depois de restaurar, o programa recarrega com todos os dados da versão anterior.
+
+Nota: O backup e restauração funcionam perfeitamente para dados locais.
+
+No futuro, quando o programa for colocado online, haverá backups automáticos 
+no servidor.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [botao_backup_json] Botão Backup JSON no topo
+ 2. [backup_feito] Confirmação de backup realizado
+ 3. [ficheiro_json] Ficheiro JSON descarregado
+ 4. [botao_restaurar] Botão Restaurar
+ 5. [selecionar_ficheiro] Diálogo de selecção de ficheiro
+ 6. [confirmar_restauracao] Confirmação de restauração
+
+
+================================================================================

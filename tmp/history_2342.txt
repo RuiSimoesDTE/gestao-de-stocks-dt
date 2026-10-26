@@ -1,0 +1,90 @@
+*** Begin Patch
+*** Update File: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\gestao_armazem_catenaria.html
+@@
+ function prepararMiniaturasProjeto(){
+@@
+   });
+ }
+ prepararMiniaturasProjeto();
++
++function cadernoProjetoDoPoste(codigo){
++  const n=parseInt(String(codigo||'').split('-')[0],10);
++  if(n<=6)return ['301_03','42517.PE.09.IFT.00.301_03.pdf'];
++  if(n<=20)return ['302_03','42517.PE.09.IFT.00.302_03.pdf'];
++  if(n<=28)return ['303_03','42517.PE.09.IFT.00.303_03.pdf'];
++  if(n<=40)return ['304_03','42517.PE.09.IFT.00.304_03.pdf'];
++  if(n<=51)return ['305_03','42517.PE.09.IFT.00.305_03.pdf'];
++  return ['306_05_NOVO','42517.PE.09.IFT.00.306_05_NOVO.pdf'];
++}
++function inicializarConsultaProjetoPostes(){
++  const sel=document.getElementById('proj-poste-sel');if(!sel||!DB||!DB.postes)return;
++  const atual=sel.value;
++  const postes=DB.postes.filter(p=>p.codigo&&!String(p.codigo).includes('-EXIST'))
++    .slice().sort((a,b)=>a.codigo.localeCompare(b.codigo,'pt',{numeric:true}));
++  sel.innerHTML='<option value="">— escolher poste —</option>'+postes.map(p=>'<option value="'+escapeHtml(p.id)+'">'+escapeHtml(p.codigo)+'</option>').join('');
++  if(atual&&postes.some(p=>p.id===atual))sel.value=atual;
++}
++function filtrarProjetoPostes(){
++  const q=(document.getElementById('proj-poste-busca').value||'').trim().toLowerCase();
++  const sel=document.getElementById('proj-poste-sel');if(!sel)return;
++  for(const opt of sel.options){
++    if(!opt.value){opt.hidden=false;continue;}
++    opt.hidden=!!q&&!opt.textContent.toLowerCase().includes(q);
++  }
++  const primeira=Array.from(sel.options).find(o=>o.value&&!o.hidden);
++  if(q&&primeira){sel.value=primeira.value;renderProjetoPoste();}
++}
++function renderProjetoPoste(){
++  const sel=document.getElementById('proj-poste-sel');
++  const box=document.getElementById('proj-poste-resultado');
++  if(!sel||!box)return;
++  const p=DB.postes.find(x=>x.id===sel.value);
++  if(!p){box.innerHTML='';return;}
++  const [caderno,ficheiro]=cadernoProjetoDoPoste(p.codigo);
++  const linhas=[];
++  const adicionar=(grupo,descricao,ref,detalhe)=>{
++    if(!ref)return;
++    linhas.push({grupo,descricao,ref:String(ref),detalhe:detalhe||'',qtd:1});
++  };
++  const consolas=p.consolas||{};
++  for(const [tipo,c] of Object.entries(consolas)){
++    const nome='Consola '+(tipo==='simples'?'simples':tipo);
++    adicionar(nome,'Montagem',c.montagem_ref,c.montagem?'variante '+c.montagem:'');
++    adicionar(nome,'Tirante — fixação',c.tirFix,'');
++    adicionar(nome,'Tirante — tubo',c.tirTubo,[c.tirTubo_dim,c.TL!=null?'TL '+c.TL:'',c.TT!=null?'TT '+c.TT:''].filter(Boolean).join(' · '));
++    adicionar(nome,'Consola — fixação',c.consFix,'');
++    adicionar(nome,'Consola — tubo',c.consTubo,[c.consTubo_dim,c.KL!=null?'KL '+c.KL:'',c.K!=null?'K '+c.K:''].filter(Boolean).join(' · '));
++    (c.antibalancantes||[]).forEach((a,i)=>adicionar(nome,i===0?'Antibalançante':'Elemento antibalançante',a.ref,[a.tipo,a.L!=null?'L '+a.L:''].filter(Boolean).join(' · ')));
++    adicionar(nome,'Braço de chamada',c.brch,'');
++    adicionar(nome,'Pêndulo antibalançante',c.pend,'');
++  }
++  if(!Object.keys(consolas).length){
++    adicionar('Montagem principal','Montagem',p.montagem_ref,p.montagem?'variante '+p.montagem:'');
++    adicionar('Montagem principal','Tirante — fixação',p.tirFix,'');
++    adicionar('Montagem principal','Tirante — tubo',p.tirTubo,'');
++    adicionar('Montagem principal','Consola — fixação',p.consFix,'');
++    adicionar('Montagem principal','Antibalançante',p.ab,'');
++    adicionar('Montagem principal','Braço de chamada',p.brch,'');
++    adicionar('Montagem principal','Pêndulo antibalançante',p.pend,'');
++  }
++  (p.outros_equipamentos||p.outrosEquip||[]).forEach(e=>adicionar('Outros equipamentos',e.desc||'Equipamento',e.cod||'',e.params?Object.entries(e.params).map(([k,v])=>k+' '+v).join(' · '):''));
++  adicionar('Estrutura','Viga / poste',p.viga,p.L?'comprimento '+p.L+' m':'');
++  adicionar('Fundação','Maciço',p.tipo_macico||p.macico,p.fur||p.furacao||'');
++  const grupos=[...new Set(linhas.map(x=>x.grupo))];
++  const tabelas=grupos.map(grupo=>{
++    const itens=linhas.filter(x=>x.grupo===grupo);
++    return '<h4 style="margin:14px 0 6px;color:var(--azul-esc)">'+escapeHtml(grupo)+'</h4><div class="tbl-wrap"><table>'+
++      '<tr><th>Necessário</th><th>Desenho</th><th>Referência / dimensão</th><th>Qtd. no poste</th></tr>'+
++      itens.map(x=>'<tr><td>'+escapeHtml(x.descricao)+'</td><td><b>'+escapeHtml(x.ref)+'</b></td><td>'+escapeHtml(x.detalhe||'—')+'</td><td>1 aplicação</td></tr>').join('')+
++      '</table></div>';
++  }).join('');
++  const cotas=Object.entries(consolas).map(([tipo,c])=>c.cotas?'<b>'+escapeHtml(tipo)+':</b> '+Object.entries(c.cotas).map(([k,v])=>k+'='+v).join(' · '):'').filter(Boolean).join('<br>');
++  box.innerHTML='<div class="info-box"><b>Poste '+escapeHtml(p.codigo)+'</b> · Estado: '+escapeHtml(p.estado||'—')+
++    ' · Caderno <b>'+escapeHtml(caderno)+'</b> · <a target="_blank" href="projeto_vendas_novas/V09_IFTE_PDes/'+ficheiro+'">abrir PDF original</a></div>'+
++    tabelas+
++    (cotas?'<div class="projeto-guia" style="margin-top:12px"><h4>Cotas indicadas na folha</h4>'+cotas+'</div>':'')+
++    '<p class="mini" style="margin-top:10px"><b>Como ler a quantidade:</b> “1 aplicação” significa que essa referência aparece uma vez naquela consola ou equipamento do poste. Se o poste tiver duas consolas, as aplicações são mostradas separadamente. Os parafusos e peças internas de cada desenho só podem ser discriminados quando a própria folha os indicar.</p>';
++}
+ 
+ /* ================= SELECTS ================= */
+*** End Patch

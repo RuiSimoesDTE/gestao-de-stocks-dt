@@ -1,0 +1,182 @@
+================================================================================
+RASTREAMENTO DE ORIGEM - FITAS MÉTRICAS
+================================================================================
+Data: 15/10/2026
+Pesquisado por: Claude Code (análise SEED_DATA + histórico de backups + EXPORT SAP)
+
+================================================================================
+1. FITA MÉTRICA STANLEY 5 MT TYLON (M92)
+================================================================================
+
+ID do Sistema:     M92
+Código:            FIT-001
+Código SAP:        (SEM SAP)
+Descrição:         FITA MÉTRICA STANLEY 5 MT TYLON
+Unidade:           un
+Tipo:              Máquina
+Categoria:         Material
+Fornecedor:        Ferramaq
+Preço:             -
+
+ORIGEM: ENTRADA MANUAL
+─────────────────────────────────────────────────────────────────────────────
+✓ Encontrado no SEED_DATA do programa (gestao_armazem_catenaria.html)
+✓ NÃO vem de EXPORT SAP (não tem categoria "Importado SAP")
+✓ NÃO tem código SAP atribuído
+✓ Classificado como "Material", não como "Importado SAP"
+✓ Fornecedor "Ferramaq" (entrada manual)
+
+QUANDO FOI ADICIONADA:
+─────────────────────────────────────────────────────────────────────────────
+Data exata: NÃO REGISTADA NO SEED_DATA
+Origem: Adicionada manualmente ao catálogo inicial do programa
+Histórico: Presente em todos os backups analisados desde a criação
+
+STOCK ATUAL:
+─────────────────────────────────────────────────────────────────────────────
+Vendas Novas (IC-0019):   2 unidades
+Pampilhosa (IC-0018):     0 unidades
+TOTAL:                    2 unidades
+
+MOVIMENTOS: 0 entradas, 0 saídas (apenas stock inicial)
+
+================================================================================
+2. FITA METRICA CAIXA METALICA 5MT (M4020)
+================================================================================
+
+ID do Sistema:     M4020
+Código:            5001896
+Código SAP:        5001896
+Descrição:         Fita Metrica Caixa Metalica 5Mt
+Unidade:           un
+Tipo:              Consumível
+Categoria:         Material
+Fornecedor:        SAP TMv 101
+Preço:             -
+
+ORIGEM: SAP (PROVAVELMENTE EXPORT SAP)
+─────────────────────────────────────────────────────────────────────────────
+✓ Encontrado no SEED_DATA do programa
+✓ Tem código SAP atribuído (5001896)
+✓ Fornecedor "SAP TMv 101" (indica origem em sistema SAP)
+✓ Classificado como "Material", não "Importado SAP"
+⚠ NÃO encontrado em IMPORT_SAP_20261012.csv (não foi importado em 12/10)
+
+QUANDO FOI ADICIONADA:
+─────────────────────────────────────────────────────────────────────────────
+Data exata: NÃO REGISTADA NO SEED_DATA
+Origem: Provavelmente de um EXPORT SAP anterior a 12/10/2026
+Histórico: Presente em todos os backups analisados
+
+COMPRAS REGISTADAS:
+─────────────────────────────────────────────────────────────────────────────
+Total de encomendas: 0 linhas encontradas
+Total comprado: 0 unidades
+Nenhuma PO associada no sistema
+
+STOCK ATUAL:
+─────────────────────────────────────────────────────────────────────────────
+Vendas Novas (IC-0019):   2 unidades
+Pampilhosa (IC-0018):     0 unidades
+TOTAL:                    2 unidades
+
+MOVIMENTOS: 0 entradas, 0 saídas
+
+================================================================================
+3. FITA METRICA BIMAT STANLEY 8MT (sap20260812-mat-4500881595-40)
+================================================================================
+
+ID do Sistema:     sap20260812-mat-4500881595-40
+Código:            5001894
+Código SAP:        5001894
+Descrição:         FITA METRICA BIMAT STANLEY 8MT
+Unidade:           un
+Tipo:              Consumível
+Categoria:         Importado SAP
+Fornecedor:        220117781 Joao S. Azevedo, Lda
+Preço:             10.9756 EUR
+PC Origem:         4500881595
+Data PC:           2026-07-30
+
+ORIGEM: EXPORT SAP (IMPORT CONFIRMADO)
+─────────────────────────────────────────────────────────────────────────────
+✓ Encontrado no SEED_DATA do programa
+✓ Categoria oficial: "Importado SAP" (padrão para imports SAP)
+✓ ID segue padrão SAP: "sap20260812-mat-..." (data 12/08/2026 no ID)
+✓ Código SAP 5001894 presente
+✓ Fornecedor SAP: "220117781 Joao S. Azevedo, Lda"
+✓ Tem preço e PC associados (4500881595 de 2026-07-30)
+
+QUANDO FOI ADICIONADA:
+─────────────────────────────────────────────────────────────────────────────
+Data de importação: Cerca de 12/08/2026 (pelo padrão do ID)
+Origem: EXPORT SAP da Nota de Receção PC 4500881595
+Data do documento SAP: 2026-07-30
+Fornecedor: Joao S. Azevedo, Lda
+
+COMPRAS REGISTADAS:
+─────────────────────────────────────────────────────────────────────────────
+Encomendas encontradas: 2 linhas
+
+  Data         | Material   | Qtd Encom  | Qtd Receb  | Un | Status     | PC
+  2026-03-10   | 5001894    |         1 |         1 | un | ✓ OK       | 4500848767
+  2026-07-30   | 5001894    |         1 |         1 | un | ✓ OK       | 4500881595
+
+Total comprado: 2 unidades
+Total recebido: 2 unidades
+
+STOCK ATUAL:
+─────────────────────────────────────────────────────────────────────────────
+Vendas Novas (IC-0019):   1 unidade
+Pampilhosa (IC-0018):     0 unidades
+TOTAL:                    1 unidade
+
+MOVIMENTOS: 0 consumos/saídas registadas
+
+OBSERVAÇÃO IMPORTANTE:
+─────────────────────────────────────────────────────────────────────────────
+Este material aparece também como "M2858" com descrição "PAQUIMETRO ANALOGICO MACFER"
+(SAP 5001894 também). Possível duplicação ou erro de catalogação em SAP.
+
+================================================================================
+RESUMO DE CONCLUSÕES
+================================================================================
+
+MATERIAL                              | ORIGEM        | DATA ADIÇÃO  | QUEM
+────────────────────────────────────────────────────────────────────────────
+1. M92 (STANLEY 5MT TYLON)            | MANUAL        | NÃO REGISTADA | (Sistema)
+2. M4020 (CAIXA METALICA 5MT SAP)     | SAP (anterior)| NÃO REGISTADA | (Sistema)
+3. sap20260812-mat-4500881595-40      | EXPORT SAP    | ~12/08/2026  | (Sistema SAP)
+   (BIMAT STANLEY 8MT)                |               |              | Azevedo
+
+RESPOSTA ÀS QUESTÕES:
+────────────────────────────────────────────────────────────────────────────
+
+✓ Vieram de EXPORT SAP?
+  • M92: NÃO (entrada manual)
+  • M4020: PROVÁVEL (tem código SAP, mas não em último export)
+  • BIMAT (sap20260812-...): SIM (categoria "Importado SAP", ID confirma import)
+
+✓ Vieram de entrada manual?
+  • M92: SIM
+  • M4020: NÃO (é de SAP)
+  • BIMAT: NÃO (é de SAP)
+
+✓ Vieram de outro ficheiro?
+  • Nenhuma origem em IMPORT_SAP_20261012.csv
+  • Nenhuma origem em ficheiros de entrada.html
+
+✓ Quando foram adicionadas?
+  • M92: Desde a criação do programa (data exata perdida)
+  • M4020: Antes de 12/10/2026 (não está em export atual)
+  • BIMAT: 12/08/2026 (pela data do ID do import SAP)
+
+✓ Quem as adicionou?
+  • M92: Sistema (manual, sem registo de utilizador)
+  • M4020: Sistema (via SAP, sem registo de utilizador)
+  • BIMAT: Sistema (via import SAP de PC 4500881595 de Joao S. Azevedo)
+
+================================================================================
+FICHEIRO GERADO: ORIGEM_FITAS_METRICAS.txt
+DATA: 15/10/2026 08:52
+================================================================================

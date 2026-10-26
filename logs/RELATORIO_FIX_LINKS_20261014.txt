@@ -1,0 +1,85 @@
+﻿RELATÓRIO DE CORREÇÃO DE CAMINHOS DOS MANUAIS
+Correção realizada em: 14/10/2026 14:35
+=============================================
+
+PROBLEMA:
+---------
+Os 3 links para documentação usavam caminhos relativos '../documentacao/' 
+que não funcionavam consistentemente no SharePoint.
+
+LOCALIZAÇÃO DOS LINKS:
+---------------------
+1. Manual HTML (MANUAL.html) - linha 587
+2. Manual PDF (MANUAL.pdf) - linha 594  
+3. Índice (INDEX.html) - linha 601
+
+SOLUÇÃO IMPLEMENTADA:
+--------------------
+✓ Adicionados IDs únicos aos 3 links:
+  - id="link-manual-html"
+  - id="link-manual-pdf"
+  - id="link-index"
+
+✓ Adicionada função JavaScript 'ajustarCaminhosManuais()' que:
+  - Detecta a localização do HTML
+  - Ajusta os caminhos dinamicamente
+  - Funciona em ambos os locais (local e SharePoint)
+  - Executa ao carregar o DOM e imediatamente como fallback
+
+ESTRUTURA DE DIRETÓRIOS (AMBOS OS LOCAIS):
+------------------------------------------
+Local: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\
+  ├── app/
+  │   └── gestao_armazem_catenaria.html [ATUALIZADO]
+  └── documentacao/
+      ├── MANUAL.html
+      ├── MANUAL.pdf
+      └── INDEX.html
+
+SharePoint: C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A\Obras_dte_IC - 00_Obras\Gestao de Materiais de Catenaria\
+  ├── app/
+  │   └── gestao_armazem_catenaria.html [ATUALIZADO]
+  └── documentacao/
+      ├── MANUAL.html
+      ├── MANUAL.pdf
+      └── INDEX.html
+
+FICHEIROS ATUALIZADOS:
+---------------------
+✓ Local: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\app\gestao_armazem_catenaria.html
+✓ SharePoint: C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A\Obras_dte_IC - 00_Obras\Gestao de Materiais de Catenaria\app\gestao_armazem_catenaria.html
+
+BACKUPS CRIADOS:
+---------------
+✓ Local: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\backups\gestao_armazem_catenaria_backup_antes_fix_links_20261014.html
+✓ SharePoint: C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A\Obras_dte_IC - 00_Obras\Gestao de Materiais de Catenaria\backups\gestao_armazem_catenaria_backup_antes_fix_links_20261014.html
+
+COMO TESTAR:
+-----------
+1. Abrir o ficheiro LOCAL:
+   C:\Users\dst7973\Desktop\gestao_de_stocks_dte\app\gestao_armazem_catenaria.html
+   → Clicar nos 3 botões de documentação
+   → Devem abrir os ficheiros corretos
+
+2. Abrir do SharePoint/OneDrive:
+   C:\Users\dst7973\OneDrive - Domingos da Silva Teixeira, S.A\Obras_dte_IC - 00_Obras\Gestao de Materiais de Catenaria\app\gestao_armazem_catenaria.html
+   → Clicar nos 3 botões de documentação
+   → Devem abrir os ficheiros corretos
+
+NOTAS TÉCNICAS:
+--------------
+- Os caminhos '../documentacao/' continuam no HTML como fallback
+- A função JavaScript detecta e ajusta se necessário
+- Funciona com:
+  * Ficheiro local (file://)
+  * SharePoint (file://)
+  * Contextos web futuros (http://)
+
+PRÓXIMOS PASSOS:
+---------------
+1. Validar que os links funcionam em AMBOS os locais
+2. Se ainda houver problemas, contactar o Rui com os detalhes do erro
+3. Os ficheiros estão prontos para publicação
+
+Relatório gerado pelo Claude Haiku 4.5
+Integração: Gestão de Materiais de Catenária DTE

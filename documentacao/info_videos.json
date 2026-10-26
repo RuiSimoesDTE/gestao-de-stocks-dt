@@ -1,0 +1,233 @@
+{
+  "projeto": "Gestão de Materiais de Catenária - DTE Instalações Especiais",
+  "departamento": "Catenária",
+  "data_criacao": "2026-10-14",
+  "versao": "1.0",
+  "idioma": "Português de Portugal",
+  "qualidade": "1080p (1920x1080)",
+  "fps": 30,
+  "codec_video": "H264",
+  "codec_audio": "AAC",
+  "formato": "MP4",
+  "total_videos": 12,
+  "duracao_total_minutos": 36,
+  "status": "Estrutura pronta - Aguardando gravação",
+  "estrutura_pastas": {
+    "scripts_videos": "Scripts de narração em português (TXT)",
+    "audio_videos": "Áudio TTS gerado (WAV)",
+    "videos": "Vídeos finais (MP4)"
+  },
+  "videos": [
+    {
+      "numero": 1,
+      "titulo": "Início e Menu Lateral",
+      "secao": "Apresentação e Navegação",
+      "duracao_estimada": "2:30",
+      "script_file": "01_inicio_menu_lateral_script.txt",
+      "audio_file": "01_audio.wav",
+      "video_file": "01_inicio_menu_lateral.mp4",
+      "descricao": "Apresentação da aplicação, tela de entrada e exploração do menu lateral",
+      "passos_navegacao": 5,
+      "palavras_chave": ["início", "menu", "navegação", "tema", "backup"]
+    },
+    {
+      "numero": 2,
+      "titulo": "Stock - Consultar Materiais",
+      "secao": "Armazém",
+      "duracao_estimada": "3:00",
+      "script_file": "02_stock_consultar_materiais_script.txt",
+      "audio_file": "02_audio.wav",
+      "video_file": "02_stock_consultar_materiais.mp4",
+      "descricao": "Como pesquisar, filtrar e consultar o stock de materiais",
+      "passos_navegacao": 6,
+      "palavras_chave": ["stock", "pesquisa", "filtros", "exportar", "materiais"]
+    },
+    {
+      "numero": 3,
+      "titulo": "Entradas - Registar Chegadas",
+      "secao": "Armazém",
+      "duracao_estimada": "3:30",
+      "script_file": "03_entradas_registar_chegadas_script.txt",
+      "audio_file": "03_audio.wav",
+      "video_file": "03_entradas_registar_chegadas.mp4",
+      "descricao": "Como registar entrada de material do fornecedor",
+      "passos_navegacao": 6,
+      "palavras_chave": ["entrada", "pedido", "fornecedor", "quantidade", "data"]
+    },
+    {
+      "numero": 4,
+      "titulo": "Saídas - Registar Saídas",
+      "secao": "Armazém",
+      "duracao_estimada": "3:30",
+      "script_file": "04_saidas_registar_saidas_script.txt",
+      "audio_file": "04_audio.wav",
+      "video_file": "04_saidas_registar_saidas.mp4",
+      "descricao": "Como registar saída de material da DTE para obra",
+      "passos_navegacao": 6,
+      "palavras_chave": ["saída", "obra", "consumo", "quantidade", "rastreabilidade"]
+    },
+    {
+      "numero": 5,
+      "titulo": "Transferências entre Armazéns",
+      "secao": "Armazém",
+      "duracao_estimada": "3:00",
+      "script_file": "05_transferencias_entre_armazens_script.txt",
+      "audio_file": "05_audio.wav",
+      "video_file": "05_transferencias_entre_armazens.mp4",
+      "descricao": "Como transferir material entre diferentes armazéns ou obras",
+      "passos_navegacao": 6,
+      "palavras_chave": ["transferência", "origem", "destino", "guia", "rastreabilidade"]
+    },
+    {
+      "numero": 6,
+      "titulo": "Encomendas - Pedidos de Compra",
+      "secao": "Armazém",
+      "duracao_estimada": "3:30",
+      "script_file": "06_encomendas_pedidos_de_compra_script.txt",
+      "audio_file": "06_audio.wav",
+      "video_file": "06_encomendas_pedidos_de_compra.mp4",
+      "descricao": "Como consultar e gerir pedidos de compra com SAP",
+      "passos_navegacao": 6,
+      "palavras_chave": ["encomenda", "pedido", "fornecedor", "SAP", "fornecimento"]
+    },
+    {
+      "numero": 7,
+      "titulo": "Consumos - Relatório de Saídas",
+      "secao": "Gestão",
+      "duracao_estimada": "3:00",
+      "script_file": "07_consumos_relatorio_de_saidas_script.txt",
+      "audio_file": "07_audio.wav",
+      "video_file": "07_consumos_relatorio_de_saidas.mp4",
+      "descricao": "Como consultar relatório de consumos e fazer reconciliação SAP",
+      "passos_navegacao": 6,
+      "palavras_chave": ["consumo", "relatório", "período", "valor", "reconciliação"]
+    },
+    {
+      "numero": 8,
+      "titulo": "Projeto - Visualizar Postes",
+      "secao": "Projeto",
+      "duracao_estimada": "3:30",
+      "script_file": "08_projeto_visualizar_postes_script.txt",
+      "audio_file": "08_audio.wav",
+      "video_file": "08_projeto_visualizar_postes.mp4",
+      "descricao": "Como consultar estrutura de postes e desenhos técnicos PDF",
+      "passos_navegacao": 6,
+      "palavras_chave": ["poste", "desenho", "PDF", "estrutura", "componente"]
+    },
+    {
+      "numero": 9,
+      "titulo": "Materiais por Poste",
+      "secao": "Projeto",
+      "duracao_estimada": "3:00",
+      "script_file": "09_materiais_por_poste_script.txt",
+      "audio_file": "09_audio.wav",
+      "video_file": "09_materiais_por_poste.mp4",
+      "descricao": "Como consultar lista de materiais necessários para cada poste",
+      "passos_navegacao": 6,
+      "palavras_chave": ["BOM", "poste", "quantidade", "material", "orçamento"]
+    },
+    {
+      "numero": 10,
+      "titulo": "Relatórios - Análises",
+      "secao": "Gestão",
+      "duracao_estimada": "3:30",
+      "script_file": "10_relatorios_analises_script.txt",
+      "audio_file": "10_audio.wav",
+      "video_file": "10_relatorios_analises.mp4",
+      "descricao": "Como gerar e analisar relatórios de stock, movimentos e consumos",
+      "passos_navegacao": 7,
+      "palavras_chave": ["relatório", "análise", "gráfico", "filtro", "exportação"]
+    },
+    {
+      "numero": 11,
+      "titulo": "Backup e Restauração",
+      "secao": "Gestão",
+      "duracao_estimada": "2:30",
+      "script_file": "11_backup_e_restauracao_script.txt",
+      "audio_file": "11_audio.wav",
+      "video_file": "11_backup_e_restauracao.mp4",
+      "descricao": "Como fazer backup de dados e restaurar versão anterior",
+      "passos_navegacao": 6,
+      "palavras_chave": ["backup", "JSON", "restaurar", "segurança", "dados"]
+    },
+    {
+      "numero": 12,
+      "titulo": "Definições - Configurar",
+      "secao": "Gestão",
+      "duracao_estimada": "3:00",
+      "script_file": "12_definicoes_configurar_script.txt",
+      "audio_file": "12_audio.wav",
+      "video_file": "12_definicoes_configurar.mp4",
+      "descricao": "Como configurar armazéns, materiais, fornecedores e parâmetros",
+      "passos_navegacao": 6,
+      "palavras_chave": ["definições", "armazém", "fornecedor", "configuração"]
+    }
+  ],
+  "ferramentas": {
+    "gravacao": {
+      "nome": "OBS Studio",
+      "url": "https://obsproject.com",
+      "versao_minima": "29.0",
+      "custo": "Gratuito",
+      "configuracao": {
+        "resolucao": "1920x1080",
+        "fps": 30,
+        "bitrate": "8000-10000 kbps",
+        "codec": "H264"
+      }
+    },
+    "audio_tts": {
+      "opcao_1": {
+        "nome": "Windows Text-to-Speech (Local)",
+        "custo": "Gratuito",
+        "vantagens": "Sem internet, PT-PT disponível"
+      },
+      "opcao_2": {
+        "nome": "Google Translate TTS",
+        "custo": "Gratuito",
+        "vantagens": "Online, qualidade boa"
+      },
+      "opcao_3": {
+        "nome": "ElevenLabs",
+        "url": "https://elevenlabs.io",
+        "custo": "€5-100/mês",
+        "vantagens": "Voz natural, PT-PT excelente"
+      }
+    },
+    "processamento": {
+      "nome": "FFmpeg",
+      "url": "https://ffmpeg.org",
+      "custo": "Gratuito",
+      "funcao": "Sincronizar áudio + vídeo"
+    }
+  },
+  "cronograma_estimado": {
+    "fase_1_preparacao": "30 minutos",
+    "fase_2_gravacao": "3-4 horas",
+    "fase_3_audio": "1-2 horas",
+    "fase_4_processamento": "1-2 horas",
+    "fase_5_integracao": "30 minutos",
+    "total": "6-8 horas"
+  },
+  "requisitos_sistema": {
+    "so": "Windows 10 ou superior",
+    "processador": "Intel i5 ou superior",
+    "memoria_ram": "8 GB mínimo",
+    "espaco_disco": "10 GB para vídeos finais",
+    "internet": "Recomendado para download de ferramentas"
+  },
+  "contactos": {
+    "utilizador_principal": "Rui Simões",
+    "email": "rui16simoes@gmail.com",
+    "empresa": "DTE Instalações Especiais",
+    "departamento": "Catenária"
+  },
+  "notas": [
+    "Português de Portugal (PT-PT) é essencial para qualidade profissional",
+    "TTS local (Windows) não requer API key ou internet",
+    "Se a interface mudar, apenas gravar novamente as secções alteradas",
+    "Áudio pode ser reutilizado se o script não mudar",
+    "Publicar na SharePoint depois de testar todos os links",
+    "Guardar backups dos vídeos em local seguro"
+  ]
+}

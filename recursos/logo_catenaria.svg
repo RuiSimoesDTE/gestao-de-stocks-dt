@@ -1,0 +1,43 @@
+<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Catenária DTE - Logo visual da forma de cabo suspenso -->
+
+  <!-- Define padrão para o cabo -->
+  <defs>
+    <linearGradient id="cabGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b4f8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#08365e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Postes de suporte esquerdo e direito -->
+  <rect x="15" y="40" width="8" height="70" fill="#555" />
+  <rect x="177" y="40" width="8" height="70" fill="#555" />
+
+  <!-- Cabo em forma de catenária (curva natural de suspensão) -->
+  <path d="M 20 50 Q 100 85 185 50"
+        stroke="url(#cabGrad)"
+        stroke-width="5"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <!-- Isoladores no poste esquerdo -->
+  <circle cx="19" cy="58" r="3" fill="#c0392b" />
+  <circle cx="19" cy="68" r="3" fill="#c0392b" />
+  <circle cx="19" cy="78" r="3" fill="#c0392b" />
+
+  <!-- Isoladores no poste direito -->
+  <circle cx="181" cy="58" r="3" fill="#c0392b" />
+  <circle cx="181" cy="68" r="3" fill="#c0392b" />
+  <circle cx="181" cy="78" r="3" fill="#c0392b" />
+
+  <!-- Texto "DTE" abaixo -->
+  <text x="100" y="115"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#0b4f8a">
+    DTE Catenária
+  </text>
+</svg>

@@ -1,0 +1,50 @@
+VIDEO 1: INÍCIO E MENU LATERAL
+Duração estimada: 2:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Olá! Bem-vindo ao programa de Gestão de Materiais de Catenária da DTE.
+
+Nesta secção vamos explorar a tela inicial e o menu lateral.
+
+Na tela inicial, tem duas opções: Operador e Gestão.
+
+A versão Operador é para quem está no armazém e precisa de ler QR codes e
+consultar stock rapidamente.
+
+A versão Gestão é para administrativos e engenherios que gerem compras,
+transferências e relatórios.
+
+No menu lateral, à esquerda, encontra as seguintes secções:
+
+Na zona de OBRAS, pode selecionar entre Vendas Novas e Pampilhosa.
+
+Cada obra tem dados independentes de stock e movimentos.
+
+Na zona de PROJETO, tem acesso aos postes, desenhos, materiais por poste e
+códigos de peças.
+
+Na zona de ARMAZÉM, estão todas as operações de stock: consultas, entradas,
+saídas, transferências.
+
+Na zona de GESTÃO, tem relatórios, encomendas, consumos e definições.
+
+No canto superior direito, tem botões para mudar o tema entre claro e escuro,
+fazer backup e restaurar dados.
+
+Isto permite guardar os seus dados em segurança em qualquer altura.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [tela_inicial] Tirar screenshot da tela de entrada (duas opções)
+2. [menu_lateral_aberto] Menu lateral expandido mostrando todas as secções
+3. [tema_claro] Tema claro ativado
+4. [tema_escuro] Tema escuro ativado
+5. [botoes_backup] Botões de Backup e Restaurar destacados no topo
+
+================================================================================

@@ -1,0 +1,179 @@
+materiais com consumo lançado nos 4 mapas: 208 | soma lançada: 9933
+materiais com consumo real no programa: 305 | soma: 13964.5
+
+=== LANÇADO NO SAP A MAIS do que o consumo que o programa tem (37) — consumo sem saída no programa, ou saída lançada duas vezes ===
+  4026592    9S-FIO CONTACTO 107MM                lançado 2473     (mai 380 jun 380 jul 1340 ago 373) programa 753 dif -1720
+  4026591    9G-CABO BRONZE 65MM                  lançado 2234     (mai 435 jun 378 jul 0 ago 1421) programa 1859 dif -375
+  4026586    9M-CABO COBRE DURO 150MM             lançado 306      (mai 0 jun 306 jul 0 ago 0) programa 0 dif -306
+  4036953    19F-ANILHA PLANA D=13,5MM            lançado 312      (mai 162 jun 150 jul 0 ago 0) programa 162 dif -150
+  5000134    ELECTRODOS NUMAL 2.5X350MM           lançado 167      (mai 167 jun 0 jul 0 ago 0) programa 67 dif -100
+  4038586    ABRACADEIRA ALGEROZ 50MM             lançado 70       (mai 0 jun 70 jul 0 ago 0) programa 0 dif -70
+  4026448    560-PINCA SUSPENSAO CDT AL-ACO       lançado 47       (mai 47 jun 0 jul 0 ago 0) programa 27 dif -20
+  4026383    17C-PARAFUSO INOX SEXT M12X30/30 C   lançado 46       (mai 31 jun 15 jul 0 ago 0) programa 31 dif -15
+  4036947    17D-PARAFUSO M12X40/40 C/HU          lançado 42       (mai 27 jun 15 jul 0 ago 0) programa 27 dif -15
+  4026433    406B-CAVILHA 52xØ19                  lançado 166      (mai 17 jun 16 jul 25 ago 108) programa 151 dif -15
+  4026510    501A-CORPO PINCA SUSP CS P/CONSOLA   lançado 55       (mai 27 jun 15 jul 13 ago 0) programa 40 dif -15
+  4036989    501D-TAMPA PINCA SUSP.CABO SUPORTE   lançado 48       (mai 27 jun 15 jul 6 ago 0) programa 33 dif -15
+  4026523    517-TERMINAL VARA REGULACAO          lançado 64       (mai 27 jun 16 jul 21 ago 0) programa 49 dif -15
+  4026526    522-APERTA TUBO C/OLHAL P/TUBO 30X   lançado 56       (mai 40 jun 16 jul 0 ago 0) programa 41 dif -15
+  4026535    536-GANCHO P/TUBO 24X32              lançado 15       (mai 15 jun 0 jul 0 ago 0) programa 0 dif -15
+  4026545    546-MANGA APERTO                     lançado 64       (mai 27 jun 16 jul 21 ago 0) programa 49 dif -15
+  5000284    GARRAFA OXIGENIO INDUSTRIAL GRANDE   lançado 10       (mai 10 jun 0 jul 0 ago 0) programa 0 dif -10
+  3002314    CORDA ARNES                          lançado 10       (mai 0 jun 0 jul 6 ago 4) programa 0 dif -10
+  4026568    60-ISOLADOR SINTÉTICO P/TIRANTE      lançado 66       (mai 27 jun 10 jul 29 ago 0) programa 57 dif -9
+  4026534    533C-GANCHO P/BRACO CHAMADA 25X30    lançado 9        (mai 0 jun 0 jul 0 ago 9) programa 0 dif -9
+  5003472    ETM - ARNES CINTO SEGURANCA ANTI Q   lançado 9        (mai 0 jun 0 jul 6 ago 3) programa 0 dif -9
+  4019688    CHAVE UNIVERSAL                      lançado 24       (mai 0 jun 5 jul 10 ago 9) programa 16 dif -8
+  3000599    MOSQUETAO SEGURANCA MEDIO            lançado 6        (mai 0 jun 0 jul 6 ago 0) programa 0 dif -6
+  4026569    61-ISOLADOR SINTETICO P/CONSOLA      lançado 52       (mai 27 jun 4 jul 21 ago 0) programa 49 dif -3
+  4019846    REGULADOR GASES COMPRIMIDOS          lançado 5        (mai 5 jun 0 jul 0 ago 0) programa 2 dif -3
+  5003096    PORTA CHAVES C/ ETIQUETA             lançado 9        (mai 0 jun 0 jul 5 ago 4) programa 6 dif -3
+  4036993    561-PECA AMARRACAO P/ C.D.T.A.       lançado 7        (mai 5 jun 2 jul 0 ago 0) programa 5 dif -2
+  4015739    GARRAFA OXIGENIO S0,5 2228           lançado 2        (mai 2 jun 0 jul 0 ago 0) programa 0 dif -2
+  4006164    OLEO P/ROSCAR RIMS SPECIAL           lançado 3        (mai 3 jun 0 jul 0 ago 0) programa 1 dif -2
+  4043693    210B-PERFIL P/FIX REG CDTAU80X45X6   lançado 2        (mai 0 jun 2 jul 0 ago 0) programa 0 dif -2
+  4003679    EXTENSAO TRIPLA C/T 3MTS.            lançado 6        (mai 0 jun 0 jul 4 ago 2) programa 4 dif -2
+  4043226    14B7-ESPIA Ø 24 L=10,25m             lançado 7        (mai 4 jun 2 jul 0 ago 1) programa 6 dif -1
+  4002623    ABRACADEIRA ELECTRODO TERRA          lançado 1        (mai 0 jun 0 jul 1 ago 0) programa 0 dif -1
+  5001724    ALOQUETE 45MM                        lançado 5        (mai 1 jun 0 jul 0 ago 4) programa 4 dif -1
+  5003751    GARRAFA ACETILENO GRANDE             lançado 1        (mai 1 jun 0 jul 0 ago 0) programa 0 dif -1
+  4004175    MANGA TERM. 16/5                     lançado 1        (mai 1 jun 0 jul 0 ago 0) programa 0 dif -1
+  5018036    CORDA NYLON 6MM                      lançado 3        (mai 0 jun 0 jul 2 ago 1) programa 2 dif -1
+
+=== PROGRAMA TEM MAIS CONSUMO do que o lançado (41) ===
+  4015939    9U1-CABO LXV 50MM                    lançado 65       programa 3668     dif +3603 | última saída 2026-07-23
+  4004145    LIGADOR GARRA JBS C/2 PARAF. LGS-5   lançado 0        programa 400      dif +400 | última saída 2026-03-12
+  4026505    442-PARAFUSO PONTO M12X22/22         lançado 9        programa 161      dif +152 | última saída 2026-09-16
+  5016700    BUCHA PLASTICA M6 CZ                 lançado 105      programa 205      dif +100 | última saída 2026-09-17
+  4037050    662-LIGADOR PARALELO P/CABO ALU      lançado 0        programa 53       dif +53 | última saída 2026-07-23
+  4026460    16D9-PARAFUSO M16X65/38 C/HU+HM      lançado 0        programa 52       dif +52 | última saída 2026-07-14
+  4026530    363-APERTA CABO EXTREMIDADE          lançado 4        programa 50       dif +46 | última saída 2026-03-09
+  5000100    SPRAYS ZINCO BRILHANTE               lançado 13       programa 50       dif +37 | última saída 2026-09-17
+  4043065    271-ESQUADRO ABAIX P/CONSOLA FEEDE   lançado 0        programa 20       dif +20 | última saída 2026-05-20
+  4026266    POSTE HE180A L=9,20M                 lançado 27       programa 40       dif +13 | última saída 2026-09-07
+  4026500    432B-ABRACADEIRA C/PORCA M12 O=62    lançado 0        programa 12       dif +12 | última saída 2026-04-22
+  4040292    LIGADOR RAPIDO 221-413               lançado 50       programa 62       dif +12 | última saída 2026-03-27
+  4026556    627-SUPORTE FIX BRACO CHAMADA P/AM   lançado 0        programa 12       dif +12 | última saída 2026-04-22
+  4043096    551-PINCA SUSP P/FEEDER 150MM        lançado 18       programa 29       dif +11 | última saída 2026-07-01
+  4026410    291B-CHAVETA 1/2 CANA CU 4X40        lançado 130      programa 140      dif +10 | última saída 2026-09-16
+  4043191    113A-CANTONEIRA P/ALONGA (60X60X6)   lançado 0        programa 10       dif +10 | última saída 2026-04-13
+  4003058    CABO ACO 3MM                         lançado 0        programa 10       dif +10 | última saída 2026-07-21
+  4029815    465-ESQUADRO SUS.PINC.SUSP.CABO.SU   lançado 21       programa 30       dif +9 | última saída 2026-07-01
+  5016465    CERRA CABOS 5/16" 8MM                lançado 0        programa 8        dif +8 | última saída 2026-07-21
+  4036969    360-MEIA GARRA P/CABO 95MM/FC 107M   lançado 0        programa 6        dif +6 | última saída 2026-06-05
+  5004696    FOLHA SERRA CORTAR FERRO             lançado 8        programa 13       dif +5 | última saída 2026-09-17
+  4026269    POSTE HE200A L=9,20M                 lançado 6        programa 11       dif +5 | última saída 2026-09-07
+  4026517    511-PECA AMARRACAO ESPIA             lançado 11       programa 15       dif +4 | última saída 2026-07-02
+  4026276    POSTE HE220B L=10,00M                lançado 8        programa 12       dif +4 | última saída 2026-07-02
+  4036360    POSTE HE240B COM 10,00M              lançado 0        programa 3        dif +3 | última saída 2026-03-12
+  4043698    217A-PERFIL P/FIX 2PE CON U140X60X   lançado 49       programa 52       dif +3 | última saída 2026-07-14
+  4026494    408A-ESTRIBO AMARRAÇÃO M20 C/PORCA   lançado 4        programa 7        dif +3 | última saída 2026-07-02
+  4026271    POSTE HE200A L=10,00M                lançado 2        programa 4        dif +2 | última saída 2026-07-02
+  PRG0001    PREGO ACO                            lançado 0        programa 2        dif +2 | última saída 2026-06-29
+  4001935    FECHADURA UNIVERSAL                  lançado 3        programa 5        dif +2 | última saída 2026-09-10
+  4026317    103-BRINCO AMARRACAO CAT COMPENSAD   lançado 1        programa 2        dif +1 | última saída 2026-04-28
+  4026395    19C-PORCA M18                        lançado 12       programa 13       dif +1 | última saída 2026-06-05
+  4026267    POSTE HE180A L=9,60M                 lançado 0        programa 1        dif +1 | última saída 2026-03-12
+  4026270    POSTE HE200A L=9,60M                 lançado 3        programa 4        dif +1 | última saída 2026-06-02
+  4036356    POSTE HE220B COM 9,20M               lançado 0        programa 1        dif +1 | última saída 2026-03-12
+  4026275    POSTE HE220B L=9,60M                 lançado 10       programa 11       dif +1 | última saída 2026-07-02
+  4046112    POSTE HE240A L=3,8M                  lançado 0        programa 1        dif +1 | última saída 2026-03-12
+  4026282    POSTE HE240B L=9,60M                 lançado 2        programa 3        dif +1 | última saída 2026-06-02
+  4046110    POSTE HE300A L=11,2M                 lançado 0        programa 1        dif +1 | última saída 2026-03-12
+  4043594    410A-ESTICADOR ABERTO                lançado 0        programa 1        dif +1 | última saída 2026-07-21
+  5001894    FITA METRICA CAIXA PLASTICA 8MT      lançado 1        programa 2        dif +1 | última saída 2026-09-10
+
+=== CONSUMO NO PROGRAMA SEM LINHA EM NENHUM MAPA (93) ===
+  SEM:75184125       Cabo Flex. Isol. (LXV-70 AL)               qtd 1028 em 9 saídas | última 2026-03-27
+  SEM:4050100060000  Bucha Naykon p Tijolo m6                   qtd 200 em 2 saídas | última 2026-05-25
+  SEM:9124050502     Manga Termo GMW 22/6                       qtd 101.5 em 2 saídas | última 2026-03-27
+  SEM:068.140.16     CABO RV-K 4*2,5+T PRETO (A)                qtd 100 em 1 saídas | última 2026-03-12
+  SEM:068.140.14     CABO RV-K 2*2,5+T PRETO (A)                qtd 100 em 1 saídas | última 2026-03-12
+  SEM:1201660002     DISCO C/FERRO INOX MACFER CAM-CSS 125      qtd 100 em 4 saídas | última 2026-09-17
+  SEM:124MEPPLR14    Pilha Alcalina MN 1400 Plus K2 LR14 (2un   qtd 72 em 2 saídas | última 2026-05-25
+  SEM:9123100875     Placa de aterramento cu 82x82 Aço 16mm 9   qtd 52 em 6 saídas | última 2026-05-08
+  SEM:4032389        Porca M10 em INOX [M10]                    qtd 52 em 1 saídas | última 2026-07-28
+  SEM:54112          Braçadeira Tirante isolador                qtd 51 em 2 saídas | última 2026-07-01
+  SEM:5009749        DISCO C/FERRO INOX MACFER CAM-CSS 125 x    qtd 50 em 1 saídas | última 2026-05-25
+  SEM:5004487        Broca Sds 6X110                            qtd 44 em 1 saídas | última 2026-09-17
+  SEM:4004331        PARAFUSO SEXTAVADO DIN933 M8X45            qtd 40 em 1 saídas | última 2026-05-25
+  SEM:TR70           Terminal p/ cabo de alumínio LXV 70mm      qtd 26 em 5 saídas | última 2026-03-27
+  SEM:1606           Parafuso M16x55/38 com Hu + Hm             qtd 24 em 1 saídas | última 2026-03-12
+  SEM:115105647      FOLHA C/FERRO BI-METAL SADYFLEX            qtd 20 em 4 saídas | última 2026-09-17
+  SEM:536A           Gancho p/ tubo 24x32                       qtd 19 em 1 saídas | última 2026-07-01
+  SEM:289B           Vara de regulação de tirante               qtd 15 em 1 saídas | última 2026-06-01
+  SEM:TR50-10mm      Terminal p/ cabo de alumínio LXV 50mm 10   qtd 14 em 3 saídas | última 2026-03-26
+  SEM:551-A          Pinças Feeder                              qtd 14 em 1 saídas | última 2026-05-29
+  SEM:400013         Abraçadeira espig inox 3/4*26mm            qtd 12 em 1 saídas | última 2026-03-09
+  SEM:0              PTX-Marcador PVC CLIM 2/4 - 0 (rolo 500    qtd 12 em 4 saídas | última 2026-03-25
+  SEM:3002312        CAPACETE VERMELHO REF: CAP368XPS73         qtd 11 em 1 saídas | última 2026-09-17
+  SEM:T              PTX-Marcador PVC CLIM 2/4 - T (rolo 500    qtd 10 em 4 saídas | última 2026-03-25
+  SEM:N              PTX-Marcador PVC CLIM 2/4 - N (rolo 500    qtd 10 em 4 saídas | última 2026-03-25
+  SEM:5002377        DISCO LAMELAS P/INOX MACFER 115MM GR       qtd 10 em 1 saídas | última 2026-05-25
+  SEM:3000904        COLETE ALTA VISIBILIDADE DE REDE - TAM X   qtd 10 em 1 saídas | última 2026-09-17
+  SEM:75112018       GANCHO PARA BRAÇO DE CHAMADA 25 X 30 (FE   qtd 9 em 1 saídas | última 2026-09-16
+  SEM:1000           cavilha 1/2 [1x2]                          qtd 8 em 1 saídas | última 2026-03-12
+  SEM:279505         Spray Zinco ST 400ml                       qtd 7 em 1 saídas | última 2026-05-25
+  SEM:P              PTX-Marcador PVC CLIM 2/4 - P (rolo 500    qtd 6 em 2 saídas | última 2026-03-25
+  SEM:A              PTX-Marcador PVC CLIM 2/4 - A (rolo 500    qtd 6 em 2 saídas | última 2026-03-25
+  SEM:02.104.39.131A Cantoneira 80x80x8 direita                 qtd 6 em 1 saídas | última 2026-03-12
+  SEM:02.104.40.131B Cantoneira 80x80x8 esquerda                qtd 6 em 1 saídas | última 2026-03-12
+  SEM:SAIDA-SC       Serro coba                                 qtd 6 em 1 saídas | última 2026-04-29
+  SEM:4008694        TOM.2P+T (SCHUKO) C/ ALV PROT CZ 48132CC   qtd 5 em 1 saídas | última 2026-03-12
+  SEM:5002179        Almotolia Pressolo FLX 5133/250            qtd 5 em 1 saídas | última 2026-05-25
+  SEM:14B            Espia Ø 24                                 qtd 5 em 5 saídas | última 2026-07-02
+  SEM:TBI70          Terminal Bimetalico 70                     qtd 4 em 1 saídas | última 2026-03-24
+  SEM:C              PTX-Marcador PVC CLIM 2/4 - C (rolo 500    qtd 4 em 2 saídas | última 2026-03-25
+  SEM:D              PTX-Marcador PVC CLIM 2/4 - D (rolo 500    qtd 4 em 2 saídas | última 2026-03-25
+  SEM:E              PTX-Marcador PVC CLIM 2/4 - E (rolo 500    qtd 4 em 2 saídas | última 2026-03-25
+  SEM:(  )           PTX-Marcador PVC CLIM 2/4 - (espaço) (ro   qtd 4 em 2 saídas | última 2026-03-25
+  SEM:S              PTX-Marcador PVC CLIM 2/4 - S (rolo 500    qtd 4 em 2 saídas | última 2026-03-25
+  SEM:4006316        PILHA DURACEL ALCALINA MN 1300 PLUS K2     qtd 4 em 1 saídas | última 2026-05-25
+  SEM:SAIDA-ISO      Isoladores sintéticos MT                   qtd 4 em 1 saídas | última 2026-04-30
+  SEM:75112155       CALÇO E RÓTULA DE APOIO PARA ESPIA DE AM   qtd 4 em 1 saídas | última 2026-07-02
+  SEM:P.HEA200-10.4  Poste HEA 200 c/10,4mt-Furado              qtd 3 em 3 saídas | última 2026-07-02
+  SEM:1105           Uniao p/eletrodo terra UT5/8´´ Aco Cobre   qtd 3 em 3 saídas | última 2026-05-08
+  SEM:4042448886262  Tesa Rolo Fita Isoladora vermelho          qtd 3 em 1 saídas | última 2026-05-25
+  SEM:4042448886224  Tesa Rolo Fita Isoladora preto             qtd 3 em 1 saídas | última 2026-05-25
+  SEM:4042448886248  Tesa Rolo Fita Isoladora azul              qtd 3 em 1 saídas | última 2026-05-25
+  SEM:4003803        FITA ISOLADORA AZUL                        qtd 3 em 1 saídas | última 2026-05-25
+  SEM:4003806        FITA ISOLADORA PRETA                       qtd 3 em 1 saídas | última 2026-05-25
+  SEM:4003809        FITA ISOLADORA VERMELHA                    qtd 3 em 1 saídas | última 2026-05-25
+  SEM:9123100211     Elétrodo de Terra ET250                    qtd 2 em 1 saídas | última 2026-03-24
+  SEM:9123100223     Abraçadeira p/Eletrodo                     qtd 2 em 1 saídas | última 2026-03-24
+  SEM:9123000255     Terminal Compressao AL TCT 50 M10          qtd 2 em 2 saídas | última 2026-05-08
+  SEM:11518449       Broca SDS Plus Joran 6x110mm               qtd 2 em 1 saídas | última 2026-05-25
+  SEM:70UL050        Chaves Universais UL050                    qtd 2 em 1 saídas | última 2026-05-25
+  SEM:4003428        CARTUCHO GAZ VITO C/VALVULA 190GR          qtd 2 em 1 saídas | última 2026-05-25
+  SEM:5004519        ILHAS DURACEL ALCALINA MN 1500PLUS K4 (A   qtd 2 em 1 saídas | última 2026-05-25
+  SEM:5004876        Serrote c/ferro macfer tubular ths-03      qtd 2 em 1 saídas | última 2026-05-25
+  SEM:4015731        Tesoura Corta Corta Tubos Mlcp 16-32       qtd 2 em 1 saídas | última 2026-09-17
+  SEM:242GW62482     TOMADA FIXA 4P+T 16A GW62482               qtd 1 em 1 saídas | última 2026-03-12
+  SEM:200.4546944    CERTIFICADOR INSTALAÇÕES FLUKE 1662 SCH    qtd 1 em 1 saídas | última 2026-03-12
+  SEM:Broca 06       Broca HSSM2-06,0mm-Mcf                     qtd 1 em 1 saídas | última 2026-03-19
+  SEM:Broca 10,50    Broca HSSM2-10,50mm Mcf                    qtd 1 em 1 saídas | última 2026-03-19
+  SEM:Broca 12,50    Broca Hssm2-12,50mm-Mcf                    qtd 1 em 1 saídas | última 2026-03-19
+  SEM:4026542        PEÇA DE AMARRAÇÃO PARA CABOS DE 95 E 120   qtd 1 em 1 saídas | última 2026-04-27
+  SEM:4026543        PEÇA DE AMARRAÇÃO PARA CABOS DE 95 E 120   qtd 1 em 1 saídas | última 2026-04-27
+  SEM:2303302        Cartuxho Seg. "Re" 3/8 Esq. p/Regulador    qtd 1 em 1 saídas | última 2026-03-12
+  SEM:RebarbadoraMakita Rebarbadora 125mm 18v 4.0 AH DGA504RMJ M   qtd 1 em 1 saídas | última 2026-03-12
+  SEM:2120           Berbequim Aparafusador 18v  4,0Ah Bosch    qtd 1 em 1 saídas | última 2026-03-12
+  SEM:1038           Gerador EU 30 IS                           qtd 1 em 1 saídas | última 2026-03-12
+  SEM:1067           Fresa para postes                          qtd 1 em 1 saídas | última 2026-03-12
+  SEM:2201060        Paquimetro Analogico                       qtd 1 em 1 saídas | última 2026-05-25
+  SEM:1201650038     Disco lamelas P Inox                       qtd 1 em 1 saídas | última 2026-05-25
+  SEM:5003982        CINTA CARGA C/ROQ. MACFER GANCHO ""J       qtd 1 em 1 saídas | última 2026-05-25
+  SEM:4013681        CHAVE PONTOS IE26                          qtd 1 em 1 saídas | última 2026-05-25
+  SEM:5005574        MAÇARICO VITO C/ISQUEIRO                   qtd 1 em 1 saídas | última 2026-05-25
+  SEM:5003593        MARRETA CABO FIBRA MACFER 4 KG             qtd 1 em 1 saídas | última 2026-05-25
+  SEM:5003586        PAS LIXO ZINCO C/CABO ALTO                 qtd 1 em 1 saídas | última 2026-05-25
+  SEM:ESM-001        ESMERILADORA SANDY 117-125MM               qtd 1 em 1 saídas | última 2026-05-29
+  SEM:SAIDA-PCD      Pé consola Duplo completo                  qtd 1 em 1 saídas | última 2026-04-28
+  SEM:SAIDA-CTD      Conj. Tirante Duplo completo               qtd 1 em 1 saídas | última 2026-04-28
+  SEM:SAIDA-C5011    Consola completa 50-11                     qtd 1 em 1 saídas | última 2026-04-28
+  SEM:SAIDA-ESP      M. Esplanento Provisório 1750mt            qtd 1 em 1 saídas | última 2026-04-28
+  SEM:4026272        Poste HEA 220 c/9,6mt - Furado, GQ         qtd 1 em 1 saídas | última 2026-07-02
+  SEM:4029794        PEÇA DE REGULAÇÃO “TIPO R2” PARA ESPIA D   qtd 1 em 1 saídas | última 2026-07-02
+  SEM:223D           Postalete de feeder L=3600                 qtd 1 em 1 saídas | última 2026-07-28
+  SEM:               Cavilha do suporte dos braços Ø12 × 55 f   qtd 1 em 1 saídas | última 2026-07-28
+  SEM:P.HEA180-10.4  Poste HEA 180 c/10,4mt - Furado, GQ        qtd 1 em 1 saídas | última 2026-09-07

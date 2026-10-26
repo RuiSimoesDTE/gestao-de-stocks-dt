@@ -1,0 +1,26 @@
+{
+  "name": "Catenária — Gestão (DTE)",
+  "short_name": "Gestão",
+  "description": "Gestão de stocks, movimentos, encomendas, projeto e guias de material de catenária da DTE.",
+  "lang": "pt-PT",
+  "dir": "ltr",
+  "id": "./gestao_materiais_catenaria.html",
+  "start_url": "./gestao_materiais_catenaria.html?origem=pwa&modo=normal",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#eef1f4",
+  "theme_color": "#0b4f8a",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Saídas", "short_name": "Saídas", "url": "./gestao_materiais_catenaria.html?origem=pwa&area=saidas", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Stock", "short_name": "Stock", "url": "./gestao_materiais_catenaria.html?origem=pwa&area=stock", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Guias AT", "short_name": "Guias", "url": "./gestao_materiais_catenaria.html?origem=pwa&area=guias-at", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

@@ -1,0 +1,51 @@
+﻿VIDEO 8: PROJETO - VISUALIZAR POSTES
+Duração estimada: 3:30
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Vamos explorar a secção de Projeto, onde pode ver a estrutura de postes 
+e desenhos técnicos.
+
+O projeto de Vendas Novas tem 448 postes e pórticos diferentes.
+
+Cada um tem um número único, como 04-26, 05-15 ou 64-29_30.
+
+Clique em PROJETO e depois em Projeto ou Visualizar Postes.
+
+Pode procurar um poste pelo seu número.
+
+Quando encontra, o programa mostra:
+- O tipo de poste (simples, pórtico, etc.)
+- Os desenhos associados
+- As estruturas
+- Os equipamentos
+- Os materiais necessários
+
+Cada desenho é clicável e abre um PDF com o desenho técnico completo.
+
+Isto é muito útil para saber exactamente o que precisa para cada poste.
+
+Os desenhos vêm dos cadernos de montagem da ferramenta de catenária.
+
+Pode abrir qualquer desenho para consultar as medidas, referências técnicas 
+e submontagens.
+
+Esta integração com os desenhos torna fácil saber quanto material precisa 
+para cada poste.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [projeto_menu] Expandir menu PROJETO
+ 2. [projeto_postes] Abrir secção Projeto
+ 3. [procurar_poste] Barra de pesquisa de postes
+ 4. [ficha_poste] Ficha de um poste
+ 5. [desenhos_pdf] Links para desenhos PDF
+ 6. [componentes_poste] Componentes listados
+
+
+================================================================================

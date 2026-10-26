@@ -1,0 +1,20 @@
+{
+  "name": "Catenária — Operador",
+  "short_name": "Operador",
+  "description": "Ler o QR do material, ver o nome e o stock e dar baixa.",
+  "lang": "pt-PT",
+  "dir": "ltr",
+  "id": "./operador",
+  "start_url": "./gestao_materiais_catenaria.html?modo=operador&origem=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef1f4",
+  "theme_color": "#1b8a4b",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

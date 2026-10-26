@@ -1,0 +1,309 @@
+═══════════════════════════════════════════════════════════════════════════════
+GUIA DE LEITURA DOS DESENHOS DE MONTAGEM - AUDITORIA
+Projeto: Vendas Novas / IC-0019 (IFTE LP10)
+═══════════════════════════════════════════════════════════════════════════════
+
+OBJETIVO:
+Extrair dados técnicos precisos dos cadernos de montagem (PDFs) e compará-los
+com o programa, identificando discrepâncias e omissões.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ESTRUTURA DE UM DESENHO DE POSTE
+═══════════════════════════════════════════════════════════════════════════════
+
+Cada desenho de poste típico contém:
+
+1. IDENTIFICAÇÃO DO POSTE
+   └─ Número: XX-XX (ex: 04-26, 64-29, etc)
+      Localizado geralmente no canto inferior ou superior da página
+
+2. REFERÊNCIA DE MONTAGEM
+   └─ Código de montagem: EC-XXX, Tipo de Pórtico, etc
+      Descreve o tipo de estrutura base do poste
+
+3. COORDENADAS / POSIÇÃO
+   └─ XY (para postes simples) ou Km (para linha)
+      Indica onde o poste está localizado na linha
+
+4. ESTRUTURA PRINCIPAL
+   └─ Componentes principais visualizados no desenho:
+      - Tirante fixo (E-6179, E-6180, etc)
+      - Tirante em tubo (E-6181, E-6182, etc)
+      - Consola fixo (E-6161, E-6162, etc)
+      - Antibalançante / Braço (E-6183, E-6184, etc)
+      - Viga (HE220B, HE260B, etc)
+      - Macizo / Fundação (1Ft, 2Ft, 1Fr, etc)
+      - Pêndulo (E-6188, E-6189, etc)
+
+5. EQUIPAMENTOS ADICIONAIS
+   └─ Componentes não estruturais:
+      - Montagem de espia (C-1607, C-1608, etc)
+      - Amarração de catenária (C-160, C-161, etc)
+      - Equipamento tensor (EC-219, EC-220, etc)
+      - Suspensão (E-6177, E-6178, etc)
+      - Componentes de segurança (E-6178, etc)
+
+6. MATERIAIS DE SEGURANÇA
+   └─ Quando o poste é de acesso (escalada, etc):
+      - Arnês (1 ponto, 2 pontos)
+      - Cordas de segurança (Corda Y, Corda I, etc)
+      - Mosquetões
+      - Sistemas de amarração
+
+7. QUANTIDADES
+   └─ Número de unidades de cada componente
+      IMPORTANTE: Não assumir qty=1 se não for explícito
+
+
+═══════════════════════════════════════════════════════════════════════════════
+METODOLOGIA DE LEITURA (PASSO A PASSO)
+═══════════════════════════════════════════════════════════════════════════════
+
+PASSO 1: LOCALIZAR O POSTE NO PDF
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ • Abra o PDF apontado                                                       │
+│ • Vá à página indicada no mapa (postes_paginas.js)                          │
+│ • Procure o número do poste (XX-XX) no topo ou canto                        │
+│ • Se a página tiver 2 postes, identifique qual é (coordenadas ajudam)      │
+│ • Leia as coordenadas XY visíveis no desenho                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PASSO 2: IDENTIFICAR O TIPO DE MONTAGEM
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ • Procure indicação de tipo (EC-232, EC-235, Pórtico, etc)                  │
+│ • Se não houver etiqueta clara, identifique visualmente:                    │
+│   - Poste simples com estrutura única = EC-232 (Montagem A)                 │
+│   - Poste com 2 estruturas = Pode ter 2 montagens                           │
+│   - Pórtico (2 postes ligados no topo) = Pórtico                            │
+│ • Registar EXACTAMENTE como está no caderno                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PASSO 3: SEGUIR PELA MONTAGEM, NÃO PELO TEXTO
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ REGRA CRÍTICA (Do memory do projeto):                                       │
+│ "Ler desenhos pela MONTAGEM, não pelo texto descritivo"                     │
+│                                                                              │
+│ Procedimento:                                                               │
+│ 1. Localizar a montagem por número/coordenadas (ex: 64-29)                  │
+│ 2. Reconstruir a grelha de componentes por XY                               │
+│ 3. NUNCA confiar apenas em legendas de texto                                │
+│ 4. Sempre confirmar visualmente no desenho                                  │
+│                                                                              │
+│ Exemplo (ERRADO):                                                           │
+│   Ler apenas "Tirante EC-6179" da legenda                                   │
+│                                                                              │
+│ Exemplo (CORRETO):                                                          │
+│   1. Identificar poste 64-29 visualmente                                    │
+│   2. Ver as linhas de referência XY                                         │
+│   3. Seguir cada componente visualmente                                     │
+│   4. Confirmar que é EC-6179 e quantidade (1 ou 2?)                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PASSO 4: LISTAR COMPONENTES ESTRUTURAIS
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Procurar por ordem (pode não ter todos):                                    │
+│                                                                              │
+│ □ ESTRUTURAS E FUNDAÇÕES:                                                   │
+│   └─ Tirante Fixo (E-61XX)         Qtd: ___                                │
+│   └─ Tirante em Tubo (E-61XX)      Qtd: ___                                │
+│   └─ Consola Fixo (E-61XX)         Qtd: ___                                │
+│   └─ Consola em Tubo (E-61XX)      Qtd: ___                                │
+│   └─ Viga (HE220B, HE260B, etc)    Qtd: ___                                │
+│   └─ Macizo (1Ft, 2Ft, 1Fr, etc)   Qtd: ___                                │
+│                                                                              │
+│ □ ANTIBALANÇANTE E BRAÇO:                                                   │
+│   └─ Antibalançante (E-61XX)       Qtd: ___                                │
+│   └─ Braço de Chamada (E-61XX)     Qtd: ___                                │
+│                                                                              │
+│ □ PÊNDULO E SUSPENSÃO:                                                      │
+│   └─ Pêndulo (E-61XX)              Qtd: ___                                │
+│   └─ Suspensão Fixa (E-61XX)       Qtd: ___                                │
+│                                                                              │
+│ □ EQUIPAMENTOS:                                                             │
+│   └─ Tensor (EC-2XX)               Qtd: ___                                │
+│   └─ Espia (C-16XX)                Qtd: ___                                │
+│   └─ Outros (anotar)               Qtd: ___                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PASSO 5: LISTAR COMPONENTES DE SEGURANÇA (se aplicável)
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Se o poste for de acesso (escalada):                                        │
+│                                                                              │
+│ □ Arnês (tipo):                    Qtd: ___    SAP: ___                    │
+│ □ Corda Y (Patacho) (SAP):         Qtd: ___    SAP: ___                    │
+│ □ Corda I (Amortecedor) (SAP):     Qtd: ___    SAP: ___                    │
+│ □ Mosquetão (SAP):                 Qtd: ___    SAP: ___                    │
+│ □ Outros componentes segurança:                                             │
+│   └─ ________________________       Qtd: ___    SAP: ___                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PASSO 6: EXTRAIR CÓDIGOS SAP
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Procurar por:                                                               │
+│ • Números SAP visíveis nos desenhos (ex: 5004614, 3002314)                 │
+│ • Legendas técnicas com SAP                                                 │
+│ • Tabelas de materiais                                                      │
+│                                                                              │
+│ REGRA: Só registar SAP se estiver visível no desenho!                       │
+│        Nunca inventar ou assumir                                            │
+│                                                                              │
+│ Exemplo de preenchimento:                                                   │
+│   E-6179 IIA (Tirante Fixo) → SAP: 5XXXXXX (se visível)                   │
+│   E-6183 E (Braço)          → SAP: [em branco se não houver]              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PASSO 7: VERIFICAR QUANTIDADES
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ NÃO ASSUMIR qty=1 automaticamente!                                          │
+│                                                                              │
+│ Procurar por:                                                               │
+│ • Números nos desenhos: 1x, 2x, 3x, etc                                    │
+│ • Tabelas de materiais com colunas "Qtd"                                    │
+│ • Legendas com "quantidade" ou "un"                                         │
+│                                                                              │
+│ Exemplo de ERRO comum:                                                      │
+│   ERRADO: Caderno mostra 2 arneses, mas programa tem qty=1                 │
+│   Impacto: Falta 1 arnês na obra!                                          │
+│                                                                              │
+│ MÉTODO DE VALIDAÇÃO:                                                        │
+│ 1. Contar visualmente componentes iguais no desenho                         │
+│ 2. Procurar indicação numérica explícita                                    │
+│ 3. Se dúvida, marcar com "???" e questionar depois                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+CHECKLIST DE CONSISTÊNCIA
+═══════════════════════════════════════════════════════════════════════════════
+
+Para cada poste lido, validar:
+
+□ Número do poste (XX-XX) confirmado visualmente
+□ Tipo de montagem identificado
+□ Coordenadas XY registadas (se visíveis)
+□ Todos os componentes estruturais mapeados
+□ Quantidades confirmadas (não assumidas)
+□ Códigos SAP anotados (apenas se visíveis)
+□ Componentes de segurança (se aplicável)
+□ Referência ao PDF e página registada
+□ Dados conferidos 2x antes de registar
+
+
+═══════════════════════════════════════════════════════════════════════════════
+DISCREPÂNCIAS COMUNS ENCONTRADAS
+═══════════════════════════════════════════════════════════════════════════════
+
+BASE DE ERROS TÍPICOS:
+
+❌ ERRO 1: Componente faltante
+   Sintoma: Programa tem poste X mas falta material Y
+   Causa: Leitura incompleta do desenho
+   Solução: Reler todo o desenho, procurar por legendas pequenas
+
+❌ ERRO 2: Quantidade errada
+   Sintoma: Programa diz qty=1 mas caderno mostra 2
+   Causa: Não contar visualmente no desenho
+   Solução: Contar componentes visuais + procurar indicações numéricas
+
+❌ ERRO 3: Código SAP errado
+   Sintoma: Programa tem SAP 5001234 mas caderno mostra 5001235
+   Causa: Digitação errada ou confusão de semelhante
+   Solução: Validar 2x antes de registar, ler número completo
+
+❌ ERRO 4: Referência de montagem incorreta
+   Sintoma: Tipo registado como EC-232 mas caderno mostra EC-235
+   Causa: Assumir tipo em vez de ler explicitamente
+   Solução: Procurar etiqueta clara no desenho, confirmar 2x
+
+❌ ERRO 5: Componentes genéricos não especificados
+   Sintoma: Programa tem "Tirante" mas não especifica tipo (IIA, IIB, etc)
+   Causa: Leitura superficial da legenda
+   Solução: Sempre extrair sufixo completo (E-6179 IIA, não só E-6179)
+
+❌ ERRO 6: Poste duplicado ou confundido
+   Sintoma: Página tem 2 postes (64-29 e 64-30) mas registado errado
+   Causa: Não distinguir os 2 desenhos da mesma página
+   Solução: Usar coordenadas XY para separar, ler ambos
+
+
+═══════════════════════════════════════════════════════════════════════════════
+NOMENCLATURA E CÓDIGOS INTERNOS
+═══════════════════════════════════════════════════════════════════════════════
+
+TIPOS DE MONTAGEM (IFTE LP10):
+- EC-232: Poste simples, Montagem A
+- EC-235: Poste simples variante
+- Pórtico: 2 postes ligados (64-29_30, 64-31_32, etc)
+- Mono: Poste único em linha reta
+
+COMPONENTES ESTRUTURAIS:
+- E-61XX: Estruturas (Tirante, Consola, Pêndulo, Suspensão)
+  └─ E-6179 IIA/IIB: Tirante Fixo
+  └─ E-6181 Tc: Tirante em Tubo
+  └─ E-6183 E: Antibalançante / Braço
+  └─ E-6188 I/X: Pêndulo
+- HE220B, HE260B, etc: Perfis metálicos (vigas)
+- 1Ft, 2Ft, 1Fr: Tipos de fundação (Ferros)
+
+EQUIPAMENTOS:
+- C-16XX: Componentes conexos (Espia, Amarração, etc)
+- EC-2XX: Equipamentos (Tensor, etc)
+
+COMPONENTES SEGURANÇA:
+- SAP 3002314: Corda Y/Patacho
+- SAP 3000599: Mosquetão
+- SAP variável: Arnês (confirmar no desenho)
+
+MATERIAIS:
+- SAP 5XXX: Materiais gerais
+- SAP 4XXX: Serviços/Equipamentos
+- SAP 3XXX: Consumíveis de segurança
+
+
+═══════════════════════════════════════════════════════════════════════════════
+REFERÊNCIAS RÁPIDAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Ficheiros de configuração do programa:
+□ gestao_armazem_catenaria.html - SEED_DATA com postes existentes
+□ postes_paginas.js - Mapeamento postes → PDF + página
+□ AGENTS.md - Regras técnicas e de negócio
+
+Documentação técnica:
+□ Normativos da IP e tipo de catenária (OneDrive)
+□ Desenhos normativos e de referência
+
+Documentos de auditoria:
+□ AUDITORIA_COMPLETA_CADERNOS_vs_PROGRAMA.txt - Relatório geral
+□ CHECKLIST_22_POSTES_FALTANTES.txt - Checklist de integração
+
+
+═══════════════════════════════════════════════════════════════════════════════
+DÚVIDAS FREQUENTES
+═══════════════════════════════════════════════════════════════════════════════
+
+P: E se o desenho não tiver SAP visível?
+R: Deixar em branco ou "TBD" (To Be Determined). Nunca inventar.
+
+P: E se a quantidade não estiver explícita?
+R: Marcar com "?" e questionar ao engenheiro de projecto. Não assumir qty=1.
+
+P: E se o tipo de montagem não estiver claro?
+R: Comparar visualmente com tipos conhecidos (04-26, 05-15, etc).
+   Se ainda incerto, marcar e questionar.
+
+P: Qual a diferença entre E-6179 IIA e E-6179 IIB?
+R: Variante de dimensão/especificação. Ler explicitamente no desenho.
+
+P: E se a página tiver 2 postes?
+R: Ler ambos separadamente. Usar coordenadas XY para distinguir.
+
+P: Como validar se leram bem?
+R: Comparar com poste semelhante já registado. Verificar 2x antes de guardar.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+Guia versão 1.0 | 14/10/2026
+Preparado para: Auditoria IFTE LP10 Vendas Novas
+═══════════════════════════════════════════════════════════════════════════════

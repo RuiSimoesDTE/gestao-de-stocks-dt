@@ -1,0 +1,54 @@
+﻿VIDEO 12: DEFINIÇÕES - CONFIGURAR
+Duração estimada: 3:00
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Finalmente, vamos ver como configurar o programa segundo as suas necessidades.
+
+As definições permitem personalizar o programa para a sua obra específica.
+
+Clique em GESTÃO e depois em Definições ou Configurar.
+
+Na secção de Armazéns, pode adicionar novos armazéns ou modificar os 
+existentes.
+
+Cada armazém tem um nome e uma localização, importante para organizar o stock.
+
+Na secção de Materiais, pode criar tipos de material personalizados.
+
+Isto ajuda a organizar melhor o seu catálogo.
+
+Na secção de Fornecedores, pode adicionar novos fornecedores ou actualizar 
+os existentes.
+
+Cada fornecedor tem um código SAP e contactos para referência.
+
+Na secção de Parâmetros, pode configurar opções gerais do programa.
+
+Por exemplo: moeda, idioma, formato de data, etc.
+
+Se quer resetar tudo para o estado inicial, tem um botão para isso também.
+
+Use com cuidado, porque apaga todos os seus dados!
+
+Se cometeu um erro nas definições, pode sempre restaurar de um backup anterior.
+
+As definições permitem que o programa seja adaptável para diferentes contextos 
+e empresas.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [gestao_definicoes] Abrir secção Definições
+ 2. [secao_armazens] Secção Armazéns
+ 3. [novo_armazem] Botão novo armazém
+ 4. [secao_materiais] Secção Materiais
+ 5. [secao_fornecedores] Secção Fornecedores
+ 6. [secao_parametros] Secção Parâmetros
+
+
+================================================================================

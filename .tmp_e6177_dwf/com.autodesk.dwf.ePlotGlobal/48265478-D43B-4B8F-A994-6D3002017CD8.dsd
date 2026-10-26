@@ -1,0 +1,42 @@
+[DWF6Version]
+Ver=1
+[DWF6MinorVersion]
+MinorVer=1
+[DWF6Sheet:10002000386-01_E-6177-E-6177]
+DWG=C:\Os meus documentos\Organização desenhos\Correções\Desenhos E\_feitos\E-6177\10002000386-01_E-6177.dwg
+Layout=E-6177
+Setup=
+OriginalSheetPath=
+Has Plot Port=0
+SheetIdentifier=384FF34E-7AB6-48DD-AA27-A340596C4028
+Has3DDWF=0
+[Target]
+Type=1
+DWF=C:\Os meus documentos\Organização desenhos\Correções\Desenhos E\_feitos\E-6177\10002000386-01_E-6177.dwf
+OUT=
+PWD=
+[AutoCAD Block Data]
+IncludeBlockInfo=0
+BlockTmplFilePath=
+[SheetSet Properties]
+IsSheetSet=FALSE
+IsHomogeneous=FALSE
+SheetSet Name=
+NoOfCopies=0
+PlotStampOn=FALSE
+ViewFile=FALSE
+JobID=0
+SelectionSetName=
+AcadProfile=
+CategoryName=
+LogFilePath=
+IncludeLayer=FALSE
+LineMerge=FALSE
+CurrentPrecision=
+PromptForDwfName=TRUE
+PwdProtectPublishedDWF=FALSE
+PromptForPwd=FALSE
+RepublishingMarkups=FALSE
+PublishSheetSetMetadata=FALSE
+PublishSheetMetadata=FALSE
+3DDWFOptions=0 0

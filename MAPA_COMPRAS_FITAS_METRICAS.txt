@@ -1,0 +1,94 @@
+﻿================================================================================
+MAPA DE COMPRAS DE FITAS MÉTRICAS
+DTE - Gestão de Materiais de Catenária
+Gerado em: 2026-10-15
+================================================================================
+
+RESUMO GERAL
+============
+
+Foram consultados os seguintes ficheiros:
+- SEED_DATA da aplicação (materiais, encomendas, movimentos)
+- EXPORT SAP 17/08/2026
+- Registos internos do sistema
+
+As 3 fitas métricas procuradas:
+1. FITA MÉTRICA STANLEY 5 MT TYLON (M92) - Ferramaq
+2. FITA METRICA CAIXA METALICA 5MT (M4020) - SAP
+3. FITA METRICA BIMAT STANLEY 8MT - JS Azevedo
+
+
+DETALHES POR FITA MÉTRICA
+=========================
+
+1. FITA MÉTRICA STANLEY 5 MT TYLON (M92) - Ferramaq
+───────────────────────────────────────────────────────────
+
+Data Enc    | PC        | Fornecedor | Quantidade | Valor Unit | Valor Total | Data Rec
+────────────────────────────────────────────────────────────────────────────────────────────
+-           | -         | -          | -          | -          | -           | -
+
+Status: Nenhuma encomenda registada no sistema
+Observação: Material existe no catálogo (ID: M92, Código: FIT-001) mas não tem 
+            compras ou movimentos de entrada registados.
+
+
+2. FITA METRICA CAIXA METALICA 5MT (M4020) - SAP
+──────────────────────────────────────────────────
+
+Data Enc    | PC        | Fornecedor | Quantidade | Valor Unit | Valor Total | Data Rec
+────────────────────────────────────────────────────────────────────────────────────────────
+-           | -         | -          | -          | -          | -           | -
+
+Status: Nenhuma encomenda registada no sistema
+Observação: Material existe no catálogo (ID: M4020, Código SAP: 5001896) mas não tem 
+            compras ou movimentos de entrada registados.
+
+
+3. FITA METRICA BIMAT STANLEY 8MT - JS Azevedo
+────────────────────────────────────────────────
+
+Data Enc    | PC        | Fornecedor              | Quantidade | Valor Unit | Valor Total | Data Rec
+──────────────────────────────────────────────────────────────────────────────────────────────────
+2026-07-30  | 4500881595| João S. Azevedo, Lda   | 1          | €10.98     | €10.98      | -
+
+Status: 1 encomenda registada
+Origem: EXPORT SAP 17/08/2026 | PEP IC-0019-P-01 | Item 40
+Observação: Material originário de SAP (ID: sap20260812-mat-4500881595-40, Código SAP: 5001894)
+
+
+TOTAIS GERAIS
+=============
+
+Total de fitas métricas com compras registadas: 1 de 3
+Total de encomendas encontradas: 1
+Valor total gasto: €10.98
+
+Fornecedores identificados:
+- João S. Azevedo, Lda: €10.98
+
+Período de compras: 2026-07-30 a 2026-07-30
+
+
+OBSERVAÇÕES IMPORTANTES
+=======================
+
+1. As fitas STANLEY (M92) e CAIXA METALICA (M4020) não têm encomendas registadas 
+   no sistema SAP ou na aplicação de gestão.
+
+2. A única fita com registo é a BIMAT STANLEY 8MT, que entrou via EXPORT SAP 
+   em 17/08/2026.
+
+3. É possível que as outras 2 fitas tenham sido:
+   - Adquiridas antes da implementação do sistema de rastreamento
+   - Adquiridas via processos manuais não registados em SAP
+   - Importadas de existências anteriores sem formalizar como encomenda
+
+4. Para informações completas sobre todas as compras, recomenda-se:
+   - Consultar Ferramaq directamente para compras de M92
+   - Verificar se há registos manuais ou históricos que não foram importados do SAP
+   - Validar com Rui Simões dados históricos anteriores a 17/08/2026
+
+
+Dados coerentes com a base de dados em 2026-10-15
+Consulte o ficheiro de dados (dados_armazem_catenaria.json) para detalhes completos.

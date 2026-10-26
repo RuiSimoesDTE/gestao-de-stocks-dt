@@ -1,0 +1,1768 @@
+﻿{
+    "data_extracao":  "2026-10-14",
+    "fonte":  "PDFs V09_IFTE_PDes (intervalo 64-21Y a 64-36)",
+    "postes":  [
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-27A",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-35-P",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "C-3511",
+                                               "cod":  "C-3511"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6177",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-27Y",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-28A",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-21",
+                       "montagem":  "A",
+                       "cotas":  {
+                                     "C":  "1.800"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "C-2576",
+                                               "cod":  "C-2576"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "EC-219",
+                                               "cod":  "EC-219"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "C-1602",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-25",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.000"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6180",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-23",
+                       "montagem":  "C",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.000"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "C-2576",
+                                               "cod":  "C-2576"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "EC-219",
+                                               "cod":  "EC-219"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6180",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-28",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6179",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-22",
+                       "montagem":  "A",
+                       "cotas":  {
+                                     "C":  "1.800"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "C-2576",
+                                               "cod":  "C-2576"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "EC-219",
+                                               "cod":  "EC-219"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "C-1602",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-21Y",
+                       "montagem":  "A",
+                       "cotas":  {
+                                     "C":  "1.800"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "C-2576",
+                                               "cod":  "C-2576"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "EC-219",
+                                               "cod":  "EC-219"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "C-1602",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-27",
+                       "montagem":  "A",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.250"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6187",
+                                               "cod":  "E-6187"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6180",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-36",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "C-3511",
+                                               "cod":  "C-3511"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-25Y",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.250"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6187",
+                                               "cod":  "E-6187"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-26A",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.250"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6187",
+                                               "cod":  "E-6187"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-24",
+                       "montagem":  "C",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.000"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-35A",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "C-3511",
+                                               "cod":  "C-3511"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6179",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-34",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6177",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-30A",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "A":  "1.400"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "E-6213",
+                                               "cod":  "E-6213"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-26",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.250"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6187",
+                                               "cod":  "E-6187"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-23A",
+                       "montagem":  "C",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.000"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6185",
+                                               "cod":  "E-6185"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6189",
+                                               "cod":  "E-6189"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-31A",
+                       "montagem":  "A",
+                       "cotas":  {
+                                     "A":  "1.400"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6213",
+                                               "cod":  "E-6213"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6179",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-25A",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "C":  "1.800",
+                                     "S":  "0.250"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6180",
+                                               "cod":  "E-6180"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6187",
+                                               "cod":  "E-6187"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-31",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "A":  "1.400"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "E-6213",
+                                               "cod":  "E-6213"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-29A",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "A":  "1.400"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "E-6213",
+                                               "cod":  "E-6213"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-36-P",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "C-160",
+                                               "cod":  "C-160"
+                                           },
+                                           {
+                                               "desc":  "E-6190",
+                                               "cod":  "E-6190"
+                                           },
+                                           {
+                                               "desc":  "C-1602",
+                                               "cod":  "C-1602"
+                                           },
+                                           {
+                                               "desc":  "C-3511",
+                                               "cod":  "C-3511"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-33",
+                       "montagem":  "B",
+                       "cotas":  {
+                                     "A":  "1.400"
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6213",
+                                               "cod":  "E-6213"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6179",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-33A",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "EC-232",
+                                               "cod":  "EC-232"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "E-6179",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "existente"
+                   },
+                   {
+                       "desmontar":  [
+
+                                     ],
+                       "numero":  "64-29",
+                       "montagem":  "B",
+                       "cotas":  {
+
+                                 },
+                       "pdf":  "42517.PE.09.IFT.00.306_03.txt",
+                       "outrosEquip":  [
+                                           {
+                                               "desc":  "E-6179",
+                                               "cod":  "E-6179"
+                                           },
+                                           {
+                                               "desc":  "E-6181",
+                                               "cod":  "E-6181"
+                                           },
+                                           {
+                                               "desc":  "E-6161",
+                                               "cod":  "E-6161"
+                                           },
+                                           {
+                                               "desc":  "E-6182",
+                                               "cod":  "E-6182"
+                                           },
+                                           {
+                                               "desc":  "E-6183",
+                                               "cod":  "E-6183"
+                                           },
+                                           {
+                                               "desc":  "E-6184",
+                                               "cod":  "E-6184"
+                                           },
+                                           {
+                                               "desc":  "E-6188",
+                                               "cod":  "E-6188"
+                                           },
+                                           {
+                                               "desc":  "E-6177",
+                                               "cod":  "E-6177"
+                                           },
+                                           {
+                                               "desc":  "E-6178",
+                                               "cod":  "E-6178"
+                                           },
+                                           {
+                                               "desc":  "E-6213",
+                                               "cod":  "E-6213"
+                                           }
+                                       ],
+                       "notas":  "Tem tirante. Tem consola. Tem antibalançante. ",
+                       "montagem_ref":  "EC-232",
+                       "consFix":  "",
+                       "tirFix":  "",
+                       "estado":  "desmontar"
+                   }
+               ],
+    "total":  28
+}

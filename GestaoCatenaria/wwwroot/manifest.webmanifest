@@ -1,0 +1,17 @@
+{
+  "name": "Gestão de Materiais de Catenária — DTE",
+  "short_name": "Catenária DTE",
+  "description": "Gestão de armazém, encomendas e cadernos de montagem da catenária.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d6b",
+  "lang": "pt-PT",
+  "icons": [
+    { "src": "/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

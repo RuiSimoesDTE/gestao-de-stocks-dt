@@ -1,0 +1,50 @@
+﻿VIDEO 5: TRANSFERÊNCIAS ENTRE ARMAZÉNS
+Duração estimada: 3:00
+================================================================================
+
+SCRIPT DE NARRAÇÃO (Português de Portugal):
+--------------------------------------------------------------------------------
+
+Nesta secção vamos aprender a transferir material entre diferentes armazéns 
+ou entre obras.
+
+Uma transferência é diferente de uma saída. É um movimento interno onde o 
+material sai de um sítio e entra noutro.
+
+Clique em ARMAZÉM e depois em Transferências.
+
+Escolha o armazém de origem onde o material se encontra atualmente.
+
+Depois escolha o armazém ou obra de destino.
+
+Procure o material que pretende transferir.
+
+Introduza a quantidade a transferir.
+
+Se tem uma guia de remessa, pode adicionar o número da guia para rastreabilidade.
+
+Introduza a data da transferência.
+
+O sistema verifica se tem quantidade suficiente no armazém de origem.
+
+Quando confirma, o stock do armazém de origem diminui e o do destino aumenta 
+no mesmo momento.
+
+A transferência fica registada com origem, destino, quantidade, data e guia.
+
+Isto é importante para manter a rastreabilidade de todos os movimentos.
+
+================================================================================
+
+PASSOS DE NAVEGAÇÃO:
+--------------------------------------------------------------------------------
+
+1. [armazem_transferencias] Abrir secção Transferências
+ 2. [armazem_origem] Escolher armazém de origem
+ 3. [armazem_destino] Escolher armazém de destino
+ 4. [procurar_material_trans] Procurar material
+ 5. [quantidade_transferir] Quantidade a transferir
+ 6. [numero_guia] Campo de número de guia
+
+
+================================================================================

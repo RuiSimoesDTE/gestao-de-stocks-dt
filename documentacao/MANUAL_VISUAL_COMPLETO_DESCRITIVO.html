@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Visual Completo - Gestão de Materiais de Catenária</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .toc-section {
+            background: #f9f9f9;
+            padding: 30px;
+            border-left: 5px solid #0066cc;
+            margin: 20px;
+        }
+
+        .toc-section h2 {
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .toc-item {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .toc-item:hover {
+            background: #0066cc;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,102,204,0.3);
+        }
+
+        .toc-item strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .toc-item small {
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 20px;
+            margin: -20px -20px 30px -20px;
+            border-radius: 0;
+        }
+
+        .section-header h2 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .section-header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .subsection {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6b6b;
+            border-radius: 3px;
+        }
+
+        .subsection h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subsection p {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .steps {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 3px;
+        }
+
+        .step-number {
+            background: #0066cc;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 1.2em;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            display: block;
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #666;
+        }
+
+        .example-box {
+            background: #e3f2fd;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .example-box strong {
+            color: #0066cc;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .tips-box {
+            background: #f3e5f5;
+            border-left: 4px solid #7b1fa2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .tips-box strong {
+            color: #7b1fa2;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .screenshot-container {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .screenshot {
+            width: 100%;
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .screenshot-caption {
+            background: #f9f9f9;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .legend {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 3px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        .legend-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .legend-item:before {
+            content: "● ";
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ff6b6b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .highlight-icon {
+            background: #ff6b6b;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 1.2em;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #0066cc;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #f0f0f0;
+        }
+
+        .button-style {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 3px;
+            text-decoration: none;
+            margin: 5px 5px 5px 0;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        .button-style:hover {
+            background: #004499;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .button-green {
+            background: #4caf50;
+        }
+
+        .button-green:hover {
+            background: #388e3c;
+        }
+
+        .button-warning {
+            background: #ff6b6b;
+        }
+
+        .button-warning:hover {
+            background: #e63946;
+        }
+
+        footer {
+            background: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 3px solid #0066cc;
+        }
+
+        .breadcrumb {
+            padding: 10px 20px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0066cc;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5em;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .warning-banner {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .warning-banner strong {
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📘 Manual Visual Completo</h1>
+            <p>Gestão de Materiais de Catenária DTE</p>
+        </header>
+
+        <div class="breadcrumb">
+            <strong>Versão:</strong> 1.0 | <strong>Data:</strong> 14 de Outubro de 2026 | <strong>App:</strong> localhost:8765
+        </div>
+
+        <div class="toc-section">
+            <h2>📋 Índice de Conteúdos</h2>
+            <div class="toc-grid">
+                <a href="#manual" class="toc-item">
+                    <strong>📖 Manual de Utilizador</strong>
+                    <small>Instruções gerais e boas práticas</small>
+                </a>
+                <a href="#painel" class="toc-item">
+                    <strong>📊 Painel de Armazém</strong>
+                    <small>Resumo rápido e últimos movimentos</small>
+                </a>
+                <a href="#stock" class="toc-item">
+                    <strong>📦 Stock Atual</strong>
+                    <small>Quantidade de cada material</small>
+                </a>
+                <a href="#entradas" class="toc-item">
+                    <strong>➕ Entradas de Material</strong>
+                    <small>Registar chegadas de novo material</small>
+                </a>
+                <a href="#saidas" class="toc-item">
+                    <strong>➖ Saídas de Material</strong>
+                    <small>Registar saídas e consumos</small>
+                </a>
+                <a href="#transferencias" class="toc-item">
+                    <strong>🔄 Transferências Entre Armazéns</strong>
+                    <small>Movimentação entre obras</small>
+                </a>
+                <a href="#guias-at" class="toc-item">
+                    <strong>📄 Guias AT</strong>
+                    <small>Arquivo de guias de transferência</small>
+                </a>
+                <a href="#pedidos" class="toc-item">
+                    <strong>🛒 Pedidos ao Armazém</strong>
+                    <small>Requisições internas de materiais</small>
+                </a>
+                <a href="#projeto" class="toc-item">
+                    <strong>🏗️ Projeto</strong>
+                    <small>Postes, desenhos, cadernos de montagem</small>
+                </a>
+                <a href="#materiais-poste" class="toc-item">
+                    <strong>📋 Materiais por Poste</strong>
+                    <small>Lista de peças por poste</small>
+                </a>
+                <a href="#penduagem" class="toc-item">
+                    <strong>⚡ Pendulagem</strong>
+                    <small>Calculadora de vãos e pêndulos</small>
+                </a>
+                <a href="#codigos" class="toc-item">
+                    <strong>🔐 Códigos de Peças</strong>
+                    <small>Tabela de correspondência de códigos</small>
+                </a>
+                <a href="#definicoes" class="toc-item">
+                    <strong>⚙️ Definições</strong>
+                    <small>Configurações, backup e restauração</small>
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- SECÇÃO 1: MANUAL -->
+            <div class="section" id="manual">
+                <div class="section-header">
+                    <h2>📖 Manual de Utilizador</h2>
+                    <p>Instruções gerais e funcionalidades principais da aplicação</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>A página Manual apresenta as instruções de utilização da aplicação em versão mobile (telemóvel/tablet), com guias de como aceder e utilizar as principais funcionalidades.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Permite que utilizadores novos compreendam rapidamente como usar a aplicação. Inclui:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Instruções de acesso à aplicação</li>
+                        <li>Sistema de login e segurança</li>
+                        <li>Funcionalidades principais explicadas</li>
+                        <li>Dicas de utilização no telemóvel</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO ACEDER</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Clique no Menu</strong>
+                                <p>Clique em "☰ Catenaria" no canto superior esquerdo para expandir o menu lateral</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Procure por "Manual"</strong>
+                                <p>No menu lateral, localize a opção "Manual" na secção OBRAS</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Clique em Manual</strong>
+                                <p>A página abrirá mostrando as instruções de utilização completas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 FUNCIONALIDADES PRINCIPAIS EXPLICADAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Painel geral:</strong> Ver o resumo rápido do armazém e os últimos movimentos</li>
+                        <li><strong>Stock atual:</strong> Ver a quantidade de cada material com pesquisa e filtros</li>
+                        <li><strong>Entrada de material:</strong> Registar quando chega material novo (por PO, manual ou SAP)</li>
+                        <li><strong>Saída de material:</strong> Registar saídas para montagem ou consumo</li>
+                        <li><strong>Transferências:</strong> Registar mudança de material entre armazéns ou obras</li>
+                        <li><strong>Guias AT:</strong> Ver guardo de guias de transporte que não correspondem a transferências internas</li>
+                        <li><strong>Encomendas:</strong> Ver o estado de todos os pedidos de compra</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS E ATALHOS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>A aplicação funciona sem ligação — "Abrir a aplicação" abre a app guardada no telemóvel</li>
+                        <li>Para colocar na barra de bookmarks, funciona sem ligação!</li>
+                        <li>Coloque "Abrir no ecran — Add to Home Screen" para um atalho rápido no telemóvel</li>
+                        <li>A página está otimizada para mobile e desktop</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 2: PAINEL -->
+            <div class="section" id="painel">
+                <div class="section-header">
+                    <h2>📊 Painel de Armazém</h2>
+                    <p>Visão rápida e resumo dos últimos movimentos</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Painel resumido que mostra informações gerais sobre o armazém em tempo real, com atualização automática a cada movimento registado.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Permite ver rapidamente:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>O estado geral do armazém</li>
+                        <li>Os últimos movimentos registados</li>
+                        <li>Totais de stock por armazém</li>
+                        <li>Informações que se atualizam ao instante quando há mudanças</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO ACEDER</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>No Menu Lateral</strong>
+                                <p>Localize a secção "ARMAZÉM" e clique em "Painel"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 INFORMAÇÕES MOSTRADAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Número de postes no caderno</li>
+                        <li>Postes novos a montar</li>
+                        <li>Postes a desmontar</li>
+                        <li>Postes existentes</li>
+                        <li>Últimos movimentos de entrada, saída e transferência</li>
+                        <li>Totais de stock por armazém (atualizam ao instante)</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Se mudar de obra ou filtrar, os totais atualizam ao instante</li>
+                        <li>Clique nos botões "Claro" ou "Escuro" para mudar o tema visual</li>
+                        <li>Use "Auto" para que o tema se adapte ao seu dispositivo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 3: STOCK -->
+            <div class="section" id="stock">
+                <div class="section-header">
+                    <h2>📦 Stock Atual</h2>
+                    <p>Quantidade disponível de cada material no armazém</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Tabela completa com todos os materiais em stock, mostrando quantidades, código, armazém, fornecedor e tipo. Permite pesquisa e filtragem avançada.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Consultar a quantidade de cada material em stock</li>
+                        <li>Pesquisar por código, descrição ou nome</li>
+                        <li>Filtrar por armazém, fornecedor ou tipo de material</li>
+                        <li>Exportar dados para Excel (CSV)</li>
+                        <li>Registar novo material</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO PESQUISAR UM MATERIAL</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder ao Stock</strong>
+                                <p>Menu → ARMAZÉM → Stock</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Escrever Código ou Descrição</strong>
+                                <p>No campo "Pesquisar código / descrição" escreva o código SAP ou nome (ex: "fio de contacto", "511", "cantoneira")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Aplicar Filtros (Opcional)</strong>
+                                <p>Selecione Armazém, Fornecedor ou Tipo para afunilar a pesquisa</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Ver Resultados</strong>
+                                <p>A tabela mostrará os materiais que correspondem aos critérios</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 EXEMPLOS DE PESQUISA:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Pesquisar "9C" mostra o "Condutor CU duro 12mm²"</li>
+                        <li>Pesquisar "fio" mostra todos os fios em stock</li>
+                        <li>Filtrar por "Armazém Catenária" mostra apenas os materiais desse armazém</li>
+                        <li>Pesquisar "01.100.01" (código SAP) mostra a peça exata</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS IMPORTANTES:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Exportar para Excel:</strong> Clique em "⬇ Exportar CSV" para descarregar os dados em ficheiro Excel</li>
+                        <li><strong>Novo Material:</strong> Clique em "Novo material" para adicionar um item ao stock (requer PO ou confirmação)</li>
+                        <li><strong>Sem Preço SAP:</strong> 308 materiais ainda não têm preço SAP, por isso não aparecem no cálculo do valor total</li>
+                        <li><strong>Filtros combinados:</strong> Pode usar vários filtros simultaneamente para resultados mais específicos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 4: ENTRADAS -->
+            <div class="section" id="entradas">
+                <div class="section-header">
+                    <h2>➕ Entradas de Material</h2>
+                    <p>Registar chegadas de novo material no armazém</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Página com 3 opções para registar entrada de material no armazém: por número de pedido de compra, entrada manual ou importação de ficheiro SAP.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para registar quando chega material novo no armazém. Existem 3 formas:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Por PO:</strong> Material chegou com número de pedido de compra identificado</li>
+                        <li><strong>Manual:</strong> Registar entrada sem PO ou com preenchimento manual</li>
+                        <li><strong>Importação SAP:</strong> Importar ficheiro CSV exportado do sistema SAP</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO REGISTAR ENTRADA POR NÚMERO DE PEDIDO</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Entradas</strong>
+                                <p>Menu → ARMAZÉM → Entradas</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Preencher Número de Pedido</strong>
+                                <p>Na secção "Receber por nº de pedido de compra", escreva o número (ex: 4500851896)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Data de Entrega</strong>
+                                <p>Selecione a data em que o material chegou</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Selecionar Armazém</strong>
+                                <p>Escolha o armazém onde o material foi recebido</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Marcar Linhas Recebidas</strong>
+                                <p>Procure pelo pedido, marque as linhas que chegaram e ajuste a quantidade</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <strong>Confirmar Entrada</strong>
+                                <p>Clique em "Registar entrada" para guardar o movimento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO REGISTAR ENTRADA MANUAL</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Secção "Entrada manual"</strong>
+                                <p>Procure o material na lista (escreva o código ou escolha na lista)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Quantidade</strong>
+                                <p>Escreva o número de unidades que chegaram</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Selecionar Armazém</strong>
+                                <p>Escolha o local onde foi recebido</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Data</strong>
+                                <p>Data da chegada do material</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Campos Adicionais (Opcional)</strong>
+                                <p>Preencha PO, Documento/Guia ou Fornecedor se tiver a informação</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <strong>Registar Entrada</strong>
+                                <p>Clique em "Registar entrada" para guardar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 EXEMPLO PRÁTICO:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Cenário:</strong> Chegou material de PO 4500851896 em 14/10/2026</li>
+                        <li><strong>Procedimento:</strong> Escrever PO → Data → Selecionar Armazém Catenária → Marcar linhas → Registar</li>
+                        <li><strong>Resultado:</strong> Stock fica atualizado e o movimento fica registado</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS IMPORTANTES:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Importação SAP:</strong> O ficheiro CSV deve ter colunas: código, material, quantidade, descrição, armazém, preço</li>
+                        <li><strong>Validação:</strong> A aplicação valida o pedido de compra e mostra o número de linhas encontradas</li>
+                        <li><strong>Ajuste de quantidade:</strong> Se o material chegou em quantidade diferente, ajuste o campo durante o registo</li>
+                        <li><strong>Documento/Guia:</strong> Coloque o número da guia de transporte ou factura para referência</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 5: SAÍDAS -->
+            <div class="section" id="saidas">
+                <div class="section-header">
+                    <h2>➖ Saídas de Material</h2>
+                    <p>Registar saídas, consumos e deslocação de materiais</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Página para registar quando material sai do armazém (para montagem, consumo, dano, roubo ou ajuste).</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para registar:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Material que sai para montagem de um poste ou obra</li>
+                        <li>Consumos internos ou desperdícios</li>
+                        <li>Roubo ou dano</li>
+                        <li>Ajustes de stock</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO REGISTAR UMA SAÍDA</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Saídas</strong>
+                                <p>Menu → ARMAZÉM → Saídas</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Tipo de Saída</strong>
+                                <p>Escolha "Material individual" ou outro tipo (a lista adapta conforme o tipo)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Procurar Material</strong>
+                                <p>Escreva o código ou escolha na lista "— Cavi lha do suporte dos braços Ø12 ×  1"</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Quantidade</strong>
+                                <p>Escreva a quantidade que está a sair</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Armazém de Origem</strong>
+                                <p>Selecione de qual armazém o material sai</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <strong>Data</strong>
+                                <p>Data da saída</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <strong>Destino / Obra / Frente</strong>
+                                <p>Escreva para onde vai o material (ex: obra, equipa, poste, montagem)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <strong>Registar Saída</strong>
+                                <p>Clique em "Registar saída" para confirmar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 EXEMPLO PRÁTICO:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Cenário:</strong> Saem 5 metros de fio de contacto para montagem do poste 04-26</li>
+                        <li><strong>Procedimento:</strong> Material individual → fio de contacto → Quantidade 5 → Armazém Catenária → Data 14/10/2026 → Destino "Poste 04-26" → Registar</li>
+                        <li><strong>Resultado:</strong> Stock diminui, registo fica guardado</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS IMPORTANTES:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Tipos de saída:</strong> Escolha o tipo correto (Material individual, Montagem completa, Ajuste, etc.)</li>
+                        <li><strong>Filtro de materiais:</strong> A lista "— Cavi lha do suporte" filtra para mostrar apenas materiais válidos</li>
+                        <li><strong>Histórico:</strong> Abaixo do formulário, vê o histórico de saídas (filtro por datas disponível)</li>
+                        <li><strong>Roubo ou Dano:</strong> Registar como saída normal e anotar no campo "Destino"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 6: TRANSFERÊNCIAS -->
+            <div class="section" id="transferencias">
+                <div class="section-header">
+                    <h2>🔄 Transferências Entre Armazéns</h2>
+                    <p>Movimentação de material entre obras e armazéns</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Tabela com todas as guias de transferência entre armazéns, mostrando origem, destino, data e materiais movimentados.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Ver histórico de transferências entre obras (IC-0019 vs IC-0018)</li>
+                        <li>Identificar onde foi cada lote de material</li>
+                        <li>Rastrear movimentos de material entre armazéns</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO VER AS TRANSFERÊNCIAS</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Transferências</strong>
+                                <p>Menu → ARMAZÉM → Transferências entre armazéns</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Ver Tabela</strong>
+                                <p>Aparece tabela com todas as guias registadas, ordenadas por data mais recente primeiro</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Abrir Detalhes (Opcional)</strong>
+                                <p>Clique numa linha para ver todos os materiais dessa transferência</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 COLUNAS DA TABELA:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>DATA:</strong> Data de saída da obra origem</li>
+                        <li><strong>GUIA:</strong> Número de guia AT (ex: GT AIDTXX)</li>
+                        <li><strong>ORIGEM:</strong> Obra de partida (ex: IC-0019 — Vendas Novas)</li>
+                        <li><strong>DESTINO:</strong> Obra de chegada (ex: IC-0018 — Pampilhosa)</li>
+                        <li><strong>MATERIAL E QUANTIDADE:</strong> Descrição e qtd do que foi transferido</li>
+                        <li><strong>PDF:</strong> Link para descarregar a guia em PDF</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Registar nova transferência:</strong> Use a secção "Saídas" e escolha destino como outra obra (cria automaticamente guia)</li>
+                        <li><strong>Guias AT:</strong> Cada transferência gera uma guia AT que pode ser impressa em PDF</li>
+                        <li><strong>Sincronização:</strong> As transferências afetam automaticamente o stock de ambas as obras</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 7: GUIAS AT -->
+            <div class="section" id="guias-at">
+                <div class="section-header">
+                    <h2>📄 Guias AT</h2>
+                    <p>Arquivo de guias de transporte entre armazéns e obras</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Arquivo com guias de transferência que não correspondem a transferências internas entre as duas obras principais (IC-0019 e IC-0018). Inclui transferências para/de outras localidades.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Consultar guias de material que saiu para Coimbra, Pombal, Cascais, etc.</li>
+                        <li>Ver histórico de transferências com outras unidades/armazéns</li>
+                        <li>Rastrear material que foi para fora das duas obras principais</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO CONSULTAR GUIAS AT</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Guias AT</strong>
+                                <p>Menu → ARMAZÉM → Guias AT</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Ver Arquivo</strong>
+                                <p>Tabela com todas as guias AT registadas (data, número guia, origem, destino, materiais)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Pesquisar (Opcional)</strong>
+                                <p>Use os filtros para localizar guias de um período ou localidade específica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 EXEMPLO DE REGISTOS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Pampilhosa → Coimbra (Rua das Cerâmicas)</li>
+                        <li>Pombal → Largo Salgueiro Maia</li>
+                        <li>Coimbra → Rua Adriano Lucas</li>
+                        <li>Entroncamento → Rua Ferreira Mesquita</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Diferença:</strong> Guias AT são para fora das obras principais; transferências internas usam um sistema separado</li>
+                        <li><strong>Importância:</strong> Estas guias ajudam a rastrear material que foi para outras localidades</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 8: PEDIDOS AO ARMAZÉM -->
+            <div class="section" id="pedidos">
+                <div class="section-header">
+                    <h2>🛒 Pedidos ao Armazém</h2>
+                    <p>Requisições internas de materiais entre departamentos/obras</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Painel que mostra KPIs dos pedidos ao armazém (em espera, atrasados, entregues) com opção de criar novos pedidos.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Requisitar material que uma obra ou equipa precisa</li>
+                        <li>Acompanhar estado de pedidos (em espera, entregues, atrasados)</li>
+                        <li>Ver estatísticas de pedidos por mês</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO CRIAR UM NOVO PEDIDO</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Pedidos</strong>
+                                <p>Menu → ARMAZÉM → Pedidos ao armazém</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Clique "Novo pedido"</strong>
+                                <p>Botão azul para iniciar um novo pedido</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Preencher Dados</strong>
+                                <p>Código material, obra/equipa, quantidade, datas, observações</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Submeter Pedido</strong>
+                                <p>Registar e notificar o responsável do armazém</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 KPIs MOSTRADOS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Em espera:</strong> Pedidos aguardando processamento</li>
+                        <li><strong>Atrasados:</strong> Pedidos que ultrapassaram o prazo previsto</li>
+                        <li><strong>Entrados, por receber:</strong> Materiais que chegaram mas não foram ainda levantados</li>
+                        <li><strong>Recebidos este mês:</strong> Total de pedidos entregues no mês atual</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Filtragem:</strong> Use os filtros para ver apenas "Em espera" ou "Atrasados"</li>
+                        <li><strong>Pesquisa:</strong> Procure por código de material, pessoa ou referência de obra</li>
+                        <li><strong>Status:</strong> O status muda automaticamente conforme o armazém processa</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 9: PROJETO -->
+            <div class="section" id="projeto">
+                <div class="section-header">
+                    <h2>🏗️ Projeto</h2>
+                    <p>Consulta organizada de postes, desenhos, cadernos de montagem e materiais da obra</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Página com informações do projeto: somátório de materiais do projeto, cadernos de montagem por poste, desenhos técnicos e estruturas.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Ver o somátório total de materiais que o projeto precisa</li>
+                        <li>Consultar cadernos de montagem por poste</li>
+                        <li>Ver desenhos e pórticos associados</li>
+                        <li>Aceder a lista de peças para cada montagem</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO PESQUISAR UM POSTE</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Projeto</strong>
+                                <p>Menu → PROJETO → Projeto</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Expandir Cadernos de Montagem</strong>
+                                <p>Clique na seta para abrir a seção</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Escolher Poste</strong>
+                                <p>Dropdown com lista de postes (ex: 04-26, 04-29, 05-15)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Ver Detalhes</strong>
+                                <p>Aparece o caderno, desenhos e lista de peças do poste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 INFORMAÇÕES POR POSTE:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Caderno:</strong> Nome do caderno (ex: EC-232, Por Identificar)</li>
+                        <li><strong>Estado:</strong> Novo, Existente, A desmontar</li>
+                        <li><strong>Tipo de Montagem:</strong> A, B, C (conforme projeto)</li>
+                        <li><strong>Estruturas e Fundações:</strong> Tabela com peças estruturais, elementos, desenhos e quantidades</li>
+                        <li><strong>Tirantes:</strong> Componentes de reforço</li>
+                        <li><strong>Consolos:</strong> Suportes laterais</li>
+                        <li><strong>Isoladores/Porcas:</strong> Componentes elétricos</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Pesquisa de poste:</strong> Escreva número como "04-26" ou intervalo "05-15 ou 64-29_30"</li>
+                        <li><strong>Abrir ficha completa:</strong> Clique em "Abrir ficha do poste" para ver mais detalhes</li>
+                        <li><strong>Desenhos:</strong> Clique nos códigos de desenho para abrir ficheiros PDF (se disponível)</li>
+                        <li><strong>Quantidade vs Utilizado:</strong> Tabela mostra qtd de projeto vs qtd que foi utilizada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 10: MATERIAIS POR POSTE -->
+            <div class="section" id="materiais-poste">
+                <div class="section-header">
+                    <h2>📋 Materiais por Poste</h2>
+                    <p>Lista de peças necessárias para cada poste da obra</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Página com lista dos 448 postes do caderno, mostrando estado (Novo, Existente, A desmontar) e tabela resumida de peças por poste.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Ver quantos postes de cada tipo tem o projeto</li>
+                        <li>Consultar lista de peças para um poste específico</li>
+                        <li>Planificar montagem por poste</li>
+                        <li>Verificar quais peças são necessárias</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO CONSULTAR MATERIAIS DE UM POSTE</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Materiais por Poste</strong>
+                                <p>Menu → PROJETO → Materiais por Poste</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Ver KPIs</strong>
+                                <p>Mostra 448 postes no caderno, 207 novos a montar, 111 a desmontar, 130 existentes</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Pesquisar Poste</strong>
+                                <p>Escreva número na pesquisa (ex: "04-26", "05-15")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Ver Lista</strong>
+                                <p>Tabela mostra poste, estado, tipo montagem, e peças necessárias</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 KPIs DO PROJETO:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>448 postes no caderno</strong> — Total de postes no projeto</li>
+                        <li><strong>207 postes novos a montar</strong> — Postes que ainda não existem</li>
+                        <li><strong>111 postes a desmontar</strong> — Postes antigos que vão ser removidos</li>
+                        <li><strong>130 postes existentes</strong> — Postes que continuam em pé</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Filtrar por estado:</strong> Use dropdown para ver apenas "Novo", "Existente", etc.</li>
+                        <li><strong>Somátorio:</strong> Secção mostra total de peças necessárias por poste</li>
+                        <li><strong>Exportar CSV:</strong> Clique em "Exportar CSV" para descarregar a lista</li>
+                        <li><strong>Tabela interativa:</strong> Clique num poste para ver detalhes completos das peças</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 11: PENDUAGEM -->
+            <div class="section" id="penduagem">
+                <div class="section-header">
+                    <h2>⚡ Pendulagem</h2>
+                    <p>Calculadora de vão, distribuição e comprimentos de pêndulos da catenária</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Calculadora interativa para cálculos de catenária, vãos entre postes, comprimento de pêndulos e cargas.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Calcular vão entre postes</li>
+                        <li>Determinar comprimento de pêndulos</li>
+                        <li>Validar cargas de isoladores e tirantes</li>
+                        <li>Desenhar esquemas de catenária</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO UTILIZAR A CALCULADORA</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Pendulagem</strong>
+                                <p>Menu → PROJETO → Pendulagem</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Abrir numa Janela Maior</strong>
+                                <p>Clique em "Abrir numa janela maior" para ver a calculadora em tela cheia</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Preencher Dados</strong>
+                                <p>Introduza vão, carga, alturas dos postes, etc.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Ver Resultados</strong>
+                                <p>A calculadora mostra comprimentos, distribuições e validações</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Interface dedicada:</strong> Usa ferramenta externa otimizada para cálculos</li>
+                        <li><strong>Normas IP:</strong> Calculadora respeita normativos de catenária para IP (Série LP10 para Vendas Novas)</li>
+                        <li><strong>Documentação:</strong> Resultados podem ser exportados ou impressos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 12: CÓDIGOS DE PEÇAS -->
+            <div class="section" id="codigos">
+                <div class="section-header">
+                    <h2>🔐 Códigos de Peças</h2>
+                    <p>Tabela de correspondência entre códigos e peças do catálogo IP</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Tabela completa com todos os códigos de peças da catenária, mostrando código SAP, código projeto, descrição, e outros atributos.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Consultar código SAP de uma peça</li>
+                        <li>Encontrar código projeto/montagem correspondente</li>
+                        <li>Ver descrição técnica de peças</li>
+                        <li>Exportar lista de códigos para Excel</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO PROCURAR UM CÓDIGO</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Códigos de Peças</strong>
+                                <p>Menu → PROJETO → Códigos de Peças</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Pesquisar por Código</strong>
+                                <p>Escreva código SAP (ex: "01.100.01") ou código projeto (ex: "9C")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Usar Filtros</strong>
+                                <p>Dropdown "Mostrar" para selecionar categorias (Todos, Utilizados, etc.)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Ver Resultados</strong>
+                                <p>Tabela mostra correspondências encontradas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 EXEMPLO DE PROCURA:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Pesquisar "9C":</strong> Encontra "Condutor CU duro 12mm²" com código SAP 01.100.03</li>
+                        <li><strong>Pesquisar "01.100.01":</strong> Encontra "Cabo de Bronze" com código projeto "SC"</li>
+                        <li><strong>Pesquisar "cantoneira":</strong> Lista todas as cantoneiras disponíveis</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS IMPORTANTES:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Manual IP:</strong> Códigos vêm do Manual de Peças de Catenária da IP (GR.MN.CAT.003 v.01)</li>
+                        <li><strong>Sem inventar:</strong> Nunca inventar códigos SAP ou peças — usar apenas o catálogo oficial</li>
+                        <li><strong>987 códigos:</strong> Total de 987 códigos no manual; 832 com nome confirmado; 575 usados nas listas de peças</li>
+                        <li><strong>Exportar:</strong> Clique em "Exportar CSV" para descarregar tabela para Excel</li>
+                        <li><strong>Sem preço SAP:</strong> 308 materiais ainda não têm preço associado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECÇÃO 13: DEFINIÇÕES -->
+            <div class="section" id="definicoes">
+                <div class="section-header">
+                    <h2>⚙️ Definições</h2>
+                    <p>Configurações, backup, restauração e parametrização da aplicação</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>O QUÊ</h3>
+                    <p>Página com todas as configurações da aplicação: utilizadores, segurança, pasta partilhada, backup, armazéns, acertos de stock e parâmetros.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>PARA QUÊ</h3>
+                    <p>Para:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Gerir utilizadores e acessos</li>
+                        <li>Fazer backup dos dados</li>
+                        <li>Restaurar dados de um backup anterior</li>
+                        <li>Configurar sincronização de ficheiros</li>
+                        <li>Ajustar stock manual</li>
+                        <li>Definir armazéns e localizações</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO FAZER BACKUP</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Definições</strong>
+                                <p>Menu → GESTÃO → Definições (rolar até ao fim para ver "Dados")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Localizar Secção "Dados"</strong>
+                                <p>Encontrar botão "Exportar backup (JSON)"</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Clique "Exportar backup"</strong>
+                                <p>Descarrega ficheiro JSON com todos os dados da aplicação</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Guardar Ficheiro</strong>
+                                <p>Salve em local seguro (OneDrive, Google Drive, ou computador local)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO RESTAURAR DADOS</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Aceder a Definições</strong>
+                                <p>Menu → GESTÃO → Definições → Secção "Dados"</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Clique "Restaurar backup"</strong>
+                                <p>Botão para selecionar ficheiro JSON anterior</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Selecionar Ficheiro</strong>
+                                <p>Escolha o backup que pretende restaurar</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Confirmar Restauração</strong>
+                                <p>Confirme a ação — dados serão substituídos pelos do backup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO AJUSTAR STOCK MANUALMENTE</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Localizar Secção "Acerto de Stock"</strong>
+                                <p>Em Definições, procure "Acerto de stock"</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Escrever Código do Material</strong>
+                                <p>Código SAP ou descrição (ex: "511", "fio de contacto")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Selecionar Armazém</strong>
+                                <p>Onde está o material</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Quantidade Atual na Aplicação</strong>
+                                <p>Valor que está registado (ler apenas)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Quantidade Corrigida / Real</strong>
+                                <p>Quantidade verificada fisicamente</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <strong>Motivo / Observações</strong>
+                                <p>Explicar porque mudou (ex: "inventário físico", "peça partida", "roubo")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <strong>Clique "Aplicar Acerto"</strong>
+                                <p>Registar o ajuste — fica com marcação de ajuste automático</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>COMO ADICIONAR NOVO ARMAZÉM</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Localizar "Armazéns / Localizações"</strong>
+                                <p>Em Definições</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Escrever Nome do Novo Armazém</strong>
+                                <p>Ex: "Armazém Central", "Entreposto Pombal"</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Clique "Adicionar"</strong>
+                                <p>Armazém fica criado e disponível para usar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <strong>📌 INFORMAÇÕES IMPORTANTES:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Backup regular:</strong> Fazer backup pelo menos uma vez por semana</li>
+                        <li><strong>Tipo de ficheiro:</strong> JSON (compatível com Excel, Word, etc. após importação)</li>
+                        <li><strong>Sincronização:</strong> Dados ficam guardados no navegador e no endereço da pasta compartilhada</li>
+                        <li><strong>Acertos marcados:</strong> Todo o ajuste de stock fica com marcação automática "ajuste: true" nos dados</li>
+                    </ul>
+                </div>
+
+                <div class="warning-banner">
+                    <strong>⚠️ AVISO IMPORTANTE:</strong> Não apague manualmente nenhum ficheiro! Contacte o Rui para qualquer ajuste ou reparação. O "Apagar todos os dados" é irrecuperável!
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 DICAS DE SEGURANÇA:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Backup automático:</strong> Dados são guardados no navegador automaticamente a cada movimento</li>
+                        <li><strong>Sincronização:</strong> Usar pasta partilhada (OneDrive/SharePoint) para sincronizar entre computadores</li>
+                        <li><strong>Múltiplas cópias:</strong> Manter backups em pelo menos 2 locais diferentes (computador + cloud)</li>
+                        <li><strong>Testar restauração:</strong> Periodicamente, fazer teste de restauração para confirmar que o backup funciona</li>
+                        <li><strong>Documentação de códigos:</strong> Ver guia "Como usar o caderno de códigos" para entender estrutura dos dados</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div style="border-top: 2px solid #0066cc; padding-top: 30px; margin-top: 40px;">
+                <h2 style="color: #0066cc; margin-bottom: 20px;">📚 RESUMO RÁPIDO: O QUE FAZER EM CADA SITUAÇÃO</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3>Chegou Material</h3>
+                        <p>Menu → ARMAZÉM → Entradas → Procurar PO → Confirmar quantidade → Registar</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">➖</div>
+                        <h3>Material Sai</h3>
+                        <p>Menu → ARMAZÉM → Saídas → Escolher material → Qtd → Destino → Registar</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Transferência</h3>
+                        <p>Menu → ARMAZÉM → Saídas → Destino = Outra obra → Cria guia automática</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Fazer Backup</h3>
+                        <p>Menu → GESTÃO → Definições → Dados → Exportar backup (JSON)</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Consultar Stock</h3>
+                        <p>Menu → ARMAZÉM → Stock → Pesquisar código → Ver quantidade</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Ver Poste</h3>
+                        <p>Menu → PROJETO → Projeto → Cadernos → Escolher poste → Peças</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Manual Visual Completo — Gestão de Materiais de Catenária DTE</strong></p>
+        <p>Versão: 1.0 | Data: 14 de Outubro de 2026 | Aplicação: http://localhost:8765/app/gestao_materiais_catenaria.html</p>
+        <p style="margin-top: 10px; opacity: 0.8;">Documento criado com anotações visuais, screenshots e instruções passo-a-passo para uso completo da aplicação.</p>
+    </footer>
+
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const btn = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth scrolling for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+{
+ "difs": [
+  {
+   "poste": "04-28",
+   "pdf": "CABO XAV 2x2.5mm2 1938",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "04-28",
+   "pdf": "CABO XAV 3x2.5mm2 1938",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "04-28",
+   "pdf": "CABO XAV 3x6mm2 1938",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-28A",
+   "pdf": "CABO XAV 2x2.5mm2 92",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-29A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "06-33",
+   "pdf": "PENDULAGEM: VER IT-CAT-043 TN-5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "POSTE DESMONTAR",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "H D S E F A C B -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "OUTROS EQUIPAMENTOS DES. REF. -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "DESMONTAR - POSTE SIMPLES (ENCASTRADO) DESM01",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "DESMONTAR - CONSOLA SIMPLES DESM03",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "DESMONTAR - AMARRAÇÃO CDTA DESM16",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-35",
+   "pdf": "DESMONTAR - ESPIA NORMAL DESM18",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "POSTE DESMONTAR",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "H D S E F A C B -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "OUTROS EQUIPAMENTOS DES. REF. -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "DESMONTAR - POSTE SIMPLES (ENCASTRADO) DESM01",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "DESMONTAR - CONSOLA SIMPLES DESM03",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "DESMONTAR - AMARRAÇÃO CAT COMPENSADA DESM13",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "06-36",
+   "pdf": "DESMONTAR - ESPIA NORMAL DESM18",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "11-22A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "11-23",
+   "pdf": "CABO XAV 2x2.5mm2 80.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "11-24",
+   "pdf": "CABO XAV 2x2.5mm2 92",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "15-07",
+   "pdf": "PENDULAGEM: VER IT-CAT-043 T1-1",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "19-19",
+   "pdf": "CABO XAV 2x2.5mm2 34.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "19-20",
+   "pdf": "CABO XAV 2x2.5mm2 46",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "19-20A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "26-19",
+   "pdf": "CABO XAV 3x2.5mm2 1104",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "26-25A",
+   "pdf": "CABO XAV 2x2.5mm2 333.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "26-26A",
+   "pdf": "CABO XAV 2x2.5mm2 322",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "26-28",
+   "pdf": "ADICIONAR FURAÇÃO A POSTE EXISTENTE FUR001",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-02",
+   "pdf": "ADICIONAR FURAÇÃO A POSTE EXISTENTE FUR001",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-06A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "27-09",
+   "pdf": "ADICIONAR FURAÇÃO A POSTE EXISTENTE FUR001",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-26",
+   "pdf": "POSTE DESMONTAR",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-26",
+   "pdf": "H D S E F A C B -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-26",
+   "pdf": "OUTROS EQUIPAMENTOS DES. REF. -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-26",
+   "pdf": "DESMONTAR - POSTE SIMPLES (ENCASTRADO) DESM01",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "27-26",
+   "pdf": "DESMONTAR - CONSOLA SIMPLES DESM03",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "31-21A",
+   "pdf": "CABO XAV 2x2.5mm2 103.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "31-22A",
+   "pdf": "CABO XAV 2x2.5mm2 126.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "31-23",
+   "pdf": "CABO XAV 2x2.5mm2 57.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "31-21B",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "34-02",
+   "pdf": "CABO XAV 2x2.5mm2 161",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "34-01A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "34-17B",
+   "pdf": "CABO XAV 2x2.5mm2 437",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "34-25A",
+   "pdf": "CABO XAV 2x2.5mm2 851",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "39-23A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "39-26",
+   "pdf": "CABO XAV 2x2.5mm2 161",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "45-15",
+   "pdf": "ADICIONAR FUROS P FUR001",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "45-22",
+   "pdf": "CABO XAV 2x2.5mm2 92",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "45-23",
+   "pdf": "CABO XAV 2x2.5mm2 69",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "45-23A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "50-26",
+   "pdf": "POSTE DESMONTAR",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "50-26",
+   "pdf": "H D S E F A C B -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "50-26",
+   "pdf": "OUTROS EQUIPAMENTOS DES. REF. -",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "50-26",
+   "pdf": "DESMONTAR - POSTE SIMPLES (ENCASTRADO) DESM01",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "50-26",
+   "pdf": "DESMONTAR - CONSOLA SIMPLES DESM03",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "50-36",
+   "pdf": "CABO XAV 2x2.5mm2 103.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "50-37A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "57-23A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "57-26",
+   "pdf": "CABO XAV 2x2.5mm2 80.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "61-10A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "63-21",
+   "pdf": "CABO XAV 3x2.5mm2 1518",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "63-21",
+   "pdf": "CABO XAV 3x6mm2 1518",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "64-05",
+   "pdf": "FURAÇÃO EM POSTE EXISTENTE FUR001",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "65-10A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  },
+  {
+   "poste": "65-17",
+   "pdf": "CABO XAV 2x2.5mm2 310.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "65-18",
+   "pdf": "CABO XAV 2x2.5mm2 287.5",
+   "programa": "(não existe no programa)"
+  },
+  {
+   "poste": "68-14A",
+   "pdf": "FIXAÇÃO DO TRANSFORMADOR EC-135 a",
+   "programa": "FIXAÇÃO DO TRANSFORMADOR EC-388 a"
+  }
+ ],
+ "semPagina": [
+  "04-26-EXIST",
+  "04-27-EXIST",
+  "04-28-EXIST",
+  "05-01-EXIST",
+  "05-02-EXIST",
+  "05-03-EXIST",
+  "05-04-EXIST",
+  "05-05-EXIST",
+  "05-06-EXIST",
+  "05-07-EXIST",
+  "05-10-EXIST",
+  "05-12-EXIST",
+  "05-13-EXIST",
+  "05-14-EXIST",
+  "05-15-EXIST",
+  "06-04-EXIST",
+  "06-24A-EXIST",
+  "06-30-EXIST",
+  "06-32-EXIST",
+  "06-33-EXIST",
+  "06-34-EXIST",
+  "06-35-EXIST",
+  "06-36-EXIST",
+  "10-12-EXIST",
+  "18-17-EXIST",
+  "19-01-EXIST",
+  "19-03-EXIST",
+  "19-04-EXIST",
+  "19-05-EXIST",
+  "19-24-EXIST",
+  "19-26-EXIST",
+  "19-28-EXIST",
+  "19-29A-EXIST",
+  "19-30-EXIST",
+  "19-31-EXIST",
+  "19-34-EXIST",
+  "20-01-EXIST",
+  "20-02-EXIST",
+  "20-03-EXIST",
+  "20-04-EXIST",
+  "20-05-EXIST",
+  "26-19-EXIST",
+  "26-20-EXIST",
+  "26-21-EXIST",
+  "26-22-EXIST",
+  "26-23-EXIST",
+  "26-24-EXIST",
+  "26-25-EXIST",
+  "26-26-EXIST",
+  "27-26-EXIST",
+  "27-27-EXIST",
+  "31-22-EXIST",
+  "31-26A-EXIST",
+  "31-28-EXIST",
+  "39-26-Exist",
+  "39-28-Exist",
+  "40-02-Exist",
+  "40-03-Exist",
+  "40-04-Exist",
+  "40-05-Exist",
+  "40-06-Exist",
+  "40-07-Exist",
+  "40-08-Exist",
+  "40-09-Exist",
+  "40-10-Exist",
+  "40-11-Exist",
+  "40-12-Exist",
+  "40-13-Exist",
+  "40-14-Exist",
+  "45-16-EXIST",
+  "46-19-EXIST",
+  "49-17-Exist",
+  "49-18-Exist",
+  "50-01-Exist",
+  "50-02-Exist",
+  "50-03-Exist",
+  "50-04-Exist",
+  "50-05-Exist",
+  "50-06-Exist",
+  "50-07-Exist",
+  "50-08-Exist",
+  "50-09-Exist",
+  "50-10-Exist",
+  "50-26-Exist",
+  "51-01-EXIST",
+  "51-02-EXIST",
+  "51-03-EXIST",
+  "58-07-EXIST",
+  "63-21-Exist",
+  "63-22-Exist",
+  "64-01-Exist",
+  "64-02-Exist",
+  "64-03-Exist",
+  "64-06-Exist",
+  "64-07-Exist",
+  "63-08-Exist",
+  "63-09-Exist",
+  "64-16-Exist",
+  "64-17-Exist",
+  "64-21-Exist",
+  "64-21Y-Exist",
+  "64-23A-Exist",
+  "64-25A-Exist",
+  "64-25Y-Exist",
+  "64-26A-Exist",
+  "64-27A-Exist",
+  "64-27Y-Exist",
+  "64-28A-Exist",
+  "64-29-Exist",
+  "64-29A-Exist",
+  "64-30A-Exist",
+  "64-31-Exist",
+  "64-35-P",
+  "64-36-P"
+ ],
+ "semPoste": []
+}

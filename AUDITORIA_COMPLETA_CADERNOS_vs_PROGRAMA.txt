@@ -1,0 +1,307 @@
+═══════════════════════════════════════════════════════════════════════════════
+AUDITORIA COMPLETA: CADERNOS DE MONTAGEM vs PROGRAMA
+Projeto: Vendas Novas / IC-0019 (IFTE LP10)
+Data: 14/10/2026
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 RESUMO EXECUTIVO
+───────────────────────────────────────────────────────────────────────────────
+✓ Postes mapeados nos cadernos (postes_paginas.js):     356
+✓ Postes registados no programa:                         334
+❌ Discrepância total:                                    22 postes
+
+⚠️ ACHADO CRÍTICO:
+   Existem 22 postes nos cadernos de montagem que NÃO foram ainda registados
+   no programa. Estes necessitam leitura manual dos PDFs e integração.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+❌ POSTES FALTANTES NO PROGRAMA (22)
+═══════════════════════════════════════════════════════════════════════════════
+
+Os seguintes postes estão mapeados nos cadernos mas não existem no programa:
+
+POSTE 05-10
+  Ficheiro PDF:     42517.PE.09.IFT.00.301_03.pdf
+  Página:           23
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 06-24A
+  Ficheiro PDF:     42517.PE.09.IFT.00.301_03.pdf
+  Página:           58
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 19-29A
+  Ficheiro PDF:     42517.PE.09.IFT.00.302_03.pdf
+  Página:           32
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 31-22
+  Ficheiro PDF:     42517.PE.09.IFT.00.304_03.pdf
+  Página:           9
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 31-26A
+  Ficheiro PDF:     42517.PE.09.IFT.00.304_03.pdf
+  Página:           10
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 31-28
+  Ficheiro PDF:     42517.PE.09.IFT.00.304_03.pdf
+  Página:           11
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 63-08
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           30
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 63-09
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           32
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-21Y
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           48
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-23A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           51
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-25A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           54
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-25Y
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           55
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-26A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           57
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-27A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           59
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-27Y
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           60
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-28A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           62
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-29
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           64
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-29A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           65
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-30A
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           66
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-31
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           68
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-35
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           73
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+POSTE 64-36
+  Ficheiro PDF:     42517.PE.09.IFT.00.306_05_NOVO.pdf
+  Página:           74
+  Status:           Não existe no programa
+  Ação recomendada: Ler caderno, extrair dados e criar entrada
+
+
+═══════════════════════════════════════════════════════════════════════════════
+✅ VERIFICAÇÕES REALIZADAS
+═══════════════════════════════════════════════════════════════════════════════
+
+1. ✓ Mapeamento de postes (postes_paginas.js)
+   - Ficheiro lido e validado
+   - 356 postes com referência a PDF e página
+   - Distribuição por ficheiro PDF confirmada
+
+2. ✓ Programa (SEED_DATA)
+   - Ficheiro gestao_armazem_catenaria.html lido
+   - 334 postes registados e validados
+   - Nenhum poste no programa que não exista no mapeamento
+
+3. ✓ PDFs disponíveis
+   - 25 ficheiros PDF confirmados
+   - Localização: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\projeto_vendas_novas\V09_IFTE_PDes\
+   - Todos os PDFs referenciados no mapeamento existem
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🔍 PRÓXIMOS PASSOS (AUDITORIA FASE 2)
+═══════════════════════════════════════════════════════════════════════════════
+
+PARA OS 22 POSTES FALTANTES:
+1. Abrir o ficheiro PDF especificado para cada poste
+2. Ir para a página indicada
+3. Ler o desenho de montagem e extrair:
+   - Número do poste (já conhecemos, ex: 64-29)
+   - Tipo/código de montagem (ex: EC-232, Pórtico, etc)
+   - Estruturas necessárias (Tirante, Consola, Viga, Macizo, etc)
+   - Componentes especiais (Antibalançante, Braço de chamada, etc)
+   - Equipamentos adicionais (Tensor, Suspensão, etc)
+   - Materiais de segurança (Arnês, Corda, etc)
+   - Códigos SAP de cada componente (quando visíveis)
+   - Quantidades de cada item
+4. Registar os dados no programa seguindo o formato existente
+5. Validar que não há conflitos ou duplicações
+
+PARA AUDITORIA COMPLETA (Todos os 356 postes):
+1. Ler visualmente cada PDF página a página
+2. Para cada poste, comparar:
+   - Materiais no programa vs. caderno
+   - Códigos SAP vs. caderno
+   - Quantidades vs. caderno
+   - Nomes e descrições vs. caderno
+3. Registar discrepâncias encontradas
+4. Gerar relatório de correções
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📋 TIPOS DE ERROS PROCURADOS
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Peça Faltante
+  Exemplo: Caderno mostra "Arnês 2 pontos" mas programa não tem
+  Impacto: Compra incompleta, obra paralisa
+
+✓ Código SAP Errado
+  Exemplo: Programa tem SAP 5001234 mas caderno mostra 5001235
+  Impacto: Mercadoria errada comprada ou não corresponde
+
+✓ Quantidade Errada
+  Exemplo: Programa registado com qty=1 mas caderno mostra qty=2
+  Impacto: Falta de material na obra
+
+✓ Poste Não Existe no Programa
+  Exemplo: Caderno tem poste 64-29 mas não existe no programa
+  Impacto: CRÍTICO - Material não será requisitado nem controlado
+  Status: ENCONTRADOS 22 POSTES DESTES ❌
+
+✓ Material Não Existe no Cadastro
+  Exemplo: Poste refere "Corrente X10" mas não existe em materiais
+  Impacto: Não consegue registar saída, não há rastreabilidade
+
+✓ Tipo/Montagem Errado
+  Exemplo: Programa registado como "EC-232" mas caderno mostra "EC-235"
+  Impacto: Desenho errado, estrutura não correspondente
+
+✓ Especificações Incompletas
+  Exemplo: Poste sem referência ao PDF original
+  Impacto: Impossível rever/validar dados
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📄 DOCUMENTAÇÃO DE REFERÊNCIA
+═══════════════════════════════════════════════════════════════════════════════
+
+Ficheiros consultados:
+1. gestao_armazem_catenaria.html
+   Localização: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\
+   Contém: SEED_DATA com 334 postes, 1.937 materiais, 2.243 movimentos
+   Versão: De 17/08/2026 (segundo documentação)
+
+2. postes_paginas.js
+   Localização: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\projeto_vendas_novas\V09_IFTE_PDes\
+   Contém: Mapeamento de 356 postes para páginas de PDF
+   Formato: var PROJETO_PAGINAS_POSTE = { ... }
+
+3. Cadernos PDF (V09_IFTE_PDes)
+   Localização: C:\Users\dst7973\Desktop\gestao_de_stocks_dte\projeto_vendas_novas\V09_IFTE_PDes\
+   Quantid: 25 ficheiros
+   Padrão: 42517.PE.09.IFT.00.XXX_XX.pdf
+   Totais: ~2000 páginas de desenhos técnicos
+
+
+═══════════════════════════════════════════════════════════════════════════════
+✅ POSTES CORRECTOS (A VALIDAR)
+═══════════════════════════════════════════════════════════════════════════════
+
+Amostra de postes que existem tanto no mapeamento quanto no programa:
+(334 postes no programa estão presentes no mapeamento - 100% de cobertura)
+
+  ✓ 04-26    ✓ 04-27    ✓ 04-28    ✓ 05-01    ✓ 05-02
+  ✓ 05-03    ✓ 05-04    ✓ 05-05    ✓ 05-06    ✓ 05-07
+  ✓ 05-12    ✓ 05-13    ✓ 05-14    ✓ 05-15    ✓ 05-16
+  ✓ 05-17    ✓ 05-18    ✓ 05-18A   ✓ 05-19    ✓ 05-20
+  [... 314 postes adicionais ...]
+
+Nota: Estes 334 postes existem no programa E estão no mapeamento.
+      Ainda requerem auditoria linha por linha dos dados (materiais, qtds, códigos SAP).
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📌 RECOMENDAÇÃO FINAL
+═══════════════════════════════════════════════════════════════════════════════
+
+AÇÃO IMEDIATA:
+1. Prioridade 1: Adicionar ao programa os 22 postes faltantes
+   Custo: ~1-2 horas de leitura e entrada manual dos 22 postes
+   Benefício: Cobertura 100% dos cadernos no programa
+
+2. Prioridade 2: Auditoria completa dos 334 postes existentes
+   Custo: ~40-60 horas (leitura linha por linha de 25 PDFs)
+   Benefício: Validação de exactidão de materiais, qtds e códigos SAP
+
+3. Prioridade 3: Automatizar leitura de desenhos (investigar OCR)
+   Custo: Setups iniciais
+   Benefício: Futura automatização de actualizações
+
+CRONOGRAMA PROPOSTO:
+□ Semana 1: Adicionar 22 postes faltantes
+□ Semana 2-4: Auditoria completa dos 334 postes
+□ Semana 5: Relatório final e correções
+
+
+═══════════════════════════════════════════════════════════════════════════════
+Relatório gerado: 14/10/2026
+Auditoria por: Claude Haiku 4.5 (com revisão manual necessária dos PDFs)
+Responsável: Rui Simões (DTE Instalações Especiais - Catenária)
+═══════════════════════════════════════════════════════════════════════════════
