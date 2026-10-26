@@ -7656,18 +7656,18 @@ window.sairNao=function(){document.getElementById('modal-sair').style.display='n
     linhas.map(m=>'<tr><td><b>'+esc(m.codigo||'')+'</b></td><td>'+esc(m.desc||'')+'</td><td style="text-align:right">'+fmt(m.qtd||0)+'</td><td>'+esc(m.un||'')+'</td></tr>').join('')+'</tbody>';
 };
 
-/* ===== SUBSTITUIÇÃO VISUAL: Pasta partilhada → Gravar para GitHub ===== */
+/* ===== SUBSTITUIÇÃO VISUAL: Gravar para GitHub → Gravar para GitHub ===== */
 (function() {
   'use strict';
   const substituirTexto = () => {
     // Substituir em todos os elementos
     document.querySelectorAll('*').forEach(el => {
       if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-        el.childNodes[0].textContent = el.childNodes[0].textContent.replace(/Pasta partilhada/g, 'Gravar para GitHub');
+        el.childNodes[0].textContent = el.childNodes[0].textContent.replace(/Gravar para GitHub/g, 'Gravar para GitHub');
       }
       for (let attr of ['title', 'aria-label']) {
         if (el.getAttribute(attr)) {
-          el.setAttribute(attr, el.getAttribute(attr).replace(/Pasta partilhada/g, 'Gravar para GitHub'));
+          el.setAttribute(attr, el.getAttribute(attr).replace(/Gravar para GitHub/g, 'Gravar para GitHub'));
         }
       }
     });
@@ -7681,7 +7681,7 @@ window.sairNao=function(){document.getElementById('modal-sair').style.display='n
     }
 
     // Esconder botão de pasta partilhada
-    const btnPasta = document.querySelector('[title*="Pasta partilhada"]');
+    const btnPasta = document.querySelector('[title*="Gravar para GitHub"]');
     if (btnPasta) {
       btnPasta.hidden = true;
       btnPasta.style.display = 'none !important';
