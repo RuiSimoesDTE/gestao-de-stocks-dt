@@ -2490,6 +2490,10 @@ function guardar(){
     try{if(window.sincAgendar)window.sincAgendar();}catch(e){}   // 07/10/2026: grava o ficheiro na pasta partilhada
   }catch(e){toast('Erro a guardar — espaço do navegador esgotado','erro');}
 }
+/* Auto-save: grava automaticamente a cada 30 segundos */
+setInterval(function(){
+  try{if(document.readyState==='complete')guardar();}catch(e){}
+},30000);
 /* 18/09/2026 (A10): cada obra tinha o seu contador e as montagens são partilhadas: duas obras
    podiam criar o mesmo id. O contador passa a ser o maior de todas as obras e das montagens. */
 function novoId(){
