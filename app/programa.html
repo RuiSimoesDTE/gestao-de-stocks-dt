@@ -2,9 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=gestao_armazem_catenaria.html?v=latest&t=1793032251">
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="refresh" content="0; url=https://raw.githubusercontent.com/RuiSimoesDTE/gestao-de-stocks-dt/master/app/gestao_armazem_catenaria.html?t=" + Date.now()>
+<title>Gestão de Armazém</title>
 </head>
 <body>
-Redirecionando...
+Carregando programa do repositório...
+<script>
+// Redirecionar para raw content do GitHub (sem cache)
+const url = 'https://raw.githubusercontent.com/RuiSimoesDTE/gestao-de-stocks-dt/master/app/gestao_armazem_catenaria.html?nocache=' + Date.now();
+fetch(url).then(r => r.text()).then(html => {
+    document.documentElement.innerHTML = html;
+}).catch(e => {
+    document.body.innerHTML = '<h1>Erro ao carregar</h1><p>Não conseguiu ligar ao repositório. Erro: ' + e.message + '</p>';
+});
+</script>
 </body>
 </html>
