@@ -7064,10 +7064,7 @@ setTimeout(()=>{
   function desenhar(){
     const pill=$('estado-sinc');
     if(pill){
-      if(estado==='desligada'){pill.hidden=!suportado?true:false;pill.className='pill-sinc';pill.textContent='☁ Pasta partilhada: desligada';pill.title='Clica para ligar (Definições)';}
-      else if(estado==='ligada'){pill.hidden=false;pill.className='pill-sinc ok';pill.textContent='☁ Sincronizado'+(ultima?' '+ultima:'');pill.title=resumo||'Pasta partilhada ligada';}
-      else if(estado==='autorizar'){pill.hidden=false;pill.className='pill-sinc aviso';pill.textContent='☁ Autorizar pasta';pill.title='Clica para autorizar o acesso à pasta';}
-      else{pill.hidden=false;pill.className='pill-sinc erro';pill.textContent='☁ Erro de sincronização';pill.title=resumo;}
+      pill.hidden=true; // Desativado - usando GitHub em vez de pasta partilhada
     }
     const gs=$('btn-gravar-sair');if(gs)gs.hidden=!(pasta&&estado==='ligada'&&!document.body.classList.contains('modo-operador'));
     if(pasta)tirarFaixa();
