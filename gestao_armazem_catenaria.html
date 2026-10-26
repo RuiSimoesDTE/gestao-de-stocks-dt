@@ -429,6 +429,7 @@ button.btn.cinza {
     <span id="sessao-user" class="pill-sessao" hidden></span>
     <button id="btn-alertas" class="pill-sinc" hidden onclick="abrirAlertas()" title="Baixas, pedidos e sugestões">🔔 <span id="alertas-n">0</span></button>
     <button id="btn-instalar-app" class="btn verde sm" hidden onclick="instalarApp()" title="Instalar o programa como aplicação neste computador">📲 Instalar app</button>
+    <button class="btn verde sm" onclick="sincGravarESair()" title="Grava as alterações e sincroniza com GitHub">💾 Gravar para GitHub</button>
     <button class="btn cinza sm" onclick="exportarBackup()">⬇ Backup (JSON)</button>
     <button class="btn cinza sm" onclick="document.getElementById('imp-backup').click()">⬆ Restaurar</button>
     <input type="file" id="imp-backup" accept=".json" style="display:none" onchange="importarBackup(this)">
