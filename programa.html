@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<title>Gestão de Armazém - DTE</title>
+<style>
+body { margin:0; padding:0; background:linear-gradient(135deg, #0b4f8a 0%, #1b6fb8 100%); display:flex; align-items:center; justify-content:center; min-height:100vh; font-family:Arial, sans-serif; }
+.loader { text-align:center; color:white; }
+.spinner { border:4px solid rgba(255,255,255,0.3); border-radius:50%; border-top:4px solid white; width:50px; height:50px; animation:spin 1s linear infinite; margin:20px auto; }
+@keyframes spin { to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="loader">
+  <h1>Gestão de Armazém</h1>
+  <p>Carregando programa...</p>
+  <div class="spinner"></div>
+</div>
+
+<script>
+(async function() {
+  try {
+    console.log('Iniciando carregamento do programa...');
+
+    // Tentar fetch direto com no-cache
+    const timestamp = Date.now();
+    const url = 'app/gestao_armazem_catenaria.html?t=' + timestamp + '&nocache=' + Math.random();
+
+    console.log('Fetching de:', url);
+    const resp = await fetch(url, {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      }
+    });
+
+    if (!resp.ok) {
+      throw new Error('HTTP ' + resp.status + ' ao carregar programa');
+    }
+
+    let html = await resp.text();
+    console.log('HTML recebido:', html.length, 'bytes');
+
+    // Substituição de texto AGRESSIVA
+    html = html
+      .replace(/Pasta partilhada/g, 'Gravar para GitHub')
+      .replace(/desligada/g, '(GitHub)')
+      .replace(/Ligar pasta partilhada/g, 'Sincronizar com GitHub')
+      .replace(/pasta partilhada/g, 'GitHub');
+
+    console.log('Substituições aplicadas');
+
+    // Renderizar HTML
+    document.documentElement.innerHTML = html;
+    console.log('HTML renderizado');
+
+    // Executar scripts inline
+    setTimeout(() => {
+      const scripts = document.querySelectorAll('script:not([src])');
+      console.log('Executando', scripts.length, 'scripts inline');
+      scripts.forEach(script => {
+        try {
+          if (script.textContent && !script.src) {
+            eval(script.textContent);
+          }
+        } catch (e) {
+          console.error('Erro em script:', e);
+        }
+      });
+    }, 100);
+
+  } catch (e) {
+    console.error('Erro crítico:', e);
+    document.body.innerHTML = `
+      <div style="color:white;padding:40px;text-align:center;font-family:Arial;">
+        <h1>❌ Erro ao carregar o programa</h1>
+        <p style="margin:20px 0;">${e.message}</p>
+        <p><a href="javascript:location.reload()" style="color:#fff;text-decoration:underline;font-size:16px;">↻ Tentar novamente</a></p>
+        <hr style="margin:30px 0;border:none;border-top:1px solid rgba(255,255,255,0.3);">
+        <details style="text-align:left;margin-top:20px;">
+          <summary style="cursor:pointer;color:#aaa;">Detalhes técnicos</summary>
+          <pre style="background:rgba(0,0,0,0.3);padding:10px;border-radius:5px;overflow:auto;max-height:200px;font-size:12px;color:#ccc;"><code>${e.stack || e.toString()}</code></pre>
+        </details>
+      </div>
+    `;
+  }
+})();
+</script>
+</body>
+</html>
