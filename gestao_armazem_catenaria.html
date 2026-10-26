@@ -7654,7 +7654,51 @@ window.sairNao=function(){document.getElementById('modal-sair').style.display='n
   const tbl=document.getElementById('tbl-projeto-totais');
   if(tbl)tbl.innerHTML='<thead><tr><th>Código</th><th>Descrição</th><th>Qtd</th><th>Un</th></tr></thead><tbody>'+
     linhas.map(m=>'<tr><td><b>'+esc(m.codigo||'')+'</b></td><td>'+esc(m.desc||'')+'</td><td style="text-align:right">'+fmt(m.qtd||0)+'</td><td>'+esc(m.un||'')+'</td></tr>').join('')+'</tbody>';
-};</script>
+};
+
+/* ===== SUBSTITUIÇÃO VISUAL: Pasta partilhada → Gravar para GitHub ===== */
+(function() {
+  'use strict';
+  const substituirTexto = () => {
+    // Substituir em todos os elementos
+    document.querySelectorAll('*').forEach(el => {
+      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+        el.childNodes[0].textContent = el.childNodes[0].textContent.replace(/Pasta partilhada/g, 'Gravar para GitHub');
+      }
+      for (let attr of ['title', 'aria-label']) {
+        if (el.getAttribute(attr)) {
+          el.setAttribute(attr, el.getAttribute(attr).replace(/Pasta partilhada/g, 'Gravar para GitHub'));
+        }
+      }
+    });
+
+    // Mostrar botão "Gravar para GitHub" se existir
+    const btnGravar = document.getElementById('btn-gravar-github');
+    if (btnGravar) {
+      btnGravar.style.display = 'inline-flex !important';
+      btnGravar.hidden = false;
+      btnGravar.style.background = '#28a745 !important';
+    }
+
+    // Esconder botão de pasta partilhada
+    const btnPasta = document.querySelector('[title*="Pasta partilhada"]');
+    if (btnPasta) {
+      btnPasta.hidden = true;
+      btnPasta.style.display = 'none !important';
+    }
+  };
+
+  // Executar na carga
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', substituirTexto);
+  } else {
+    substituirTexto();
+  }
+
+  // Executar a cada 500ms para cobrir renderizações dinâmicas
+  setInterval(substituirTexto, 500);
+})();
+</script>
 </body>
 </html>
 
