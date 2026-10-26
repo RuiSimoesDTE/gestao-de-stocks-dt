@@ -434,10 +434,6 @@ button.btn.cinza {
       <button type="button" data-programa-theme="dark" onclick="definirTemaPrograma('dark')">☾ Escuro</button>
       <button type="button" data-programa-theme="auto" onclick="definirTemaPrograma('auto')">Auto</button>
     </div>
-    <button id="btn-autosave" class="pill-sinc ok" style="background:#d9f3e1;color:#116b34;cursor:default;" title="Auto-save ativo - grava automaticamente a cada 30 segundos">💾 Auto-save ativo</button>
-    <span id="estado-rede" class="pill-rede" hidden title="Sem ligação à rede — a aplicação continua a funcionar com a cópia guardada">● Sem ligação</span>
-    <button id="estado-sinc" class="pill-sinc" hidden onclick="sincPill()" style="display:none!important;"></button>
-    <button id="btn-gravar-sair" class="pill-sinc ok" hidden onclick="sincGravarESair()" title="Grava já para GitHub e deixa fechar">💾 Gravar e sair</button>
     <span id="sessao-user" class="pill-sessao" hidden></span>
     <button id="btn-alertas" class="pill-sinc" hidden onclick="abrirAlertas()" title="Baixas, pedidos e sugestões">🔔 <span id="alertas-n">0</span></button>
     <button id="btn-instalar-app" class="btn verde sm" hidden onclick="instalarApp()" title="Instalar o programa como aplicação neste computador">📲 Instalar app</button>
@@ -2491,10 +2487,6 @@ function guardar(){
     try{if(window.sincAgendar)window.sincAgendar();}catch(e){}   // 07/10/2026: grava o ficheiro na pasta partilhada
   }catch(e){toast('Erro a guardar — espaço do navegador esgotado','erro');}
 }
-/* Auto-save: grava automaticamente a cada 30 segundos */
-setInterval(function(){
-  try{if(document.readyState==='complete')guardar();}catch(e){}
-},30000);
 /* 18/09/2026 (A10): cada obra tinha o seu contador e as montagens são partilhadas: duas obras
    podiam criar o mesmo id. O contador passa a ser o maior de todas as obras e das montagens. */
 function novoId(){
