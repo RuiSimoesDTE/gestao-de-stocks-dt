@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <title>Gestão de Armazém - DTE</title>
+</head>
+<body style="margin:0;padding:0;background:#0b4f8a;display:flex;align-items:center;justify-content:center;min-height:100vh;">
+    <div style="text-align:center;color:white;">
+        <h1>Carregando programa...</h1>
+        <p>A aplicação está a iniciar. Por favor aguarde.</p>
+    </div>
+
+    <iframe id="app-frame" style="display:none;width:100%;height:100%;border:none;" src="gestao_armazem_catenaria.html"></iframe>
+
+    <script>
+        // Força carregamento sem cache
+        const timestamp = Date.now();
+        const frame = document.getElementById('app-frame');
+        frame.src = `gestao_armazem_catenaria.html?v=${timestamp}&t=${timestamp}`;
+
+        setTimeout(() => {
+            frame.style.display = 'block';
+            document.body.innerHTML = '';
+            document.body.appendChild(frame);
+        }, 500);
+
+        // Alternativa: carregar diretamente
+        window.location.href = `gestao_armazem_catenaria.html?v=${timestamp}&nocache=true`;
+    </script>
+</body>
+</html>
