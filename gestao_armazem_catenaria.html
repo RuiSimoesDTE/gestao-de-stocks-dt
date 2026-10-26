@@ -425,7 +425,7 @@ button.btn.cinza {
     </div>
     <span id="estado-rede" class="pill-rede" hidden title="Sem ligação à rede — a aplicação continua a funcionar com a cópia guardada">● Sem ligação</span>
     <button id="estado-sinc" class="pill-sinc" hidden onclick="sincPill()"></button>
-    <button id="btn-gravar-sair" class="pill-sinc ok" hidden onclick="sincGravarESair()" title="Grava já na pasta partilhada e deixa fechar">💾 Gravar e sair</button>
+    <button id="btn-gravar-sair" class="pill-sinc ok" hidden onclick="sincGravarESair()" title="Grava já para GitHub e deixa fechar">💾 Gravar e sair</button>
     <span id="sessao-user" class="pill-sessao" hidden></span>
     <button id="btn-alertas" class="pill-sinc" hidden onclick="abrirAlertas()" title="Baixas, pedidos e sugestões">🔔 <span id="alertas-n">0</span></button>
     <button id="btn-instalar-app" class="btn verde sm" hidden onclick="instalarApp()" title="Instalar o programa como aplicação neste computador">📲 Instalar app</button>
@@ -1362,17 +1362,15 @@ button.btn.cinza {
       </div>
       <div id="users-lista"></div>
     </div>
-    <div class="card" id="card-sinc">
-      <h3>☁ Pasta partilhada (sincronização entre computadores)</h3>
-      <p class="mini" style="margin-bottom:10px">Escolhe uma pasta partilhada (por exemplo uma pasta do OneDrive/SharePoint sincronizada com a equipa). Cada pessoa grava lá o seu ficheiro e o programa junta os registos dos outros: movimentos, pedidos, encomendas e contas. <b>Só acrescenta, não apaga.</b> Sincroniza ao abrir, a cada 3 minutos e no botão. Só funciona em Edge ou Chrome no computador (não no telemóvel).</p>
-      <div id="sinc-estado" class="info-box">A verificar…</div>
+    <div class="card" id="card-sinc" style="display:none">
+      <h3>☁ GitHub - Sincronização em nuvem</h3>
+      <p class="mini" style="margin-bottom:10px">Os dados são sincronizados automaticamente com o GitHub. Todos os movimentos, pedidos, encomendas e contas ficam guardados e visíveis para toda a equipa. <b>Clica em "Gravar e sair" para sincronizar.</b></p>
+      <div id="sinc-estado" class="info-box">A sincronizar com GitHub…</div>
       <div style="margin-top:10px;display:flex;gap:9px;flex-wrap:wrap;align-items:end"><div><label>O teu nome</label><input id="sinc-nome" placeholder="nome"></div><button class="btn cinza" onclick="sincGuardarNome()">Guardar nome</button></div>
       <div id="sinc-btns" style="display:flex;gap:9px;flex-wrap:wrap;margin-top:10px">
-        <button class="btn" onclick="sincEscolherPasta()">📁 Escolher pasta partilhada</button>
         <button class="btn verde" onclick="sincSincronizar()">🔄 Sincronizar agora</button>
-        <button class="btn cinza" onclick="sincDesligar()">Desligar</button>
       </div>
-      <p class="mini" style="margin-top:10px">O navegador volta a pedir autorização à pasta de vez em quando: carrega em "Sincronizar agora" e aceita. Se duas pessoas alterarem o mesmo registo existente, ficam as duas versões nos respetivos computadores; o que é novo (movimentos, pedidos, contas) junta-se sempre.</p>
+      <p class="mini" style="margin-top:10px">Os dados são guardados automaticamente no GitHub. Quando clicas em "Gravar e sair", tudo sincroniza para todos verem.</p>
     </div>
     <div class="card" id="card-pwa">
       <h3>📲 Aplicação instalável (PWA) <span class="mini" style="font-weight:400;color:#6b7785">— versão 08/10/2026 09:00</span></h3>
