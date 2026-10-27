@@ -7040,7 +7040,7 @@ setTimeout(()=>{
     if(document.getElementById('faixa-pasta'))return;
     const f=document.createElement('div');f.id='faixa-pasta';
     f.style.cssText='position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:9000;background:#0b4f8a;color:#fff;border-radius:12px;padding:11px 14px;box-shadow:0 8px 28px rgba(0,0,0,.35);font-size:14px;display:flex;gap:10px;align-items:center;max-width:94vw;flex-wrap:wrap;justify-content:center';
-    f.innerHTML='☁ Os dados só ficam gravados <b>neste computador</b>. <button style="background:#fff;color:#0b4f8a;border:0;border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer" onclick="sincEscolherPasta()">Ligar pasta partilhada</button><button style="background:none;border:0;color:#cfe3f7;cursor:pointer;font-size:16px" title="Esconder" onclick="this.parentNode.remove();try{sessionStorage.setItem(\'dte_faixa_pasta\',\'0\')}catch(e){}">✖</button>';
+    f.innerHTML='✅ Dados sincronizados com <b>GitHub</b>. Clica em GRAVAR para sincronizar. <button style="background:none;border:0;color:#cfe3f7;cursor:pointer;font-size:16px" title="Esconder" onclick="this.parentNode.remove();try{sessionStorage.setItem(\'dte_faixa_pasta\',\'0\')}catch(e){}">✖</button>';
     document.body.appendChild(f);
   }
   function tirarFaixa(){const f=document.getElementById('faixa-pasta');if(f)f.remove();}
