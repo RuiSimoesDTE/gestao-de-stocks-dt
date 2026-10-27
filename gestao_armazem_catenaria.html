@@ -873,6 +873,8 @@ button.btn.cinza {
     <p class="hint">Guias de transporte e remessa que não correspondem a transferências internas entre obras. As cinco transferências IC-0019 → IC-0018 mantêm-se no separador “Transferências”.</p>
     <div class="card" style="border-left:4px solid var(--azul)">
       <h3 style="margin-top:0">Arquivo de guias AT</h3>
+      <input type="search" id="busca-guias-at" placeholder="Procurar material, guia, origem ou destino..." oninput="filtrarGuiasAT(this.value)" style="width:100%;max-width:460px;margin:6px 0 12px">
+      <p class="mini" id="busca-guias-at-resumo"></p>
       <div class="tbl-wrap"><table>
         <thead><tr><th>Data</th><th>Guia AT</th><th>Local de origem</th><th>Local de destino</th><th>Material e quantidade</th><th>PDF</th></tr></thead>
         <tbody>
@@ -952,6 +954,18 @@ button.btn.cinza {
       </table></div>
     </div>
   </section>
+<script>
+/* Pesquisa nas Guias AT: filtra as linhas pelo texto (sem acentos nem maiúsculas). Não altera dados. */
+function filtrarGuiasAT(termo){
+  const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const t=norm(termo).trim();
+  const linhas=[...document.querySelectorAll('#view-guias-at tbody tr')];
+  let visiveis=0;
+  linhas.forEach(tr=>{const ok=!t||norm(tr.textContent).includes(t);tr.style.display=ok?'':'none';if(ok)visiveis++;});
+  const r=document.getElementById('busca-guias-at-resumo');
+  if(r) r.textContent=t?('A mostrar '+visiveis+' de '+linhas.length+' guias.'):'';
+}
+</script>
 
   <!-- ===== ENCOMENDAS ===== -->
   <section class="view" id="view-encomendas">
