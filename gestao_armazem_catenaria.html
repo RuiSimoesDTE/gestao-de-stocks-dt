@@ -7010,6 +7010,12 @@ setTimeout(()=>{
     try{if(!(await permissao(false))){definirEstado('autorizar');return false;}await gravarProprio();alterado=false;ultima=hora();definirEstado('ligada');return true;}
     catch(e){console.warn(e);definirEstado('erro');return false;}
   }
+  window.definirTemaPrograma=function(tema){
+    document.documentElement.setAttribute('data-theme',tema);
+    try{localStorage.setItem('dte_tema',tema);}catch(e){}
+    document.querySelectorAll('[data-programa-theme]').forEach(b=>b.classList.toggle('active',b.getAttribute('data-programa-theme')===tema));
+  };
+  (function(){const t=localStorage.getItem('dte_tema')||'light';definirTemaPrograma(t);})();
   window.sincAgendar=function(){
     alterado=true;
     if(!pasta||estado==='desligada'||estado==='autorizar')return;
