@@ -3,339 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Catenária - DTE | Materiais de Catenária</title>
+    <title>Gestão de Catenária - DTE</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0b4f8a 0%, #1b6fb8 100%);
             color: #333;
-        }
-
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #0b4f8a 0%, #1b6fb8 100%);
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
         }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        nav a:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .btn-entrar {
-            background: #fff;
-            color: #0b4f8a;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 4px;
-        }
-
-        .btn-entrar:hover {
-            background: #f0f0f0;
-        }
-
-        /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #0b4f8a 0%, #1b6fb8 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .hero .btn {
-            display: inline-block;
+        .container {
             background: white;
-            color: #0b4f8a;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        h1 { color: #0b4f8a; margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 30px; }
+        .btn {
+            display: inline-block;
+            background: #28a745;
+            color: white;
             padding: 15px 40px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s;
             cursor: pointer;
+            border: none;
         }
-
-        .hero .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-
-        /* SECÇÕES */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .secao {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .secao h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: #0b4f8a;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .card-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #0b4f8a;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-
-        /* RESPONSIVO */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
+        .btn:hover {
+            background: #218838;
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                ⚡ DTE | Gestão de Catenária
-            </div>
-            <nav>
-                <a href="#programa">Programa</a>
-                <a href="#documentos">Documentos</a>
-                <a href="#auditoria">Auditoria</a>
-                <a href="app/gestao_armazem_catenaria.html" class="btn-entrar">ENTRAR</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <div class="hero">
+    <div class="container">
         <h1>⚡ Gestão de Catenária</h1>
         <p><strong>DTE - Instalações Especiais</strong></p>
-        <p style="font-size: 16px; margin-top: 10px;">Sistema colaborativo de trabalho em rede</p>
-        <a href="javascript:void(0)" onclick="carregarPrograma()" class="btn" style="background:#28a745;margin-top:20px;padding:15px 40px;font-size:16px;">🚀 ENTRAR NO PROGRAMA</a>
+        <p>Sistema de gestão de materiais de catenária</p>
+        <a href="gestao_armazem_catenaria.html" class="btn">🚀 ENTRAR NO PROGRAMA</a>
     </div>
-
-    <!-- PROGRAMA -->
-    <section id="programa" class="secao">
-        <div class="container">
-            <h2>💻 Gestão de Catenária</h2>
-            <p style="font-size: 18px; margin-bottom: 30px;">
-                Sistema integrado de gestão de materiais de catenária com sincronização em tempo real via GitHub
-            </p>
-
-            <div class="cards">
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Armazém</h3>
-                    <p>Controle de stock, entradas e saídas em tempo real</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">👥</div>
-                    <h3>Multi-User</h3>
-                    <p>Vários utilizadores trabalham simultaneamente</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <h3>Sincronizado</h3>
-                    <p>Todas as mudanças sincronizam em tempo real</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔒</div>
-                    <h3>Seguro</h3>
-                    <p>Login obrigatório, auditoria completa</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Relatórios</h3>
-                    <p>Histórico e análise de movimentos</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">☁️</div>
-                    <h3>Na Nuvem</h3>
-                    <p>GitHub - Backup automático de tudo</p>
-                </div>
-            </div>
-
-<a href="javascript:carregarPrograma()" class="btn" style="background: #28a745; color: white; display: inline-block; padding: 15px 40px; margin-top: 20px;font-weight:bold;">
-                ✓ ENTRAR NO PROGRAMA
-            </a>
-        </div>
-    </section>
-
-<script>
-async function carregarPrograma() {
-  try {
-    const t = Date.now();
-    const url = 'app/gestao_armazem_catenaria.html?t=' + t + '&v=' + Math.random();
-    const r = await fetch(url, { cache: 'no-store', headers: { 'Cache-Control': 'no-cache' } });
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    let html = await r.text();
-    html = html.replace(/Pasta partilhada/g, 'Gravar para GitHub').replace(/desligada/g, '(GitHub)');
-    const blob = new Blob([html], { type: 'text/html' });
-    window.location = URL.createObjectURL(blob);
-  } catch (e) {
-    alert('Erro ao carregar: ' + e.message + '\n\nTentando acesso direto...');
-    window.location = 'app/gestao_armazem_catenaria.html';
-  }
-}
-</script>
-
-    <!-- DOCUMENTOS -->
-    <section id="documentos" class="secao" style="background: #f5f5f5;">
-        <div class="container">
-            <h2>📚 Documentos</h2>
-            <p style="font-size: 18px; margin-bottom: 30px;">
-                Guias, manuais e documentação disponível
-            </p>
-
-            <div class="cards">
-                <div class="card">
-                    <div class="card-icon">📖</div>
-                    <h3>Guia de Login</h3>
-                    <p><a href="README.md" style="color: #0b4f8a; text-decoration: none;">Ver documento →</a></p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">👥</div>
-                    <h3>Guia da Equipa</h3>
-                    <p><a href="GUIA_EQUIPA.md" style="color: #0b4f8a; text-decoration: none;">Ver documento →</a></p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">⚙️</div>
-                    <h3>Técnico</h3>
-                    <p>Consulte Rui Simões para acesso</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AUDITORIA -->
-    <section id="auditoria" class="secao">
-        <div class="container">
-            <h2>🔍 Sistema de Auditoria</h2>
-            <p style="font-size: 18px; margin-bottom: 30px;">
-                Todas as ações ficam registadas e visíveis
-            </p>
-
-            <div style="background: #f5f5f5; padding: 30px; border-radius: 8px; text-align: left; max-width: 600px; margin: 0 auto;">
-                <p><strong>✓ Quem fez</strong> - Email do utilizador</p>
-                <p><strong>✓ O quê</strong> - Descrição da ação</p>
-                <p><strong>✓ Quando</strong> - Data e hora exata</p>
-                <p><strong>✓ Onde</strong> - Ficheiro/secção alterada</p>
-                <p><strong>✓ Histórico</strong> - Tudo versionado no GitHub</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 DTE - Instalações Especiais | Gestão de Materiais de Catenária</p>
-        <p>Email: <strong>rui.simoes@dte.pt</strong></p>
-        <p><a href="https://github.com/RuiSimoesDTE/gestao-de-stocks-dt" style="color: #0b8fff; text-decoration: none;">GitHub Repositório →</a></p>
-    </footer>
 </body>
 </html>
