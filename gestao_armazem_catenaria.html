@@ -35,6 +35,9 @@
   .obra-tab:hover{background:rgba(255,255,255,.14);color:#fff;}
   .obra-tab.active{background:#1c6fb8;border-color:#3f93de;color:#fff;}
   .obra-tab .obra-codigo{font-size:10px;font-weight:400;opacity:.75;margin-left:6px;}
+  .obra-editar{font-size:11px;margin-left:4px;cursor:pointer;opacity:0.6;transition:opacity 0.2s;}
+  .obra-tab .obra-editar:hover{opacity:1;}
+  html[data-theme="dark"] .obra-editar{color:#d9e9f8;}
   .obra-tab-nova{width:100%;margin-top:5px;border:1px dashed rgba(255,255,255,.35);background:transparent;color:#bcd8f2;padding:7px 10px;border-radius:9px;cursor:pointer;font-size:12px;font-weight:700;}
   .obra-tab-nova:hover{background:rgba(255,255,255,.08);color:#fff;}
   /* 23/09/2026 — menu na lateral esquerda (pedido do Rui). */
@@ -2515,9 +2518,18 @@ function atualizarSeletorObras(){
   const tabs=document.getElementById('obra-tabs');if(!tabs||!OBRAS)return;
   tabs.innerHTML=Object.entries(OBRAS.obras).filter(([,o])=>!o.arquivada).map(([id,o])=>
     '<button class="obra-tab '+(id===OBRAS.ativa?'active':'')+'" onclick="mudarObra(\''+escapeHtml(id).replace(/'/g,"\\'")+'\')" aria-pressed="'+(id===OBRAS.ativa)+'">'+
-    escapeHtml(nomeObraExibicao(id,o))+(o.codigo?'<span class="obra-codigo">'+escapeHtml(o.codigo)+'</span>':'')+'</button>'
+    escapeHtml(nomeObraExibicao(id,o))+(id===OBRAS.ativa?'<span class="obra-editar" onclick="event.stopPropagation(); editarNomeObra(\''+escapeHtml(id).replace(/'/g,"\\'")+'\')" title="Editar nome da obra">✎</span>':'')+(o.codigo?'<span class="obra-codigo">'+escapeHtml(o.codigo)+'</span>':'')+'</button>'
   ).join('');
   document.title=nomeObraExibicao(OBRAS.ativa,OBRAS.obras[OBRAS.ativa])+' — Gestão de Materiais de Catenária';
+}
+function editarNomeObra(id){
+  if(!OBRAS||!OBRAS.obras[id])return;
+  const nomeActual=OBRAS.obras[id].nome||nomeObraExibicao(id,OBRAS.obras[id]);
+  const novoNome=prompt('Novo nome da obra:',nomeActual);
+  if(novoNome&&novoNome.trim()&&novoNome!==nomeActual){
+    OBRAS.obras[id].nome=novoNome.trim();
+    guardar();atualizarSeletorObras();toast('Nome da obra actualizado','ok');
+  }
 }
 function mudarObra(id){
   if(!OBRAS||id===OBRAS.ativa)return;
