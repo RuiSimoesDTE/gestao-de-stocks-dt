@@ -11,10 +11,10 @@
    - bibliotecas externas (xlsx no cdnjs): ficam guardadas depois da primeira vez;
    - tudo o que não é GET, e pedidos por partes (range) de PDFs, passam direto, sem guardar.
    Para forçar uma limpeza total da cópia guardada, aumentar VERSAO. */
-const VERSAO = '2026-10-14-06';
+const VERSAO = '2026-10-27-01';
 const CACHE_APP = 'dte-catenaria-app-' + VERSAO;
 const CACHE_EXTRA = 'dte-catenaria-extra-v1';   // PDFs e bibliotecas: sobrevive às versões da aplicação
-const PAGINA = './gestao_materiais_catenaria.html';
+const PAGINA = './gestao_armazem_catenaria.html';
 const PRE_CACHE = [
   PAGINA, './entrada.html', './manifest.webmanifest', './manifest-operador.webmanifest', './logo_dte_dst.png',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png',
