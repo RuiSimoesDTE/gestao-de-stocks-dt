@@ -270,7 +270,7 @@
   html[data-theme="dark"] #caide-poste-info{background:#202a34!important;}
   html[data-theme="dark"] [style*="background:#f8fafc"]{background:#202a34!important;}
   html[data-theme="dark"] iframe{background:#10161d!important;}
-  html[data-theme="dark"] [style*="background:white"],html[data-theme="dark"] [style*="background: white"],html[data-theme="dark"] [style*="background:#fff"],html[data-theme="dark"] .card,html[data-theme="dark"] .modal{background:#1a2332!important;color:#333!important;}
+  html[data-theme="dark"] [style*="background:white"],html[data-theme="dark"] [style*="background: white"],html[data-theme="dark"] [style*="background:#fff"],html[data-theme="dark"] .card,html[data-theme="dark"] .modal{background:#1a2332!important;color:var(--texto)!important;}
   html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#0f1520!important;color:#eef3f7!important;border-color:#36434f!important;}
   html[data-theme="dark"] .kpi .v{color:#5eb3ff!important;}
   html[data-theme="dark"] .kpi .l{color:#a5b8c8!important;}
@@ -973,6 +973,19 @@ function filtrarGuiasAT(termo){
   const r=document.getElementById('busca-guias-at-resumo');
   if(r) r.textContent=t?('A mostrar '+visiveis+' de '+linhas.length+' guias.'):'';
 }
+/* As Guias AT são só de Vendas Novas: o botão do menu e o separador só aparecem nessa obra. */
+function atualizarGuiasAT(){
+  if(!OBRAS) return;
+  const vn=OBRAS.ativa==='vendas_novas';
+  const botao=document.querySelector('#nav button[data-v="guias-at"]');
+  if(botao) botao.style.display=vn?'':'none';
+  const vista=document.getElementById('view-guias-at');
+  if(!vn && vista && vista.classList.contains('active')){
+    const inicio=document.querySelector('#nav button[data-v]:not([data-v="guias-at"])');
+    if(inicio) inicio.click();
+  }
+}
+document.addEventListener('DOMContentLoaded',atualizarGuiasAT);
 </script>
 
   <!-- ===== ENCOMENDAS ===== -->
@@ -2554,7 +2567,7 @@ function editarNomeObra(id){
 }
 function mudarObra(id){
   if(!OBRAS||id===OBRAS.ativa)return;
-  guardar();ativarObra(id);guardar();atualizarSeletorObras();preencherSelects();refrescarTudo();toast('Obra ativa: '+OBRAS.obras[id].nome,'ok');
+  guardar();ativarObra(id);guardar();atualizarSeletorObras();preencherSelects();refrescarTudo();atualizarGuiasAT();toast('Obra ativa: '+OBRAS.obras[id].nome,'ok');
 }
 function slugObra(nome){return nome.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');}
 function criarObra(){
