@@ -270,7 +270,7 @@
   html[data-theme="dark"] #caide-poste-info{background:#202a34!important;}
   html[data-theme="dark"] [style*="background:#f8fafc"]{background:#202a34!important;}
   html[data-theme="dark"] iframe{background:#10161d!important;}
-  html[data-theme="dark"] [style*="background:white"],html[data-theme="dark"] [style*="background: white"],html[data-theme="dark"] [style*="background:#fff"],html[data-theme="dark"] .card,html[data-theme="dark"] .modal{background:#1a2332!important;color:#333!important;}
+  html[data-theme="dark"] [style*="background:white"],html[data-theme="dark"] [style*="background: white"],html[data-theme="dark"] [style*="background:#fff"],html[data-theme="dark"] .card,html[data-theme="dark"] .modal{background:#1a2332!important;color:#eef3f7!important;}
   html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#0f1520!important;color:#eef3f7!important;border-color:#36434f!important;}
   html[data-theme="dark"] .kpi .v{color:#5eb3ff!important;}
   html[data-theme="dark"] .kpi .l{color:#a5b8c8!important;}
@@ -873,10 +873,10 @@ button.btn.cinza {
     <p class="hint">Guias de transporte e remessa que não correspondem a transferências internas entre obras. As cinco transferências IC-0019 → IC-0018 mantêm-se no separador “Transferências”.</p>
     <div class="card" style="border-left:4px solid var(--azul)">
       <h3 style="margin-top:0">Arquivo de guias AT</h3>
-      <div class="tbl-wrap"><table>
+      <div class="tbl-wrap"><table id="tbl-guias-at">
         <thead><tr><th>Data</th><th>Guia AT</th><th>Local de origem</th><th>Local de destino</th><th>Material e quantidade</th><th>PDF</th></tr></thead>
         <tbody>
-          <tr><td>04/11/2025</td><td>GT ATDT202501GT/3719</td><td>Pampilhosa — Rua das Cerâmicas</td><td>Coimbra — Rua Adriano Lucas, Armazém D</td><td>2 × Bancada de trabalho; 1 × Engenho de furar</td><td><a class="btn sm" target="_blank" href="guias_at/GT ATDT202501GT3719_Bancadas_Engenho de furar.pdf">Abrir guia</a></td></tr>
+          <!-- renderizadas dinamicamente -->
           <tr><td>04/11/2025</td><td>GT ATDT202501GT/3724</td><td>Coimbra — Rua Adriano Lucas, Armazém D</td><td>Pampilhosa — Rua das Cerâmicas</td><td>1.200 m × Bobine de cabo flexível 95 mm</td><td><a class="btn sm" target="_blank" href="guias_at/GT ATDT202501GT3724_CaboFlexivel.pdf">Abrir guia</a></td></tr>
           <tr><td>11/11/2025</td><td>GT ATDT202501GT/3831</td><td>Pampilhosa — Rua das Cerâmicas</td><td>Coimbra — Rua Adriano Lucas, Armazém D</td><td>70 m tubos galvanizados; 2 guias de fibra; 1 malão; 5 ferramentas ligeiras; 5 ferramentas elétricas; 15 isoladores cerâmicos</td><td><a class="btn sm" target="_blank" href="guias_at/GT ATDT202501GT3831_Ferramentas diversas.pdf">Abrir guia</a></td></tr>
           <tr><td>11/11/2025</td><td>GT ATDT202501GT/3834</td><td>Pombal — Largo Salgueiro Maia</td><td>Coimbra — Rua Adriano Lucas, Armazém D</td><td>1 bastidor Telecomundo; 1 bastidor telecomunicações; 1 conjunto de baterias; 1 lote de material de telecomunicações</td><td><a class="btn sm" target="_blank" href="guias_at/GT ATDT202501GT 3834_ Ferramentas Diversas.pdf">Abrir guia</a></td></tr>
@@ -1357,12 +1357,8 @@ button.btn.cinza {
       <div class="tbl-wrap">
         <table>
           <thead><tr><th>Nome</th><th>Email</th><th>Nível</th><th>Estado</th></tr></thead>
-          <tbody><tr>
-            <td><b>Rui Simões</b></td>
-            <td>rui.simoes@dte.pt</td>
-            <td><span class="tag montagem">Administrador máximo</span></td>
-            <td><span class="stk-ok">Ativo</span></td>
-          </tr></tbody>
+          <tbody>
+          <!-- Renderizadas dinamicamente com renderGuiasAT() --></tbody>
         </table>
       </div>
       <div class="info-box" style="margin-top:12px">
@@ -2437,13 +2433,13 @@ function fundirSeedEmVendas(){
 function capturarObraAtiva(){
   if(!OBRAS||!OBRAS.obras[OBRAS.ativa])return;
   const o=OBRAS.obras[OBRAS.ativa];
-  Object.assign(o,{materiais:DB.materiais,armazens:DB.armazens,movimentos:DB.movimentos,encomendas:DB.encomendas,param:DB.param,seq:DB.seq,pedidos:DB.pedidos||[],mapasConsumos:DB.mapasConsumos||[]});
+  Object.assign(o,{materiais:DB.materiais,armazens:DB.armazens,movimentos:DB.movimentos,encomendas:DB.encomendas,param:DB.param,seq:DB.seq,pedidos:DB.pedidos||[],mapasConsumos:DB.mapasConsumos||[],guiasAT:DB.guiasAT||[]});
   OBRAS.partilhado.postes=DB.postes;OBRAS.partilhado.montagens=DB.montagens;
 }
 function ativarObra(id){
   const o=OBRAS.obras[id];if(!o)throw new Error('Obra inexistente');
   OBRAS.ativa=id;
-  DB={materiais:o.materiais||[],montagens:OBRAS.partilhado.montagens||[],armazens:o.armazens||['Armazém Catenária'],movimentos:o.movimentos||[],encomendas:o.encomendas||[],pedidos:(o.pedidos=o.pedidos||[]),mapasConsumos:(o.mapasConsumos=o.mapasConsumos||[]),postes:OBRAS.partilhado.postes||[],param:o.param||{neg:'avisar',user:''},seq:o.seq||1};
+  DB={materiais:o.materiais||[],montagens:OBRAS.partilhado.montagens||[],armazens:o.armazens||[\'Armazém Catenária\'],movimentos:o.movimentos||[],encomendas:o.encomendas||[],pedidos:(o.pedidos=o.pedidos||[]),mapasConsumos:(o.mapasConsumos=o.mapasConsumos||[]),guiasAT:(o.guiasAT=o.guiasAT||[]),postes:OBRAS.partilhado.postes||[],param:o.param||{neg:\'avisar\',user:\'\'},seq:o.seq||1};
   _stk=null;window.DB=DB;window.OBRAS=OBRAS;window.SEED_DATA=SEED_DATA;window.persistir=guardar;
 }
 function carregar(){
@@ -4710,6 +4706,13 @@ function exportarCodigosPecas(){
   a.download='codigos_pecas_manual_IP.csv';a.click();URL.revokeObjectURL(a.href);
 }
 
+function renderGuiasAT(){
+  const t=document.getElementById('tbl-guias-at');
+  if(!DB.guiasAT||DB.guiasAT.length===0){t.innerHTML='<tr><td class="empty" colspan="6">Sem guias AT para esta obra.</td></tr>';return;}
+  t.innerHTML='<tr><th>Data</th><th>Guia AT</th><th>Local de origem</th><th>Local de destino</th><th>Material e quantidade</th><th>PDF</th></tr>'+
+    DB.guiasAT.sort((a,b)=>new Date(b.data)-new Date(a.data)).map(g=>`<tr><td>${escapeHtml(g.data)}</td><td>${escapeHtml(g.numero)}</td><td>${escapeHtml(g.origem)}</td><td>${escapeHtml(g.destino)}</td><td>${escapeHtml(g.material)}</td><td><a class="btn sm" target="_blank" href="${escapeHtml(g.pdf)}">Abrir guia</a></td></tr>`).join('');
+}
+
 function refrescarTudo(){
   preencherSelects();
   if(typeof renderCodigosPecas==='function')renderCodigosPecas();
@@ -4718,6 +4721,7 @@ function refrescarTudo(){
   renderMateriais();
   renderMontagens();
   renderMovimentos();
+  renderGuiasAT();
   renderEncomendas();
   renderPostes();
   renderArmazens();
@@ -5663,6 +5667,7 @@ function renderCaideMeta(){
       // Re-render
       if(typeof window.atualizar==='function') window.atualizar();
       else if(typeof window.renderMovimentos==='function') window.renderMovimentos();
+  renderGuiasAT();
     } else {
       console.log('Auto-merge: nenhum movimento em falta no localStorage');
       // Mesmo sem merge, garantir que dropdowns têm origens
