@@ -7020,11 +7020,19 @@ setTimeout(()=>{
     if(!pasta){if(confirm('A pasta partilhada ainda não está ligada, por isso nada foi gravado nela. Ligar agora?'))sincEscolherPasta();return;}
     toast('A gravar na pasta partilhada…','ok');
     const ok=await gravarAgora();
-    if(!ok){alert('Não foi possível gravar na pasta partilhada. Carrega em "Sincronizar agora" (autoriza a pasta) e tenta outra vez. Se fechares agora, os dados ficam só neste computador.');return;}
-    toast('Gravado às '+ultima+'. Já podes fechar.','ok');
-    try{window.close();}catch(e){}
-    setTimeout(()=>{if(!window.closed)alert('Gravado na pasta partilhada às '+ultima+'.\nJá podes fechar esta janela.');},400);
+    if(!ok){toast('Erro ao gravar. Tenta novamente ou autoriza a pasta nas definições.','erro');return;}
+    toast('Gravado às '+ultima+'. A sincronizar…','ok');
+    setTimeout(()=>sincronizar(false),500);
   };
+  /* Auto-inicializar pasta na primeira vez */
+  (async function(){
+    if(!pasta){
+      const h=await lerPasta();
+      if(h){pasta=h;definirEstado('ligada');sincronizar(false);}
+    }
+  })();
+  /* Sincronização automática a cada 30 segundos */
+  setInterval(()=>{if(pasta&&estado==='ligada')sincronizar(false);},30000);
   /* ao fechar: se há alterações por gravar, grava logo e pede confirmação ao navegador (a mensagem é a do navegador) */
   window.addEventListener('beforeunload',e=>{
     if(document.body.classList.contains('modo-operador'))return;
