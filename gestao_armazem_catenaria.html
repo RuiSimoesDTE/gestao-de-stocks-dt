@@ -875,6 +875,19 @@ button.btn.cinza {
       <h3 style="margin-top:0">Arquivo de guias AT</h3>
       <input type="search" id="busca-guias-at" placeholder="Procurar material, guia, origem ou destino..." oninput="filtrarGuiasAT(this.value)" style="width:100%;max-width:460px;margin:6px 0 12px">
       <p class="mini" id="busca-guias-at-resumo"></p>
+      <details class="guia-form" style="margin:6px 0 12px">
+        <summary style="cursor:pointer;font-weight:600">+ Acrescentar guia AT</summary>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:8px">
+          <input id="gat-data" type="date" title="Data da guia">
+          <input id="gat-numero" placeholder="Nº da guia (ex.: GT ATDT202601GT/3900)">
+          <input id="gat-origem" placeholder="Local de origem">
+          <input id="gat-destino" placeholder="Local de destino">
+          <input id="gat-material" placeholder="Material e quantidade (ex.: 10 × Consola)" style="grid-column:1/-1">
+          <input id="gat-pdf" placeholder="PDF (opcional, ex.: guias_at/GT_xxx.pdf)">
+        </div>
+        <button class="btn verde" onclick="adicionarGuiaAT()" style="margin-top:8px">Guardar guia</button>
+        <p class="mini" id="gat-msg"></p>
+      </details>
       <div class="tbl-wrap"><table>
         <thead><tr><th>Data</th><th>Guia AT</th><th>Local de origem</th><th>Local de destino</th><th>Material e quantidade</th><th>PDF</th></tr></thead>
         <tbody>
@@ -984,8 +997,58 @@ function atualizarGuiasAT(){
     const inicio=document.querySelector('#nav button[data-v]:not([data-v="guias-at"])');
     if(inicio) inicio.click();
   }
+  renderGuiasATNovas();
+  preencherObrasParaApagar();
 }
 document.addEventListener('DOMContentLoaded',atualizarGuiasAT);
+/* Apagar obras (exceto Vendas Novas): só com backup descarregado antes e confirmação escrita. */
+function preencherObrasParaApagar(){
+  const sel=document.getElementById('apagar-obra-sel');if(!sel||!OBRAS)return;
+  const atual=sel.value;
+  sel.innerHTML=Object.entries(OBRAS.obras).filter(([id])=>id!=='vendas_novas').map(([id,o])=>'<option value="'+escapaHTML(id)+'">'+escapaHTML(o.nome)+'</option>').join('')||'<option value="">(não há outras obras)</option>';
+  if(atual&&[...sel.options].some(o=>o.value===atual))sel.value=atual;
+}
+function apagarObraEscolhida(){
+  const msg=document.getElementById('apagar-obra-msg');
+  const id=document.getElementById('apagar-obra-sel').value;
+  if(!id||id==='vendas_novas'||!OBRAS.obras[id]){msg.textContent='Escolha uma obra que não seja Vendas Novas.';return;}
+  const nome=OBRAS.obras[id].nome;
+  const escrito=prompt('Para apagar a obra "'+nome+'" escreva exatamente:\nAPAGAR '+nome+'\n\nVai ser descarregado um backup antes.');
+  if(escrito!=='APAGAR '+nome){msg.textContent='Cancelado: a confirmação não corresponde.';return;}
+  exportarBackup();
+  if(OBRAS.ativa===id)mudarObra('vendas_novas');   /* troca os dados ANTES de apagar; nunca gravar uma obra vazia por cima de Vendas Novas */
+  if(OBRAS.ativa===id)return;
+  delete OBRAS.obras[id];
+  guardar();atualizarSeletorObras();preencherSelects();refrescarTudo();atualizarGuiasAT();
+  msg.textContent='Obra apagada: '+nome+'. Backup descarregado antes.';
+  toast('Obra apagada: '+nome,'ok');
+}
+/* Guias AT acrescentadas pelo programa: ficam guardadas na obra de Vendas Novas (campo guiasAT). */
+function guiasATDaObra(){const o=OBRAS&&OBRAS.obras[OBRAS.ativa];return o?(o.guiasAT||(o.guiasAT=[])):[];}
+function valorCampo(id){return (document.getElementById(id).value||'').trim();}
+function escapaHTML(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function adicionarGuiaAT(){
+  const msg=document.getElementById('gat-msg');
+  const dataIso=valorCampo('gat-data');
+  const g={id:'gat-'+Date.now(),numero:valorCampo('gat-numero'),origem:valorCampo('gat-origem'),destino:valorCampo('gat-destino'),material:valorCampo('gat-material'),pdf:valorCampo('gat-pdf')};
+  if(!dataIso||!g.numero||!g.material){msg.textContent='Preencha pelo menos a data, o número da guia e o material.';return;}
+  const [a,m,d]=dataIso.split('-');g.dataTexto=d+'/'+m+'/'+a;
+  const existe=[...document.querySelectorAll('#view-guias-at tbody tr td:nth-child(2)')].some(td=>td.textContent.trim()===g.numero)||guiasATDaObra().some(x=>x.numero===g.numero);
+  if(existe){msg.textContent='Esta guia já existe: '+g.numero;return;}
+  guiasATDaObra().push(g);guardar();renderGuiasATNovas();
+  ['gat-data','gat-numero','gat-origem','gat-destino','gat-material','gat-pdf'].forEach(id=>document.getElementById(id).value='');
+  msg.textContent='Guia guardada em Vendas Novas.';
+}
+function renderGuiasATNovas(){
+  const tbody=document.querySelector('#view-guias-at tbody');if(!tbody)return;
+  tbody.querySelectorAll('tr.guia-nova').forEach(tr=>tr.remove());
+  if(!OBRAS||OBRAS.ativa!=='vendas_novas')return;
+  guiasATDaObra().forEach(g=>{
+    const tr=document.createElement('tr');tr.className='guia-nova';
+    tr.innerHTML='<td>'+escapaHTML(g.dataTexto)+'</td><td>'+escapaHTML(g.numero)+'</td><td>'+escapaHTML(g.origem)+'</td><td>'+escapaHTML(g.destino)+'</td><td>'+escapaHTML(g.material)+'</td><td>'+(g.pdf?'<a class="btn sm" target="_blank" href="'+escapaHTML(g.pdf)+'">Abrir guia</a>':'—')+'</td>';
+    tbody.appendChild(tr);
+  });
+}
 </script>
 
   <!-- ===== ENCOMENDAS ===== -->
@@ -1474,6 +1537,13 @@ document.addEventListener('DOMContentLoaded',atualizarGuiasAT);
       <p class="mini" style="margin-bottom:10px">Os dados ficam guardados neste navegador. Faz backup regularmente para um ficheiro.</p>
       <button class="btn cinza" onclick="exportarBackup()">⬇ Exportar backup (JSON)</button>
       <button class="btn cinza" onclick="document.getElementById('imp-backup').click()">⬆ Restaurar backup</button>
+      <div class="card" style="margin-top:12px;border-left:4px solid #b91c1c">
+        <h4 style="margin:0 0 6px">Apagar uma obra</h4>
+        <p class="mini">Só para obras que não são Vendas Novas. Antes de apagar, descarrega um backup completo. Tem de escrever a confirmação exata.</p>
+        <select id="apagar-obra-sel" style="min-width:220px"></select>
+        <button class="btn vermelho" onclick="apagarObraEscolhida()" style="margin-left:6px">Apagar obra</button>
+        <p class="mini" id="apagar-obra-msg"></p>
+      </div>
       <button class="btn cinza" onclick="if(confirm('Recarregar os dados iniciais do Mapa de Stock? Substitui os dados de TODAS as obras (Vendas Novas, Pampilhosa e outras). É descarregado antes o backup geral.')){exportarBackup();seedInicial();}">↺ Recarregar dados do Mapa</button>
       <button class="btn vermelho" onclick="apagarTudo()">🗑 Apagar todos os dados</button>
     </div>

@@ -1,0 +1,27 @@
+POSTES ACRESCENTADOS PELO RUI (consumos de outubro)
+Confirmados no cadastro do programa (gestao_armazem_catenaria.html).
+
+18-17 HE200A
+19-01 HE180A
+19-03 HE200A
+19-04 HE200A
+19-05 HE180A
+19-20A HE220B
+19-22A HE200A
+19-24 HE220B
+19-26 HE180A
+19-28 HE220B
+19-30 HE200A
+19-31 HE180A
+19-33 HE180A
+19-35 HE200A
+19-36 HE200A
+19-37 HE220B
+20-01 HE220B
+20-02 HE220B
+20-03 HE180A
+20-04 HE220B
+20-05 HE200A
+
+Total: 21 postes (HE180A: 6, HE200A: 8, HE220B: 7).
+Consumos ainda nao lancados: aguarda codigo de stock por tamanho e confirmacao.

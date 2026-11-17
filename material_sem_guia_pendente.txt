@@ -1,0 +1,17 @@
+MATERIAL DE GUIA AINDA NÃO REGISTADA (pendente)
+Estado: a aguardar número, data, origem, destino e sentido (entrada ou saída de Vendas Novas).
+Não foi registado no programa. Não houve movimentos de stock.
+
+Material indicado pelo utilizador:
+- Cod. 444 - Vara de regulação - 29 un
+- Cod. 517 - Terminal de vara de regulação - 32 un
+- Cod. 536B - Gancho para tubo 34x42 - 5 un
+- Cod. 627 - Suporte fix. do braço - 13 un
+- Cod. 719 - Tampão fêmea 3/4"G - 7 un
+- Cod. 16D8 - Parafusos em aço galvanizado c/ furo + Hu M16x60/38 m=9 Ø=4,5 - 77 un
+
+Nº da guia: (por confirmar)
+Data: (por confirmar)
+Origem: (por confirmar)
+Destino: (por confirmar)
+Sentido: (por confirmar)

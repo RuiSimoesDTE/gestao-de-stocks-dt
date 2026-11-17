@@ -1,0 +1,22 @@
+# Ficheiros de backup antigos
+gestao_armazem_catenaria_*.html
+gestao_armazem_catenaria_backup_*.html
+gestao_armazem_catenaria_antes_*.html
+
+# Ficheiros temporários do sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+
+# Ficheiros de trabalho em curso
+*RASCUNHO*
+*PROPOSTA*
+*DRAFT*
+*.csv
+*.url
+
+# Ficheiros antigos
+ficheiros_antigos/
